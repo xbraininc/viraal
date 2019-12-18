@@ -1,0 +1,7 @@
+dataset:
+  reader:
+    class: datasets.imdb.ImdbDatasetReader
+  splits:
+    train: /u/home/badr/Corpus/aclImdb/train
+    val: /u/home/badr/Corpus/aclImdb/val
+    test: /u/home/badr/Corpus/aclImdb/test
