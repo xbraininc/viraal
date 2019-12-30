@@ -1,9 +1,0 @@
-model:
-  class: models.vat_text_classifier.VATTextClassifier
-  params:
-    hidden_size: 128
-    num_layers: 2
-    bidirectional: True
-
-    
-    

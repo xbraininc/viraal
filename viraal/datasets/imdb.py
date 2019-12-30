@@ -30,26 +30,28 @@ class ImdbDatasetReader(DatasetReader):
 
         self._tokenizer = tokenizer or WordTokenizer()
         self._token_indexers = token_indexers or {'tokens': SingleIdTokenIndexer()}
-        self._max_instances = max_instances
-        self._local_seed = local_seed or 42
-        self._rng = random.Random(self._local_seed)
+        # self._local_seed = local_seed or 42
+        # self._rng = random.Random(self._local_seed)
 
     @overrides
-    def _read(self, file_path):
+    def _read(self, file_path, max_instances=None):
         pos_dir = osp.join(file_path, 'pos')
         neg_dir = osp.join(file_path, 'neg')
 
         path = set(chain(glob(osp.join(pos_dir,'*.txt')),
                      glob(osp.join(neg_dir,'*.txt'))))
 
-        for p in self._rng.sample(path, self._max_instances):
+        # max_instances = max_instances or len(path)
+
+        # for p in self._rng.sample(path, max_instances):
+        for p in path:
             with open(p) as file:
-                yield self.text_to_instance(file.read(), 0 if 'neg' in str(p) else 1)
+                yield self.text_to_instance(file.read(), 'neg' if 'neg' in str(p) else 'pos')
 
     @overrides
     def text_to_instance(self, string: str, label: int) -> Instance:
         fields: Dict[str, Field] = {}
-        tokens = self._tokenizer.tokenize(string)
+        tokens = self._tokenizer.tokenize(string.lower())
         fields['sentence'] = TextField(tokens, self._token_indexers)
-        fields['label'] = LabelField(label, skip_indexing=True)
+        fields['label'] = LabelField(label)
         return Instance(fields)

@@ -7,6 +7,6 @@ class TestImdbDatasetReader:
         self.reader = ImdbDatasetReader(max_instances=100)
 
     def test(self):
-        train_instances = self.reader.read("/u/home/badr/Corpus/aclImdb/train")
+        train_instances = self.reader.read("tests/fixtures/imdb/train")
         vocab = Vocabulary.from_instances(train_instances)
         print("Done")

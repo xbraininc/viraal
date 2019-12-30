@@ -1,4 +1,0 @@
-defaults:
-  - dataset: imdb
-  - model: lstm_attn
-  - training: low_data

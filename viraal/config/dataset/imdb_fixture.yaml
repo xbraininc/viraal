@@ -2,9 +2,9 @@ dataset:
   reader:
     class: viraal.datasets.imdb.ImdbDatasetReader
   splits:
-    train: /u/home/badr/Corpus/aclImdb/train5000
-    val: /u/home/badr/Corpus/aclImdb/val
-    test: /u/home/badr/Corpus/aclImdb/test
+    train: /u/home/badr/Expe/VirAAL/tests/fixtures/imdb/train
+    val: /u/home/badr/Expe/VirAAL/tests/fixtures/imdb/val
+    test: /u/home/badr/Expe/VirAAL/tests/fixtures/imdb/test
   embedding:
     vocab_namespace: tokens
     embedding_dim: 300

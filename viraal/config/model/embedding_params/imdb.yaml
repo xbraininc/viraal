@@ -1,4 +1,0 @@
-embedding_params:
-  vocab_namespace: tokens
-  embedding_dim: 100
-  pretrained_file: /u/home/badr/Corpus/aclImdb/imdb.wiki.en.vec

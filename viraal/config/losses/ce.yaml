@@ -1,0 +1,5 @@
+losses:
+  ce:
+    class: torch.nn.CrossEntropyLoss
+    params:
+      reduction: none

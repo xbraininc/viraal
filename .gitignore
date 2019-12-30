@@ -2,3 +2,10 @@
 .vscode/
 env/
 **/__pycache__/**
+dist
+build
+*.egg-info
+outputs
+runs
+multiruns
+*.pyc

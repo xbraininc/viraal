@@ -1,0 +1,9 @@
+model:
+  class: viraal.models.basic_lstm.BasicLSTMClassifier
+  params:
+    hidden_size: 128
+    num_layers: 2
+    bidirectional: False
+
+    
+    

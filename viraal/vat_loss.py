@@ -18,8 +18,11 @@ def _normalize_perturbation(perturb):
 
     return perturb_hat
 
-def _prepare_perturb(pert, scale, input_mask):
-    pert_hat = pert*_unsqueeze_to(input_mask, pert)
+def _prepare_perturb(pert, scale, input_mask=None):
+    if input_mask is not None:
+        pert_hat = pert*_unsqueeze_to(input_mask, pert)
+    else:
+        pert_hat = pert
     pert_hat = scale*_normalize_perturbation(pert_hat)
     return pert_hat.detach()
 
@@ -36,8 +39,8 @@ class VatLoss(nn.Module):
 
     def _kl_div_from_logits(self, original_logits, perturbed_logits):
         #We detach the input logits as specified in Miyato el al 2017
-        original_logits = original_logits.detach()
-        input_prob = F.softmax(original_logits, dim=-1)
+        detached_logits = original_logits.detach()
+        input_prob = F.softmax(detached_logits, dim=-1)
         logprob_pert = F.log_softmax(perturbed_logits, dim=-1)
         # We calculate the KL Div without reduction and manually add up the class probabilities
         # that we suppose are in the last dimension. We then average over the batch 
@@ -49,7 +52,7 @@ class VatLoss(nn.Module):
                                     model_forward,
                                     original_logits, 
                                     model_input, 
-                                    model_input_mask):
+                                    model_input_mask=None):
 
         d = torch.randn_like(model_input)
 
@@ -70,15 +73,15 @@ class VatLoss(nn.Module):
         
 
     def forward(self, 
-                model_forward, 
                 original_logits,
+                model_forward,
                 model_input,
-                model_input_mask):
+                model_input_mask=None):
         
-        r_vadv = _generate_vadv_perturbation(model_forward, original_logits, model_input, model_input_mask)
+        r_vadv = self._generate_vadv_perturbation(model_forward, original_logits, model_input, model_input_mask)
         
         perturbed_logits = model_forward(model_input + r_vadv)
-        kl_div = torch.mean(self._kl_div_from_logits(original_logits, perturbed_logits))
+        kl_div = self._kl_div_from_logits(original_logits, perturbed_logits)
 
         return kl_div
 
