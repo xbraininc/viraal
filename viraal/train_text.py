@@ -81,7 +81,7 @@ class TrainText:
         self.word_embeddings.to(config.misc.device)
         self.model = instantiate(config.model, input_size=self.word_embeddings.get_output_dim(), vocab_size=self.vocab.get_vocab_size('label'))
         self.model.to(config.misc.device)
-        self.optimizer = instantiate(config.training.optimizer, self.model.parameters())
+        self.optimizer = instantiate(config.training.optimizer, list(self.model.parameters())+list(self.word_embeddings.parameters()))
         
         self.losses = {}
         for loss in config.losses:
@@ -92,18 +92,38 @@ class TrainText:
 
         self.iteration = 0
         self.saved_iterations = []
-        self.config = config
-        self.epochs = config.training.epochs
-        self.checkpoint_max = config.training.checkpoint_max
-        self.checkpoint_freq = config.training.checkpoint_freq
-        self.device = config.misc.device
+        self.c = config
+
+    def ensure_max_checkpoints(self, new_checkpoint):
+        self.saved_iterations.append(new_checkpoint)
+        while len(self.saved_iterations) > self.c.training.checkpoint_max:
+            os.remove(self.saved_iterations.pop(0))
+
+    def save_best(self, checkpoint_prefix="model"):
+        torch.save(self.model, os.path.join(checkpoint_prefix, 'best.th'))
+
+    def save(self, checkpoint_prefix="model"):
+        checkpoint = get_checkpoint(checkpoint_prefix, self.iteration)
+        ensure_dir(checkpoint_prefix)
+        self.ensure_max_checkpoints(checkpoint['model'])
+
+        torch.save(self.model, checkpoint['model'])
+        if not os.path.isdir(checkpoint['vocab']): 
+            self.vocab.save_to_files(checkpoint['vocab'])
+        
+        return checkpoint
+
+    def restore(self, checkpoint):
+        self.model = torch.load(checkpoint['model'])
+        self.vocab.from_files(checkpoint['vocab'])
 
     def train_epoch(self):
         
         self.model.train()
         logger.info("Epoch %s", self.iteration)
         for batch in tqdm(self.iterator(self.train_instances, num_epochs=1, shuffle=True)):
-            batch_to_device(batch, self.device)
+            self.optimizer.zero_grad()
+            batch_to_device(batch, self.c.misc.device)
             embeddings = self.word_embeddings(batch['sentence'])
             mask = get_text_field_mask(batch['sentence'])
             logits = self.model(embeddings=embeddings, mask=mask)
@@ -131,8 +151,6 @@ class TrainText:
                 unlabeled_tensors = apply(tensors, lambda x:x[~labeled])
                 self.metrics.update('unlabeled_train',**unlabeled_tensors)
 
-            self.metrics.update('train', prop_labeled=sum(labeled)/len(labeled), **tensors)
-
             self.optimizer.step()
         
         self.iteration += 1
@@ -141,36 +159,32 @@ class TrainText:
         self.metrics.upload()
         self.metrics.reset()
 
-    def ensure_max_checkpoints(self, new_checkpoint):
-        self.saved_iterations.append(new_checkpoint)
-        while len(self.saved_iterations) > self.checkpoint_max:
-            os.remove(self.saved_iterations.pop(0))
+    def evaluate(self, phase, instances):
+        self.model.eval()
+        logger.info("Evaluation : %s", phase)
+        for batch in tqdm(self.iterator(instances, num_epochs=1, shuffle=True)):
+            batch_to_device(batch, self.c.misc.device)
+            embeddings = self.word_embeddings(batch['sentence'])
+            mask = get_text_field_mask(batch['sentence'])
+            logits = self.model(embeddings=embeddings, mask=mask)
+            label = batch['label']
 
-    def save_best(self, checkpoint_prefix="model"):
-        torch.save(self.model, os.path.join(checkpoint_prefix, 'best.th'))
-
-    def save(self, checkpoint_prefix="model"):
-        checkpoint = get_checkpoint(checkpoint_prefix, self.iteration)
-        ensure_dir(checkpoint_prefix)
-        self.ensure_max_checkpoints(checkpoint['model'])
-
-        torch.save(self.model, checkpoint['model'])
-        if not os.path.isdir(checkpoint['vocab']): 
-            self.vocab.save_to_files(checkpoint['vocab'])
+            self.metrics.update(phase, logits=logits, mask=mask, label=label)
         
-        return checkpoint
-
-    def restore(self, checkpoint):
-        self.model = torch.load(checkpoint['model'])
-        self.vocab.from_files(checkpoint['vocab'])
+        self.metrics.log()
+        self.metrics.upload()
+        self.metrics.reset()
 
     def train_loop(self):
-        for epoch in range(self.epochs):
+        for epoch in range(self.c.training.epochs):
             try:
                 self.train_epoch()
-                if self.iteration % self.checkpoint_freq==0:
+                if self.iteration % self.c.training.checkpoint_freq==0:
                     self.save()
+                if self.iteration % self.c.training.eval_freq==0:
+                    self.evaluate('val', self.val_instances)
             except KeyboardInterrupt:
+                logger.error("Keyboard Interupt")
                 break
             except Exception as e:
                 self.save()
@@ -182,7 +196,7 @@ def train_text(cfg):
     register_interpolations()
     cfg_yaml = cfg.pretty(resolve=True)
     logger.info("====CONFIG====\n%s", cfg_yaml)
-    with open('conf.yaml', 'w+') as conf:
+    with open('config.yaml', 'w+') as conf:
         conf.write(cfg_yaml)
 
     set_seeds(cfg.misc.seed)
@@ -192,4 +206,7 @@ def train_text(cfg):
     tr.train_loop()
 
 if __name__ == "__main__":
-    train_text()
+    try:
+        train_text()
+    except Exception as e:
+        logger.exception("Fatal error")
