@@ -31,20 +31,19 @@ class UnlabelInstances:
     def __init__(self,
                  label_key : str,
                  labeled_part : float,
-                 label_min : int,
-                 local_seed : int):
+                 label_min : int):
         self.label_key=label_key
         self.labeled_part=labeled_part
         self.label_min=label_min
-        self.local_seed=local_seed
+        # self.local_seed=local_seed
 
     def __call__(self, instances : List[Instance]):
         """
         Arguments:
             instances {List[Instance]} -- List of instances to add labeled field to unlabel
         """
-        rng = random.Random(self.local_seed) #We create a local rng to prevent the order of execution from changing the partition
-        instances_shuf = rng.sample(instances, len(instances)) #We locally shuffle the instances 
+        # rng = random.Random(self.local_seed) #We create a local rng to prevent the order of execution from changing the partition
+        instances_shuf = random.sample(instances, len(instances)) #We locally shuffle the instances 
 
         label_count = {} # We calculate a label count
         for instance in instances_shuf:

@@ -49,6 +49,5 @@ def set_seeds(seed):
     torch.manual_seed(seed)
 
 def register_interpolations():
-    seed = random.randint(0,1e6)
-    OmegaConf.register_resolver("seed", lambda : seed)
+    OmegaConf.register_resolver("seed", lambda : random.randint(0,1e6))
     OmegaConf.register_resolver("id", lambda : uuid.uuid4().hex)

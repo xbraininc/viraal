@@ -3,7 +3,6 @@ training:
   epochs: 300
   checkpoint_freq: 10
   checkpoint_max: 5
-  gradient_clipping: 1.0
 
   unlabeler:
     class: viraal.datasets.unlabel.UnlabelInstances
@@ -11,7 +10,6 @@ training:
       label_key: label
       labeled_part: 0.5
       label_min: 1
-      local_seed: ${seed:}
 
   iterator:
     class: allennlp.data.iterators.basic_iterator.BasicIterator

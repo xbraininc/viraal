@@ -5,6 +5,7 @@ import os
 import hydra
 import ometrics
 import torch
+import numpy as np
 from tqdm import tqdm
 from allennlp.common.params import Params
 from allennlp.data.vocabulary import Vocabulary
@@ -35,6 +36,19 @@ def batch_to_device(batch,device):
             batch[key] = value.to(device)
         elif isinstance(value, dict):
             batch_to_device(value, device)
+
+def from_locals(variables, loc):
+    kwargs = {}
+    for v in variables:
+        if v in loc:
+            kwargs[v] = loc[v]
+    return kwargs
+
+def apply(dico, func):
+    new_dico = {}
+    for k,v in dico.items():
+        new_dico[k] = func(v)
+    return new_dico
 
 class TrainText:
     def __init__(self, config):
@@ -93,29 +107,37 @@ class TrainText:
             embeddings = self.word_embeddings(batch['sentence'])
             mask = get_text_field_mask(batch['sentence'])
             logits = self.model(embeddings=embeddings, mask=mask)
-            
-            if 'ce' in self.losses and any(batch['labeled']):
-                labeled = batch['labeled']
-                ce_loss = self.losses['ce'](logits[labeled], batch['label'][labeled])
+            label = batch['label']
+            labeled = np.array(batch['labeled'], dtype=bool)
+
+            if 'ce' in self.losses and any(labeled):
+                ce_loss = self.losses['ce'](logits[labeled], label[labeled])
                 ce_loss.mean().backward(retain_graph=True)
-                self.metrics.update('train', ce_loss=ce_loss)
-            
+                self.metrics.update('labeled_train', ce_loss=ce_loss)
+                
             if 'vat' in self.losses:
                 model_forward = lambda embeddings : self.model(embeddings=embeddings, mask=mask)
                 vat_loss = self.losses['vat'](logits, model_forward, embeddings, mask)
                 vat_loss.mean().backward()
                 self.metrics.update('train', vat_loss=vat_loss)
 
-            self.metrics.update('train',
-                                logits=logits, 
-                                mask=mask, 
-                                label=batch['label'], 
-                                labeled=batch['labeled'])
+            tensors = from_locals(['logits', 'mask', 'label', 'vat_loss'],loc = locals())
+
+            if any(labeled):
+                labeled_tensors = apply(tensors, lambda x:x[labeled])
+                self.metrics.update('labeled_train',**labeled_tensors)
+
+            if any(~labeled):
+                unlabeled_tensors = apply(tensors, lambda x:x[~labeled])
+                self.metrics.update('unlabeled_train',**unlabeled_tensors)
+
+            self.metrics.update('train', prop_labeled=sum(labeled)/len(labeled), **tensors)
 
             self.optimizer.step()
         
         self.iteration += 1
         self.metrics.log()
+        # self.metrics.tensorboard()
         self.metrics.upload()
         self.metrics.reset()
 
@@ -144,15 +166,24 @@ class TrainText:
 
     def train_loop(self):
         for epoch in range(self.epochs):
-            self.train_epoch()
-            if self.iteration % self.checkpoint_freq==0:
+            try:
+                self.train_epoch()
+                if self.iteration % self.checkpoint_freq==0:
+                    self.save()
+            except KeyboardInterrupt:
+                break
+            except Exception as e:
                 self.save()
+                raise e
         self.save()
 
 @hydra.main(config_path='config/train_text.yaml', strict=False)
 def train_text(cfg):
     register_interpolations()
-    logger.info("====CONFIG====\n%s", cfg.pretty(resolve=True))
+    cfg_yaml = cfg.pretty(resolve=True)
+    logger.info("====CONFIG====\n%s", cfg_yaml)
+    with open('conf.yaml', 'w+') as conf:
+        conf.write(cfg_yaml)
 
     set_seeds(cfg.misc.seed)
 

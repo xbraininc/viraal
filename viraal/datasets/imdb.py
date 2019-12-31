@@ -23,9 +23,7 @@ class ImdbDatasetReader(DatasetReader):
     def __init__(self,
                  token_indexers: Dict[str, TokenIndexer] = None,
                  tokenizer: Tokenizer = None,
-                 lazy: bool = False,
-                 max_instances: int = None,
-                 local_seed: int = None) -> None:
+                 lazy: bool = False) -> None:
         super().__init__(lazy=lazy)
 
         self._tokenizer = tokenizer or WordTokenizer()
