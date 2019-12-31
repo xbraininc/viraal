@@ -1,7 +1,7 @@
 defaults:
   - hydra/sweeper: range
   - hydra/launcher: ray
-  - dataset: imdb
+  - dataset: imdb5000
   - model: text_classifier
   - losses: vat
   - training: text
@@ -12,6 +12,10 @@ hydra:
   sweep:
     dir: multiruns/${misc.name}/${now:%Y-%m-%d}/${now:%H-%M-%S}
     subdir: ${hydra.job.num}
+  job_logging:
+    formatters:
+      simple:
+        format: '[%(asctime)s][%(levelname)s] - %(message)s'
 
 ray:
   remote:

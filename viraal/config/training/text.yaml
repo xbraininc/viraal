@@ -2,6 +2,7 @@ training:
 
   epochs: 300
   checkpoint_freq: 10
+  eval_freq: 10
   checkpoint_max: 5
 
   unlabeler:
