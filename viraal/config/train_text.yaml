@@ -27,3 +27,4 @@ misc:
   seed: ${seed:}
   id: ${id:}
   device: 0
+  test: False
