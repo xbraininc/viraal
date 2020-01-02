@@ -47,9 +47,10 @@ class ImdbDatasetReader(DatasetReader):
                 yield self.text_to_instance(file.read(), 'neg' if 'neg' in str(p) else 'pos')
 
     @overrides
-    def text_to_instance(self, string: str, label: int) -> Instance:
+    def text_to_instance(self, string: str, label: str = None) -> Instance:
         fields: Dict[str, Field] = {}
         tokens = self._tokenizer.tokenize(string.lower())
         fields['sentence'] = TextField(tokens, self._token_indexers)
-        fields['label'] = LabelField(label)
+        if label is not None:
+            fields['label'] = LabelField(label)
         return Instance(fields)

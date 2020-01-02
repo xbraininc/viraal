@@ -20,7 +20,7 @@ def _normalize_perturbation(perturb):
 
 def _prepare_perturb(pert, scale, input_mask=None):
     if input_mask is not None:
-        pert_hat = pert*_unsqueeze_to(input_mask, pert)
+        pert_hat = pert*(_unsqueeze_to(input_mask, pert).float())
     else:
         pert_hat = pert
     pert_hat = scale*_normalize_perturbation(pert_hat)

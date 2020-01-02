@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
     LONG_DESC = fh.read()
     setup(
         name="viraal",
-        version="0.1.0",
+        version="0.2.0",
         author="Badr Youbi Idrissi",
         author_email="badryoubiidrissi@gmail.com",
         description="Viraal package",
@@ -26,11 +26,11 @@ with open("README.md", "r") as fh:
         "allennlp==0.9.0",
          "hydra-core==0.11.2",
          "hydra-range-sweeper-badr==0.1.1",
-         "hydra-ray-launcher-badr==0.1.0",
+         "hydra-ray-launcher-badr==0.1.1",
          "ometrics==1.0.2",
          "pytest==5.3.1",
          "ray==0.8",
-         "torch==1.3.1",
+         "torch==1.2",
          "torchvision==0.4.2"
          ]
     )

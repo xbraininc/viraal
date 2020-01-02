@@ -19,7 +19,9 @@ class BasicLSTMClassifier(nn.Module):
                                bidirectional=bidirectional,
                                batch_first=True)
 
-        self.hidden2label = torch.nn.Linear((2 if bidirectional else 1)*hidden_size,
+        bidir_mul = 2 if bidirectional else 1
+
+        self.hidden2label = torch.nn.Linear(bidir_mul*hidden_size,
                                             vocab_size)
 
     def forward(self,

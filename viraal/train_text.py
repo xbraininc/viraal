@@ -17,7 +17,7 @@ from hydra.utils import instantiate
 from omegaconf import OmegaConf, DictConfig
 
 from viraal.datasets.imdb import ImdbDatasetReader
-from viraal.config import register_interpolations, set_seeds, get_key
+from viraal.config import register_interpolations, set_seeds, get_key, pass_conf
 
 logger = logging.getLogger(__name__)
 
@@ -72,14 +72,15 @@ class TrainText:
         logger.info("Reading val instances")
         self.val_instances = self.dataset_reader.read(config.dataset.splits.val)
 
-        self.vocab = Vocabulary.from_instances(self.train_instances)
+        configured_vocab_from_inst = pass_conf(Vocabulary.from_instances, config, 'dataset.vocab')
+        self.vocab = configured_vocab_from_inst(self.train_instances)
         self.iterator.index_with(self.vocab)
 
         embedding_params = Params(OmegaConf.to_container(config.dataset.embedding))
         token_embedding = Embedding.from_params(self.vocab, embedding_params)
         self.word_embeddings = BasicTextFieldEmbedder({"tokens": token_embedding})
         self.word_embeddings.to(config.misc.device)
-        self.model = instantiate(config.model, input_size=self.word_embeddings.get_output_dim(), vocab_size=self.vocab.get_vocab_size('label'))
+        self.model = instantiate(config.model, input_size=self.word_embeddings.get_output_dim(), vocab_size=self.vocab.get_vocab_size('labels'))
         self.model.to(config.misc.device)
         self.optimizer = instantiate(config.training.optimizer, list(self.model.parameters())+list(self.word_embeddings.parameters()))
         
@@ -107,7 +108,7 @@ class TrainText:
         ensure_dir(checkpoint_prefix)
         self.ensure_max_checkpoints(checkpoint['model'])
 
-        torch.save(self.model, checkpoint['model'])
+        torch.save(self.model.state_dict(), checkpoint['model'])
         if not os.path.isdir(checkpoint['vocab']): 
             self.vocab.save_to_files(checkpoint['vocab'])
         
@@ -161,7 +162,7 @@ class TrainText:
 
     def evaluate(self, phase, instances):
         self.model.eval()
-        logger.info("Evaluation : %s", phase)
+        # logger.info("Evaluation : %s", phase)
         for batch in tqdm(self.iterator(instances, num_epochs=1, shuffle=True)):
             batch_to_device(batch, self.c.misc.device)
             embeddings = self.word_embeddings(batch['sentence'])
@@ -190,6 +191,10 @@ class TrainText:
                 self.save()
                 raise e
         self.save()
+        self.evaluate('val', self.val_instances)
+        if self.c.training.test:
+            self.test_instances = self.dataset_reader.read(self.c.dataset.splits.test)
+            self.evaluate('test', self.test_instances)
 
 @hydra.main(config_path='config/train_text.yaml', strict=False)
 def train_text(cfg):

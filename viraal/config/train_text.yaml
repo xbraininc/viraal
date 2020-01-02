@@ -2,9 +2,9 @@ defaults:
   - hydra/sweeper: range
   - hydra/launcher: ray
   - dataset: imdb5000
-  - model: text_classifier
+  - model: lstm_1024
   - losses: vat
-  - training: text
+  - training: imdb5000
 
 hydra:
   run:

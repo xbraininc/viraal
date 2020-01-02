@@ -114,11 +114,11 @@ class Histogram:
 
 class Metrics:
     def __init__(self):
-        self.writer = SummaryWriter('tensorboard')
+        # self.writer = SummaryWriter('tensorboard')
         self._metrics = ometrics.Metrics({
             'labeled_train': [Accuracy(), Average('ce_loss'), Average('vat_loss')],
             'unlabeled_train': [Accuracy(), Average('vat_loss')],
-            'train': [Accuracy(), Average('vat_loss'), Average('prop_labeled'), Std('prop_labeled')],
+            'train': [Accuracy(), Average('vat_loss')],
             'val' : [Accuracy()],
             'test' : [Accuracy()]
         })
