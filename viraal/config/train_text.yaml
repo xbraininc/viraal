@@ -1,30 +1,11 @@
 defaults:
-  - hydra/sweeper: range
-  - hydra/launcher: ray
   - dataset: imdb5000
   - model: lstm_1024
   - losses: vat
-  - training: imdb5000
-
-hydra:
-  run:
-    dir: runs/${misc.name}/${now:%Y-%m-%d}/${now:%H-%M-%S}
-  sweep:
-    dir: multiruns/${misc.name}/${now:%Y-%m-%d}/${now:%H-%M-%S}
-    subdir: ${hydra.job.num}
-  job_logging:
-    formatters:
-      simple:
-        format: '[%(asctime)s][%(levelname)s] - %(message)s'
-
-ray:
-  remote:
-    num_cpus: 1
-    num_gpus: 1
-
-misc:
-  name: text
-  seed: ${seed:}
-  id: ${id:}
-  device: 0
-  test: False
+  - training: text
+  - misc: default
+  - hydra: default
+  - hydra/sweeper: range
+  - hydra/launcher: ray
+  - ray: default
+  - wandb: default

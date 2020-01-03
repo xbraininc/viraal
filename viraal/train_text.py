@@ -3,6 +3,7 @@ import os
 
 import hydra
 import torch
+import wandb
 import numpy as np
 from tqdm import tqdm
 from allennlp.common.params import Params
@@ -14,7 +15,7 @@ from hydra.utils import instantiate
 from omegaconf import OmegaConf, DictConfig
 
 from viraal.config import (register_interpolations, set_seeds,
-                           get_key, pass_conf)
+                           get_key, pass_conf, flatten_dict)
 
 logger = logging.getLogger(__name__)
 
@@ -113,6 +114,8 @@ class TrainText:
 
         self.metrics = instantiate(config.training.metrics)
 
+        if config.misc.wandb: wandb.watch(self.model)
+
         self.iteration = 0
         self.saved_iterations = []
         self.c = config
@@ -140,13 +143,15 @@ class TrainText:
         self.model = torch.load(checkpoint["model"])
         self.vocab.from_files(checkpoint["vocab"])
 
-    def train_epoch(self):
+    def train_epoch(self, step):
 
         self.model.train()
         logger.info("Epoch %s", self.iteration)
-        for batch in tqdm(
-            self.iterator(self.train_instances, num_epochs=1, shuffle=True)
-        ):
+        iterator = self.iterator(self.train_instances, num_epochs=1, shuffle=True)
+        if self.c.misc.tqdm:
+            iterator = tqdm(iterator)
+
+        for batch in iterator:
             self.optimizer.zero_grad()
             batch_to_device(batch, self.c.misc.device)
             embeddings = self.word_embeddings(batch["sentence"])
@@ -183,13 +188,17 @@ class TrainText:
         self.iteration += 1
         self.metrics.log()
         # self.metrics.tensorboard()
-        self.metrics.upload()
+        self.metrics.upload(step=step)
         self.metrics.reset()
 
-    def evaluate(self, phase, instances):
+    def evaluate(self, phase, instances, step):
         self.model.eval()
         # logger.info("Evaluation : %s", phase)
-        for batch in tqdm(self.iterator(instances, num_epochs=1, shuffle=True)):
+
+        iterator = self.iterator(instances, num_epochs=1, shuffle=True)
+        if self.c.misc.tqdm:
+            iterator = tqdm(iterator)
+        for batch in iterator:
             batch_to_device(batch, self.c.misc.device)
             embeddings = self.word_embeddings(batch["sentence"])
             mask = get_text_field_mask(batch["sentence"])
@@ -199,17 +208,17 @@ class TrainText:
             self.metrics.update(phase, logits=logits, mask=mask, label=label)
 
         self.metrics.log()
-        self.metrics.upload()
+        self.metrics.upload(step=step)
         self.metrics.reset()
 
     def train_loop(self):
         for epoch in range(self.c.training.epochs):
             try:
-                self.train_epoch()
+                self.train_epoch(step=epoch)
                 if self.iteration % self.c.training.checkpoint_freq == 0:
                     self.save()
                 if self.iteration % self.c.training.eval_freq == 0:
-                    self.evaluate("val", self.val_instances)
+                    self.evaluate("val", self.val_instances, step=epoch)
             except KeyboardInterrupt:
                 logger.error("Keyboard Interupt")
                 break
@@ -217,21 +226,26 @@ class TrainText:
                 self.save()
                 raise e
         self.save()
-        self.evaluate("val", self.val_instances)
+        self.evaluate("val", self.val_instances, step=epoch)
         if self.c.misc.test:
             self.test_instances = self.dataset_reader.read(self.c.dataset.splits.test)
-            self.evaluate("test", self.test_instances)
+            self.evaluate("test", self.test_instances, step=epoch)
 
+def save_config(cfg_yaml):
+    with open("config.yaml", "w+") as conf:
+        conf.write(cfg_yaml)
 
 @hydra.main(config_path="config/train_text.yaml", strict=False)
 def train_text(cfg):
     register_interpolations()
+
     cfg_yaml = cfg.pretty(resolve=True)
     logger.info("====CONFIG====\n%s", cfg_yaml)
-    with open("config.yaml", "w+") as conf:
-        conf.write(cfg_yaml)
-
+    save_config(cfg_yaml)
     set_seeds(cfg.misc.seed)
+
+    if cfg.misc.wandb:
+        pass_conf(wandb.init, cfg, 'wandb')(config=cfg.to_container(resolve=True))
 
     tr = TrainText(cfg)
 

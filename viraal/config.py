@@ -1,5 +1,6 @@
 from omegaconf import OmegaConf
 from omegaconf import DictConfig
+import ometrics
 import functools
 import uuid
 import random
@@ -54,3 +55,10 @@ def register_interpolations():
         OmegaConf.register_resolver("id", lambda : uuid.uuid4().hex)
     except AssertionError:
         pass
+
+def flatten_dict(dico):
+    odico = ometrics.Metrics(dico)
+    flattened = {}
+    for keys, value in odico.flatten():
+        flattened['.'.join(keys)] = str(value)
+    return flattened

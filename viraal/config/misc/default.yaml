@@ -1,0 +1,8 @@
+misc:
+  name: text
+  seed: ${seed:}
+  id: ${id:}
+  device: 0
+  test: False
+  tqdm: False
+  wandb: False

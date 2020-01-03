@@ -1,10 +1,12 @@
 import logging
 import ometrics
 import torch
+import wandb
 import functools
 import numpy as np
 from hydra.utils import instantiate
 from tensorboardX import SummaryWriter
+
 
 logger = logging.getLogger(__name__)
 
@@ -42,6 +44,9 @@ class Average:
             self.sum += value.sum()
             self.ave = self.sum/self.nb_samples
 
+    def get_name(self):
+        return f'{self.name}_ave'
+
     def get(self):
         return self.ave
 
@@ -64,6 +69,9 @@ class Std:
     def get(self):
         return np.std(self.values)
 
+    def get_name(self):
+        return f'{self.name}_std'
+
     def __repr__(self):
         return f'{self.name} std: {self.get():.2e}'
     
@@ -85,36 +93,16 @@ class Accuracy:
     def get(self):
         return self.acc
 
+    def get_name(self):
+        return f'acc'
+
     def __repr__(self):
         return f'acc: {self.get()*100:.2f}%'
 
-class Histogram:
-    def __init__(self, name, writer):
-        self.name=name
-        self.writer=writer
-        self.reset()
-
-    def reset(self):
-        self.values=[]
-
-    def update(self, **kwargs):
-        if self.name in kwargs:
-            value = kwargs[self.name]
-            self.values.append(value)
-
-    def get(self):
-        return None
-
-    def tensorboard(self, iteration, phase):
-        self.writer.add_histogram(phase+self.name, self.values, iteration)
-
-    def __repr__(self):
-        return f'{self.name}: {self.get():.2e}'
-    
-
 class Metrics:
-    def __init__(self):
+    def __init__(self, wandb=True):
         # self.writer = SummaryWriter('tensorboard')
+        self.wandb=wandb
         self._metrics = ometrics.Metrics({
             'labeled_train': [Accuracy(), Average('ce_loss'), Average('vat_loss')],
             'unlabeled_train': [Accuracy(), Average('vat_loss')],
@@ -122,26 +110,26 @@ class Metrics:
             'val' : [Accuracy()],
             'test' : [Accuracy()]
         })
-        self.iteration=0
+
     @prepare_tensors
     def update(self, phase, **kwargs):
         for metric in self._metrics[phase]:
             metric.update(**kwargs)
     
     def reset(self):
-        self.iteration+=1
         for phase in self._metrics:
             for metric in self._metrics[phase]:
                 metric.reset()
 
-    def upload(self):
-        pass
-
-    def tensorboard(self):
-        for phase in self._metrics:
-            for metric in self._metrics:
-                if hasattr(metric, 'tensorboard'):
-                    metric.tensorboard(phase, self.iteration)
+    def upload(self, step):
+        if self.wandb:
+            to_upload={'epoch':step}
+            for phase in self._metrics:
+                for metric in self._metrics[phase]:
+                    if metric.get() is not None:
+                        full_name='_'.join([phase, metric.get_name()])
+                        to_upload[full_name] = metric.get()
+            wandb.log(to_upload, step=step)
 
     def log(self):
         for phase in self._metrics:

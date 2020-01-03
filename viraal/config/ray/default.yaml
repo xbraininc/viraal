@@ -1,0 +1,4 @@
+ray:
+  remote:
+    num_cpus: 1
+    num_gpus: 1
