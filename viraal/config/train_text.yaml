@@ -2,7 +2,7 @@ defaults:
   - dataset: imdb5000
   - model: lstm_1024
   - losses: vat
-  - training: text
+  - training: imdb5000
   - misc: default
   - hydra: default
   - hydra/sweeper: range

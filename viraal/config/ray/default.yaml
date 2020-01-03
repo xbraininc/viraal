@@ -1,4 +1,6 @@
 ray:
+  init:
+    address: 127.0.0.1:50014
   remote:
     num_cpus: 1
     num_gpus: 1
