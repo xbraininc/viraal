@@ -1,10 +1,11 @@
 losses:
-  vat:
-    class: viraal.losses.vat_loss.VatLoss
+  vat_old:
+    class: viraal.losses.vat_loss_old.VAT
     params:
-      epsilon: 5
+      device: 0
+      eps: 5
       xi: 1e-5
-      power_iterations: 1
+      k: 1
   ce:
     class: torch.nn.CrossEntropyLoss
     params:

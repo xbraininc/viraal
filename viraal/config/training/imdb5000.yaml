@@ -1,8 +1,8 @@
 training:
 
-  epochs: 100
-  checkpoint_freq: 10
-  eval_freq: 10
+  epochs: 10
+  checkpoint_freq: 1
+  eval_freq: 1
   checkpoint_max: 10
   
   unlabeler:

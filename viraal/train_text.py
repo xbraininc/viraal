@@ -172,6 +172,15 @@ class TrainText:
                 vat_loss = self.losses["vat"](logits, model_forward, embeddings, mask)
                 vat_loss.mean().backward()
                 self.metrics.update("train", vat_loss=vat_loss)
+            
+            if "vat_old" in self.losses:
+                model_forward = lambda embeddings: self.model(
+                    embeddings=embeddings, mask=mask
+                )
+                vat_loss = self.losses["vat_old"](model_forward, logits, embeddings)
+                vat_loss.mean().backward()
+                self.metrics.update("train", vat_loss=vat_loss)
+
 
             tensors = from_locals(["logits", "mask", "label", "vat_loss"], loc=locals())
 
