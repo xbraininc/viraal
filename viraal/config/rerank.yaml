@@ -1,0 +1,19 @@
+defaults:
+  - hydra: default
+  - hydra/sweeper: range
+  - hydra/launcher: ray
+  - ray: default
+rerank:
+  criteria:
+    - ce
+  part: ${training.unlabeler.params.labeled_part}
+  pretrain: ???
+  iteration: 10
+misc:
+  name: text
+  id: ${id:}
+  name: rerank
+  device: 0
+  test: False
+  tqdm: False
+  wandb: False

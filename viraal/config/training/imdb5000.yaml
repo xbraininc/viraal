@@ -24,6 +24,3 @@ training:
 
   metrics:
     class: viraal.metrics.Metrics
-    params:
-      wandb: ${misc.wandb}
-

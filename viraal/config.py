@@ -62,3 +62,7 @@ def flatten_dict(dico):
     for keys, value in odico.flatten():
         flattened['.'.join(keys)] = str(value)
     return flattened
+
+def save_config(cfg_yaml):
+    with open("config.yaml", "w+") as conf:
+        conf.write(cfg_yaml)
