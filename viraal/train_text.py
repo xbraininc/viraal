@@ -25,6 +25,12 @@ logger = logging.getLogger(__name__)
 
 class TrainText:
     def __init__(self, config, checkpoint_prefix='model'):
+
+        """
+        This function relies heavily on hydra.utils.instantiate which fetches 
+        the object directly as specified by the config. Once can also put additional
+        argments with it, they will be merged with what the config specified.
+        """
         
         self.checkpoint_prefix=checkpoint_prefix
         self.c = config if isinstance(config, DictConfig) else OmegaConf.create(config)
@@ -233,15 +239,18 @@ class TrainText:
             instances_info(phase="Test", instances=self.test_instances)
             self.evaluate("test", self.test_instances)
 
+#This decorator makes it posisble to have easy command line arguments and receive a cfg object
 @hydra.main(config_path="config/train_text.yaml", strict=False)
 def train_text(cfg):
-    register_interpolations()
+    register_interpolations() 
+    #This is to replace ${seed:} and ${id:} in the config with a seed and an id
 
-    cfg_yaml = cfg.pretty(resolve=True)
+    cfg_yaml = cfg.pretty(resolve=True) #We write the config to disk
     logger.info("====CONFIG====\n%s", cfg_yaml)
     save_config(cfg_yaml)
     set_seeds(cfg.misc.seed)
 
+    #If wandb is activated we initialize it
     if cfg.misc.wandb:
         pass_conf(wandb.init, cfg, 'wandb')(config=cfg.to_container(resolve=True))
 
