@@ -76,3 +76,19 @@ python -m viraal.train_text -m dataset=imdb5000 \
                                wandb.group=$PRETRAIN_NAME \
                                wandb.project=viraal-pretrain \
 ```
+
+## Data
+
+The different paths to the datasets used can be found in the configurations in config/dataset
+
+## Visualizing results
+
+We use weights and biases to visualize results. Please refer to https://www.wandb.com/ for more detail.
+
+For a quickstart, create an account at wandb and get your API key and then launch
+
+```
+wandb login
+```
+
+in a terminal. Then the results are automatically uploaded to your workspace online.
