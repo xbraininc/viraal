@@ -60,11 +60,7 @@ def rerank(trainer, cfg):
     if cfg.misc.tqdm:
         iterator = tqdm(iterator)
     criter_epoch = []
-    presoftmax = []
-    if "k_center" in cfg.rerank.criteria:
-        def hook(module, inp):
-            presoftmax.append(inp[0].detach().cpu().numpy())
-        trainer.model.output2label.register_forward_pre_hook(hook)
+
     for batch in iterator:
         batch_to_device(batch, cfg.misc.device)
         embeddings = trainer.word_embeddings(batch["sentence"])
@@ -94,9 +90,6 @@ def rerank(trainer, cfg):
     presoftmax = np.concatenate(presoftmax)
 
     selected = np.argsort(criter_epoch)[:to_select]
-
-    if "k_center" in cfg.rerank.criteria:
-        selected = k_center_greedy(presoftmax, lambda x,y : np.linalg.norm(x-y), to_select)
 
     for idx in selected:
         unlabeled[idx]['labeled'].metadata = True
