@@ -6,6 +6,13 @@ import uuid
 import random
 import numpy as np
 import torch
+import importlib
+
+def get_func(cfg):
+    module, function = cfg.func.rsplit(".", 1)
+    module = importlib.import_module(module)
+    function = getattr(module, function)
+    return pass_conf(function, cfg, 'params')
 
 def get_key(cfg, key):
     if key == '':

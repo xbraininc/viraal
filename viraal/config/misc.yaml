@@ -1,0 +1,14 @@
+defaults:
+  - hydra: default
+  - hydra/sweeper: range
+  - hydra/launcher: ray
+  - ray: default
+  - misc: default
+
+k_center:
+  k: 100
+
+dataset:
+  func: sklearn.datasets.make_moons
+  params:
+    n_samples: 4000
