@@ -55,5 +55,8 @@ def from_locals(variables, loc):
 def apply(dico, func):
     new_dico = {}
     for k, v in dico.items():
-        new_dico[k] = func(v)
+        if isinstance(v, dict):
+            new_dico[k] = apply(v, func)
+        else:
+            new_dico[k] = func(v)
     return new_dico

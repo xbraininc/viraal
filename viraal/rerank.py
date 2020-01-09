@@ -13,7 +13,8 @@ from omegaconf import OmegaConf
 from viraal.config import (flatten_dict, get_key, pass_conf,
                            register_interpolations, save_config, set_seeds)
 from viraal.train_text import TrainText, batch_to_device, get_checkpoint
-from viraal.utils import destroy_trainer
+from viraal.utils import destroy_trainer, apply
+from viraal.queries.k_center_greedy import k_center_greedy
 
 logger = logging.getLogger(__name__)
 
@@ -53,11 +54,17 @@ def rerank(trainer, cfg):
     trainer.set_train_mode()
 
     unlabeled = trainer.get_unlabeled_instances()
+    to_select = int(cfg.rerank.part*len(trainer.train_instances))
 
     iterator = trainer.iterator(unlabeled, num_epochs=1)
     if cfg.misc.tqdm:
         iterator = tqdm(iterator)
     criter_epoch = []
+    presoftmax = []
+    if "k_center" in cfg.rerank.criteria:
+        def hook(module, inp):
+            presoftmax.append(inp[0].detach().cpu().numpy())
+        trainer.model.output2label.register_forward_pre_hook(hook)
     for batch in iterator:
         batch_to_device(batch, cfg.misc.device)
         embeddings = trainer.word_embeddings(batch["sentence"])
@@ -80,12 +87,16 @@ def rerank(trainer, cfg):
         
         if "random" in cfg.rerank.criteria:
             criter += np.random.rand(logits.size(0))
-        
+
         criter_epoch.append(criter)
 
     criter_epoch = np.concatenate(criter_epoch)
-    to_select = int(cfg.rerank.part*len(trainer.train_instances))
+    presoftmax = np.concatenate(presoftmax)
+
     selected = np.argsort(criter_epoch)[:to_select]
+
+    if "k_center" in cfg.rerank.criteria:
+        selected = k_center_greedy(presoftmax, lambda x,y : np.linalg.norm(x-y), to_select)
 
     for idx in selected:
         unlabeled[idx]['labeled'].metadata = True

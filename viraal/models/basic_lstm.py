@@ -21,7 +21,7 @@ class BasicLSTMClassifier(nn.Module):
 
         bidir_mul = 2 if bidirectional else 1
 
-        self.hidden2label = torch.nn.Linear(bidir_mul*hidden_size,
+        self.output2label = torch.nn.Linear(bidir_mul*hidden_size,
                                             vocab_size)
 
     def forward(self,
@@ -29,7 +29,7 @@ class BasicLSTMClassifier(nn.Module):
                 mask: torch.Tensor = None) -> torch.Tensor:
         hidden, _ = self.encoder(embeddings)
         hidden = hidden[range(embeddings.size(0)), mask.sum(dim=1)-1]
-        logits = self.hidden2label(hidden)
+        logits = self.output2label(hidden)
 
         return logits
         
