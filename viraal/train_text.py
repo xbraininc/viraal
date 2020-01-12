@@ -17,8 +17,8 @@ from tqdm import tqdm
 
 from viraal.config import (flatten_dict, get_key, pass_conf,
                            register_interpolations, save_config, set_seeds)
-from viraal.utils import (apply, batch_to_device, destroy_trainer, ensure_dir,
-                          from_locals, get_checkpoint, instances_info)
+from viraal.core.utils import (apply, batch_to_device, destroy_trainer, ensure_dir,
+                          from_locals, instances_info)
 
 logger = logging.getLogger(__name__)
 

@@ -13,7 +13,7 @@ from omegaconf import OmegaConf
 from viraal.config import (flatten_dict, get_key, pass_conf,
                            register_interpolations, save_config, set_seeds)
 from viraal.train_text import TrainText, batch_to_device, get_checkpoint
-from viraal.utils import destroy_trainer, apply
+from viraal.core.utils import destroy_trainer, apply
 from viraal.queries.k_center_greedy import k_center_greedy
 
 logger = logging.getLogger(__name__)

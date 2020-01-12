@@ -21,14 +21,6 @@ def ensure_dir(directory):
     if not os.path.isdir(directory):
         os.makedirs(directory)
 
-
-def get_checkpoint(checkpoint_prefix, iteration):
-    return {
-        "embedding": os.path.join(checkpoint_prefix, f"embedding_{iteration}.th"),
-        "encoder": os.path.join(checkpoint_prefix, f"encoder_{iteration}.th"),
-        "vocab": os.path.join(checkpoint_prefix, "model.vocab"),
-    }
-
 def destroy_trainer(tr):
     logger.info('Destroying trainer')
     wandb.join()

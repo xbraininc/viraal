@@ -23,5 +23,5 @@ training:
       lr: 0.001
 
   metrics:
-    class: viraal.metrics.Metrics
+    class: viraal.core.metrics.Metrics
 
