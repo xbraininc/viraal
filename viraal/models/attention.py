@@ -33,6 +33,8 @@ class AttentionClassifier(nn.Module):
                 mask: torch.Tensor = None) -> torch.Tensor:
         # Notation: Batch (B), Max seq length (T), Hidden size (H), Number of labels (L)
         output, _ = self.encoder(embeddings) # output : (B,T,H)
+        output = output*(mask.unsqueeze(2).float())
+        
         last_output = output[range(embeddings.size(0)), mask.sum(dim=1)-1] # last_output : (B,H)
         attention_weights = self.attention(last_output, output) # attention_weights : (B,T)
         context  = torch.bmm(attention_weights.unsqueeze(1), output).squeeze(1) 

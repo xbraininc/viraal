@@ -1,0 +1,11 @@
+losses:
+  vat_joint:
+    class: viraal.losses.vat_loss_joint.VatLossJoint
+    params:
+      epsilon: 5
+      xi: 1e-5
+      power_iterations: 1
+  ce:
+    class: torch.nn.CrossEntropyLoss
+    params:
+      reduction: none

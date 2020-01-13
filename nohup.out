@@ -1,0 +1,3135 @@
+2020-01-12 16:21:39,692	INFO resource_spec.py:216 -- Starting Ray with 4.25 GiB memory available for workers and up to 2.13 GiB for objects. You can adjust these settings with ray.init(memory=<bytes>, object_store_memory=<bytes>).
+[2020-01-12 16:21:40,086][HYDRA] RangeSweeper sweeping
+[2020-01-12 16:21:40,086][HYDRA] Sweep output dir : multiruns/text/2020-01-12/16-21-40
+[2020-01-12 16:21:40,092][HYDRA] Ray Launcher is launching 8 jobs locally
+[2020-01-12 16:21:40,092][HYDRA] Sweep output dir : multiruns/text/2020-01-12/16-21-40
+[2020-01-12 16:21:40,092][HYDRA] 	#0 : hydra=no_console misc.seed=293920 misc.wandb=True wandb.group=atis_vat wandb.project=viraal-joint
+[2020-01-12 16:21:40,657][HYDRA] 	#1 : hydra=no_console misc.seed=293921 misc.wandb=True wandb.group=atis_vat wandb.project=viraal-joint
+[2020-01-12 16:21:40,906][HYDRA] 	#2 : hydra=no_console misc.seed=293922 misc.wandb=True wandb.group=atis_vat wandb.project=viraal-joint
+[2020-01-12 16:21:41,178][HYDRA] 	#3 : hydra=no_console misc.seed=293923 misc.wandb=True wandb.group=atis_vat wandb.project=viraal-joint
+[2020-01-12 16:21:41,384][HYDRA] 	#4 : hydra=no_console misc.seed=293924 misc.wandb=True wandb.group=atis_vat wandb.project=viraal-joint
+[2020-01-12 16:21:41,567][HYDRA] 	#5 : hydra=no_console misc.seed=293925 misc.wandb=True wandb.group=atis_vat wandb.project=viraal-joint
+[2020-01-12 16:21:41,847][HYDRA] 	#6 : hydra=no_console misc.seed=293926 misc.wandb=True wandb.group=atis_vat wandb.project=viraal-joint
+[2020-01-12 16:21:42,040][HYDRA] 	#7 : hydra=no_console misc.seed=293927 misc.wandb=True wandb.group=atis_vat wandb.project=viraal-joint
+[2m[36m(pid=5587)[0m wandb: Tracking run with wandb version 0.8.19
+[2m[36m(pid=5589)[0m wandb: Tracking run with wandb version 0.8.19
+[2m[36m(pid=5585)[0m wandb: Tracking run with wandb version 0.8.19
+[2m[36m(pid=5595)[0m wandb: Tracking run with wandb version 0.8.19
+[2m[36m(pid=5585)[0m wandb: Wandb version 0.8.20 is available!  To upgrade, please run:
+[2m[36m(pid=5585)[0m wandb:  $ pip install wandb --upgrade
+[2m[36m(pid=5585)[0m wandb: Run data is saved locally in wandb/run-20200113_002143-ym7mqouq
+[2m[36m(pid=5595)[0m wandb: Wandb version 0.8.20 is available!  To upgrade, please run:
+[2m[36m(pid=5595)[0m wandb:  $ pip install wandb --upgrade
+[2m[36m(pid=5595)[0m wandb: Run data is saved locally in wandb/run-20200113_002143-xti6vpkm
+[2m[36m(pid=5587)[0m wandb: Wandb version 0.8.20 is available!  To upgrade, please run:
+[2m[36m(pid=5587)[0m wandb:  $ pip install wandb --upgrade
+[2m[36m(pid=5587)[0m wandb: Run data is saved locally in wandb/run-20200113_002143-pc64znqh
+[2m[36m(pid=5589)[0m wandb: Wandb version 0.8.20 is available!  To upgrade, please run:
+[2m[36m(pid=5589)[0m wandb:  $ pip install wandb --upgrade
+[2m[36m(pid=5589)[0m wandb: Run data is saved locally in wandb/run-20200113_002143-ii1jigyz
+[2m[36m(pid=5587)[0m wandb: ERROR Error while calling W&B API: Error 1062: Duplicate entry 'viraal-joint-17765' for key 'ix_projects_name_entity_id' (<Response [500]>)
+[2m[36m(pid=5589)[0m wandb: ERROR Error while calling W&B API: Error 1062: Duplicate entry 'viraal-joint-17765' for key 'ix_projects_name_entity_id' (<Response [500]>)
+[2m[36m(pid=5585)[0m wandb: ERROR Error while calling W&B API: Error 1062: Duplicate entry 'viraal-joint-17765' for key 'ix_projects_name_entity_id' (<Response [500]>)
+[2m[36m(pid=5595)[0m wandb: Syncing run earthy-sponge-1
+[2m[36m(pid=5595)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-joint
+[2m[36m(pid=5595)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-joint/runs/xti6vpkm
+[2m[36m(pid=5595)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=5595)[0m 
+[2m[36m(pid=5595)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=5595)[0m 3019it [00:00, 18231.22it/s]
+[2m[36m(pid=5595)[0m 4478it [00:00, 21576.78it/s]
+[2m[36m(pid=5595)[0m 0it [00:00, ?it/s]500it [00:00, 34949.04it/s]
+[2m[36m(pid=5595)[0m   0% 0/4478 [00:00<?, ?it/s]
+[2m[36m(pid=5595)[0m 100% 4478/4478 [00:00<00:00, 109272.55it/s]
+[2m[36m(pid=5595)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=5595)[0m 100% 950/950 [00:00<00:00, 18886.37it/s]
+[2m[36m(pid=5585)[0m wandb: Network error resolved after 0:00:01.418711, resuming normal operation.
+[2m[36m(pid=5585)[0m wandb: Syncing run wobbly-totem-2
+[2m[36m(pid=5585)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-joint
+[2m[36m(pid=5585)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-joint/runs/ym7mqouq
+[2m[36m(pid=5585)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=5587)[0m wandb: Network error resolved after 0:00:01.550580, resuming normal operation.
+[2m[36m(pid=5587)[0m wandb: Syncing run fine-disco-3
+[2m[36m(pid=5587)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-joint
+[2m[36m(pid=5587)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-joint/runs/pc64znqh
+[2m[36m(pid=5587)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=5589)[0m wandb: Network error resolved after 0:00:01.577939, resuming normal operation.
+[2m[36m(pid=5589)[0m wandb: Syncing run glorious-snowball-3
+[2m[36m(pid=5589)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-joint
+[2m[36m(pid=5589)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-joint/runs/ii1jigyz
+[2m[36m(pid=5589)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=5585)[0m 
+[2m[36m(pid=5585)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=5585)[0m 3019it [00:00, 19196.12it/s]
+[2m[36m(pid=5589)[0m 
+[2m[36m(pid=5589)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=5585)[0m 4478it [00:00, 23457.44it/s]
+[2m[36m(pid=5585)[0m 0it [00:00, ?it/s]500it [00:00, 27922.56it/s]
+[2m[36m(pid=5585)[0m   0% 0/4478 [00:00<?, ?it/s]
+[2m[36m(pid=5587)[0m 
+[2m[36m(pid=5587)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=5585)[0m 100% 4478/4478 [00:00<00:00, 94184.54it/s]
+[2m[36m(pid=5585)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=5585)[0m 100% 950/950 [00:00<00:00, 18141.62it/s]
+[2m[36m(pid=5587)[0m 3019it [00:00, 19222.11it/s]
+[2m[36m(pid=5589)[0m 3019it [00:00, 19198.59it/s]4478it [00:00, 22952.13it/s]
+[2m[36m(pid=5587)[0m 4478it [00:00, 22262.32it/s]
+[2m[36m(pid=5587)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=5589)[0m 0it [00:00, ?it/s]500it [00:00, 21502.19it/s]
+[2m[36m(pid=5589)[0m   0% 0/4478 [00:00<?, ?it/s]
+[2m[36m(pid=5587)[0m 500it [00:00, 24488.57it/s]
+[2m[36m(pid=5587)[0m   0% 0/4478 [00:00<?, ?it/s]
+[2m[36m(pid=5589)[0m 100% 4478/4478 [00:00<00:00, 97790.81it/s]
+[2m[36m(pid=5589)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=5587)[0m 100% 4478/4478 [00:00<00:00, 110918.09it/s]
+[2m[36m(pid=5587)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=5589)[0m 100% 950/950 [00:00<00:00, 16978.46it/s]
+[2m[36m(pid=5587)[0m 100% 950/950 [00:00<00:00, 16704.28it/s]
+[2m[36m(pid=5595)[0m 
+[2m[36m(pid=5595)[0m wandb: Waiting for W&B process to finish, PID 6013
+[2m[36m(pid=5595)[0m wandb: Program ended successfully.
+[2m[36m(pid=5595)[0m wandb: Run summary:
+[2m[36m(pid=5595)[0m wandb:                                               _timestamp 1578876127.2093625
+[2m[36m(pid=5595)[0m wandb:                                                    _step 100
+[2m[36m(pid=5595)[0m wandb:                                                 _runtime 1225.5807065963745
+[2m[36m(pid=5595)[0m wandb:                                    labeled_train_int acc 1.0
+[2m[36m(pid=5595)[0m wandb:                                labeled_train_ce_loss_ave 0.0004924394888803363
+[2m[36m(pid=5595)[0m wandb:                                                    epoch 100
+[2m[36m(pid=5595)[0m wandb:                         unlabeled_train_tag conlleval f1 0.8648912594373287
+[2m[36m(pid=5595)[0m wandb:                                       train_vat_loss_ave 0.004624729976058006
+[2m[36m(pid=5595)[0m wandb:                                              val_int acc 0.904
+[2m[36m(pid=5595)[0m wandb:                                  unlabeled_train_int acc 0.9269565217391305
+[2m[36m(pid=5595)[0m wandb:                           labeled_train_tag conlleval f1 1.0
+[2m[36m(pid=5595)[0m wandb:                                     val_tag conlleval f1 0.853852967227635
+[2m[36m(pid=5595)[0m wandb: Syncing files in wandb/run-20200113_002143-xti6vpkm:
+[2m[36m(pid=5595)[0m wandb:   upstream_diff_bbe2af8444a2404bc47edc50908ea60f934d3b68.patch
+[2m[36m(pid=5595)[0m wandb: plus 8 W&B file(s) and 0 media file(s)
+[2m[36m(pid=5595)[0m wandb: - 0.03MB of 0.03MB uploaded
+[2m[36m(pid=5595)[0m wandb: \ 0.03MB of 0.03MB uploaded
+[2m[36m(pid=5595)[0m wandb: | 0.03MB of 0.03MB uploaded
+[2m[36m(pid=5595)[0m wandb: / 0.03MB of 0.03MB uploadedwandb:                                                                                
+[2m[36m(pid=5595)[0m wandb: Synced earthy-sponge-1: https://app.wandb.ai/cetosignis/viraal-joint/runs/xti6vpkm
+[2m[36m(pid=5595)[0m wandb: Tracking run with wandb version 0.8.19
+[2m[36m(pid=5595)[0m wandb: Wandb version 0.8.20 is available!  To upgrade, please run:
+[2m[36m(pid=5595)[0m wandb:  $ pip install wandb --upgrade
+[2m[36m(pid=5595)[0m wandb: Run data is saved locally in wandb/run-20200113_004211-y5jbbvlh
+[2m[36m(pid=5595)[0m wandb: Syncing run proud-silence-5
+[2m[36m(pid=5595)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-joint
+[2m[36m(pid=5595)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-joint/runs/y5jbbvlh
+[2m[36m(pid=5595)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=5595)[0m 
+[2m[36m(pid=5595)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=5595)[0m 3409it [00:00, 18751.66it/s]4478it [00:00, 21648.48it/s]
+[2m[36m(pid=5595)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=5595)[0m 500it [00:00, 38068.43it/s]
+[2m[36m(pid=5595)[0m   0% 0/4478 [00:00<?, ?it/s]100% 4478/4478 [00:00<00:00, 104569.79it/s]
+[2m[36m(pid=5595)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=5595)[0m 100% 950/950 [00:00<00:00, 16332.16it/s]
+[2m[36m(pid=5589)[0m 
+[2m[36m(pid=5589)[0m wandb: Waiting for W&B process to finish, PID 6011
+[2m[36m(pid=5589)[0m wandb: Program ended successfully.
+[2m[36m(pid=5589)[0m wandb: Run summary:
+[2m[36m(pid=5589)[0m wandb:                                                    _step 100
+[2m[36m(pid=5589)[0m wandb:                                               _timestamp 1578876136.781923
+[2m[36m(pid=5589)[0m wandb:                                                 _runtime 1235.3662149906158
+[2m[36m(pid=5589)[0m wandb:                                                    epoch 100
+[2m[36m(pid=5589)[0m wandb:                                     val_tag conlleval f1 0.8717647058823529
+[2m[36m(pid=5589)[0m wandb:                           labeled_train_tag conlleval f1 1.0
+[2m[36m(pid=5589)[0m wandb:                                labeled_train_ce_loss_ave 0.0008865943527780473
+[2m[36m(pid=5589)[0m wandb:                                    labeled_train_int acc 1.0
+[2m[36m(pid=5589)[0m wandb:                                  unlabeled_train_int acc 0.9416149068322981
+[2m[36m(pid=5589)[0m wandb:                                       train_vat_loss_ave 0.00826217234134674
+[2m[36m(pid=5589)[0m wandb:                         unlabeled_train_tag conlleval f1 0.8728651326902143
+[2m[36m(pid=5589)[0m wandb:                                              val_int acc 0.92
+[2m[36m(pid=5589)[0m wandb: Syncing files in wandb/run-20200113_002143-ii1jigyz:
+[2m[36m(pid=5589)[0m wandb:   upstream_diff_bbe2af8444a2404bc47edc50908ea60f934d3b68.patch
+[2m[36m(pid=5589)[0m wandb: plus 8 W&B file(s) and 0 media file(s)
+[2m[36m(pid=5589)[0m wandb: - 0.03MB of 0.03MB uploaded
+[2m[36m(pid=5589)[0m wandb: \ 0.03MB of 0.03MB uploaded
+[2m[36m(pid=5589)[0m wandb: | 0.03MB of 0.03MB uploaded
+[2m[36m(pid=5589)[0m wandb: / 0.03MB of 0.03MB uploadedwandb:                                                                                
+[2m[36m(pid=5589)[0m wandb: Synced glorious-snowball-3: https://app.wandb.ai/cetosignis/viraal-joint/runs/ii1jigyz
+[2m[36m(pid=5589)[0m wandb: Tracking run with wandb version 0.8.19
+[2m[36m(pid=5589)[0m wandb: Wandb version 0.8.20 is available!  To upgrade, please run:
+[2m[36m(pid=5589)[0m wandb:  $ pip install wandb --upgrade
+[2m[36m(pid=5589)[0m wandb: Run data is saved locally in wandb/run-20200113_004220-8uop2o61
+[2m[36m(pid=5589)[0m wandb: Syncing run young-lion-6
+[2m[36m(pid=5589)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-joint
+[2m[36m(pid=5589)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-joint/runs/8uop2o61
+[2m[36m(pid=5589)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=5589)[0m 
+[2m[36m(pid=5589)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=5589)[0m 3252it [00:00, 32517.40it/s]
+[2m[36m(pid=5589)[0m 4228it [00:00, 17451.63it/s]4478it [00:00, 20114.65it/s]
+[2m[36m(pid=5589)[0m 0it [00:00, ?it/s]500it [00:00, 38023.57it/s]
+[2m[36m(pid=5589)[0m   0% 0/4478 [00:00<?, ?it/s]
+[2m[36m(pid=5589)[0m 100% 4478/4478 [00:00<00:00, 100832.09it/s]
+[2m[36m(pid=5589)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=5589)[0m 100% 950/950 [00:00<00:00, 17861.70it/s]
+[2m[36m(pid=5587)[0m 
+[2m[36m(pid=5587)[0m wandb: Waiting for W&B process to finish, PID 6014
+[2m[36m(pid=5587)[0m wandb: Program ended successfully.
+[2m[36m(pid=5587)[0m wandb: Run summary:
+[2m[36m(pid=5587)[0m wandb:                                                    _step 100
+[2m[36m(pid=5587)[0m wandb:                                                 _runtime 1248.471167087555
+[2m[36m(pid=5587)[0m wandb:                                               _timestamp 1578876149.8880398
+[2m[36m(pid=5587)[0m wandb:                           labeled_train_tag conlleval f1 0.9960604070912672
+[2m[36m(pid=5587)[0m wandb:                                     val_tag conlleval f1 0.8561362301820317
+[2m[36m(pid=5587)[0m wandb:                                    labeled_train_int acc 0.9977924944812362
+[2m[36m(pid=5587)[0m wandb:                                                    epoch 100
+[2m[36m(pid=5587)[0m wandb:                                labeled_train_ce_loss_ave 0.023734381422400475
+[2m[36m(pid=5587)[0m wandb:                                  unlabeled_train_int acc 0.9316770186335404
+[2m[36m(pid=5587)[0m wandb:                         unlabeled_train_tag conlleval f1 0.8622138836772983
+[2m[36m(pid=5587)[0m wandb:                                              val_int acc 0.896
+[2m[36m(pid=5587)[0m wandb:                                       train_vat_loss_ave 0.026329025626182556
+[2m[36m(pid=5587)[0m wandb: Syncing files in wandb/run-20200113_002143-pc64znqh:
+[2m[36m(pid=5587)[0m wandb:   upstream_diff_bbe2af8444a2404bc47edc50908ea60f934d3b68.patch
+[2m[36m(pid=5587)[0m wandb: plus 8 W&B file(s) and 0 media file(s)
+[2m[36m(pid=5587)[0m wandb: - 0.04MB of 0.04MB uploaded
+[2m[36m(pid=5587)[0m wandb: \ 0.04MB of 0.04MB uploaded
+[2m[36m(pid=5587)[0m wandb: | 0.04MB of 0.04MB uploaded
+[2m[36m(pid=5587)[0m wandb: / 0.04MB of 0.04MB uploaded
+[2m[36m(pid=5587)[0m wandb: - 0.04MB of 0.04MB uploadedwandb:                                                                                
+[2m[36m(pid=5587)[0m wandb: Synced fine-disco-3: https://app.wandb.ai/cetosignis/viraal-joint/runs/pc64znqh
+[2m[36m(pid=5824)[0m wandb: Tracking run with wandb version 0.8.19
+[2m[36m(pid=5824)[0m wandb: Wandb version 0.8.20 is available!  To upgrade, please run:
+[2m[36m(pid=5824)[0m wandb:  $ pip install wandb --upgrade
+[2m[36m(pid=5824)[0m wandb: Run data is saved locally in wandb/run-20200113_004237-wv6sp0mc
+[2m[36m(pid=5824)[0m wandb: Syncing run gentle-durian-7
+[2m[36m(pid=5824)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-joint
+[2m[36m(pid=5824)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-joint/runs/wv6sp0mc
+[2m[36m(pid=5824)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=5824)[0m 
+[2m[36m(pid=5824)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=5824)[0m 3019it [00:00, 18585.73it/s]
+[2m[36m(pid=5824)[0m 4478it [00:00, 22776.83it/s]
+[2m[36m(pid=5824)[0m 0it [00:00, ?it/s]500it [00:00, 29276.34it/s]
+[2m[36m(pid=5824)[0m   0% 0/4478 [00:00<?, ?it/s]
+[2m[36m(pid=5824)[0m 100% 4478/4478 [00:00<00:00, 104169.03it/s]
+[2m[36m(pid=5824)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=5824)[0m 100% 950/950 [00:00<00:00, 17144.51it/s]
+[2m[36m(pid=5585)[0m 
+[2m[36m(pid=5585)[0m wandb: Waiting for W&B process to finish, PID 6012
+[2m[36m(pid=5585)[0m wandb: Program ended successfully.
+[2m[36m(pid=5585)[0m wandb: Run summary:
+[2m[36m(pid=5585)[0m wandb:                                                 _runtime 1271.670696258545
+[2m[36m(pid=5585)[0m wandb:                                               _timestamp 1578876173.1276047
+[2m[36m(pid=5585)[0m wandb:                                                    _step 100
+[2m[36m(pid=5585)[0m wandb:                         unlabeled_train_tag conlleval f1 0.849299677926747
+[2m[36m(pid=5585)[0m wandb:                           labeled_train_tag conlleval f1 0.9972752043596731
+[2m[36m(pid=5585)[0m wandb:                                       train_vat_loss_ave 0.02720201388001442
+[2m[36m(pid=5585)[0m wandb:                                     val_tag conlleval f1 0.8357857563272515
+[2m[36m(pid=5585)[0m wandb:                                              val_int acc 0.93
+[2m[36m(pid=5585)[0m wandb:                                    labeled_train_int acc 1.0
+[2m[36m(pid=5585)[0m wandb:                                                    epoch 100
+[2m[36m(pid=5585)[0m wandb:                                  unlabeled_train_int acc 0.9475776397515528
+[2m[36m(pid=5585)[0m wandb:                                labeled_train_ce_loss_ave 0.003594837849959731
+[2m[36m(pid=5585)[0m wandb: Syncing files in wandb/run-20200113_002143-ym7mqouq:
+[2m[36m(pid=5585)[0m wandb:   upstream_diff_bbe2af8444a2404bc47edc50908ea60f934d3b68.patch
+[2m[36m(pid=5585)[0m wandb: plus 8 W&B file(s) and 0 media file(s)
+[2m[36m(pid=5585)[0m wandb: - 0.03MB of 0.03MB uploaded
+[2m[36m(pid=5585)[0m wandb: \ 0.03MB of 0.03MB uploaded
+[2m[36m(pid=5585)[0m wandb: | 0.03MB of 0.03MB uploaded
+[2m[36m(pid=5585)[0m wandb: / 0.03MB of 0.03MB uploaded
+[2m[36m(pid=5585)[0m wandb: - 0.03MB of 0.03MB uploaded
+[2m[36m(pid=5585)[0m wandb: \ 0.03MB of 0.03MB uploadedwandb:                                                                                
+[2m[36m(pid=5585)[0m wandb: Synced wobbly-totem-2: https://app.wandb.ai/cetosignis/viraal-joint/runs/ym7mqouq
+[2m[36m(pid=5585)[0m wandb: Tracking run with wandb version 0.8.19
+[2m[36m(pid=5585)[0m wandb: Wandb version 0.8.20 is available!  To upgrade, please run:
+[2m[36m(pid=5585)[0m wandb:  $ pip install wandb --upgrade
+[2m[36m(pid=5585)[0m wandb: Run data is saved locally in wandb/run-20200113_004257-3a8t02cv
+[2m[36m(pid=5585)[0m wandb: Syncing run snowy-bush-8
+[2m[36m(pid=5585)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-joint
+[2m[36m(pid=5585)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-joint/runs/3a8t02cv
+[2m[36m(pid=5585)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=5585)[0m 
+[2m[36m(pid=5585)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=5585)[0m 2725it [00:00, 27248.34it/s]
+[2m[36m(pid=5585)[0m 3543it [00:00, 14827.95it/s]
+[2m[36m(pid=5585)[0m 4478it [00:00, 18940.40it/s]
+[2m[36m(pid=5585)[0m 0it [00:00, ?it/s]500it [00:00, 25059.17it/s]
+[2m[36m(pid=5585)[0m   0% 0/4478 [00:00<?, ?it/s]
+[2m[36m(pid=5585)[0m 100% 4478/4478 [00:00<00:00, 98762.16it/s]
+[2m[36m(pid=5585)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=5585)[0m 100% 950/950 [00:00<00:00, 18650.08it/s]
+[2m[36m(pid=5595)[0m 
+[2m[36m(pid=5595)[0m wandb: Waiting for W&B process to finish, PID 6417
+[2m[36m(pid=5595)[0m wandb: Program ended successfully.
+[2m[36m(pid=5595)[0m wandb: Run summary:
+[2m[36m(pid=5595)[0m wandb:                                               _timestamp 1578877350.9124136
+[2m[36m(pid=5595)[0m wandb:                                                    _step 100
+[2m[36m(pid=5595)[0m wandb:                                                 _runtime 2449.283757686615
+[2m[36m(pid=5595)[0m wandb:                                    labeled_train_int acc 1.0
+[2m[36m(pid=5595)[0m wandb:                                labeled_train_ce_loss_ave 0.000735950015950948
+[2m[36m(pid=5595)[0m wandb:                                                    epoch 100
+[2m[36m(pid=5595)[0m wandb:                         unlabeled_train_tag conlleval f1 0.8706437832571385
+[2m[36m(pid=5595)[0m wandb:                                       train_vat_loss_ave 0.005806623958051205
+[2m[36m(pid=5595)[0m wandb:                                              val_int acc 0.898
+[2m[36m(pid=5595)[0m wandb:                                  unlabeled_train_int acc 0.9306832298136646
+[2m[36m(pid=5595)[0m wandb:                           labeled_train_tag conlleval f1 1.0
+[2m[36m(pid=5595)[0m wandb:                                     val_tag conlleval f1 0.8654183733177296
+[2m[36m(pid=5595)[0m wandb: Syncing files in wandb/run-20200113_004211-y5jbbvlh:
+[2m[36m(pid=5595)[0m wandb:   upstream_diff_bbe2af8444a2404bc47edc50908ea60f934d3b68.patch
+[2m[36m(pid=5595)[0m wandb: plus 8 W&B file(s) and 0 media file(s)
+[2m[36m(pid=5595)[0m wandb: - 0.03MB of 0.03MB uploaded
+[2m[36m(pid=5595)[0m wandb: \ 0.03MB of 0.03MB uploaded
+[2m[36m(pid=5595)[0m wandb: | 0.03MB of 0.03MB uploaded
+[2m[36m(pid=5595)[0m wandb: / 0.03MB of 0.03MB uploaded
+[2m[36m(pid=5595)[0m wandb: - 0.03MB of 0.03MB uploadedwandb:                                                                                
+[2m[36m(pid=5595)[0m wandb: Synced proud-silence-5: https://app.wandb.ai/cetosignis/viraal-joint/runs/y5jbbvlh
+[2m[36m(pid=5824)[0m 
+[2m[36m(pid=5824)[0m wandb: Waiting for W&B process to finish, PID 6530
+[2m[36m(pid=5824)[0m wandb: Program ended successfully.
+[2m[36m(pid=5824)[0m wandb: Run summary:
+[2m[36m(pid=5824)[0m wandb:                                                    _step 100
+[2m[36m(pid=5824)[0m wandb:                                               _timestamp 1578877357.1793234
+[2m[36m(pid=5824)[0m wandb:                                                 _runtime 1201.986144542694
+[2m[36m(pid=5824)[0m wandb:                           labeled_train_tag conlleval f1 1.0
+[2m[36m(pid=5824)[0m wandb:                                                    epoch 100
+[2m[36m(pid=5824)[0m wandb:                                       train_vat_loss_ave 0.009217302314937115
+[2m[36m(pid=5824)[0m wandb:                                  unlabeled_train_int acc 0.9450931677018634
+[2m[36m(pid=5824)[0m wandb:                                              val_int acc 0.924
+[2m[36m(pid=5824)[0m wandb:                                labeled_train_ce_loss_ave 0.001106472685933113
+[2m[36m(pid=5824)[0m wandb:                                     val_tag conlleval f1 0.8765033734232913
+[2m[36m(pid=5824)[0m wandb:                         unlabeled_train_tag conlleval f1 0.8835368611488015
+[2m[36m(pid=5824)[0m wandb:                                    labeled_train_int acc 1.0
+[2m[36m(pid=5824)[0m wandb: Syncing files in wandb/run-20200113_004237-wv6sp0mc:
+[2m[36m(pid=5824)[0m wandb:   upstream_diff_bbe2af8444a2404bc47edc50908ea60f934d3b68.patch
+[2m[36m(pid=5824)[0m wandb: plus 8 W&B file(s) and 0 media file(s)
+[2m[36m(pid=5824)[0m wandb: - 0.03MB of 0.03MB uploaded
+[2m[36m(pid=5824)[0m wandb: \ 0.03MB of 0.03MB uploaded
+[2m[36m(pid=5824)[0m wandb: | 0.03MB of 0.03MB uploaded
+[2m[36m(pid=5824)[0m wandb: / 0.03MB of 0.03MB uploaded
+[2m[36m(pid=5824)[0m wandb: - 0.03MB of 0.03MB uploadedwandb:                                                                                
+[2m[36m(pid=5824)[0m wandb: Synced gentle-durian-7: https://app.wandb.ai/cetosignis/viraal-joint/runs/wv6sp0mc
+[2m[36m(pid=5589)[0m 
+[2m[36m(pid=5589)[0m wandb: Waiting for W&B process to finish, PID 6462
+[2m[36m(pid=5589)[0m wandb: Program ended successfully.
+[2m[36m(pid=5589)[0m wandb: Run summary:
+[2m[36m(pid=5589)[0m wandb:                                                    _step 100
+[2m[36m(pid=5589)[0m wandb:                                               _timestamp 1578877369.3470569
+[2m[36m(pid=5589)[0m wandb:                                                 _runtime 2467.931348800659
+[2m[36m(pid=5589)[0m wandb:                                                    epoch 100
+[2m[36m(pid=5589)[0m wandb:                                     val_tag conlleval f1 0.8955399061032865
+[2m[36m(pid=5589)[0m wandb:                           labeled_train_tag conlleval f1 1.0
+[2m[36m(pid=5589)[0m wandb:                                labeled_train_ce_loss_ave 0.0005068688769824803
+[2m[36m(pid=5589)[0m wandb:                                    labeled_train_int acc 1.0
+[2m[36m(pid=5589)[0m wandb:                                  unlabeled_train_int acc 0.9182608695652174
+[2m[36m(pid=5589)[0m wandb:                                       train_vat_loss_ave 0.006319764070212841
+[2m[36m(pid=5589)[0m wandb:                         unlabeled_train_tag conlleval f1 0.8841330630021776
+[2m[36m(pid=5589)[0m wandb:                                              val_int acc 0.894
+[2m[36m(pid=5589)[0m wandb: Syncing files in wandb/run-20200113_004220-8uop2o61:
+[2m[36m(pid=5589)[0m wandb:   upstream_diff_bbe2af8444a2404bc47edc50908ea60f934d3b68.patch
+[2m[36m(pid=5589)[0m wandb: plus 8 W&B file(s) and 0 media file(s)
+[2m[36m(pid=5589)[0m wandb: - 0.03MB of 0.03MB uploaded
+[2m[36m(pid=5589)[0m wandb: \ 0.03MB of 0.03MB uploaded
+[2m[36m(pid=5589)[0m wandb: | 0.03MB of 0.03MB uploaded
+[2m[36m(pid=5589)[0m wandb: / 0.03MB of 0.03MB uploadedwandb:                                                                                
+[2m[36m(pid=5589)[0m wandb: Synced young-lion-6: https://app.wandb.ai/cetosignis/viraal-joint/runs/8uop2o61
+[2m[36m(pid=5585)[0m 
+[2m[36m(pid=5585)[0m wandb: Waiting for W&B process to finish, PID 6595
+[2m[36m(pid=5585)[0m wandb: Program ended successfully.
+[2m[36m(pid=5585)[0m wandb: Run summary:
+[2m[36m(pid=5585)[0m wandb:                                                 _runtime 2538.9177622795105
+[2m[36m(pid=5585)[0m wandb:                                               _timestamp 1578877440.3746707
+[2m[36m(pid=5585)[0m wandb:                                                    _step 100
+[2m[36m(pid=5585)[0m wandb:                         unlabeled_train_tag conlleval f1 0.8912674782346514
+[2m[36m(pid=5585)[0m wandb:                           labeled_train_tag conlleval f1 1.0
+[2m[36m(pid=5585)[0m wandb:                                       train_vat_loss_ave 0.005667629186064005
+[2m[36m(pid=5585)[0m wandb:                                     val_tag conlleval f1 0.8923621350634032
+[2m[36m(pid=5585)[0m wandb:                                              val_int acc 0.918
+[2m[36m(pid=5585)[0m wandb:                                    labeled_train_int acc 1.0
+[2m[36m(pid=5585)[0m wandb:                                                    epoch 100
+[2m[36m(pid=5585)[0m wandb:                                  unlabeled_train_int acc 0.9383850931677019
+[2m[36m(pid=5585)[0m wandb:                                labeled_train_ce_loss_ave 0.0009774508653208613
+[2m[36m(pid=5585)[0m wandb: Syncing files in wandb/run-20200113_004257-3a8t02cv:
+[2m[36m(pid=5585)[0m wandb:   upstream_diff_bbe2af8444a2404bc47edc50908ea60f934d3b68.patch
+[2m[36m(pid=5585)[0m wandb: plus 8 W&B file(s) and 0 media file(s)
+[2m[36m(pid=5585)[0m wandb: - 0.03MB of 0.03MB uploaded
+[2m[36m(pid=5585)[0m wandb: \ 0.03MB of 0.03MB uploaded
+[2m[36m(pid=5585)[0m wandb: | 0.03MB of 0.03MB uploaded
+[2m[36m(pid=5585)[0m wandb: / 0.03MB of 0.03MB uploaded
+[2m[36m(pid=5585)[0m wandb: - 0.03MB of 0.03MB uploaded
+[2m[36m(pid=5585)[0m wandb: \ 0.03MB of 0.03MB uploadedwandb:                                                                                
+[2m[36m(pid=5585)[0m wandb: Synced snowy-bush-8: https://app.wandb.ai/cetosignis/viraal-joint/runs/3a8t02cv
+Fatal error
+Traceback (most recent call last):
+  File "/u/home/badr/Expe/VirAAL/viraal/train_text.py", line 264, in <module>
+    train_text()
+  File "/u/home/badr/Expe/VirAAL/env/lib/python3.6/site-packages/hydra/main.py", line 24, in decorated_main
+    strict=strict,
+  File "/u/home/badr/Expe/VirAAL/env/lib/python3.6/site-packages/hydra/_internal/utils.py", line 180, in run_hydra
+    overrides=args.overrides,
+  File "/u/home/badr/Expe/VirAAL/env/lib/python3.6/site-packages/hydra/_internal/hydra.py", line 95, in multirun
+    with_log_configuration=True,
+  File "/u/home/badr/Expe/VirAAL/env/lib/python3.6/site-packages/hydra/_internal/hydra.py", line 343, in compose_config
+    config_file=config_file, overrides=overrides, strict=strict
+  File "/u/home/badr/Expe/VirAAL/env/lib/python3.6/site-packages/hydra/_internal/config_loader.py", line 68, in load_configuration
+    consumed = self._apply_defaults_overrides(overrides, defaults)
+  File "/u/home/badr/Expe/VirAAL/env/lib/python3.6/site-packages/hydra/_internal/config_loader.py", line 171, in _apply_defaults_overrides
+    key, value = split_key_val(override)
+  File "/u/home/badr/Expe/VirAAL/env/lib/python3.6/site-packages/hydra/plugins/common/utils.py", line 72, in split_key_val
+    assert "=" in s, "'{}' not a valid override, expecting key=value format".format(s)
+AssertionError: ' ' not a valid override, expecting key=value format
+2020-01-12 17:22:41,899	INFO resource_spec.py:216 -- Starting Ray with 17.53 GiB memory available for workers and up to 8.77 GiB for objects. You can adjust these settings with ray.init(memory=<bytes>, object_store_memory=<bytes>).
+[2020-01-12 17:22:42,423][HYDRA] RangeSweeper sweeping
+[2020-01-12 17:22:42,424][HYDRA] Sweep output dir : multiruns/text/2020-01-12/17-22-42
+[2020-01-12 17:22:42,428][HYDRA] Ray Launcher is launching 8 jobs locally
+[2020-01-12 17:22:42,428][HYDRA] Sweep output dir : multiruns/text/2020-01-12/17-22-42
+[2020-01-12 17:22:42,428][HYDRA] 	#0 : losses=ce hydra=no_console misc.seed=293920 misc.wandb=True wandb.group=atis_ce wandb.project=viraal-joint ray.remote.num_gpus=0.5
+[2020-01-12 17:22:43,004][HYDRA] 	#1 : losses=ce hydra=no_console misc.seed=293921 misc.wandb=True wandb.group=atis_ce wandb.project=viraal-joint ray.remote.num_gpus=0.5
+[2020-01-12 17:22:43,260][HYDRA] 	#2 : losses=ce hydra=no_console misc.seed=293922 misc.wandb=True wandb.group=atis_ce wandb.project=viraal-joint ray.remote.num_gpus=0.5
+[2020-01-12 17:22:43,561][HYDRA] 	#3 : losses=ce hydra=no_console misc.seed=293923 misc.wandb=True wandb.group=atis_ce wandb.project=viraal-joint ray.remote.num_gpus=0.5
+[2020-01-12 17:22:43,772][HYDRA] 	#4 : losses=ce hydra=no_console misc.seed=293924 misc.wandb=True wandb.group=atis_ce wandb.project=viraal-joint ray.remote.num_gpus=0.5
+[2020-01-12 17:22:43,967][HYDRA] 	#5 : losses=ce hydra=no_console misc.seed=293925 misc.wandb=True wandb.group=atis_ce wandb.project=viraal-joint ray.remote.num_gpus=0.5
+[2020-01-12 17:22:44,256][HYDRA] 	#6 : losses=ce hydra=no_console misc.seed=293926 misc.wandb=True wandb.group=atis_ce wandb.project=viraal-joint ray.remote.num_gpus=0.5
+[2020-01-12 17:22:44,466][HYDRA] 	#7 : losses=ce hydra=no_console misc.seed=293927 misc.wandb=True wandb.group=atis_ce wandb.project=viraal-joint ray.remote.num_gpus=0.5
+[2m[36m(pid=6958)[0m wandb: Tracking run with wandb version 0.8.19
+[2m[36m(pid=6956)[0m wandb: Tracking run with wandb version 0.8.19
+[2m[36m(pid=6951)[0m wandb: Tracking run with wandb version 0.8.19
+[2m[36m(pid=6955)[0m wandb: Tracking run with wandb version 0.8.19
+[2m[36m(pid=6950)[0m wandb: Tracking run with wandb version 0.8.19
+[2m[36m(pid=6947)[0m wandb: Tracking run with wandb version 0.8.19
+[2m[36m(pid=6954)[0m wandb: Tracking run with wandb version 0.8.19
+[2m[36m(pid=6958)[0m wandb: Wandb version 0.8.20 is available!  To upgrade, please run:
+[2m[36m(pid=6958)[0m wandb:  $ pip install wandb --upgrade
+[2m[36m(pid=6958)[0m wandb: Run data is saved locally in wandb/run-20200113_012245-8vy5r0xk
+[2m[36m(pid=6956)[0m wandb: Wandb version 0.8.20 is available!  To upgrade, please run:
+[2m[36m(pid=6956)[0m wandb:  $ pip install wandb --upgrade
+[2m[36m(pid=6956)[0m wandb: Run data is saved locally in wandb/run-20200113_012245-si5tcgin
+[2m[36m(pid=6951)[0m wandb: Wandb version 0.8.20 is available!  To upgrade, please run:
+[2m[36m(pid=6951)[0m wandb:  $ pip install wandb --upgrade
+[2m[36m(pid=6951)[0m wandb: Run data is saved locally in wandb/run-20200113_012245-27o945oe
+[2m[36m(pid=6958)[0m wandb: Syncing run brisk-jazz-9
+[2m[36m(pid=6958)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-joint
+[2m[36m(pid=6958)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-joint/runs/8vy5r0xk
+[2m[36m(pid=6958)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=6953)[0m wandb: Tracking run with wandb version 0.8.19
+[2m[36m(pid=6956)[0m wandb: Syncing run icy-elevator-9
+[2m[36m(pid=6956)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-joint
+[2m[36m(pid=6956)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-joint/runs/si5tcgin
+[2m[36m(pid=6956)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=6955)[0m wandb: Wandb version 0.8.20 is available!  To upgrade, please run:
+[2m[36m(pid=6955)[0m wandb:  $ pip install wandb --upgrade
+[2m[36m(pid=6955)[0m wandb: Run data is saved locally in wandb/run-20200113_012245-jjcaiaym
+[2m[36m(pid=6951)[0m wandb: Syncing run efficient-feather-9
+[2m[36m(pid=6951)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-joint
+[2m[36m(pid=6951)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-joint/runs/27o945oe
+[2m[36m(pid=6951)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=6958)[0m 
+[2m[36m(pid=6956)[0m 
+[2m[36m(pid=6951)[0m 
+[2m[36m(pid=6955)[0m wandb: Syncing run solar-violet-12
+[2m[36m(pid=6955)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-joint
+[2m[36m(pid=6955)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-joint/runs/jjcaiaym
+[2m[36m(pid=6955)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=6955)[0m 
+[2m[36m(pid=6958)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=6956)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=6951)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=6950)[0m wandb: Wandb version 0.8.20 is available!  To upgrade, please run:
+[2m[36m(pid=6950)[0m wandb:  $ pip install wandb --upgrade
+[2m[36m(pid=6950)[0m wandb: Run data is saved locally in wandb/run-20200113_012246-rnpo1smf
+[2m[36m(pid=6951)[0m 8it [00:00, 79.11it/s]
+[2m[36m(pid=6958)[0m 9it [00:00, 74.91it/s]
+[2m[36m(pid=6956)[0m 7it [00:00, 54.05it/s]
+[2m[36m(pid=6955)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=6950)[0m wandb: Syncing run exalted-morning-13
+[2m[36m(pid=6950)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-joint
+[2m[36m(pid=6950)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-joint/runs/rnpo1smf
+[2m[36m(pid=6950)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=6951)[0m 17it [00:00, 79.75it/s]
+[2m[36m(pid=6958)[0m 24it [00:00, 86.30it/s]
+[2m[36m(pid=6956)[0m 23it [00:00, 67.08it/s]
+[2m[36m(pid=6955)[0m 13it [00:00, 129.01it/s]
+[2m[36m(pid=6947)[0m wandb: Wandb version 0.8.20 is available!  To upgrade, please run:
+[2m[36m(pid=6947)[0m wandb:  $ pip install wandb --upgrade
+[2m[36m(pid=6947)[0m wandb: Run data is saved locally in wandb/run-20200113_012246-66fbcuan
+[2m[36m(pid=6950)[0m 
+[2m[36m(pid=6951)[0m 39it [00:00, 98.41it/s]
+[2m[36m(pid=6958)[0m 45it [00:00, 104.30it/s]
+[2m[36m(pid=6956)[0m 42it [00:00, 83.03it/s]
+[2m[36m(pid=6955)[0m 35it [00:00, 147.01it/s]
+[2m[36m(pid=6951)[0m 61it [00:00, 117.66it/s]
+[2m[36m(pid=6958)[0m 67it [00:00, 123.53it/s]
+[2m[36m(pid=6956)[0m 68it [00:00, 103.86it/s]
+[2m[36m(pid=6947)[0m wandb: Syncing run sweet-wave-14
+[2m[36m(pid=6947)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-joint
+[2m[36m(pid=6947)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-joint/runs/66fbcuan
+[2m[36m(pid=6947)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=6955)[0m 63it [00:00, 170.57it/s]
+[2m[36m(pid=6954)[0m wandb: Wandb version 0.8.20 is available!  To upgrade, please run:
+[2m[36m(pid=6954)[0m wandb:  $ pip install wandb --upgrade
+[2m[36m(pid=6954)[0m wandb: Run data is saved locally in wandb/run-20200113_012246-v7vny2fs
+[2m[36m(pid=6950)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=6951)[0m 86it [00:00, 139.46it/s]
+[2m[36m(pid=6958)[0m 93it [00:00, 145.63it/s]
+[2m[36m(pid=6956)[0m 92it [00:00, 124.98it/s]
+[2m[36m(pid=6947)[0m 
+[2m[36m(pid=6955)[0m 92it [00:00, 191.60it/s]
+[2m[36m(pid=6950)[0m 19it [00:00, 185.71it/s]
+[2m[36m(pid=6951)[0m 114it [00:00, 163.69it/s]
+[2m[36m(pid=6958)[0m 125it [00:00, 173.86it/s]
+[2m[36m(pid=6956)[0m 121it [00:00, 150.14it/s]
+[2m[36m(pid=6955)[0m 125it [00:00, 217.92it/s]
+[2m[36m(pid=6954)[0m wandb: Syncing run polar-field-15
+[2m[36m(pid=6954)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-joint
+[2m[36m(pid=6954)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-joint/runs/v7vny2fs
+[2m[36m(pid=6954)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=6950)[0m 43it [00:00, 198.00it/s]
+[2m[36m(pid=6951)[0m 142it [00:00, 184.35it/s]
+[2m[36m(pid=6958)[0m 154it [00:00, 197.07it/s]
+[2m[36m(pid=6953)[0m wandb: Wandb version 0.8.20 is available!  To upgrade, please run:
+[2m[36m(pid=6953)[0m wandb:  $ pip install wandb --upgrade
+[2m[36m(pid=6953)[0m wandb: Run data is saved locally in wandb/run-20200113_012246-emv2bvmw
+[2m[36m(pid=6956)[0m 147it [00:00, 171.93it/s]
+[2m[36m(pid=6947)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=6955)[0m 161it [00:00, 246.46it/s]
+[2m[36m(pid=6950)[0m 69it [00:00, 212.04it/s]
+[2m[36m(pid=6954)[0m 
+[2m[36m(pid=6951)[0m 178it [00:00, 213.46it/s]
+[2m[36m(pid=6947)[0m 15it [00:00, 147.44it/s]
+[2m[36m(pid=6958)[0m 188it [00:00, 224.88it/s]
+[2m[36m(pid=6956)[0m 181it [00:00, 201.22it/s]
+[2m[36m(pid=6955)[0m 188it [00:00, 248.71it/s]
+[2m[36m(pid=6950)[0m 101it [00:00, 233.31it/s]
+[2m[36m(pid=6953)[0m wandb: Syncing run atomic-cosmos-16
+[2m[36m(pid=6953)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-joint
+[2m[36m(pid=6953)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-joint/runs/emv2bvmw
+[2m[36m(pid=6953)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=6947)[0m 35it [00:00, 158.29it/s]
+[2m[36m(pid=6958)[0m 215it [00:01, 193.48it/s]
+[2m[36m(pid=6956)[0m 207it [00:01, 176.81it/s]
+[2m[36m(pid=6954)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=6950)[0m 126it [00:00, 235.35it/s]
+[2m[36m(pid=6951)[0m 204it [00:01, 178.83it/s]
+[2m[36m(pid=6953)[0m 
+[2m[36m(pid=6947)[0m 60it [00:00, 174.82it/s]
+[2m[36m(pid=6955)[0m 215it [00:00, 196.43it/s]
+[2m[36m(pid=6958)[0m 243it [00:01, 211.99it/s]
+[2m[36m(pid=6956)[0m 231it [00:01, 191.34it/s]
+[2m[36m(pid=6954)[0m 17it [00:00, 169.26it/s]
+[2m[36m(pid=6950)[0m 151it [00:00, 235.87it/s]
+[2m[36m(pid=6951)[0m 235it [00:01, 203.42it/s]
+[2m[36m(pid=6947)[0m 80it [00:00, 180.99it/s]
+[2m[36m(pid=6955)[0m 243it [00:01, 214.67it/s]
+[2m[36m(pid=6958)[0m 269it [00:01, 223.41it/s]
+[2m[36m(pid=6956)[0m 268it [00:01, 222.08it/s]
+[2m[36m(pid=6947)[0m 114it [00:00, 210.47it/s]
+[2m[36m(pid=6954)[0m 41it [00:00, 184.29it/s]
+[2m[36m(pid=6950)[0m 179it [00:00, 246.15it/s]
+[2m[36m(pid=6951)[0m 265it [00:01, 224.87it/s]
+[2m[36m(pid=6953)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=6955)[0m 280it [00:01, 245.27it/s]
+[2m[36m(pid=6958)[0m 302it [00:01, 246.10it/s]
+[2m[36m(pid=6956)[0m 297it [00:01, 237.91it/s]
+[2m[36m(pid=6947)[0m 143it [00:00, 229.06it/s]
+[2m[36m(pid=6954)[0m 62it [00:00, 188.49it/s]
+[2m[36m(pid=6951)[0m 298it [00:01, 247.96it/s]
+[2m[36m(pid=6953)[0m 12it [00:00, 113.78it/s]
+[2m[36m(pid=6955)[0m 309it [00:01, 256.94it/s]
+[2m[36m(pid=6950)[0m 206it [00:00, 200.90it/s]
+[2m[36m(pid=6958)[0m 333it [00:01, 259.98it/s]
+[2m[36m(pid=6956)[0m 327it [00:01, 251.75it/s]
+[2m[36m(pid=6947)[0m 170it [00:00, 239.02it/s]
+[2m[36m(pid=6954)[0m 82it [00:00, 190.66it/s]
+[2m[36m(pid=6951)[0m 327it [00:01, 258.77it/s]
+[2m[36m(pid=6955)[0m 344it [00:01, 276.98it/s]
+[2m[36m(pid=6953)[0m 35it [00:00, 133.33it/s]
+[2m[36m(pid=6950)[0m 239it [00:01, 226.21it/s]
+[2m[36m(pid=6958)[0m 362it [00:01, 267.09it/s]
+[2m[36m(pid=6956)[0m 359it [00:01, 268.49it/s]
+[2m[36m(pid=6947)[0m 200it [00:00, 253.11it/s]
+[2m[36m(pid=6954)[0m 110it [00:00, 208.57it/s]
+[2m[36m(pid=6955)[0m 375it [00:01, 285.10it/s]
+[2m[36m(pid=6951)[0m 358it [00:01, 271.32it/s]
+[2m[36m(pid=6953)[0m 58it [00:00, 152.00it/s]
+[2m[36m(pid=6950)[0m 267it [00:01, 239.78it/s]
+[2m[36m(pid=6958)[0m 393it [00:01, 278.01it/s]
+[2m[36m(pid=6953)[0m 83it [00:00, 171.51it/s]
+[2m[36m(pid=6956)[0m 389it [00:01, 274.56it/s]
+[2m[36m(pid=6954)[0m 140it [00:00, 224.54it/s]
+[2m[36m(pid=6955)[0m 406it [00:01, 288.16it/s]
+[2m[36m(pid=6951)[0m 391it [00:01, 280.25it/s]
+[2m[36m(pid=6950)[0m 294it [00:01, 247.59it/s]
+[2m[36m(pid=6958)[0m 428it [00:01, 295.51it/s]
+[2m[36m(pid=6953)[0m 109it [00:00, 189.64it/s]
+[2m[36m(pid=6956)[0m 421it [00:01, 280.83it/s]
+[2m[36m(pid=6947)[0m 226it [00:00, 208.59it/s]
+[2m[36m(pid=6954)[0m 172it [00:00, 245.56it/s]
+[2m[36m(pid=6955)[0m 442it [00:01, 303.56it/s]
+[2m[36m(pid=6951)[0m 424it [00:01, 293.16it/s]
+[2m[36m(pid=6950)[0m 323it [00:01, 256.71it/s]
+[2m[36m(pid=6958)[0m 459it [00:01, 298.60it/s]
+[2m[36m(pid=6953)[0m 141it [00:00, 214.68it/s]
+[2m[36m(pid=6947)[0m 257it [00:01, 230.43it/s]
+[2m[36m(pid=6955)[0m 476it [00:01, 309.80it/s]
+[2m[36m(pid=6950)[0m 350it [00:01, 251.06it/s]
+[2m[36m(pid=6953)[0m 172it [00:00, 236.35it/s]
+[2m[36m(pid=6956)[0m 451it [00:01, 220.83it/s]
+[2m[36m(pid=6947)[0m 282it [00:01, 228.22it/s]
+[2m[36m(pid=6954)[0m 204it [00:00, 208.10it/s]
+[2m[36m(pid=6951)[0m 460it [00:01, 248.23it/s]
+[2m[36m(pid=6950)[0m 381it [00:01, 262.62it/s]
+[2m[36m(pid=6958)[0m 490it [00:02, 224.44it/s]
+[2m[36m(pid=6953)[0m 199it [00:00, 244.39it/s]
+[2m[36m(pid=6956)[0m 486it [00:02, 248.24it/s]
+[2m[36m(pid=6947)[0m 316it [00:01, 252.82it/s]
+[2m[36m(pid=6954)[0m 234it [00:01, 227.45it/s]
+[2m[36m(pid=6951)[0m 494it [00:02, 270.05it/s]
+[2m[36m(pid=6955)[0m 508it [00:01, 232.77it/s]
+[2m[36m(pid=6950)[0m 415it [00:01, 279.57it/s]
+[2m[36m(pid=6958)[0m 521it [00:02, 244.02it/s]
+[2m[36m(pid=6956)[0m 519it [00:02, 265.92it/s]
+[2m[36m(pid=6947)[0m 352it [00:01, 276.99it/s]
+[2m[36m(pid=6954)[0m 271it [00:01, 255.47it/s]
+[2m[36m(pid=6955)[0m 539it [00:02, 251.37it/s]
+[2m[36m(pid=6951)[0m 525it [00:02, 279.79it/s]
+[2m[36m(pid=6950)[0m 451it [00:01, 299.38it/s]
+[2m[36m(pid=6951)[0m 555it [00:02, 284.85it/s]
+[2m[36m(pid=6958)[0m 555it [00:02, 264.97it/s]
+[2m[36m(pid=6953)[0m 225it [00:01, 193.75it/s]
+[2m[36m(pid=6956)[0m 549it [00:02, 274.01it/s]
+[2m[36m(pid=6947)[0m 389it [00:01, 298.35it/s]
+[2m[36m(pid=6954)[0m 301it [00:01, 266.70it/s]
+[2m[36m(pid=6955)[0m 568it [00:02, 259.49it/s]
+[2m[36m(pid=6951)[0m 588it [00:02, 296.39it/s]
+[2m[36m(pid=6958)[0m 585it [00:02, 273.63it/s]
+[2m[36m(pid=6953)[0m 262it [00:01, 224.76it/s]
+[2m[36m(pid=6956)[0m 579it [00:02, 271.05it/s]
+[2m[36m(pid=6947)[0m 421it [00:01, 277.20it/s]
+[2m[36m(pid=6954)[0m 331it [00:01, 272.80it/s]
+[2m[36m(pid=6955)[0m 601it [00:02, 275.03it/s]
+[2m[36m(pid=6950)[0m 482it [00:01, 234.00it/s]
+[2m[36m(pid=6951)[0m 619it [00:02, 293.61it/s]
+[2m[36m(pid=6958)[0m 615it [00:02, 277.98it/s]
+[2m[36m(pid=6953)[0m 292it [00:01, 242.71it/s]
+[2m[36m(pid=6956)[0m 609it [00:02, 278.02it/s]
+[2m[36m(pid=6947)[0m 451it [00:01, 270.66it/s]
+[2m[36m(pid=6954)[0m 364it [00:01, 287.27it/s]
+[2m[36m(pid=6955)[0m 631it [00:02, 268.78it/s]
+[2m[36m(pid=6950)[0m 512it [00:02, 248.25it/s]
+[2m[36m(pid=6951)[0m 652it [00:02, 302.87it/s]
+[2m[36m(pid=6958)[0m 645it [00:02, 279.19it/s]
+[2m[36m(pid=6953)[0m 320it [00:01, 252.36it/s]
+[2m[36m(pid=6956)[0m 642it [00:02, 290.67it/s]
+[2m[36m(pid=6954)[0m 394it [00:01, 281.37it/s]
+[2m[36m(pid=6955)[0m 666it [00:02, 288.05it/s]
+[2m[36m(pid=6950)[0m 545it [00:02, 267.26it/s]
+[2m[36m(pid=6958)[0m 675it [00:02, 284.90it/s]
+[2m[36m(pid=6953)[0m 350it [00:01, 260.78it/s]
+[2m[36m(pid=6956)[0m 674it [00:02, 298.87it/s]
+[2m[36m(pid=6947)[0m 480it [00:01, 209.33it/s]
+[2m[36m(pid=6954)[0m 423it [00:01, 282.63it/s]
+[2m[36m(pid=6951)[0m 692it [00:02, 320.15it/s]
+[2m[36m(pid=6955)[0m 702it [00:02, 302.96it/s]
+[2m[36m(pid=6950)[0m 581it [00:02, 287.55it/s]
+[2m[36m(pid=6958)[0m 713it [00:02, 306.84it/s]
+[2m[36m(pid=6953)[0m 383it [00:01, 277.18it/s]
+[2m[36m(pid=6947)[0m 510it [00:02, 229.51it/s]
+[2m[36m(pid=6954)[0m 461it [00:01, 306.07it/s]
+[2m[36m(pid=6955)[0m 735it [00:02, 310.38it/s]
+[2m[36m(pid=6950)[0m 613it [00:02, 296.36it/s]
+[2m[36m(pid=6953)[0m 413it [00:01, 277.43it/s]
+[2m[36m(pid=6956)[0m 708it [00:02, 232.49it/s]
+[2m[36m(pid=6947)[0m 538it [00:02, 238.59it/s]
+[2m[36m(pid=6951)[0m 728it [00:02, 247.89it/s]
+[2m[36m(pid=6950)[0m 644it [00:02, 300.17it/s]
+[2m[36m(pid=6958)[0m 745it [00:03, 223.42it/s]
+[2m[36m(pid=6953)[0m 444it [00:01, 286.34it/s]
+[2m[36m(pid=6956)[0m 735it [00:03, 241.94it/s]
+[2m[36m(pid=6954)[0m 493it [00:01, 233.50it/s]
+[2m[36m(pid=6951)[0m 765it [00:02, 274.24it/s]
+[2m[36m(pid=6947)[0m 575it [00:02, 262.62it/s]
+[2m[36m(pid=6955)[0m 767it [00:02, 230.24it/s]
+[2m[36m(pid=6950)[0m 677it [00:02, 306.75it/s]
+[2m[36m(pid=6958)[0m 773it [00:03, 236.29it/s]
+[2m[36m(pid=6956)[0m 762it [00:03, 248.54it/s]
+[2m[36m(pid=6954)[0m 520it [00:02, 237.06it/s]
+[2m[36m(pid=6951)[0m 797it [00:03, 286.17it/s]
+[2m[36m(pid=6947)[0m 604it [00:02, 262.31it/s]
+[2m[36m(pid=6955)[0m 801it [00:03, 253.26it/s]
+[2m[36m(pid=6950)[0m 717it [00:02, 325.38it/s]
+[2m[36m(pid=6958)[0m 804it [00:03, 252.52it/s]
+[2m[36m(pid=6953)[0m 476it [00:01, 238.07it/s]
+[2m[36m(pid=6956)[0m 791it [00:03, 259.43it/s]
+[2m[36m(pid=6954)[0m 555it [00:02, 262.13it/s]
+[2m[36m(pid=6951)[0m 828it [00:03, 280.18it/s]
+[2m[36m(pid=6953)[0m 502it [00:02, 243.53it/s]
+[2m[36m(pid=6947)[0m 632it [00:02, 254.14it/s]
+[2m[36m(pid=6955)[0m 832it [00:03, 267.34it/s]
+[2m[36m(pid=6958)[0m 832it [00:03, 254.73it/s]
+[2m[36m(pid=6956)[0m 823it [00:03, 272.11it/s]
+[2m[36m(pid=6954)[0m 590it [00:02, 282.47it/s]
+[2m[36m(pid=6951)[0m 858it [00:03, 282.94it/s]
+[2m[36m(pid=6947)[0m 663it [00:02, 265.77it/s]
+[2m[36m(pid=6955)[0m 862it [00:03, 262.81it/s]
+[2m[36m(pid=6950)[0m 751it [00:02, 240.06it/s]
+[2m[36m(pid=6958)[0m 862it [00:03, 264.72it/s]
+[2m[36m(pid=6953)[0m 538it [00:02, 265.55it/s]
+[2m[36m(pid=6956)[0m 855it [00:03, 284.75it/s]
+[2m[36m(pid=6954)[0m 621it [00:02, 271.77it/s]
+[2m[36m(pid=6951)[0m 891it [00:03, 288.32it/s]
+[2m[36m(pid=6953)[0m 574it [00:02, 287.46it/s]
+[2m[36m(pid=6955)[0m 900it [00:03, 286.56it/s]
+[2m[36m(pid=6950)[0m 793it [00:02, 274.80it/s]
+[2m[36m(pid=6958)[0m 903it [00:03, 295.87it/s]
+[2m[36m(pid=6956)[0m 891it [00:03, 302.55it/s]
+[2m[36m(pid=6954)[0m 650it [00:02, 268.75it/s]
+[2m[36m(pid=6951)[0m 923it [00:03, 294.50it/s]
+[2m[36m(pid=6953)[0m 609it [00:02, 303.59it/s]
+[2m[36m(pid=6947)[0m 697it [00:02, 218.42it/s]
+[2m[36m(pid=6955)[0m 931it [00:03, 288.16it/s]
+[2m[36m(pid=6950)[0m 828it [00:03, 292.98it/s]
+[2m[36m(pid=6958)[0m 936it [00:03, 304.18it/s]
+[2m[36m(pid=6956)[0m 928it [00:03, 317.16it/s]
+[2m[36m(pid=6954)[0m 678it [00:02, 271.10it/s]
+[2m[36m(pid=6951)[0m 954it [00:03, 288.43it/s]
+[2m[36m(pid=6953)[0m 641it [00:02, 301.84it/s]
+[2m[36m(pid=6947)[0m 729it [00:02, 241.27it/s]
+[2m[36m(pid=6955)[0m 973it [00:03, 317.44it/s]
+[2m[36m(pid=6950)[0m 863it [00:03, 307.60it/s]
+[2m[36m(pid=6958)[0m 973it [00:03, 320.74it/s]
+[2m[36m(pid=6956)[0m 962it [00:03, 322.65it/s]
+[2m[36m(pid=6951)[0m 994it [00:03, 311.48it/s]
+[2m[36m(pid=6947)[0m 770it [00:03, 270.58it/s]
+[2m[36m(pid=6955)[0m 1007it [00:03, 319.93it/s]
+[2m[36m(pid=6950)[0m 903it [00:03, 330.26it/s]
+[2m[36m(pid=6958)[0m 1007it [00:03, 326.23it/s]
+[2m[36m(pid=6953)[0m 675it [00:02, 308.30it/s]
+[2m[36m(pid=6956)[0m 995it [00:03, 310.72it/s]
+[2m[36m(pid=6954)[0m 706it [00:02, 207.29it/s]
+[2m[36m(pid=6951)[0m 1028it [00:03, 310.88it/s]
+[2m[36m(pid=6953)[0m 713it [00:02, 326.65it/s]
+[2m[36m(pid=6947)[0m 805it [00:03, 289.61it/s]
+[2m[36m(pid=6955)[0m 1042it [00:03, 326.79it/s]
+[2m[36m(pid=6950)[0m 939it [00:03, 322.88it/s]
+[2m[36m(pid=6958)[0m 1041it [00:03, 328.85it/s]
+[2m[36m(pid=6956)[0m 1028it [00:03, 313.82it/s]
+[2m[36m(pid=6954)[0m 745it [00:02, 240.56it/s]
+[2m[36m(pid=6947)[0m 837it [00:03, 292.11it/s]
+[2m[36m(pid=6955)[0m 1076it [00:03, 314.96it/s]
+[2m[36m(pid=6950)[0m 978it [00:03, 340.20it/s]
+[2m[36m(pid=6954)[0m 774it [00:03, 245.92it/s]
+[2m[36m(pid=6947)[0m 871it [00:03, 301.40it/s]
+[2m[36m(pid=6951)[0m 1060it [00:04, 219.82it/s]
+[2m[36m(pid=6953)[0m 747it [00:02, 238.36it/s]
+[2m[36m(pid=6954)[0m 802it [00:03, 254.62it/s]
+[2m[36m(pid=6955)[0m 1109it [00:03, 306.07it/s]
+[2m[36m(pid=6950)[0m 1014it [00:03, 308.94it/s]
+[2m[36m(pid=6958)[0m 1075it [00:04, 231.93it/s]
+[2m[36m(pid=6956)[0m 1060it [00:04, 217.22it/s]
+[2m[36m(pid=6947)[0m 907it [00:03, 316.74it/s]
+[2m[36m(pid=6951)[0m 1094it [00:04, 245.74it/s]
+[2m[36m(pid=6953)[0m 776it [00:02, 251.28it/s]
+[2m[36m(pid=6954)[0m 835it [00:03, 271.88it/s]
+[2m[36m(pid=6950)[0m 1047it [00:03, 293.00it/s]
+[2m[36m(pid=6958)[0m 1113it [00:04, 262.19it/s]
+[2m[36m(pid=6956)[0m 1090it [00:04, 236.01it/s]
+[2m[36m(pid=6947)[0m 940it [00:03, 315.39it/s]
+[2m[36m(pid=6951)[0m 1127it [00:04, 263.57it/s]
+[2m[36m(pid=6953)[0m 806it [00:03, 263.90it/s]
+[2m[36m(pid=6954)[0m 873it [00:03, 296.34it/s]
+[2m[36m(pid=6955)[0m 1141it [00:04, 221.76it/s]
+[2m[36m(pid=6950)[0m 1081it [00:03, 304.94it/s]
+[2m[36m(pid=6958)[0m 1148it [00:04, 282.28it/s]
+[2m[36m(pid=6956)[0m 1121it [00:04, 251.03it/s]
+[2m[36m(pid=6947)[0m 978it [00:03, 330.53it/s]
+[2m[36m(pid=6951)[0m 1163it [00:04, 286.12it/s]
+[2m[36m(pid=6953)[0m 841it [00:03, 284.85it/s]
+[2m[36m(pid=6954)[0m 907it [00:03, 302.12it/s]
+[2m[36m(pid=6955)[0m 1177it [00:04, 250.09it/s]
+[2m[36m(pid=6958)[0m 1180it [00:04, 291.53it/s]
+[2m[36m(pid=6956)[0m 1155it [00:04, 270.68it/s]
+[2m[36m(pid=6947)[0m 1012it [00:03, 329.27it/s]
+[2m[36m(pid=6951)[0m 1198it [00:04, 302.47it/s]
+[2m[36m(pid=6953)[0m 874it [00:03, 296.09it/s]
+[2m[36m(pid=6954)[0m 939it [00:03, 302.97it/s]
+[2m[36m(pid=6955)[0m 1207it [00:04, 259.17it/s]
+[2m[36m(pid=6950)[0m 1113it [00:04, 228.51it/s]
+[2m[36m(pid=6958)[0m 1217it [00:04, 310.42it/s]
+[2m[36m(pid=6956)[0m 1185it [00:04, 275.33it/s]
+[2m[36m(pid=6951)[0m 1241it [00:04, 331.07it/s]
+[2m[36m(pid=6953)[0m 906it [00:03, 302.10it/s]
+[2m[36m(pid=6954)[0m 972it [00:03, 309.32it/s]
+[2m[36m(pid=6955)[0m 1240it [00:04, 270.73it/s]
+[2m[36m(pid=6950)[0m 1143it [00:04, 245.24it/s]
+[2m[36m(pid=6958)[0m 1252it [00:04, 320.67it/s]
+[2m[36m(pid=6956)[0m 1219it [00:04, 291.93it/s]
+[2m[36m(pid=6953)[0m 940it [00:03, 306.63it/s]
+[2m[36m(pid=6947)[0m 1046it [00:04, 226.89it/s]
+[2m[36m(pid=6954)[0m 1004it [00:03, 304.83it/s]
+[2m[36m(pid=6955)[0m 1272it [00:04, 282.18it/s]
+[2m[36m(pid=6950)[0m 1178it [00:04, 268.45it/s]
+[2m[36m(pid=6951)[0m 1277it [00:04, 305.17it/s]
+[2m[36m(pid=6958)[0m 1286it [00:04, 314.41it/s]
+[2m[36m(pid=6956)[0m 1255it [00:04, 309.34it/s]
+[2m[36m(pid=6953)[0m 975it [00:03, 318.28it/s]
+[2m[36m(pid=6947)[0m 1074it [00:04, 233.97it/s]
+[2m[36m(pid=6954)[0m 1036it [00:03, 308.71it/s]
+[2m[36m(pid=6955)[0m 1309it [00:04, 302.26it/s]
+[2m[36m(pid=6950)[0m 1210it [00:04, 281.26it/s]
+[2m[36m(pid=6951)[0m 1311it [00:04, 308.13it/s]
+[2m[36m(pid=6958)[0m 1325it [00:04, 327.73it/s]
+[2m[36m(pid=6956)[0m 1288it [00:04, 303.14it/s]
+[2m[36m(pid=6953)[0m 1008it [00:03, 303.64it/s]
+[2m[36m(pid=6947)[0m 1105it [00:04, 251.25it/s]
+[2m[36m(pid=6955)[0m 1345it [00:04, 316.68it/s]
+[2m[36m(pid=6950)[0m 1241it [00:04, 287.54it/s]
+[2m[36m(pid=6951)[0m 1345it [00:04, 316.66it/s]
+[2m[36m(pid=6958)[0m 1359it [00:05, 324.49it/s]
+[2m[36m(pid=6956)[0m 1329it [00:05, 327.12it/s]
+[2m[36m(pid=6951)[0m 1385it [00:05, 337.13it/s]
+[2m[36m(pid=6953)[0m 1044it [00:03, 317.69it/s]
+[2m[36m(pid=6947)[0m 1141it [00:04, 274.85it/s]
+[2m[36m(pid=6954)[0m 1068it [00:04, 234.01it/s]
+[2m[36m(pid=6955)[0m 1386it [00:04, 338.65it/s]
+[2m[36m(pid=6950)[0m 1275it [00:04, 299.27it/s]
+[2m[36m(pid=6958)[0m 1393it [00:05, 322.23it/s]
+[2m[36m(pid=6956)[0m 1370it [00:05, 347.78it/s]
+[2m[36m(pid=6951)[0m 1422it [00:05, 346.07it/s]
+[2m[36m(pid=6947)[0m 1176it [00:04, 292.53it/s]
+[2m[36m(pid=6954)[0m 1099it [00:04, 249.75it/s]
+[2m[36m(pid=6955)[0m 1424it [00:05, 349.04it/s]
+[2m[36m(pid=6950)[0m 1310it [00:04, 312.62it/s]
+[2m[36m(pid=6958)[0m 1428it [00:05, 324.52it/s]
+[2m[36m(pid=6956)[0m 1406it [00:05, 341.97it/s]
+[2m[36m(pid=6953)[0m 1077it [00:04, 230.11it/s]
+[2m[36m(pid=6947)[0m 1208it [00:04, 292.37it/s]
+[2m[36m(pid=6954)[0m 1129it [00:04, 261.67it/s]
+[2m[36m(pid=6955)[0m 1460it [00:05, 341.96it/s]
+[2m[36m(pid=6951)[0m 1458it [00:05, 337.57it/s]
+[2m[36m(pid=6958)[0m 1467it [00:05, 340.30it/s]
+[2m[36m(pid=6950)[0m 1343it [00:04, 294.58it/s]
+[2m[36m(pid=6953)[0m 1105it [00:04, 241.29it/s]
+[2m[36m(pid=6947)[0m 1239it [00:04, 291.05it/s]
+[2m[36m(pid=6954)[0m 1169it [00:04, 291.03it/s]
+[2m[36m(pid=6955)[0m 1495it [00:05, 302.13it/s]
+[2m[36m(pid=6950)[0m 1374it [00:04, 287.74it/s]
+[2m[36m(pid=6953)[0m 1132it [00:04, 244.26it/s]
+[2m[36m(pid=6956)[0m 1442it [00:05, 223.35it/s]
+[2m[36m(pid=6947)[0m 1270it [00:04, 289.82it/s]
+[2m[36m(pid=6954)[0m 1201it [00:04, 284.02it/s]
+[2m[36m(pid=6950)[0m 1406it [00:05, 295.44it/s]
+[2m[36m(pid=6951)[0m 1493it [00:05, 232.28it/s]
+[2m[36m(pid=6958)[0m 1502it [00:05, 229.31it/s]
+[2m[36m(pid=6953)[0m 1160it [00:04, 253.94it/s]
+[2m[36m(pid=6956)[0m 1471it [00:05, 238.69it/s]
+[2m[36m(pid=6947)[0m 1300it [00:04, 277.43it/s]
+[2m[36m(pid=6954)[0m 1234it [00:04, 295.29it/s]
+[2m[36m(pid=6950)[0m 1442it [00:05, 311.39it/s]
+[2m[36m(pid=6951)[0m 1529it [00:05, 255.94it/s]
+[2m[36m(pid=6958)[0m 1542it [00:05, 262.01it/s]
+[2m[36m(pid=6953)[0m 1194it [00:04, 274.66it/s]
+[2m[36m(pid=6955)[0m 1527it [00:05, 209.23it/s]
+[2m[36m(pid=6956)[0m 1512it [00:05, 272.21it/s]
+[2m[36m(pid=6947)[0m 1341it [00:05, 306.64it/s]
+[2m[36m(pid=6954)[0m 1265it [00:04, 296.53it/s]
+[2m[36m(pid=6950)[0m 1475it [00:05, 314.63it/s]
+[2m[36m(pid=6951)[0m 1564it [00:05, 276.32it/s]
+[2m[36m(pid=6958)[0m 1577it [00:05, 282.35it/s]
+[2m[36m(pid=6953)[0m 1234it [00:04, 302.90it/s]
+[2m[36m(pid=6955)[0m 1564it [00:05, 240.21it/s]
+[2m[36m(pid=6956)[0m 1544it [00:05, 279.32it/s]
+[2m[36m(pid=6947)[0m 1374it [00:05, 308.88it/s]
+[2m[36m(pid=6954)[0m 1296it [00:04, 294.00it/s]
+[2m[36m(pid=6951)[0m 1599it [00:05, 291.89it/s]
+[2m[36m(pid=6958)[0m 1611it [00:05, 296.13it/s]
+[2m[36m(pid=6953)[0m 1269it [00:04, 311.75it/s]
+[2m[36m(pid=6955)[0m 1603it [00:05, 270.32it/s]
+[2m[36m(pid=6956)[0m 1576it [00:05, 279.67it/s]
+[2m[36m(pid=6947)[0m 1406it [00:05, 309.26it/s]
+[2m[36m(pid=6954)[0m 1335it [00:04, 316.97it/s]
+[2m[36m(pid=6950)[0m 1507it [00:05, 228.59it/s]
+[2m[36m(pid=6951)[0m 1636it [00:05, 311.05it/s]
+[2m[36m(pid=6958)[0m 1646it [00:06, 309.77it/s]
+[2m[36m(pid=6953)[0m 1303it [00:04, 316.39it/s]
+[2m[36m(pid=6955)[0m 1639it [00:05, 291.33it/s]
+[2m[36m(pid=6956)[0m 1613it [00:06, 300.53it/s]
+[2m[36m(pid=6954)[0m 1372it [00:05, 328.79it/s]
+[2m[36m(pid=6950)[0m 1540it [00:05, 248.81it/s]
+[2m[36m(pid=6951)[0m 1670it [00:06, 315.95it/s]
+[2m[36m(pid=6958)[0m 1680it [00:06, 309.93it/s]
+[2m[36m(pid=6953)[0m 1336it [00:04, 310.80it/s]
+[2m[36m(pid=6955)[0m 1672it [00:05, 294.82it/s]
+[2m[36m(pid=6956)[0m 1648it [00:06, 312.25it/s]
+[2m[36m(pid=6954)[0m 1406it [00:05, 327.36it/s]
+[2m[36m(pid=6950)[0m 1573it [00:05, 268.45it/s]
+[2m[36m(pid=6951)[0m 1709it [00:06, 333.99it/s]
+[2m[36m(pid=6947)[0m 1438it [00:05, 219.45it/s]
+[2m[36m(pid=6958)[0m 1713it [00:06, 314.26it/s]
+[2m[36m(pid=6953)[0m 1372it [00:04, 322.87it/s]
+[2m[36m(pid=6955)[0m 1712it [00:06, 316.81it/s]
+[2m[36m(pid=6956)[0m 1681it [00:06, 311.93it/s]
+[2m[36m(pid=6947)[0m 1470it [00:05, 240.31it/s]
+[2m[36m(pid=6950)[0m 1614it [00:05, 299.03it/s]
+[2m[36m(pid=6951)[0m 1746it [00:06, 340.66it/s]
+[2m[36m(pid=6958)[0m 1746it [00:06, 299.50it/s]
+[2m[36m(pid=6953)[0m 1410it [00:05, 337.26it/s]
+[2m[36m(pid=6955)[0m 1747it [00:06, 306.81it/s]
+[2m[36m(pid=6951)[0m 1784it [00:06, 351.28it/s]
+[2m[36m(pid=6956)[0m 1715it [00:06, 318.63it/s]
+[2m[36m(pid=6954)[0m 1441it [00:05, 232.52it/s]
+[2m[36m(pid=6950)[0m 1647it [00:05, 297.77it/s]
+[2m[36m(pid=6958)[0m 1777it [00:06, 299.65it/s]
+[2m[36m(pid=6953)[0m 1451it [00:05, 352.98it/s]
+[2m[36m(pid=6947)[0m 1498it [00:05, 243.39it/s]
+[2m[36m(pid=6955)[0m 1782it [00:06, 316.64it/s]
+[2m[36m(pid=6951)[0m 1823it [00:06, 361.91it/s]
+[2m[36m(pid=6956)[0m 1748it [00:06, 320.40it/s]
+[2m[36m(pid=6954)[0m 1481it [00:05, 265.28it/s]
+[2m[36m(pid=6950)[0m 1686it [00:06, 318.25it/s]
+[2m[36m(pid=6958)[0m 1819it [00:06, 325.57it/s]
+[2m[36m(pid=6947)[0m 1534it [00:05, 268.77it/s]
+[2m[36m(pid=6955)[0m 1822it [00:06, 337.50it/s]
+[2m[36m(pid=6951)[0m 1860it [00:06, 355.98it/s]
+[2m[36m(pid=6956)[0m 1784it [00:06, 329.05it/s]
+[2m[36m(pid=6954)[0m 1518it [00:05, 288.85it/s]
+[2m[36m(pid=6950)[0m 1723it [00:06, 327.42it/s]
+[2m[36m(pid=6958)[0m 1858it [00:06, 341.94it/s]
+[2m[36m(pid=6947)[0m 1573it [00:05, 295.96it/s]
+[2m[36m(pid=6955)[0m 1866it [00:06, 362.54it/s]
+[2m[36m(pid=6953)[0m 1487it [00:05, 262.55it/s]
+[2m[36m(pid=6956)[0m 1823it [00:06, 344.53it/s]
+[2m[36m(pid=6947)[0m 1619it [00:05, 330.99it/s]
+[2m[36m(pid=6954)[0m 1566it [00:05, 327.32it/s]
+[2m[36m(pid=6950)[0m 1765it [00:06, 349.24it/s]
+[2m[36m(pid=6951)[0m 1897it [00:06, 353.58it/s]
+[2m[36m(pid=6955)[0m 1904it [00:06, 354.71it/s]
+[2m[36m(pid=6951)[0m 1936it [00:06, 361.75it/s]
+[2m[36m(pid=6953)[0m 1526it [00:05, 290.84it/s]
+[2m[36m(pid=6958)[0m 1894it [00:06, 327.54it/s]
+[2m[36m(pid=6956)[0m 1861it [00:06, 352.43it/s]
+[2m[36m(pid=6947)[0m 1658it [00:06, 345.30it/s]
+[2m[36m(pid=6950)[0m 1804it [00:06, 360.02it/s]
+[2m[36m(pid=6954)[0m 1604it [00:05, 319.82it/s]
+[2m[36m(pid=6955)[0m 1942it [00:06, 361.79it/s]
+[2m[36m(pid=6951)[0m 1981it [00:06, 383.71it/s]
+[2m[36m(pid=6958)[0m 1929it [00:06, 333.86it/s]
+[2m[36m(pid=6953)[0m 1563it [00:05, 305.75it/s]
+[2m[36m(pid=6956)[0m 1897it [00:06, 344.00it/s]
+[2m[36m(pid=6950)[0m 1842it [00:06, 361.09it/s]
+[2m[36m(pid=6947)[0m 1695it [00:06, 328.91it/s]
+[2m[36m(pid=6954)[0m 1640it [00:05, 311.94it/s]
+[2m[36m(pid=6958)[0m 1965it [00:06, 340.89it/s]
+[2m[36m(pid=6953)[0m 1597it [00:05, 292.10it/s]
+[2m[36m(pid=6956)[0m 1932it [00:06, 341.99it/s]
+[2m[36m(pid=6955)[0m 1979it [00:06, 347.50it/s]
+[2m[36m(pid=6950)[0m 1881it [00:06, 368.83it/s]
+[2m[36m(pid=6947)[0m 1730it [00:06, 327.29it/s]
+[2m[36m(pid=6954)[0m 1674it [00:06, 315.98it/s]
+[2m[36m(pid=6953)[0m 1630it [00:05, 301.79it/s]
+[2m[36m(pid=6955)[0m 2015it [00:06, 339.91it/s]
+[2m[36m(pid=6950)[0m 1919it [00:06, 355.73it/s]
+[2m[36m(pid=6947)[0m 1767it [00:06, 338.60it/s]
+[2m[36m(pid=6954)[0m 1708it [00:06, 313.01it/s]
+[2m[36m(pid=6951)[0m 2020it [00:07, 247.02it/s]
+[2m[36m(pid=6953)[0m 1665it [00:05, 314.50it/s]
+[2m[36m(pid=6950)[0m 1956it [00:06, 357.50it/s]
+[2m[36m(pid=6958)[0m 2000it [00:07, 233.66it/s]
+[2m[36m(pid=6956)[0m 1967it [00:07, 235.18it/s]
+[2m[36m(pid=6947)[0m 1802it [00:06, 324.03it/s]
+[2m[36m(pid=6954)[0m 1741it [00:06, 317.45it/s]
+[2m[36m(pid=6951)[0m 2055it [00:07, 269.03it/s]
+[2m[36m(pid=6953)[0m 1698it [00:06, 306.94it/s]
+[2m[36m(pid=6958)[0m 2038it [00:07, 260.87it/s]
+[2m[36m(pid=6956)[0m 2005it [00:07, 264.29it/s]
+[2m[36m(pid=6954)[0m 1779it [00:06, 332.96it/s]
+[2m[36m(pid=6955)[0m 2050it [00:07, 236.72it/s]
+[2m[36m(pid=6951)[0m 2092it [00:07, 290.50it/s]
+[2m[36m(pid=6958)[0m 2072it [00:07, 279.76it/s]
+[2m[36m(pid=6953)[0m 1730it [00:06, 307.96it/s]
+[2m[36m(pid=6947)[0m 1836it [00:06, 307.60it/s]
+[2m[36m(pid=6956)[0m 2041it [00:07, 284.81it/s]
+[2m[36m(pid=6947)[0m 1877it [00:06, 331.98it/s]
+[2m[36m(pid=6954)[0m 1817it [00:06, 345.07it/s]
+[2m[36m(pid=6955)[0m 2079it [00:07, 236.77it/s]
+[2m[36m(pid=6951)[0m 2126it [00:07, 303.70it/s]
+[2m[36m(pid=6950)[0m 1993it [00:07, 240.56it/s]
+[2m[36m(pid=6958)[0m 2105it [00:07, 291.97it/s]
+[2m[36m(pid=6953)[0m 1766it [00:06, 320.99it/s]
+[2m[36m(pid=6956)[0m 2078it [00:07, 305.73it/s]
+[2m[36m(pid=6954)[0m 1855it [00:06, 354.55it/s]
+[2m[36m(pid=6955)[0m 2115it [00:07, 261.17it/s]
+[2m[36m(pid=6950)[0m 2036it [00:07, 277.03it/s]
+[2m[36m(pid=6951)[0m 2160it [00:07, 300.34it/s]
+[2m[36m(pid=6958)[0m 2142it [00:07, 310.28it/s]
+[2m[36m(pid=6953)[0m 1801it [00:06, 327.64it/s]
+[2m[36m(pid=6956)[0m 2120it [00:07, 331.90it/s]
+[2m[36m(pid=6954)[0m 1892it [00:06, 357.49it/s]
+[2m[36m(pid=6955)[0m 2145it [00:07, 263.23it/s]
+[2m[36m(pid=6951)[0m 2200it [00:07, 321.61it/s]
+[2m[36m(pid=6958)[0m 2177it [00:07, 320.00it/s]
+[2m[36m(pid=6953)[0m 1835it [00:06, 319.47it/s]
+[2m[36m(pid=6947)[0m 1912it [00:07, 230.09it/s]
+[2m[36m(pid=6950)[0m 2070it [00:07, 264.93it/s]
+[2m[36m(pid=6956)[0m 2156it [00:07, 330.73it/s]
+[2m[36m(pid=6954)[0m 1929it [00:06, 353.34it/s]
+[2m[36m(pid=6955)[0m 2179it [00:07, 280.94it/s]
+[2m[36m(pid=6951)[0m 2235it [00:07, 328.57it/s]
+[2m[36m(pid=6958)[0m 2215it [00:07, 335.67it/s]
+[2m[36m(pid=6953)[0m 1868it [00:06, 315.45it/s]
+[2m[36m(pid=6947)[0m 1956it [00:07, 268.22it/s]
+[2m[36m(pid=6950)[0m 2103it [00:07, 279.55it/s]
+[2m[36m(pid=6956)[0m 2191it [00:07, 312.46it/s]
+[2m[36m(pid=6955)[0m 2215it [00:07, 296.85it/s]
+[2m[36m(pid=6951)[0m 2279it [00:07, 352.88it/s]
+[2m[36m(pid=6958)[0m 2256it [00:07, 353.21it/s]
+[2m[36m(pid=6953)[0m 1903it [00:06, 318.08it/s]
+[2m[36m(pid=6947)[0m 1993it [00:07, 292.21it/s]
+[2m[36m(pid=6950)[0m 2140it [00:07, 299.17it/s]
+[2m[36m(pid=6956)[0m 2225it [00:07, 319.10it/s]
+[2m[36m(pid=6955)[0m 2253it [00:07, 312.71it/s]
+[2m[36m(pid=6958)[0m 2296it [00:08, 363.90it/s]
+[2m[36m(pid=6947)[0m 2030it [00:07, 311.09it/s]
+[2m[36m(pid=6954)[0m 1965it [00:07, 235.93it/s]
+[2m[36m(pid=6950)[0m 2185it [00:07, 331.80it/s]
+[2m[36m(pid=6951)[0m 2316it [00:08, 328.64it/s]
+[2m[36m(pid=6956)[0m 2266it [00:08, 341.66it/s]
+[2m[36m(pid=6955)[0m 2286it [00:07, 314.24it/s]
+[2m[36m(pid=6954)[0m 2006it [00:07, 269.76it/s]
+[2m[36m(pid=6950)[0m 2225it [00:07, 348.27it/s]
+[2m[36m(pid=6951)[0m 2353it [00:08, 338.67it/s]
+[2m[36m(pid=6958)[0m 2334it [00:08, 349.90it/s]
+[2m[36m(pid=6953)[0m 1935it [00:06, 221.61it/s]
+[2m[36m(pid=6956)[0m 2302it [00:08, 339.15it/s]
+[2m[36m(pid=6947)[0m 2065it [00:07, 302.62it/s]
+[2m[36m(pid=6955)[0m 2319it [00:08, 311.91it/s]
+[2m[36m(pid=6954)[0m 2043it [00:07, 293.61it/s]
+[2m[36m(pid=6950)[0m 2264it [00:07, 357.66it/s]
+[2m[36m(pid=6951)[0m 2395it [00:08, 353.85it/s]
+[2m[36m(pid=6958)[0m 2370it [00:08, 334.02it/s]
+[2m[36m(pid=6953)[0m 1973it [00:07, 251.20it/s]
+[2m[36m(pid=6956)[0m 2343it [00:08, 354.92it/s]
+[2m[36m(pid=6947)[0m 2098it [00:07, 294.36it/s]
+[2m[36m(pid=6955)[0m 2353it [00:08, 316.94it/s]
+[2m[36m(pid=6954)[0m 2077it [00:07, 304.63it/s]
+[2m[36m(pid=6950)[0m 2302it [00:07, 348.89it/s]
+[2m[36m(pid=6951)[0m 2432it [00:08, 339.61it/s]
+[2m[36m(pid=6958)[0m 2405it [00:08, 336.92it/s]
+[2m[36m(pid=6953)[0m 2008it [00:07, 267.95it/s]
+[2m[36m(pid=6956)[0m 2380it [00:08, 354.89it/s]
+[2m[36m(pid=6947)[0m 2131it [00:07, 303.24it/s]
+[2m[36m(pid=6955)[0m 2388it [00:08, 325.69it/s]
+[2m[36m(pid=6954)[0m 2113it [00:07, 315.40it/s]
+[2m[36m(pid=6950)[0m 2339it [00:07, 349.21it/s]
+[2m[36m(pid=6951)[0m 2468it [00:08, 344.66it/s]
+[2m[36m(pid=6958)[0m 2448it [00:08, 359.48it/s]
+[2m[36m(pid=6953)[0m 2050it [00:07, 298.18it/s]
+[2m[36m(pid=6956)[0m 2419it [00:08, 363.13it/s]
+[2m[36m(pid=6947)[0m 2172it [00:07, 326.48it/s]
+[2m[36m(pid=6955)[0m 2421it [00:08, 319.43it/s]
+[2m[36m(pid=6954)[0m 2148it [00:07, 324.01it/s]
+[2m[36m(pid=6950)[0m 2386it [00:08, 377.60it/s]
+[2m[36m(pid=6951)[0m 2506it [00:08, 352.56it/s]
+[2m[36m(pid=6958)[0m 2486it [00:08, 363.17it/s]
+[2m[36m(pid=6953)[0m 2091it [00:07, 324.34it/s]
+[2m[36m(pid=6956)[0m 2460it [00:08, 375.18it/s]
+[2m[36m(pid=6947)[0m 2207it [00:07, 319.37it/s]
+[2m[36m(pid=6955)[0m 2460it [00:08, 334.25it/s]
+[2m[36m(pid=6954)[0m 2197it [00:07, 359.19it/s]
+[2m[36m(pid=6950)[0m 2426it [00:08, 376.19it/s]
+[2m[36m(pid=6951)[0m 2550it [00:08, 372.43it/s]
+[2m[36m(pid=6958)[0m 2523it [00:08, 363.69it/s]
+[2m[36m(pid=6953)[0m 2130it [00:07, 339.92it/s]
+[2m[36m(pid=6956)[0m 2502it [00:08, 386.94it/s]
+[2m[36m(pid=6947)[0m 2246it [00:07, 335.39it/s]
+[2m[36m(pid=6955)[0m 2494it [00:08, 333.98it/s]
+[2m[36m(pid=6954)[0m 2236it [00:07, 358.97it/s]
+[2m[36m(pid=6951)[0m 2588it [00:08, 369.75it/s]
+[2m[36m(pid=6958)[0m 2560it [00:08, 338.02it/s]
+[2m[36m(pid=6953)[0m 2167it [00:07, 342.01it/s]
+[2m[36m(pid=6956)[0m 2542it [00:08, 384.61it/s]
+[2m[36m(pid=6947)[0m 2281it [00:08, 333.93it/s]
+[2m[36m(pid=6955)[0m 2528it [00:08, 330.86it/s]
+[2m[36m(pid=6950)[0m 2465it [00:08, 348.74it/s]
+[2m[36m(pid=6958)[0m 2595it [00:08, 333.33it/s]
+[2m[36m(pid=6956)[0m 2581it [00:08, 358.65it/s]
+[2m[36m(pid=6947)[0m 2316it [00:08, 323.08it/s]
+[2m[36m(pid=6954)[0m 2274it [00:07, 340.50it/s]
+[2m[36m(pid=6955)[0m 2568it [00:08, 347.93it/s]
+[2m[36m(pid=6950)[0m 2503it [00:08, 357.11it/s]
+[2m[36m(pid=6953)[0m 2203it [00:07, 317.21it/s]
+[2m[36m(pid=6947)[0m 2353it [00:08, 333.61it/s]
+[2m[36m(pid=6954)[0m 2310it [00:08, 321.04it/s]
+[2m[36m(pid=6955)[0m 2606it [00:08, 354.19it/s]
+[2m[36m(pid=6950)[0m 2540it [00:08, 338.60it/s]
+[2m[36m(pid=6953)[0m 2240it [00:07, 329.52it/s]
+[2m[36m(pid=6951)[0m 2626it [00:09, 224.85it/s]
+[2m[36m(pid=6947)[0m 2391it [00:08, 344.45it/s]
+[2m[36m(pid=6954)[0m 2344it [00:08, 325.46it/s]
+[2m[36m(pid=6953)[0m 2275it [00:07, 332.04it/s]
+[2m[36m(pid=6950)[0m 2575it [00:08, 321.55it/s]
+[2m[36m(pid=6951)[0m 2661it [00:09, 247.32it/s]
+[2m[36m(pid=6958)[0m 2629it [00:09, 207.04it/s]
+[2m[36m(pid=6956)[0m 2618it [00:09, 227.25it/s]
+[2m[36m(pid=6947)[0m 2426it [00:08, 343.73it/s]
+[2m[36m(pid=6953)[0m 2324it [00:08, 367.47it/s]
+[2m[36m(pid=6954)[0m 2378it [00:08, 294.60it/s]
+[2m[36m(pid=6951)[0m 2698it [00:09, 274.57it/s]
+[2m[36m(pid=6958)[0m 2665it [00:09, 236.90it/s]
+[2m[36m(pid=6956)[0m 2656it [00:09, 257.95it/s]
+[2m[36m(pid=6947)[0m 2462it [00:08, 346.28it/s]
+[2m[36m(pid=6955)[0m 2642it [00:09, 221.97it/s]
+[2m[36m(pid=6953)[0m 2363it [00:08, 351.55it/s]
+[2m[36m(pid=6954)[0m 2417it [00:08, 316.64it/s]
+[2m[36m(pid=6951)[0m 2732it [00:09, 290.38it/s]
+[2m[36m(pid=6958)[0m 2702it [00:09, 264.49it/s]
+[2m[36m(pid=6956)[0m 2691it [00:09, 279.55it/s]
+[2m[36m(pid=6955)[0m 2677it [00:09, 248.47it/s]
+[2m[36m(pid=6950)[0m 2608it [00:08, 204.65it/s]
+[2m[36m(pid=6953)[0m 2403it [00:08, 363.75it/s]
+[2m[36m(pid=6954)[0m 2451it [00:08, 322.52it/s]
+[2m[36m(pid=6951)[0m 2766it [00:09, 303.16it/s]
+[2m[36m(pid=6956)[0m 2725it [00:09, 290.93it/s]
+[2m[36m(pid=6955)[0m 2713it [00:09, 273.56it/s]
+[2m[36m(pid=6950)[0m 2645it [00:09, 234.57it/s]
+[2m[36m(pid=6958)[0m 2734it [00:09, 262.51it/s]
+[2m[36m(pid=6953)[0m 2441it [00:08, 351.02it/s]
+[2m[36m(pid=6954)[0m 2489it [00:08, 337.47it/s]
+[2m[36m(pid=6951)[0m 2804it [00:09, 321.86it/s]
+[2m[36m(pid=6958)[0m 2771it [00:09, 286.72it/s]
+[2m[36m(pid=6956)[0m 2770it [00:09, 324.96it/s]
+[2m[36m(pid=6947)[0m 2500it [00:08, 237.88it/s]
+[2m[36m(pid=6955)[0m 2749it [00:09, 288.60it/s]
+[2m[36m(pid=6950)[0m 2682it [00:09, 258.54it/s]
+[2m[36m(pid=6954)[0m 2525it [00:08, 340.85it/s]
+[2m[36m(pid=6951)[0m 2843it [00:09, 338.18it/s]
+[2m[36m(pid=6953)[0m 2477it [00:08, 328.96it/s]
+[2m[36m(pid=6956)[0m 2808it [00:09, 332.09it/s]
+[2m[36m(pid=6947)[0m 2539it [00:08, 266.96it/s]
+[2m[36m(pid=6955)[0m 2786it [00:09, 303.56it/s]
+[2m[36m(pid=6958)[0m 2803it [00:09, 290.98it/s]
+[2m[36m(pid=6950)[0m 2713it [00:09, 256.34it/s]
+[2m[36m(pid=6951)[0m 2879it [00:09, 331.64it/s]
+[2m[36m(pid=6953)[0m 2515it [00:08, 342.62it/s]
+[2m[36m(pid=6947)[0m 2571it [00:09, 272.93it/s]
+[2m[36m(pid=6955)[0m 2819it [00:09, 294.10it/s]
+[2m[36m(pid=6958)[0m 2844it [00:09, 316.84it/s]
+[2m[36m(pid=6956)[0m 2844it [00:09, 310.73it/s]
+[2m[36m(pid=6950)[0m 2746it [00:09, 273.42it/s]
+[2m[36m(pid=6951)[0m 2916it [00:09, 341.60it/s]
+[2m[36m(pid=6958)[0m 2888it [00:09, 345.60it/s]
+[2m[36m(pid=6953)[0m 2551it [00:08, 347.25it/s]
+[2m[36m(pid=6947)[0m 2612it [00:09, 301.52it/s]
+[2m[36m(pid=6954)[0m 2560it [00:08, 219.15it/s]
+[2m[36m(pid=6955)[0m 2859it [00:09, 318.43it/s]
+[2m[36m(pid=6956)[0m 2878it [00:09, 306.47it/s]
+[2m[36m(pid=6950)[0m 2783it [00:09, 295.77it/s]
+[2m[36m(pid=6951)[0m 2952it [00:10, 345.14it/s]
+[2m[36m(pid=6958)[0m 2926it [00:10, 353.37it/s]
+[2m[36m(pid=6947)[0m 2650it [00:09, 320.22it/s]
+[2m[36m(pid=6954)[0m 2595it [00:09, 245.19it/s]
+[2m[36m(pid=6955)[0m 2898it [00:09, 335.13it/s]
+[2m[36m(pid=6956)[0m 2912it [00:10, 312.85it/s]
+[2m[36m(pid=6950)[0m 2820it [00:09, 313.88it/s]
+[2m[36m(pid=6951)[0m 2988it [00:10, 329.17it/s]
+[2m[36m(pid=6958)[0m 2964it [00:10, 354.16it/s]
+[2m[36m(pid=6947)[0m 2685it [00:09, 318.58it/s]
+[2m[36m(pid=6954)[0m 2630it [00:09, 267.31it/s]
+[2m[36m(pid=6955)[0m 2936it [00:10, 346.93it/s]
+[2m[36m(pid=6953)[0m 2587it [00:08, 225.10it/s]
+[2m[36m(pid=6956)[0m 2949it [00:10, 327.22it/s]
+[2m[36m(pid=6950)[0m 2860it [00:09, 334.72it/s]
+[2m[36m(pid=6951)[0m 3025it [00:10, 339.07it/s]
+[2m[36m(pid=6958)[0m 3001it [00:10, 355.49it/s]
+[2m[36m(pid=6947)[0m 2724it [00:09, 336.45it/s]
+[2m[36m(pid=6954)[0m 2675it [00:09, 301.94it/s]
+[2m[36m(pid=6955)[0m 2975it [00:10, 355.47it/s]
+[2m[36m(pid=6953)[0m 2621it [00:09, 250.33it/s]
+[2m[36m(pid=6956)[0m 2988it [00:10, 343.82it/s]
+[2m[36m(pid=6950)[0m 2897it [00:09, 342.19it/s]
+[2m[36m(pid=6951)[0m 3067it [00:10, 359.01it/s]
+[2m[36m(pid=6958)[0m 3038it [00:10, 359.25it/s]
+[2m[36m(pid=6947)[0m 2761it [00:09, 341.18it/s]
+[2m[36m(pid=6954)[0m 2715it [00:09, 319.37it/s]
+[2m[36m(pid=6955)[0m 3012it [00:10, 353.38it/s]
+[2m[36m(pid=6950)[0m 2934it [00:09, 350.00it/s]
+[2m[36m(pid=6953)[0m 2671it [00:09, 294.00it/s]
+[2m[36m(pid=6956)[0m 3024it [00:10, 342.63it/s]
+[2m[36m(pid=6951)[0m 3107it [00:10, 370.15it/s]
+[2m[36m(pid=6958)[0m 3077it [00:10, 367.21it/s]
+[2m[36m(pid=6947)[0m 2797it [00:09, 345.59it/s]
+[2m[36m(pid=6954)[0m 2752it [00:09, 332.15it/s]
+[2m[36m(pid=6955)[0m 3055it [00:10, 371.14it/s]
+[2m[36m(pid=6950)[0m 2974it [00:10, 363.19it/s]
+[2m[36m(pid=6953)[0m 2707it [00:09, 303.30it/s]
+[2m[36m(pid=6956)[0m 3061it [00:10, 347.63it/s]
+[2m[36m(pid=6958)[0m 3116it [00:10, 368.18it/s]
+[2m[36m(pid=6947)[0m 2836it [00:09, 357.58it/s]
+[2m[36m(pid=6954)[0m 2790it [00:09, 344.25it/s]
+[2m[36m(pid=6955)[0m 3093it [00:10, 366.42it/s]
+[2m[36m(pid=6950)[0m 3012it [00:10, 365.67it/s]
+[2m[36m(pid=6951)[0m 3145it [00:10, 348.25it/s]
+[2m[36m(pid=6953)[0m 2753it [00:09, 336.03it/s]
+[2m[36m(pid=6956)[0m 3097it [00:10, 345.55it/s]
+[2m[36m(pid=6958)[0m 3156it [00:10, 371.60it/s]
+[2m[36m(pid=6947)[0m 2878it [00:09, 373.35it/s]
+[2m[36m(pid=6954)[0m 2828it [00:09, 351.94it/s]
+[2m[36m(pid=6955)[0m 3133it [00:10, 372.40it/s]
+[2m[36m(pid=6950)[0m 3051it [00:10, 371.99it/s]
+[2m[36m(pid=6951)[0m 3196it [00:10, 384.80it/s]
+[2m[36m(pid=6953)[0m 2795it [00:09, 355.08it/s]
+[2m[36m(pid=6956)[0m 3141it [00:10, 368.92it/s]
+[2m[36m(pid=6951)[0m 3243it [00:10, 406.27it/s]
+[2m[36m(pid=6958)[0m 3194it [00:10, 364.83it/s]
+[2m[36m(pid=6947)[0m 2916it [00:10, 347.14it/s]
+[2m[36m(pid=6954)[0m 2871it [00:09, 371.73it/s]
+[2m[36m(pid=6955)[0m 3173it [00:10, 378.34it/s]
+[2m[36m(pid=6950)[0m 3091it [00:10, 379.96it/s]
+[2m[36m(pid=6953)[0m 2835it [00:09, 364.33it/s]
+[2m[36m(pid=6956)[0m 3179it [00:10, 368.91it/s]
+[2m[36m(pid=6958)[0m 3239it [00:10, 385.69it/s]
+[2m[36m(pid=6947)[0m 2952it [00:10, 350.61it/s]
+[2m[36m(pid=6954)[0m 2912it [00:09, 380.38it/s]
+[2m[36m(pid=6955)[0m 3226it [00:10, 410.31it/s]
+[2m[36m(pid=6950)[0m 3130it [00:10, 365.29it/s]
+[2m[36m(pid=6951)[0m 3286it [00:10, 379.34it/s]
+[2m[36m(pid=6953)[0m 2877it [00:09, 377.10it/s]
+[2m[36m(pid=6956)[0m 3217it [00:10, 358.01it/s]
+[2m[36m(pid=6947)[0m 2990it [00:10, 358.22it/s]
+[2m[36m(pid=6954)[0m 2956it [00:09, 393.81it/s]
+[2m[36m(pid=6955)[0m 3269it [00:10, 404.30it/s]
+[2m[36m(pid=6951)[0m 3326it [00:10, 370.86it/s]
+[2m[36m(pid=6958)[0m 3279it [00:11, 379.67it/s]
+[2m[36m(pid=6953)[0m 2920it [00:09, 390.69it/s]
+[2m[36m(pid=6956)[0m 3261it [00:11, 374.38it/s]
+[2m[36m(pid=6950)[0m 3168it [00:10, 363.45it/s]
+[2m[36m(pid=6954)[0m 2997it [00:10, 390.33it/s]
+[2m[36m(pid=6950)[0m 3205it [00:10, 364.08it/s]
+[2m[36m(pid=6947)[0m 3027it [00:10, 335.29it/s]
+[2m[36m(pid=6958)[0m 3318it [00:11, 375.30it/s]
+[2m[36m(pid=6953)[0m 2961it [00:09, 372.74it/s]
+[2m[36m(pid=6955)[0m 3311it [00:11, 378.66it/s]
+[2m[36m(pid=6956)[0m 3299it [00:11, 349.30it/s]
+[2m[36m(pid=6947)[0m 3070it [00:10, 356.88it/s]
+[2m[36m(pid=6954)[0m 3037it [00:10, 388.95it/s]
+[2m[36m(pid=6950)[0m 3242it [00:10, 365.13it/s]
+[2m[36m(pid=6958)[0m 3356it [00:11, 367.03it/s]
+[2m[36m(pid=6953)[0m 3001it [00:10, 376.39it/s]
+[2m[36m(pid=6955)[0m 3350it [00:11, 354.88it/s]
+[2m[36m(pid=6956)[0m 3335it [00:11, 347.66it/s]
+[2m[36m(pid=6947)[0m 3110it [00:10, 366.20it/s]
+[2m[36m(pid=6950)[0m 3283it [00:10, 376.26it/s]
+[2m[36m(pid=6951)[0m 3365it [00:11, 230.04it/s]
+[2m[36m(pid=6953)[0m 3040it [00:10, 374.20it/s]
+[2m[36m(pid=6954)[0m 3077it [00:10, 344.44it/s]
+[2m[36m(pid=6955)[0m 3387it [00:11, 354.79it/s]
+[2m[36m(pid=6947)[0m 3153it [00:10, 381.50it/s]
+[2m[36m(pid=6951)[0m 3403it [00:11, 260.49it/s]
+[2m[36m(pid=6954)[0m 3113it [00:10, 340.18it/s]
+[2m[36m(pid=6950)[0m 3321it [00:10, 360.12it/s]
+[2m[36m(pid=6953)[0m 3078it [00:10, 359.83it/s]
+[2m[36m(pid=6951)[0m 3443it [00:11, 290.93it/s]
+[2m[36m(pid=6958)[0m 3393it [00:11, 216.80it/s]
+[2m[36m(pid=6947)[0m 3192it [00:10, 359.84it/s]
+[2m[36m(pid=6954)[0m 3151it [00:10, 347.91it/s]
+[2m[36m(pid=6950)[0m 3358it [00:11, 357.05it/s]
+[2m[36m(pid=6953)[0m 3115it [00:10, 341.94it/s]
+[2m[36m(pid=6956)[0m 3371it [00:11, 204.98it/s]
+[2m[36m(pid=6958)[0m 3423it [00:11, 232.57it/s]
+[2m[36m(pid=6947)[0m 3229it [00:10, 362.69it/s]
+[2m[36m(pid=6951)[0m 3478it [00:11, 278.88it/s]
+[2m[36m(pid=6953)[0m 3154it [00:10, 350.51it/s]
+[2m[36m(pid=6956)[0m 3411it [00:11, 239.54it/s]
+[2m[36m(pid=6954)[0m 3187it [00:10, 319.55it/s]
+[2m[36m(pid=6955)[0m 3424it [00:11, 202.13it/s]
+[2m[36m(pid=6958)[0m 3457it [00:11, 254.61it/s]
+[2m[36m(pid=6951)[0m 3517it [00:11, 304.80it/s]
+[2m[36m(pid=6953)[0m 3190it [00:10, 351.49it/s]
+[2m[36m(pid=6956)[0m 3447it [00:11, 265.21it/s]
+[2m[36m(pid=6954)[0m 3225it [00:10, 334.99it/s]
+[2m[36m(pid=6955)[0m 3462it [00:11, 232.72it/s]
+[2m[36m(pid=6958)[0m 3494it [00:11, 278.80it/s]
+[2m[36m(pid=6950)[0m 3394it [00:11, 206.06it/s]
+[2m[36m(pid=6951)[0m 3552it [00:11, 315.76it/s]
+[2m[36m(pid=6953)[0m 3226it [00:10, 350.97it/s]
+[2m[36m(pid=6956)[0m 3486it [00:11, 289.65it/s]
+[2m[36m(pid=6954)[0m 3260it [00:10, 334.82it/s]
+[2m[36m(pid=6955)[0m 3496it [00:11, 254.36it/s]
+[2m[36m(pid=6958)[0m 3528it [00:11, 294.48it/s]
+[2m[36m(pid=6947)[0m 3266it [00:11, 213.73it/s]
+[2m[36m(pid=6950)[0m 3423it [00:11, 221.51it/s]
+[2m[36m(pid=6951)[0m 3587it [00:11, 307.64it/s]
+[2m[36m(pid=6953)[0m 3262it [00:10, 350.06it/s]
+[2m[36m(pid=6956)[0m 3520it [00:12, 298.33it/s]
+[2m[36m(pid=6954)[0m 3297it [00:10, 334.07it/s]
+[2m[36m(pid=6955)[0m 3529it [00:11, 273.03it/s]
+[2m[36m(pid=6958)[0m 3561it [00:12, 298.56it/s]
+[2m[36m(pid=6947)[0m 3310it [00:11, 252.05it/s]
+[2m[36m(pid=6951)[0m 3620it [00:12, 309.43it/s]
+[2m[36m(pid=6953)[0m 3298it [00:10, 322.18it/s]
+[2m[36m(pid=6956)[0m 3555it [00:12, 311.42it/s]
+[2m[36m(pid=6955)[0m 3562it [00:12, 287.65it/s]
+[2m[36m(pid=6950)[0m 3467it [00:11, 255.76it/s]
+[2m[36m(pid=6958)[0m 3596it [00:12, 309.38it/s]
+[2m[36m(pid=6947)[0m 3344it [00:11, 265.07it/s]
+[2m[36m(pid=6951)[0m 3656it [00:12, 322.32it/s]
+[2m[36m(pid=6953)[0m 3337it [00:10, 336.85it/s]
+[2m[36m(pid=6956)[0m 3589it [00:12, 309.83it/s]
+[2m[36m(pid=6955)[0m 3597it [00:12, 302.60it/s]
+[2m[36m(pid=6950)[0m 3509it [00:11, 288.73it/s]
+[2m[36m(pid=6958)[0m 3631it [00:12, 320.32it/s]
+[2m[36m(pid=6947)[0m 3378it [00:11, 281.18it/s]
+[2m[36m(pid=6950)[0m 3545it [00:11, 306.01it/s]
+[2m[36m(pid=6951)[0m 3690it [00:12, 318.36it/s]
+[2m[36m(pid=6956)[0m 3627it [00:12, 326.68it/s]
+[2m[36m(pid=6954)[0m 3331it [00:11, 199.21it/s]
+[2m[36m(pid=6955)[0m 3635it [00:12, 321.39it/s]
+[2m[36m(pid=6958)[0m 3665it [00:12, 322.03it/s]
+[2m[36m(pid=6947)[0m 3418it [00:11, 307.95it/s]
+[2m[36m(pid=6951)[0m 3723it [00:12, 316.82it/s]
+[2m[36m(pid=6956)[0m 3668it [00:12, 339.41it/s]
+[2m[36m(pid=6954)[0m 3370it [00:11, 229.62it/s]
+[2m[36m(pid=6955)[0m 3679it [00:12, 349.43it/s]
+[2m[36m(pid=6950)[0m 3580it [00:11, 311.99it/s]
+[2m[36m(pid=6958)[0m 3701it [00:12, 331.39it/s]
+[2m[36m(pid=6947)[0m 3453it [00:11, 313.18it/s]
+[2m[36m(pid=6950)[0m 3616it [00:12, 324.27it/s]
+[2m[36m(pid=6951)[0m 3756it [00:12, 316.37it/s]
+[2m[36m(pid=6956)[0m 3711it [00:12, 360.21it/s]
+[2m[36m(pid=6954)[0m 3413it [00:11, 266.94it/s]
+[2m[36m(pid=6955)[0m 3717it [00:12, 354.50it/s]
+[2m[36m(pid=6958)[0m 3740it [00:12, 344.57it/s]
+[2m[36m(pid=6953)[0m 3372it [00:11, 196.62it/s]
+[2m[36m(pid=6947)[0m 3488it [00:11, 320.75it/s]
+[2m[36m(pid=6951)[0m 3791it [00:12, 324.24it/s]
+[2m[36m(pid=6956)[0m 3756it [00:12, 382.54it/s]
+[2m[36m(pid=6954)[0m 3456it [00:11, 299.15it/s]
+[2m[36m(pid=6950)[0m 3653it [00:12, 331.71it/s]
+[2m[36m(pid=6958)[0m 3776it [00:12, 348.51it/s]
+[2m[36m(pid=6953)[0m 3404it [00:11, 221.69it/s]
+[2m[36m(pid=6947)[0m 3523it [00:11, 323.69it/s]
+[2m[36m(pid=6955)[0m 3754it [00:12, 327.18it/s]
+[2m[36m(pid=6950)[0m 3692it [00:12, 346.56it/s]
+[2m[36m(pid=6951)[0m 3827it [00:12, 332.94it/s]
+[2m[36m(pid=6954)[0m 3497it [00:11, 324.74it/s]
+[2m[36m(pid=6958)[0m 3818it [00:12, 361.53it/s]
+[2m[36m(pid=6953)[0m 3437it [00:11, 244.69it/s]
+[2m[36m(pid=6956)[0m 3796it [00:12, 361.45it/s]
+[2m[36m(pid=6955)[0m 3790it [00:12, 336.02it/s]
+[2m[36m(pid=6950)[0m 3729it [00:12, 351.42it/s]
+[2m[36m(pid=6951)[0m 3864it [00:12, 335.39it/s]
+[2m[36m(pid=6947)[0m 3559it [00:12, 325.52it/s]
+[2m[36m(pid=6954)[0m 3535it [00:11, 327.01it/s]
+[2m[36m(pid=6958)[0m 3861it [00:12, 377.81it/s]
+[2m[36m(pid=6953)[0m 3481it [00:11, 277.66it/s]
+[2m[36m(pid=6956)[0m 3841it [00:12, 383.97it/s]
+[2m[36m(pid=6947)[0m 3595it [00:12, 333.62it/s]
+[2m[36m(pid=6955)[0m 3826it [00:12, 342.74it/s]
+[2m[36m(pid=6951)[0m 3909it [00:12, 362.27it/s]
+[2m[36m(pid=6954)[0m 3573it [00:11, 340.93it/s]
+[2m[36m(pid=6950)[0m 3766it [00:12, 335.45it/s]
+[2m[36m(pid=6958)[0m 3905it [00:13, 391.07it/s]
+[2m[36m(pid=6953)[0m 3514it [00:11, 288.84it/s]
+[2m[36m(pid=6956)[0m 3884it [00:12, 387.75it/s]
+[2m[36m(pid=6947)[0m 3639it [00:12, 358.81it/s]
+[2m[36m(pid=6955)[0m 3866it [00:12, 352.09it/s]
+[2m[36m(pid=6951)[0m 3946it [00:13, 358.85it/s]
+[2m[36m(pid=6954)[0m 3612it [00:12, 351.90it/s]
+[2m[36m(pid=6950)[0m 3806it [00:12, 351.07it/s]
+[2m[36m(pid=6958)[0m 3945it [00:13, 381.13it/s]
+[2m[36m(pid=6953)[0m 3548it [00:11, 301.25it/s]
+[2m[36m(pid=6956)[0m 3924it [00:13, 383.88it/s]
+[2m[36m(pid=6947)[0m 3678it [00:12, 367.28it/s]
+[2m[36m(pid=6955)[0m 3903it [00:12, 353.12it/s]
+[2m[36m(pid=6951)[0m 3983it [00:13, 360.90it/s]
+[2m[36m(pid=6954)[0m 3652it [00:12, 364.81it/s]
+[2m[36m(pid=6950)[0m 3848it [00:12, 368.02it/s]
+[2m[36m(pid=6958)[0m 3984it [00:13, 375.47it/s]
+[2m[36m(pid=6953)[0m 3592it [00:11, 332.35it/s]
+[2m[36m(pid=6956)[0m 3963it [00:13, 360.49it/s]
+[2m[36m(pid=6947)[0m 3720it [00:12, 380.80it/s]
+[2m[36m(pid=6955)[0m 3946it [00:13, 368.40it/s]
+[2m[36m(pid=6951)[0m 4020it [00:13, 361.77it/s]
+[2m[36m(pid=6954)[0m 3696it [00:12, 382.50it/s]
+[2m[36m(pid=6950)[0m 3886it [00:12, 354.74it/s]
+[2m[36m(pid=6958)[0m 4022it [00:13, 375.32it/s]
+[2m[36m(pid=6953)[0m 3634it [00:12, 345.02it/s]
+[2m[36m(pid=6956)[0m 4000it [00:13, 348.51it/s]
+[2m[36m(pid=6947)[0m 3760it [00:12, 385.36it/s]
+[2m[36m(pid=6955)[0m 3984it [00:13, 346.94it/s]
+[2m[36m(pid=6951)[0m 4060it [00:13, 370.58it/s]
+[2m[36m(pid=6954)[0m 3736it [00:12, 379.14it/s]
+[2m[36m(pid=6950)[0m 3923it [00:12, 345.60it/s]
+[2m[36m(pid=6958)[0m 4060it [00:13, 365.04it/s]
+[2m[36m(pid=6956)[0m 4036it [00:13, 346.10it/s]
+[2m[36m(pid=6947)[0m 3800it [00:12, 382.12it/s]
+[2m[36m(pid=6955)[0m 4021it [00:13, 352.54it/s]
+[2m[36m(pid=6951)[0m 4098it [00:13, 355.51it/s]
+[2m[36m(pid=6953)[0m 3671it [00:12, 332.03it/s]
+[2m[36m(pid=6954)[0m 3775it [00:12, 369.32it/s]
+[2m[36m(pid=6950)[0m 3959it [00:12, 348.66it/s]
+[2m[36m(pid=6958)[0m 4099it [00:13, 371.37it/s]
+[2m[36m(pid=6947)[0m 3841it [00:12, 387.84it/s]
+[2m[36m(pid=6955)[0m 4057it [00:13, 343.07it/s]
+[2m[36m(pid=6951)[0m 4134it [00:13, 351.88it/s]
+[2m[36m(pid=6953)[0m 3713it [00:12, 351.41it/s]
+[2m[36m(pid=6956)[0m 4072it [00:13, 337.95it/s]
+[2m[36m(pid=6950)[0m 3995it [00:13, 348.13it/s]
+[2m[36m(pid=6958)[0m 4144it [00:13, 389.89it/s]
+[2m[36m(pid=6947)[0m 3882it [00:12, 393.37it/s]
+[2m[36m(pid=6954)[0m 3813it [00:12, 339.19it/s]
+[2m[36m(pid=6955)[0m 4102it [00:13, 366.99it/s]
+[2m[36m(pid=6951)[0m 4176it [00:13, 369.58it/s]
+[2m[36m(pid=6956)[0m 4110it [00:13, 348.26it/s]
+[2m[36m(pid=6953)[0m 3751it [00:12, 356.76it/s]
+[2m[36m(pid=6950)[0m 4036it [00:13, 364.33it/s]
+[2m[36m(pid=6958)[0m 4186it [00:13, 398.28it/s]
+[2m[36m(pid=6947)[0m 3922it [00:13, 391.25it/s]
+[2m[36m(pid=6954)[0m 3860it [00:12, 369.19it/s]
+[2m[36m(pid=6955)[0m 4144it [00:13, 381.20it/s]
+[2m[36m(pid=6951)[0m 4214it [00:13, 367.60it/s]
+[2m[36m(pid=6953)[0m 3788it [00:12, 356.17it/s]
+[2m[36m(pid=6956)[0m 4146it [00:13, 330.50it/s]
+[2m[36m(pid=6950)[0m 4073it [00:13, 343.65it/s]
+[2m[36m(pid=6958)[0m 4227it [00:13, 400.26it/s]
+[2m[36m(pid=6947)[0m 3967it [00:13, 405.91it/s]
+[2m[36m(pid=6954)[0m 3901it [00:12, 379.45it/s]
+[2m[36m(pid=6955)[0m 4183it [00:13, 383.77it/s]
+[2m[36m(pid=6953)[0m 3832it [00:12, 375.54it/s]
+[2m[36m(pid=6956)[0m 4184it [00:13, 343.34it/s]
+[2m[36m(pid=6950)[0m 4108it [00:13, 333.89it/s]
+[2m[36m(pid=6951)[0m 4252it [00:13, 355.26it/s]
+[2m[36m(pid=6958)[0m 4268it [00:13, 402.11it/s]
+[2m[36m(pid=6947)[0m 4008it [00:13, 400.08it/s]
+[2m[36m(pid=6954)[0m 3941it [00:12, 381.41it/s]
+[2m[36m(pid=6955)[0m 4225it [00:13, 392.50it/s]
+[2m[36m(pid=6953)[0m 3875it [00:12, 386.00it/s]
+[2m[36m(pid=6956)[0m 4219it [00:13, 331.55it/s]
+[2m[36m(pid=6950)[0m 4148it [00:13, 351.00it/s]
+[2m[36m(pid=6958)[0m 4309it [00:14, 392.57it/s]
+[2m[36m(pid=6947)[0m 4049it [00:13, 395.88it/s]
+[2m[36m(pid=6954)[0m 3980it [00:13, 359.03it/s]
+[2m[36m(pid=6955)[0m 4265it [00:13, 373.01it/s]
+[2m[36m(pid=6953)[0m 3915it [00:12, 384.57it/s]
+[2m[36m(pid=6956)[0m 4253it [00:14, 325.15it/s]
+[2m[36m(pid=6950)[0m 4184it [00:13, 346.17it/s]
+[2m[36m(pid=6953)[0m 3954it [00:12, 379.99it/s]
+[2m[36m(pid=6956)[0m 4293it [00:14, 344.03it/s]
+[2m[36m(pid=6947)[0m 4089it [00:13, 360.11it/s]
+[2m[36m(pid=6954)[0m 4017it [00:13, 340.40it/s]
+[2m[36m(pid=6955)[0m 4303it [00:14, 359.52it/s]
+[2m[36m(pid=6950)[0m 4219it [00:13, 316.59it/s]
+[2m[36m(pid=6951)[0m 4288it [00:14, 193.88it/s]
+[2m[36m(pid=6954)[0m 4052it [00:13, 342.18it/s]
+[2m[36m(pid=6953)[0m 3993it [00:13, 364.23it/s]
+[2m[36m(pid=6947)[0m 4130it [00:13, 369.79it/s]
+[2m[36m(pid=6951)[0m 4326it [00:14, 227.21it/s]
+[2m[36m(pid=6953)[0m 4030it [00:13, 334.59it/s]
+[2m[36m(pid=6947)[0m 4168it [00:13, 354.76it/s]
+[2m[36m(pid=6954)[0m 4087it [00:13, 334.82it/s]
+[2m[36m(pid=6958)[0m 4349it [00:14, 201.71it/s]
+[2m[36m(pid=6951)[0m 4359it [00:14, 248.81it/s]
+[2m[36m(pid=6947)[0m 4208it [00:13, 364.82it/s]
+[2m[36m(pid=6954)[0m 4121it [00:13, 325.52it/s]
+[2m[36m(pid=6958)[0m 4390it [00:14, 237.18it/s]
+[2m[36m(pid=6953)[0m 4065it [00:13, 317.29it/s]
+[2m[36m(pid=6955)[0m 4340it [00:14, 196.73it/s]
+[2m[36m(pid=6951)[0m 4392it [00:14, 268.40it/s]
+[2m[36m(pid=6956)[0m 4328it [00:14, 182.01it/s]
+[2m[36m(pid=6954)[0m 4159it [00:13, 338.80it/s]
+[2m[36m(pid=6950)[0m 4252it [00:14, 177.21it/s]
+[2m[36m(pid=6953)[0m 4104it [00:13, 335.63it/s]
+[2m[36m(pid=6955)[0m 4380it [00:14, 229.89it/s]
+[2m[36m(pid=6951)[0m 4427it [00:14, 287.56it/s]
+[2m[36m(pid=6958)[0m 4424it [00:14, 249.38it/s]
+[2m[36m(pid=6956)[0m 4367it [00:14, 216.53it/s]
+[2m[36m(pid=6954)[0m 4205it [00:13, 362.31it/s]
+[2m[36m(pid=6950)[0m 4287it [00:14, 207.68it/s]
+[2m[36m(pid=6953)[0m 4146it [00:13, 356.23it/s]
+[2m[36m(pid=6955)[0m 4414it [00:14, 249.99it/s]
+[2m[36m(pid=6951)[0m 4469it [00:14, 316.31it/s]
+[2m[36m(pid=6958)[0m 4456it [00:14, 261.73it/s]
+[2m[36m(pid=6956)[0m 4398it [00:14, 235.52it/s]
+[2m[36m(pid=6954)[0m 4242it [00:13, 358.53it/s]
+[2m[36m(pid=6950)[0m 4321it [00:14, 233.09it/s]
+[2m[36m(pid=6953)[0m 4183it [00:13, 344.76it/s]
+[2m[36m(pid=6947)[0m 4245it [00:14, 202.46it/s]
+[2m[36m(pid=6955)[0m 4452it [00:14, 278.48it/s]
+[2m[36m(pid=6951)[0m 4505it [00:14, 323.39it/s]
+[2m[36m(pid=6958)[0m 4498it [00:14, 294.28it/s]
+[2m[36m(pid=6956)[0m 4429it [00:14, 251.28it/s]
+[2m[36m(pid=6950)[0m 4358it [00:14, 260.36it/s]
+[2m[36m(pid=6953)[0m 4219it [00:13, 347.93it/s]
+[2m[36m(pid=6947)[0m 4279it [00:14, 230.05it/s]
+[2m[36m(pid=6955)[0m 4487it [00:14, 294.34it/s]
+[2m[36m(pid=6951)[0m 4540it [00:14, 312.51it/s]
+[2m[36m(pid=6958)[0m 4533it [00:15, 295.54it/s]
+[2m[36m(pid=6956)[0m 4463it [00:15, 270.05it/s]
+[2m[36m(pid=6950)[0m 4394it [00:14, 283.08it/s]
+[2m[36m(pid=6953)[0m 4259it [00:13, 359.72it/s]
+[2m[36m(pid=6947)[0m 4317it [00:14, 260.56it/s]
+[2m[36m(pid=6955)[0m 4521it [00:14, 298.88it/s]
+[2m[36m(pid=6951)[0m 4577it [00:15, 327.60it/s]
+[2m[36m(pid=6958)[0m 4568it [00:15, 309.65it/s]
+[2m[36m(pid=6956)[0m 4502it [00:15, 293.94it/s]
+[2m[36m(pid=6947)[0m 4354it [00:14, 285.52it/s]
+[2m[36m(pid=6954)[0m 4279it [00:14, 195.03it/s]
+[2m[36m(pid=6955)[0m 4554it [00:15, 294.09it/s]
+[2m[36m(pid=6950)[0m 4427it [00:14, 281.88it/s]
+[2m[36m(pid=6951)[0m 4612it [00:15, 309.38it/s]
+[2m[36m(pid=6958)[0m 4604it [00:15, 322.48it/s]
+[2m[36m(pid=6956)[0m 4535it [00:15, 298.52it/s]
+[2m[36m(pid=6950)[0m 4460it [00:14, 294.43it/s]
+[2m[36m(pid=6947)[0m 4389it [00:14, 302.17it/s]
+[2m[36m(pid=6954)[0m 4314it [00:14, 224.48it/s]
+[2m[36m(pid=6955)[0m 4590it [00:15, 307.76it/s]
+[2m[36m(pid=6951)[0m 4652it [00:15, 330.89it/s]
+[2m[36m(pid=6958)[0m 4640it [00:15, 332.17it/s]
+[2m[36m(pid=6956)[0m 4574it [00:15, 320.90it/s]
+[2m[36m(pid=6950)[0m 4492it [00:14, 300.93it/s]
+[2m[36m(pid=6947)[0m 4427it [00:14, 318.53it/s]
+[2m[36m(pid=6954)[0m 4358it [00:14, 262.66it/s]
+[2m[36m(pid=6955)[0m 4627it [00:15, 323.57it/s]
+[2m[36m(pid=6951)[0m 4687it [00:15, 334.73it/s]
+[2m[36m(pid=6958)[0m 4678it [00:15, 342.20it/s]
+[2m[36m(pid=6953)[0m 4296it [00:14, 203.06it/s]
+[2m[36m(pid=6956)[0m 4609it [00:15, 324.70it/s]
+[2m[36m(pid=6950)[0m 4531it [00:14, 321.27it/s]
+[2m[36m(pid=6947)[0m 4462it [00:14, 310.57it/s]
+[2m[36m(pid=6954)[0m 4393it [00:14, 279.09it/s]
+[2m[36m(pid=6955)[0m 4665it [00:15, 336.49it/s]
+[2m[36m(pid=6951)[0m 4724it [00:15, 342.04it/s]
+[2m[36m(pid=6958)[0m 4714it [00:15, 341.21it/s]
+[2m[36m(pid=6953)[0m 4330it [00:14, 228.28it/s]
+[2m[36m(pid=6956)[0m 4646it [00:15, 334.04it/s]
+[2m[36m(pid=6950)[0m 4566it [00:15, 328.84it/s]
+[2m[36m(pid=6947)[0m 4496it [00:14, 314.86it/s]
+[2m[36m(pid=6954)[0m 4430it [00:14, 301.05it/s]
+[2m[36m(pid=6955)[0m 4710it [00:15, 363.13it/s]
+[2m[36m(pid=6951)[0m 4762it [00:15, 348.06it/s]
+[2m[36m(pid=6958)[0m 4749it [00:15, 339.80it/s]
+[2m[36m(pid=6953)[0m 4361it [00:14, 247.30it/s]
+[2m[36m(pid=6956)[0m 4687it [00:15, 352.74it/s]
+[2m[36m(pid=6950)[0m 4604it [00:15, 340.72it/s]
+[2m[36m(pid=6947)[0m 4536it [00:14, 335.56it/s]
+[2m[36m(pid=6954)[0m 4465it [00:14, 311.78it/s]
+[2m[36m(pid=6951)[0m 4798it [00:15, 348.39it/s]
+[2m[36m(pid=6958)[0m 4786it [00:15, 345.75it/s]
+[2m[36m(pid=6953)[0m 4393it [00:14, 263.97it/s]
+[2m[36m(pid=6956)[0m 4727it [00:15, 365.61it/s]
+[2m[36m(pid=6955)[0m 4748it [00:15, 347.55it/s]
+[2m[36m(pid=6950)[0m 4643it [00:15, 352.33it/s]
+[2m[36m(pid=6947)[0m 4571it [00:15, 331.65it/s]
+[2m[36m(pid=6954)[0m 4502it [00:14, 326.00it/s]
+[2m[36m(pid=6951)[0m 4834it [00:15, 349.04it/s]
+[2m[36m(pid=6958)[0m 4822it [00:15, 348.28it/s]
+[2m[36m(pid=6953)[0m 4433it [00:14, 291.23it/s]
+[2m[36m(pid=6956)[0m 4766it [00:15, 372.55it/s]
+[2m[36m(pid=6955)[0m 4784it [00:15, 330.77it/s]
+[2m[36m(pid=6950)[0m 4686it [00:15, 372.31it/s]
+[2m[36m(pid=6954)[0m 4544it [00:14, 347.06it/s]
+[2m[36m(pid=6951)[0m 4874it [00:15, 360.98it/s]
+[2m[36m(pid=6958)[0m 4865it [00:15, 366.20it/s]
+[2m[36m(pid=6953)[0m 4471it [00:14, 312.62it/s]
+[2m[36m(pid=6956)[0m 4811it [00:15, 392.40it/s]
+[2m[36m(pid=6947)[0m 4612it [00:15, 342.38it/s]
+[2m[36m(pid=6955)[0m 4820it [00:15, 339.02it/s]
+[2m[36m(pid=6950)[0m 4725it [00:15, 364.13it/s]
+[2m[36m(pid=6947)[0m 4653it [00:15, 359.82it/s]
+[2m[36m(pid=6954)[0m 4581it [00:15, 341.76it/s]
+[2m[36m(pid=6951)[0m 4911it [00:16, 360.48it/s]
+[2m[36m(pid=6958)[0m 4910it [00:16, 383.89it/s]
+[2m[36m(pid=6953)[0m 4509it [00:14, 329.83it/s]
+[2m[36m(pid=6956)[0m 4851it [00:16, 357.52it/s]
+[2m[36m(pid=6955)[0m 4857it [00:15, 346.48it/s]
+[2m[36m(pid=6950)[0m 4766it [00:15, 376.34it/s]
+[2m[36m(pid=6954)[0m 4617it [00:15, 338.77it/s]
+[2m[36m(pid=6951)[0m 4950it [00:16, 368.50it/s]
+[2m[36m(pid=6958)[0m 4949it [00:16, 360.66it/s]
+[2m[36m(pid=6953)[0m 4555it [00:14, 359.92it/s]
+[2m[36m(pid=6956)[0m 4895it [00:16, 378.64it/s]
+[2m[36m(pid=6947)[0m 4691it [00:15, 358.36it/s]
+[2m[36m(pid=6955)[0m 4893it [00:16, 340.11it/s]
+[2m[36m(pid=6950)[0m 4805it [00:15, 378.14it/s]
+[2m[36m(pid=6947)[0m 4732it [00:15, 372.24it/s]
+[2m[36m(pid=6954)[0m 4653it [00:15, 338.49it/s]
+[2m[36m(pid=6951)[0m 4990it [00:16, 376.51it/s]
+[2m[36m(pid=6958)[0m 4987it [00:16, 365.89it/s]
+[2m[36m(pid=6953)[0m 4594it [00:15, 354.87it/s]
+[2m[36m(pid=6955)[0m 4935it [00:16, 359.60it/s]
+[2m[36m(pid=6950)[0m 4845it [00:15, 378.88it/s]
+[2m[36m(pid=6951)[0m 5000it [00:16, 307.63it/s]
+[2m[36m(pid=6951)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=6956)[0m 4934it [00:16, 356.95it/s]
+[2m[36m(pid=6958)[0m 5000it [00:16, 306.65it/s]
+[2m[36m(pid=6958)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=6947)[0m 4774it [00:15, 380.80it/s]
+[2m[36m(pid=6954)[0m 4692it [00:15, 351.61it/s]
+[2m[36m(pid=6953)[0m 4636it [00:15, 369.22it/s]
+[2m[36m(pid=6956)[0m 4975it [00:16, 370.66it/s]
+[2m[36m(pid=6955)[0m 4972it [00:16, 355.86it/s]
+[2m[36m(pid=6951)[0m 3it [00:00, 25.91it/s]
+[2m[36m(pid=6958)[0m 18it [00:00, 178.78it/s]
+[2m[36m(pid=6947)[0m 4817it [00:15, 393.06it/s]
+[2m[36m(pid=6954)[0m 4728it [00:15, 349.97it/s]
+[2m[36m(pid=6955)[0m 5000it [00:16, 306.25it/s]
+[2m[36m(pid=6950)[0m 4884it [00:15, 339.17it/s]
+[2m[36m(pid=6953)[0m 4675it [00:15, 357.57it/s]
+[2m[36m(pid=6956)[0m 5000it [00:16, 303.12it/s]
+[2m[36m(pid=6955)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=6951)[0m 31it [00:00, 35.59it/s]
+[2m[36m(pid=6958)[0m 50it [00:00, 205.92it/s]
+[2m[36m(pid=6956)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=6954)[0m 4769it [00:15, 363.40it/s]
+[2m[36m(pid=6950)[0m 4925it [00:16, 357.61it/s]
+[2m[36m(pid=6953)[0m 4718it [00:15, 376.53it/s]
+[2m[36m(pid=6947)[0m 4857it [00:15, 385.59it/s]
+[2m[36m(pid=6955)[0m 29it [00:00, 286.95it/s]
+[2m[36m(pid=6951)[0m 68it [00:00, 48.80it/s]
+[2m[36m(pid=6958)[0m 83it [00:00, 231.96it/s]
+[2m[36m(pid=6956)[0m 29it [00:00, 277.44it/s]
+[2m[36m(pid=6950)[0m 4965it [00:16, 365.29it/s]
+[2m[36m(pid=6953)[0m 4757it [00:15, 373.07it/s]
+[2m[36m(pid=6947)[0m 4896it [00:15, 382.09it/s]
+[2m[36m(pid=6954)[0m 4806it [00:15, 356.44it/s]
+[2m[36m(pid=6955)[0m 62it [00:00, 298.57it/s]
+[2m[36m(pid=6951)[0m 100it [00:00, 65.33it/s]
+[2m[36m(pid=6958)[0m 120it [00:00, 260.52it/s]
+[2m[36m(pid=6956)[0m 67it [00:00, 297.63it/s]
+[2m[36m(pid=6954)[0m 4849it [00:15, 374.77it/s]
+[2m[36m(pid=6950)[0m 5000it [00:16, 307.94it/s]
+[2m[36m(pid=6950)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=6953)[0m 4796it [00:15, 375.24it/s]
+[2m[36m(pid=6947)[0m 4937it [00:16, 380.81it/s]
+[2m[36m(pid=6955)[0m 92it [00:00, 297.69it/s]
+[2m[36m(pid=6951)[0m 133it [00:00, 85.96it/s]
+[2m[36m(pid=6958)[0m 154it [00:00, 279.08it/s]
+[2m[36m(pid=6956)[0m 99it [00:00, 303.05it/s]
+[2m[36m(pid=6954)[0m 4890it [00:15, 383.60it/s]
+[2m[36m(pid=6950)[0m 39it [00:00, 389.83it/s]
+[2m[36m(pid=6953)[0m 4840it [00:15, 392.54it/s]
+[2m[36m(pid=6947)[0m 4977it [00:16, 386.33it/s]
+[2m[36m(pid=6955)[0m 125it [00:00, 304.37it/s]
+[2m[36m(pid=6951)[0m 165it [00:00, 109.90it/s]
+[2m[36m(pid=6958)[0m 182it [00:00, 273.62it/s]
+[2m[36m(pid=6956)[0m 125it [00:00, 281.50it/s]
+[2m[36m(pid=6947)[0m 5000it [00:16, 308.90it/s]
+[2m[36m(pid=6947)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=6954)[0m 4935it [00:15, 401.32it/s]
+[2m[36m(pid=6950)[0m 71it [00:00, 361.22it/s]
+[2m[36m(pid=6953)[0m 4880it [00:15, 367.77it/s]
+[2m[36m(pid=6955)[0m 156it [00:00, 303.17it/s]
+[2m[36m(pid=6951)[0m 199it [00:00, 137.81it/s]
+[2m[36m(pid=6958)[0m 214it [00:00, 286.05it/s]
+[2m[36m(pid=6956)[0m 162it [00:00, 296.72it/s]
+[2m[36m(pid=6947)[0m 21it [00:00, 206.65it/s]
+[2m[36m(pid=6950)[0m 103it [00:00, 347.55it/s]
+[2m[36m(pid=6954)[0m 4976it [00:16, 385.30it/s]
+[2m[36m(pid=6955)[0m 193it [00:00, 316.82it/s]
+[2m[36m(pid=6951)[0m 228it [00:00, 160.42it/s]
+[2m[36m(pid=6958)[0m 243it [00:00, 270.80it/s]
+[2m[36m(pid=6953)[0m 4918it [00:15, 335.27it/s]
+[2m[36m(pid=6956)[0m 202it [00:00, 320.47it/s]
+[2m[36m(pid=6947)[0m 58it [00:00, 236.66it/s]
+[2m[36m(pid=6954)[0m 5000it [00:16, 309.89it/s]
+[2m[36m(pid=6954)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=6950)[0m 142it [00:00, 353.06it/s]
+[2m[36m(pid=6955)[0m 224it [00:00, 313.05it/s]
+[2m[36m(pid=6951)[0m 265it [00:00, 192.89it/s]
+[2m[36m(pid=6958)[0m 274it [00:00, 276.31it/s]
+[2m[36m(pid=6953)[0m 4962it [00:16, 359.28it/s]
+[2m[36m(pid=6956)[0m 232it [00:00, 308.94it/s]
+[2m[36m(pid=6947)[0m 90it [00:00, 255.92it/s]
+[2m[36m(pid=6954)[0m 33it [00:00, 318.94it/s]
+[2m[36m(pid=6950)[0m 169it [00:00, 316.90it/s]
+[2m[36m(pid=6955)[0m 262it [00:00, 328.20it/s]
+[2m[36m(pid=6951)[0m 306it [00:01, 228.36it/s]
+[2m[36m(pid=6958)[0m 312it [00:01, 296.75it/s]
+[2m[36m(pid=6953)[0m 5000it [00:16, 352.06it/s]5000it [00:16, 310.16it/s]
+[2m[36m(pid=6956)[0m 265it [00:00, 311.64it/s]
+[2m[36m(pid=6947)[0m 125it [00:00, 277.89it/s]
+[2m[36m(pid=6954)[0m 72it [00:00, 334.29it/s]
+[2m[36m(pid=6950)[0m 204it [00:00, 326.07it/s]
+[2m[36m(pid=6953)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=6955)[0m 298it [00:00, 333.99it/s]
+[2m[36m(pid=6951)[0m 344it [00:01, 257.89it/s]
+[2m[36m(pid=6958)[0m 343it [00:01, 298.16it/s]
+[2m[36m(pid=6956)[0m 305it [00:00, 333.66it/s]
+[2m[36m(pid=6947)[0m 165it [00:00, 304.07it/s]
+[2m[36m(pid=6954)[0m 103it [00:00, 324.47it/s]
+[2m[36m(pid=6950)[0m 246it [00:00, 346.28it/s]
+[2m[36m(pid=6953)[0m 29it [00:00, 288.54it/s]
+[2m[36m(pid=6955)[0m 336it [00:01, 344.97it/s]
+[2m[36m(pid=6951)[0m 383it [00:01, 283.69it/s]
+[2m[36m(pid=6958)[0m 377it [00:01, 307.77it/s]
+[2m[36m(pid=6956)[0m 343it [00:01, 340.66it/s]
+[2m[36m(pid=6947)[0m 202it [00:00, 317.24it/s]
+[2m[36m(pid=6954)[0m 133it [00:00, 316.20it/s]
+[2m[36m(pid=6950)[0m 281it [00:00, 344.68it/s]
+[2m[36m(pid=6953)[0m 68it [00:00, 311.21it/s]
+[2m[36m(pid=6955)[0m 372it [00:01, 348.07it/s]
+[2m[36m(pid=6958)[0m 409it [00:01, 300.98it/s]
+[2m[36m(pid=6956)[0m 379it [00:01, 343.85it/s]
+[2m[36m(pid=6947)[0m 235it [00:00, 312.47it/s]
+[2m[36m(pid=6954)[0m 166it [00:00, 316.88it/s]
+[2m[36m(pid=6950)[0m 318it [00:00, 350.98it/s]
+[2m[36m(pid=6953)[0m 103it [00:00, 320.03it/s]
+[2m[36m(pid=6955)[0m 407it [00:01, 322.10it/s]
+[2m[36m(pid=6956)[0m 414it [00:01, 336.48it/s]
+[2m[36m(pid=6947)[0m 266it [00:00, 281.59it/s]
+[2m[36m(pid=6954)[0m 195it [00:00, 306.27it/s]
+[2m[36m(pid=6950)[0m 352it [00:01, 324.17it/s]
+[2m[36m(pid=6958)[0m 440it [00:01, 294.91it/s]
+[2m[36m(pid=6953)[0m 134it [00:00, 312.23it/s]
+[2m[36m(pid=6955)[0m 440it [00:01, 301.21it/s]
+[2m[36m(pid=6947)[0m 298it [00:00, 291.41it/s]
+[2m[36m(pid=6954)[0m 229it [00:00, 313.97it/s]
+[2m[36m(pid=6956)[0m 448it [00:01, 312.73it/s]
+[2m[36m(pid=6953)[0m 166it [00:00, 314.12it/s]
+[2m[36m(pid=6950)[0m 385it [00:01, 297.72it/s]
+[2m[36m(pid=6947)[0m 328it [00:01, 292.32it/s]
+[2m[36m(pid=6954)[0m 262it [00:00, 318.51it/s]
+[2m[36m(pid=6951)[0m 419it [00:01, 159.26it/s]
+[2m[36m(pid=6953)[0m 197it [00:00, 307.51it/s]
+[2m[36m(pid=6954)[0m 293it [00:00, 308.54it/s]
+[2m[36m(pid=6951)[0m 451it [00:01, 186.51it/s]
+[2m[36m(pid=6953)[0m 228it [00:00, 296.29it/s]
+[2m[36m(pid=6954)[0m 323it [00:01, 301.02it/s]
+[2m[36m(pid=6951)[0m 480it [00:01, 200.97it/s]
+[2m[36m(pid=6958)[0m 470it [00:01, 142.71it/s]
+[2m[36m(pid=6953)[0m 256it [00:00, 280.65it/s]
+[2m[36m(pid=6954)[0m 353it [00:01, 298.28it/s]
+[2m[36m(pid=6951)[0m 508it [00:02, 209.94it/s]
+[2m[36m(pid=6958)[0m 496it [00:02, 164.18it/s]
+[2m[36m(pid=6953)[0m 287it [00:00, 285.75it/s]
+[2m[36m(pid=6955)[0m 471it [00:01, 140.55it/s]
+[2m[36m(pid=6956)[0m 480it [00:01, 146.45it/s]
+[2m[36m(pid=6954)[0m 383it [00:01, 294.81it/s]
+[2m[36m(pid=6950)[0m 415it [00:01, 135.45it/s]
+[2m[36m(pid=6951)[0m 538it [00:02, 230.38it/s]
+[2m[36m(pid=6958)[0m 520it [00:02, 181.14it/s]
+[2m[36m(pid=6953)[0m 324it [00:01, 300.66it/s]
+[2m[36m(pid=6955)[0m 499it [00:01, 163.74it/s]
+[2m[36m(pid=6956)[0m 507it [00:01, 168.60it/s]
+[2m[36m(pid=6947)[0m 358it [00:01, 137.59it/s]
+[2m[36m(pid=6950)[0m 445it [00:01, 161.83it/s]
+[2m[36m(pid=6951)[0m 567it [00:02, 243.89it/s]
+[2m[36m(pid=6958)[0m 549it [00:02, 203.65it/s]
+[2m[36m(pid=6953)[0m 358it [00:01, 310.84it/s]
+[2m[36m(pid=6955)[0m 528it [00:02, 187.92it/s]
+[2m[36m(pid=6956)[0m 541it [00:02, 198.61it/s]
+[2m[36m(pid=6947)[0m 384it [00:01, 159.11it/s]
+[2m[36m(pid=6950)[0m 471it [00:01, 181.38it/s]
+[2m[36m(pid=6951)[0m 599it [00:02, 260.11it/s]
+[2m[36m(pid=6958)[0m 582it [00:02, 227.06it/s]
+[2m[36m(pid=6953)[0m 390it [00:01, 313.45it/s]
+[2m[36m(pid=6955)[0m 556it [00:02, 207.93it/s]
+[2m[36m(pid=6956)[0m 571it [00:02, 218.66it/s]
+[2m[36m(pid=6947)[0m 414it [00:01, 184.34it/s]
+[2m[36m(pid=6951)[0m 633it [00:02, 277.11it/s]
+[2m[36m(pid=6958)[0m 613it [00:02, 244.73it/s]
+[2m[36m(pid=6953)[0m 422it [00:01, 301.56it/s]
+[2m[36m(pid=6955)[0m 587it [00:02, 230.21it/s]
+[2m[36m(pid=6950)[0m 498it [00:01, 195.35it/s]
+[2m[36m(pid=6956)[0m 605it [00:02, 243.97it/s]
+[2m[36m(pid=6947)[0m 448it [00:01, 213.03it/s]
+[2m[36m(pid=6951)[0m 667it [00:02, 287.58it/s]
+[2m[36m(pid=6958)[0m 645it [00:02, 263.00it/s]
+[2m[36m(pid=6955)[0m 625it [00:02, 258.92it/s]
+[2m[36m(pid=6950)[0m 534it [00:02, 225.45it/s]
+[2m[36m(pid=6956)[0m 639it [00:02, 264.07it/s]
+[2m[36m(pid=6947)[0m 476it [00:01, 229.39it/s]
+[2m[36m(pid=6954)[0m 413it [00:01, 136.11it/s]
+[2m[36m(pid=6951)[0m 698it [00:02, 293.04it/s]
+[2m[36m(pid=6958)[0m 677it [00:02, 277.44it/s]
+[2m[36m(pid=6955)[0m 656it [00:02, 263.71it/s]
+[2m[36m(pid=6950)[0m 562it [00:02, 234.01it/s]
+[2m[36m(pid=6956)[0m 677it [00:02, 290.02it/s]
+[2m[36m(pid=6947)[0m 505it [00:02, 243.88it/s]
+[2m[36m(pid=6954)[0m 447it [00:01, 165.91it/s]
+[2m[36m(pid=6951)[0m 730it [00:02, 300.28it/s]
+[2m[36m(pid=6958)[0m 714it [00:02, 298.93it/s]
+[2m[36m(pid=6955)[0m 691it [00:02, 281.96it/s]
+[2m[36m(pid=6950)[0m 599it [00:02, 262.99it/s]
+[2m[36m(pid=6956)[0m 718it [00:02, 317.16it/s]
+[2m[36m(pid=6947)[0m 535it [00:02, 257.95it/s]
+[2m[36m(pid=6954)[0m 479it [00:01, 192.32it/s]
+[2m[36m(pid=6951)[0m 761it [00:02, 303.12it/s]
+[2m[36m(pid=6958)[0m 747it [00:02, 305.57it/s]
+[2m[36m(pid=6953)[0m 453it [00:01, 155.56it/s]
+[2m[36m(pid=6955)[0m 728it [00:02, 302.31it/s]
+[2m[36m(pid=6950)[0m 633it [00:02, 281.89it/s]
+[2m[36m(pid=6947)[0m 570it [00:02, 278.31it/s]
+[2m[36m(pid=6956)[0m 756it [00:02, 331.16it/s]
+[2m[36m(pid=6954)[0m 515it [00:02, 220.50it/s]
+[2m[36m(pid=6950)[0m 671it [00:02, 304.56it/s]
+[2m[36m(pid=6951)[0m 798it [00:02, 316.99it/s]
+[2m[36m(pid=6958)[0m 789it [00:02, 330.44it/s]
+[2m[36m(pid=6953)[0m 485it [00:01, 183.76it/s]
+[2m[36m(pid=6947)[0m 606it [00:02, 297.14it/s]
+[2m[36m(pid=6955)[0m 761it [00:02, 303.60it/s]
+[2m[36m(pid=6956)[0m 792it [00:02, 339.12it/s]
+[2m[36m(pid=6954)[0m 547it [00:02, 242.67it/s]
+[2m[36m(pid=6950)[0m 707it [00:02, 317.02it/s]
+[2m[36m(pid=6951)[0m 832it [00:03, 322.60it/s]
+[2m[36m(pid=6958)[0m 824it [00:03, 330.92it/s]
+[2m[36m(pid=6953)[0m 522it [00:01, 214.96it/s]
+[2m[36m(pid=6947)[0m 644it [00:02, 316.72it/s]
+[2m[36m(pid=6955)[0m 798it [00:02, 320.17it/s]
+[2m[36m(pid=6956)[0m 830it [00:02, 349.63it/s]
+[2m[36m(pid=6954)[0m 585it [00:02, 272.04it/s]
+[2m[36m(pid=6958)[0m 861it [00:03, 341.60it/s]
+[2m[36m(pid=6953)[0m 561it [00:02, 247.21it/s]
+[2m[36m(pid=6947)[0m 680it [00:02, 324.55it/s]
+[2m[36m(pid=6955)[0m 844it [00:03, 351.85it/s]
+[2m[36m(pid=6950)[0m 741it [00:02, 310.76it/s]
+[2m[36m(pid=6951)[0m 865it [00:03, 307.97it/s]
+[2m[36m(pid=6956)[0m 870it [00:02, 362.51it/s]
+[2m[36m(pid=6954)[0m 627it [00:02, 299.59it/s]
+[2m[36m(pid=6951)[0m 899it [00:03, 315.76it/s]
+[2m[36m(pid=6958)[0m 897it [00:03, 341.11it/s]
+[2m[36m(pid=6953)[0m 601it [00:02, 278.74it/s]
+[2m[36m(pid=6947)[0m 723it [00:02, 348.59it/s]
+[2m[36m(pid=6955)[0m 883it [00:03, 360.78it/s]
+[2m[36m(pid=6950)[0m 787it [00:02, 343.89it/s]
+[2m[36m(pid=6956)[0m 908it [00:03, 351.41it/s]
+[2m[36m(pid=6954)[0m 671it [00:02, 330.67it/s]
+[2m[36m(pid=6951)[0m 931it [00:03, 313.99it/s]
+[2m[36m(pid=6958)[0m 938it [00:03, 358.99it/s]
+[2m[36m(pid=6953)[0m 637it [00:02, 297.96it/s]
+[2m[36m(pid=6947)[0m 764it [00:02, 363.15it/s]
+[2m[36m(pid=6955)[0m 921it [00:03, 347.78it/s]
+[2m[36m(pid=6950)[0m 831it [00:02, 359.59it/s]
+[2m[36m(pid=6956)[0m 946it [00:03, 356.87it/s]
+[2m[36m(pid=6954)[0m 715it [00:02, 355.89it/s]
+[2m[36m(pid=6951)[0m 969it [00:03, 330.97it/s]
+[2m[36m(pid=6958)[0m 978it [00:03, 369.52it/s]
+[2m[36m(pid=6953)[0m 672it [00:02, 311.18it/s]
+[2m[36m(pid=6947)[0m 802it [00:02, 364.30it/s]
+[2m[36m(pid=6955)[0m 962it [00:03, 362.77it/s]
+[2m[36m(pid=6950)[0m 869it [00:03, 362.90it/s]
+[2m[36m(pid=6956)[0m 983it [00:03, 350.82it/s]
+[2m[36m(pid=6954)[0m 754it [00:02, 361.48it/s]
+[2m[36m(pid=6951)[0m 1004it [00:03, 335.03it/s]
+[2m[36m(pid=6958)[0m 1016it [00:03, 357.50it/s]
+[2m[36m(pid=6953)[0m 716it [00:02, 340.78it/s]
+[2m[36m(pid=6955)[0m 1006it [00:03, 375.69it/s]
+[2m[36m(pid=6950)[0m 911it [00:03, 376.11it/s]
+[2m[36m(pid=6956)[0m 1019it [00:03, 352.39it/s]
+[2m[36m(pid=6947)[0m 840it [00:02, 350.06it/s]
+[2m[36m(pid=6954)[0m 793it [00:02, 360.73it/s]
+[2m[36m(pid=6951)[0m 1039it [00:03, 338.64it/s]
+[2m[36m(pid=6955)[0m 1047it [00:03, 384.29it/s]
+[2m[36m(pid=6950)[0m 950it [00:03, 358.68it/s]
+[2m[36m(pid=6958)[0m 1053it [00:03, 327.22it/s]
+[2m[36m(pid=6953)[0m 754it [00:02, 322.55it/s]
+[2m[36m(pid=6956)[0m 1060it [00:03, 364.06it/s]
+[2m[36m(pid=6947)[0m 876it [00:03, 345.76it/s]
+[2m[36m(pid=6954)[0m 831it [00:02, 357.24it/s]
+[2m[36m(pid=6951)[0m 1074it [00:03, 335.94it/s]
+[2m[36m(pid=6950)[0m 987it [00:03, 350.81it/s]
+[2m[36m(pid=6955)[0m 1087it [00:03, 367.48it/s]
+[2m[36m(pid=6958)[0m 1087it [00:03, 321.53it/s]
+[2m[36m(pid=6953)[0m 789it [00:02, 317.28it/s]
+[2m[36m(pid=6956)[0m 1097it [00:03, 343.97it/s]
+[2m[36m(pid=6947)[0m 916it [00:03, 358.80it/s]
+[2m[36m(pid=6954)[0m 868it [00:03, 329.87it/s]
+[2m[36m(pid=6951)[0m 1108it [00:03, 331.34it/s]
+[2m[36m(pid=6950)[0m 1023it [00:03, 344.26it/s]
+[2m[36m(pid=6958)[0m 1120it [00:03, 322.52it/s]
+[2m[36m(pid=6953)[0m 824it [00:02, 323.70it/s]
+[2m[36m(pid=6956)[0m 1137it [00:03, 357.36it/s]
+[2m[36m(pid=6947)[0m 953it [00:03, 354.68it/s]
+[2m[36m(pid=6954)[0m 903it [00:03, 334.92it/s]
+[2m[36m(pid=6955)[0m 1125it [00:03, 361.06it/s]
+[2m[36m(pid=6951)[0m 1142it [00:04, 326.85it/s]
+[2m[36m(pid=6958)[0m 1157it [00:04, 327.10it/s]
+[2m[36m(pid=6953)[0m 863it [00:02, 341.04it/s]
+[2m[36m(pid=6956)[0m 1175it [00:03, 361.42it/s]
+[2m[36m(pid=6947)[0m 992it [00:03, 364.29it/s]
+[2m[36m(pid=6954)[0m 938it [00:03, 329.40it/s]
+[2m[36m(pid=6955)[0m 1162it [00:03, 347.43it/s]
+[2m[36m(pid=6950)[0m 1058it [00:03, 320.07it/s]
+[2m[36m(pid=6951)[0m 1184it [00:04, 343.51it/s]
+[2m[36m(pid=6958)[0m 1201it [00:04, 353.66it/s]
+[2m[36m(pid=6953)[0m 899it [00:03, 313.95it/s]
+[2m[36m(pid=6947)[0m 1029it [00:03, 354.96it/s]
+[2m[36m(pid=6954)[0m 975it [00:03, 339.81it/s]
+[2m[36m(pid=6955)[0m 1202it [00:03, 361.43it/s]
+[2m[36m(pid=6950)[0m 1093it [00:03, 327.52it/s]
+[2m[36m(pid=6951)[0m 1223it [00:04, 355.46it/s]
+[2m[36m(pid=6956)[0m 1212it [00:03, 326.67it/s]
+[2m[36m(pid=6953)[0m 937it [00:03, 329.45it/s]
+[2m[36m(pid=6947)[0m 1066it [00:03, 358.11it/s]
+[2m[36m(pid=6954)[0m 1011it [00:03, 345.24it/s]
+[2m[36m(pid=6955)[0m 1239it [00:04, 345.99it/s]
+[2m[36m(pid=6950)[0m 1131it [00:03, 339.67it/s]
+[2m[36m(pid=6951)[0m 1262it [00:04, 362.93it/s]
+[2m[36m(pid=6958)[0m 1238it [00:04, 324.58it/s]
+[2m[36m(pid=6956)[0m 1246it [00:04, 309.07it/s]
+[2m[36m(pid=6953)[0m 974it [00:03, 339.10it/s]
+[2m[36m(pid=6947)[0m 1103it [00:03, 346.26it/s]
+[2m[36m(pid=6954)[0m 1049it [00:03, 354.69it/s]
+[2m[36m(pid=6955)[0m 1277it [00:04, 353.47it/s]
+[2m[36m(pid=6950)[0m 1166it [00:03, 341.85it/s]
+[2m[36m(pid=6958)[0m 1272it [00:04, 327.12it/s]
+[2m[36m(pid=6956)[0m 1286it [00:04, 330.77it/s]
+[2m[36m(pid=6950)[0m 1207it [00:04, 358.27it/s]
+[2m[36m(pid=6951)[0m 1299it [00:04, 356.72it/s]
+[2m[36m(pid=6953)[0m 1010it [00:03, 344.51it/s]
+[2m[36m(pid=6947)[0m 1141it [00:03, 354.14it/s]
+[2m[36m(pid=6954)[0m 1087it [00:03, 358.75it/s]
+[2m[36m(pid=6955)[0m 1313it [00:04, 337.61it/s]
+[2m[36m(pid=6958)[0m 1311it [00:04, 341.44it/s]
+[2m[36m(pid=6956)[0m 1321it [00:04, 329.98it/s]
+[2m[36m(pid=6951)[0m 1335it [00:04, 342.38it/s]
+[2m[36m(pid=6953)[0m 1046it [00:03, 345.45it/s]
+[2m[36m(pid=6947)[0m 1180it [00:03, 363.76it/s]
+[2m[36m(pid=6954)[0m 1124it [00:03, 360.76it/s]
+[2m[36m(pid=6955)[0m 1349it [00:04, 341.11it/s]
+[2m[36m(pid=6950)[0m 1244it [00:04, 340.67it/s]
+[2m[36m(pid=6958)[0m 1346it [00:04, 332.06it/s]
+[2m[36m(pid=6956)[0m 1356it [00:04, 333.04it/s]
+[2m[36m(pid=6951)[0m 1372it [00:04, 349.71it/s]
+[2m[36m(pid=6947)[0m 1217it [00:04, 357.17it/s]
+[2m[36m(pid=6954)[0m 1163it [00:03, 368.45it/s]
+[2m[36m(pid=6955)[0m 1388it [00:04, 352.40it/s]
+[2m[36m(pid=6950)[0m 1290it [00:04, 367.05it/s]
+[2m[36m(pid=6958)[0m 1386it [00:04, 348.31it/s]
+[2m[36m(pid=6953)[0m 1081it [00:03, 325.22it/s]
+[2m[36m(pid=6951)[0m 1414it [00:04, 366.57it/s]
+[2m[36m(pid=6956)[0m 1390it [00:04, 309.33it/s]
+[2m[36m(pid=6947)[0m 1253it [00:04, 345.01it/s]
+[2m[36m(pid=6954)[0m 1201it [00:03, 366.59it/s]
+[2m[36m(pid=6955)[0m 1426it [00:04, 357.75it/s]
+[2m[36m(pid=6950)[0m 1328it [00:04, 345.63it/s]
+[2m[36m(pid=6958)[0m 1428it [00:04, 366.53it/s]
+[2m[36m(pid=6953)[0m 1121it [00:03, 341.08it/s]
+[2m[36m(pid=6951)[0m 1455it [00:04, 373.17it/s]
+[2m[36m(pid=6956)[0m 1427it [00:04, 324.20it/s]
+[2m[36m(pid=6947)[0m 1288it [00:04, 338.57it/s]
+[2m[36m(pid=6954)[0m 1238it [00:04, 353.22it/s]
+[2m[36m(pid=6955)[0m 1463it [00:04, 360.47it/s]
+[2m[36m(pid=6950)[0m 1370it [00:04, 363.49it/s]
+[2m[36m(pid=6958)[0m 1467it [00:04, 371.07it/s]
+[2m[36m(pid=6953)[0m 1162it [00:03, 355.27it/s]
+[2m[36m(pid=6951)[0m 1493it [00:04, 346.82it/s]
+[2m[36m(pid=6956)[0m 1463it [00:04, 332.31it/s]
+[2m[36m(pid=6947)[0m 1329it [00:04, 357.19it/s]
+[2m[36m(pid=6954)[0m 1280it [00:04, 367.79it/s]
+[2m[36m(pid=6955)[0m 1500it [00:04, 350.01it/s]
+[2m[36m(pid=6950)[0m 1408it [00:04, 351.18it/s]
+[2m[36m(pid=6958)[0m 1505it [00:05, 367.31it/s]
+[2m[36m(pid=6953)[0m 1203it [00:03, 367.72it/s]
+[2m[36m(pid=6951)[0m 1529it [00:05, 349.24it/s]
+[2m[36m(pid=6956)[0m 1500it [00:04, 340.91it/s]
+[2m[36m(pid=6947)[0m 1371it [00:04, 372.18it/s]
+[2m[36m(pid=6954)[0m 1322it [00:04, 377.95it/s]
+[2m[36m(pid=6955)[0m 1542it [00:04, 364.94it/s]
+[2m[36m(pid=6950)[0m 1449it [00:04, 360.17it/s]
+[2m[36m(pid=6958)[0m 1546it [00:05, 376.49it/s]
+[2m[36m(pid=6953)[0m 1245it [00:04, 381.09it/s]
+[2m[36m(pid=6956)[0m 1535it [00:04, 343.41it/s]
+[2m[36m(pid=6951)[0m 1569it [00:05, 361.36it/s]
+[2m[36m(pid=6954)[0m 1361it [00:04, 374.35it/s]
+[2m[36m(pid=6955)[0m 1579it [00:05, 364.51it/s]
+[2m[36m(pid=6958)[0m 1586it [00:05, 381.05it/s]
+[2m[36m(pid=6953)[0m 1287it [00:04, 389.47it/s]
+[2m[36m(pid=6947)[0m 1409it [00:04, 334.24it/s]
+[2m[36m(pid=6950)[0m 1486it [00:04, 349.37it/s]
+[2m[36m(pid=6951)[0m 1615it [00:05, 379.02it/s]
+[2m[36m(pid=6956)[0m 1571it [00:05, 341.63it/s]
+[2m[36m(pid=6955)[0m 1616it [00:05, 353.64it/s]
+[2m[36m(pid=6958)[0m 1625it [00:05, 353.90it/s]
+[2m[36m(pid=6953)[0m 1327it [00:04, 360.70it/s]
+[2m[36m(pid=6956)[0m 1607it [00:05, 346.48it/s]
+[2m[36m(pid=6947)[0m 1447it [00:04, 345.55it/s]
+[2m[36m(pid=6954)[0m 1399it [00:04, 355.25it/s]
+[2m[36m(pid=6950)[0m 1522it [00:04, 349.29it/s]
+[2m[36m(pid=6951)[0m 1654it [00:05, 369.87it/s]
+[2m[36m(pid=6955)[0m 1655it [00:05, 363.07it/s]
+[2m[36m(pid=6958)[0m 1661it [00:05, 331.65it/s]
+[2m[36m(pid=6953)[0m 1364it [00:04, 357.77it/s]
+[2m[36m(pid=6947)[0m 1483it [00:04, 337.23it/s]
+[2m[36m(pid=6954)[0m 1436it [00:04, 356.58it/s]
+[2m[36m(pid=6950)[0m 1558it [00:05, 336.98it/s]
+[2m[36m(pid=6951)[0m 1692it [00:05, 364.88it/s]
+[2m[36m(pid=6956)[0m 1642it [00:05, 327.86it/s]
+[2m[36m(pid=6955)[0m 1692it [00:05, 360.88it/s]
+[2m[36m(pid=6958)[0m 1695it [00:05, 330.98it/s]
+[2m[36m(pid=6953)[0m 1401it [00:04, 353.36it/s]
+[2m[36m(pid=6947)[0m 1530it [00:04, 365.72it/s]
+[2m[36m(pid=6954)[0m 1478it [00:04, 373.02it/s]
+[2m[36m(pid=6950)[0m 1596it [00:05, 348.10it/s]
+[2m[36m(pid=6951)[0m 1737it [00:05, 386.57it/s]
+[2m[36m(pid=6956)[0m 1676it [00:05, 330.95it/s]
+[2m[36m(pid=6955)[0m 1731it [00:05, 365.26it/s]
+[2m[36m(pid=6958)[0m 1736it [00:05, 349.75it/s]
+[2m[36m(pid=6953)[0m 1437it [00:04, 348.08it/s]
+[2m[36m(pid=6947)[0m 1568it [00:05, 363.11it/s]
+[2m[36m(pid=6954)[0m 1516it [00:04, 361.33it/s]
+[2m[36m(pid=6950)[0m 1641it [00:05, 372.86it/s]
+[2m[36m(pid=6956)[0m 1710it [00:05, 320.18it/s]
+[2m[36m(pid=6955)[0m 1768it [00:05, 360.18it/s]
+[2m[36m(pid=6958)[0m 1772it [00:05, 346.94it/s]
+[2m[36m(pid=6953)[0m 1474it [00:04, 354.10it/s]
+[2m[36m(pid=6947)[0m 1612it [00:05, 382.00it/s]
+[2m[36m(pid=6954)[0m 1553it [00:04, 354.88it/s]
+[2m[36m(pid=6950)[0m 1684it [00:05, 386.10it/s]
+[2m[36m(pid=6956)[0m 1743it [00:05, 319.68it/s]
+[2m[36m(pid=6955)[0m 1805it [00:05, 359.88it/s]
+[2m[36m(pid=6953)[0m 1510it [00:04, 339.53it/s]
+[2m[36m(pid=6954)[0m 1589it [00:05, 339.49it/s]
+[2m[36m(pid=6950)[0m 1724it [00:05, 371.78it/s]
+[2m[36m(pid=6958)[0m 1808it [00:05, 334.77it/s]
+[2m[36m(pid=6956)[0m 1776it [00:05, 311.41it/s]
+[2m[36m(pid=6947)[0m 1652it [00:05, 350.93it/s]
+[2m[36m(pid=6953)[0m 1545it [00:04, 338.92it/s]
+[2m[36m(pid=6954)[0m 1625it [00:05, 344.84it/s]
+[2m[36m(pid=6955)[0m 1842it [00:05, 346.53it/s]
+[2m[36m(pid=6950)[0m 1762it [00:05, 367.03it/s]
+[2m[36m(pid=6958)[0m 1843it [00:05, 338.69it/s]
+[2m[36m(pid=6956)[0m 1808it [00:05, 308.24it/s]
+[2m[36m(pid=6947)[0m 1689it [00:05, 337.28it/s]
+[2m[36m(pid=6954)[0m 1660it [00:05, 324.01it/s]
+[2m[36m(pid=6955)[0m 1877it [00:05, 308.31it/s]
+[2m[36m(pid=6950)[0m 1800it [00:05, 351.86it/s]
+[2m[36m(pid=6958)[0m 1883it [00:06, 352.47it/s]
+[2m[36m(pid=6953)[0m 1580it [00:05, 330.04it/s]
+[2m[36m(pid=6956)[0m 1848it [00:05, 330.12it/s]
+[2m[36m(pid=6947)[0m 1724it [00:05, 340.10it/s]
+[2m[36m(pid=6951)[0m 1777it [00:06, 168.58it/s]
+[2m[36m(pid=6954)[0m 1693it [00:05, 322.76it/s]
+[2m[36m(pid=6953)[0m 1614it [00:05, 310.04it/s]
+[2m[36m(pid=6951)[0m 1808it [00:06, 192.13it/s]
+[2m[36m(pid=6954)[0m 1726it [00:05, 324.60it/s]
+[2m[36m(pid=6953)[0m 1647it [00:05, 313.88it/s]
+[2m[36m(pid=6951)[0m 1838it [00:06, 209.68it/s]
+[2m[36m(pid=6953)[0m 1680it [00:05, 318.03it/s]
+[2m[36m(pid=6954)[0m 1759it [00:05, 308.55it/s]
+[2m[36m(pid=6951)[0m 1868it [00:06, 225.33it/s]
+[2m[36m(pid=6953)[0m 1713it [00:05, 299.35it/s]
+[2m[36m(pid=6954)[0m 1791it [00:05, 305.56it/s]
+[2m[36m(pid=6951)[0m 1897it [00:06, 229.34it/s]
+[2m[36m(pid=6958)[0m 1919it [00:06, 151.08it/s]
+[2m[36m(pid=6953)[0m 1744it [00:05, 302.06it/s]
+[2m[36m(pid=6954)[0m 1825it [00:05, 314.92it/s]
+[2m[36m(pid=6955)[0m 1909it [00:06, 134.36it/s]
+[2m[36m(pid=6950)[0m 1836it [00:06, 155.16it/s]
+[2m[36m(pid=6956)[0m 1882it [00:06, 143.33it/s]
+[2m[36m(pid=6947)[0m 1759it [00:06, 146.38it/s]
+[2m[36m(pid=6951)[0m 1938it [00:06, 263.17it/s]
+[2m[36m(pid=6958)[0m 1960it [00:06, 186.26it/s]
+[2m[36m(pid=6953)[0m 1776it [00:05, 307.12it/s]
+[2m[36m(pid=6955)[0m 1939it [00:06, 159.32it/s]
+[2m[36m(pid=6950)[0m 1874it [00:06, 186.73it/s]
+[2m[36m(pid=6956)[0m 1917it [00:06, 173.88it/s]
+[2m[36m(pid=6947)[0m 1788it [00:06, 171.67it/s]
+[2m[36m(pid=6951)[0m 1971it [00:06, 278.75it/s]
+[2m[36m(pid=6958)[0m 1995it [00:06, 215.30it/s]
+[2m[36m(pid=6953)[0m 1807it [00:05, 307.58it/s]
+[2m[36m(pid=6955)[0m 1983it [00:06, 196.57it/s]
+[2m[36m(pid=6950)[0m 1911it [00:06, 218.04it/s]
+[2m[36m(pid=6956)[0m 1948it [00:06, 200.13it/s]
+[2m[36m(pid=6947)[0m 1828it [00:06, 205.81it/s]
+[2m[36m(pid=6951)[0m 2003it [00:06, 274.85it/s]
+[2m[36m(pid=6953)[0m 1845it [00:05, 317.71it/s]
+[2m[36m(pid=6955)[0m 2029it [00:06, 236.38it/s]
+[2m[36m(pid=6950)[0m 1943it [00:06, 235.04it/s]
+[2m[36m(pid=6958)[0m 2027it [00:06, 218.39it/s]
+[2m[36m(pid=6956)[0m 1978it [00:06, 222.21it/s]
+[2m[36m(pid=6947)[0m 1859it [00:06, 225.12it/s]
+[2m[36m(pid=6951)[0m 2036it [00:07, 288.53it/s]
+[2m[36m(pid=6955)[0m 2064it [00:06, 258.54it/s]
+[2m[36m(pid=6950)[0m 1980it [00:06, 263.01it/s]
+[2m[36m(pid=6958)[0m 2062it [00:07, 245.66it/s]
+[2m[36m(pid=6956)[0m 2011it [00:06, 242.78it/s]
+[2m[36m(pid=6947)[0m 1896it [00:06, 252.41it/s]
+[2m[36m(pid=6951)[0m 2072it [00:07, 304.22it/s]
+[2m[36m(pid=6954)[0m 1857it [00:06, 138.78it/s]
+[2m[36m(pid=6955)[0m 2099it [00:07, 279.19it/s]
+[2m[36m(pid=6950)[0m 2013it [00:06, 278.63it/s]
+[2m[36m(pid=6958)[0m 2093it [00:07, 257.19it/s]
+[2m[36m(pid=6956)[0m 2041it [00:06, 252.43it/s]
+[2m[36m(pid=6947)[0m 1928it [00:06, 267.96it/s]
+[2m[36m(pid=6951)[0m 2119it [00:07, 339.92it/s]
+[2m[36m(pid=6954)[0m 1892it [00:06, 168.18it/s]
+[2m[36m(pid=6955)[0m 2141it [00:07, 308.32it/s]
+[2m[36m(pid=6950)[0m 2056it [00:06, 309.42it/s]
+[2m[36m(pid=6958)[0m 2128it [00:07, 277.37it/s]
+[2m[36m(pid=6956)[0m 2077it [00:07, 276.59it/s]
+[2m[36m(pid=6947)[0m 1967it [00:06, 290.88it/s]
+[2m[36m(pid=6951)[0m 2156it [00:07, 346.46it/s]
+[2m[36m(pid=6954)[0m 1929it [00:06, 200.92it/s]
+[2m[36m(pid=6955)[0m 2178it [00:07, 321.48it/s]
+[2m[36m(pid=6950)[0m 2092it [00:06, 319.80it/s]
+[2m[36m(pid=6958)[0m 2161it [00:07, 289.55it/s]
+[2m[36m(pid=6956)[0m 2115it [00:07, 300.77it/s]
+[2m[36m(pid=6947)[0m 2000it [00:06, 290.20it/s]
+[2m[36m(pid=6951)[0m 2194it [00:07, 355.66it/s]
+[2m[36m(pid=6953)[0m 1877it [00:06, 142.56it/s]
+[2m[36m(pid=6954)[0m 1966it [00:06, 232.49it/s]
+[2m[36m(pid=6955)[0m 2217it [00:07, 338.99it/s]
+[2m[36m(pid=6950)[0m 2133it [00:07, 340.98it/s]
+[2m[36m(pid=6958)[0m 2201it [00:07, 313.08it/s]
+[2m[36m(pid=6956)[0m 2153it [00:07, 317.00it/s]
+[2m[36m(pid=6947)[0m 2037it [00:06, 309.92it/s]
+[2m[36m(pid=6951)[0m 2231it [00:07, 340.44it/s]
+[2m[36m(pid=6953)[0m 1915it [00:06, 173.33it/s]
+[2m[36m(pid=6954)[0m 1998it [00:06, 252.41it/s]
+[2m[36m(pid=6955)[0m 2257it [00:07, 352.84it/s]
+[2m[36m(pid=6950)[0m 2176it [00:07, 355.14it/s]
+[2m[36m(pid=6958)[0m 2239it [00:07, 325.42it/s]
+[2m[36m(pid=6956)[0m 2189it [00:07, 328.76it/s]
+[2m[36m(pid=6947)[0m 2071it [00:07, 311.27it/s]
+[2m[36m(pid=6951)[0m 2267it [00:07, 344.79it/s]
+[2m[36m(pid=6953)[0m 1952it [00:06, 205.23it/s]
+[2m[36m(pid=6954)[0m 2030it [00:06, 266.17it/s]
+[2m[36m(pid=6955)[0m 2295it [00:07, 346.02it/s]
+[2m[36m(pid=6950)[0m 2214it [00:07, 362.13it/s]
+[2m[36m(pid=6958)[0m 2274it [00:07, 330.89it/s]
+[2m[36m(pid=6956)[0m 2228it [00:07, 340.31it/s]
+[2m[36m(pid=6947)[0m 2104it [00:07, 305.49it/s]
+[2m[36m(pid=6951)[0m 2303it [00:07, 342.32it/s]
+[2m[36m(pid=6953)[0m 1993it [00:06, 241.07it/s]
+[2m[36m(pid=6954)[0m 2067it [00:06, 290.49it/s]
+[2m[36m(pid=6955)[0m 2341it [00:07, 372.18it/s]
+[2m[36m(pid=6950)[0m 2252it [00:07, 358.83it/s]
+[2m[36m(pid=6958)[0m 2314it [00:07, 347.49it/s]
+[2m[36m(pid=6956)[0m 2267it [00:07, 346.74it/s]
+[2m[36m(pid=6947)[0m 2143it [00:07, 324.61it/s]
+[2m[36m(pid=6951)[0m 2344it [00:07, 359.21it/s]
+[2m[36m(pid=6953)[0m 2037it [00:06, 277.25it/s]
+[2m[36m(pid=6954)[0m 2111it [00:07, 321.24it/s]
+[2m[36m(pid=6955)[0m 2385it [00:07, 385.57it/s]
+[2m[36m(pid=6950)[0m 2289it [00:07, 361.90it/s]
+[2m[36m(pid=6958)[0m 2355it [00:07, 362.03it/s]
+[2m[36m(pid=6956)[0m 2310it [00:07, 365.66it/s]
+[2m[36m(pid=6947)[0m 2179it [00:07, 333.85it/s]
+[2m[36m(pid=6951)[0m 2385it [00:07, 366.38it/s]
+[2m[36m(pid=6954)[0m 2151it [00:07, 340.17it/s]
+[2m[36m(pid=6950)[0m 2326it [00:07, 358.21it/s]
+[2m[36m(pid=6958)[0m 2393it [00:08, 362.41it/s]
+[2m[36m(pid=6953)[0m 2074it [00:06, 282.98it/s]
+[2m[36m(pid=6956)[0m 2348it [00:07, 363.15it/s]
+[2m[36m(pid=6947)[0m 2214it [00:07, 337.84it/s]
+[2m[36m(pid=6955)[0m 2425it [00:07, 360.64it/s]
+[2m[36m(pid=6951)[0m 2426it [00:08, 374.92it/s]
+[2m[36m(pid=6954)[0m 2188it [00:07, 333.70it/s]
+[2m[36m(pid=6950)[0m 2368it [00:07, 374.28it/s]
+[2m[36m(pid=6958)[0m 2430it [00:08, 359.95it/s]
+[2m[36m(pid=6953)[0m 2124it [00:07, 322.25it/s]
+[2m[36m(pid=6956)[0m 2385it [00:07, 350.96it/s]
+[2m[36m(pid=6947)[0m 2249it [00:07, 341.38it/s]
+[2m[36m(pid=6955)[0m 2470it [00:07, 379.67it/s]
+[2m[36m(pid=6951)[0m 2464it [00:08, 365.19it/s]
+[2m[36m(pid=6954)[0m 2225it [00:07, 342.53it/s]
+[2m[36m(pid=6950)[0m 2406it [00:07, 369.48it/s]
+[2m[36m(pid=6958)[0m 2467it [00:08, 334.61it/s]
+[2m[36m(pid=6953)[0m 2163it [00:07, 329.28it/s]
+[2m[36m(pid=6956)[0m 2425it [00:08, 352.89it/s]
+[2m[36m(pid=6947)[0m 2290it [00:07, 359.05it/s]
+[2m[36m(pid=6955)[0m 2513it [00:08, 392.64it/s]
+[2m[36m(pid=6951)[0m 2504it [00:08, 373.71it/s]
+[2m[36m(pid=6954)[0m 2261it [00:07, 339.59it/s]
+[2m[36m(pid=6950)[0m 2444it [00:07, 348.18it/s]
+[2m[36m(pid=6958)[0m 2508it [00:08, 354.14it/s]
+[2m[36m(pid=6953)[0m 2202it [00:07, 343.64it/s]
+[2m[36m(pid=6956)[0m 2464it [00:08, 361.21it/s]
+[2m[36m(pid=6947)[0m 2329it [00:07, 364.33it/s]
+[2m[36m(pid=6955)[0m 2554it [00:08, 366.71it/s]
+[2m[36m(pid=6954)[0m 2307it [00:07, 366.94it/s]
+[2m[36m(pid=6950)[0m 2483it [00:07, 359.01it/s]
+[2m[36m(pid=6951)[0m 2542it [00:08, 342.19it/s]
+[2m[36m(pid=6958)[0m 2545it [00:08, 355.37it/s]
+[2m[36m(pid=6953)[0m 2240it [00:07, 339.29it/s]
+[2m[36m(pid=6956)[0m 2501it [00:08, 353.82it/s]
+[2m[36m(pid=6947)[0m 2367it [00:07, 365.48it/s]
+[2m[36m(pid=6955)[0m 2592it [00:08, 355.62it/s]
+[2m[36m(pid=6954)[0m 2348it [00:07, 376.00it/s]
+[2m[36m(pid=6950)[0m 2527it [00:08, 376.64it/s]
+[2m[36m(pid=6951)[0m 2578it [00:08, 347.01it/s]
+[2m[36m(pid=6958)[0m 2585it [00:08, 366.98it/s]
+[2m[36m(pid=6953)[0m 2279it [00:07, 351.50it/s]
+[2m[36m(pid=6956)[0m 2537it [00:08, 354.27it/s]
+[2m[36m(pid=6947)[0m 2406it [00:07, 371.52it/s]
+[2m[36m(pid=6955)[0m 2634it [00:08, 371.09it/s]
+[2m[36m(pid=6954)[0m 2387it [00:07, 357.20it/s]
+[2m[36m(pid=6950)[0m 2566it [00:08, 378.00it/s]
+[2m[36m(pid=6951)[0m 2617it [00:08, 355.65it/s]
+[2m[36m(pid=6958)[0m 2630it [00:08, 384.90it/s]
+[2m[36m(pid=6953)[0m 2316it [00:07, 344.41it/s]
+[2m[36m(pid=6956)[0m 2575it [00:08, 361.38it/s]
+[2m[36m(pid=6947)[0m 2444it [00:08, 363.92it/s]
+[2m[36m(pid=6955)[0m 2682it [00:08, 397.76it/s]
+[2m[36m(pid=6954)[0m 2428it [00:07, 366.50it/s]
+[2m[36m(pid=6951)[0m 2658it [00:08, 369.89it/s]
+[2m[36m(pid=6958)[0m 2679it [00:08, 410.70it/s]
+[2m[36m(pid=6953)[0m 2357it [00:07, 358.09it/s]
+[2m[36m(pid=6956)[0m 2620it [00:08, 383.77it/s]
+[2m[36m(pid=6947)[0m 2492it [00:08, 391.74it/s]
+[2m[36m(pid=6955)[0m 2723it [00:08, 388.28it/s]
+[2m[36m(pid=6950)[0m 2605it [00:08, 348.99it/s]
+[2m[36m(pid=6954)[0m 2466it [00:07, 361.03it/s]
+[2m[36m(pid=6951)[0m 2700it [00:08, 382.09it/s]
+[2m[36m(pid=6958)[0m 2723it [00:08, 413.11it/s]
+[2m[36m(pid=6956)[0m 2664it [00:08, 397.91it/s]
+[2m[36m(pid=6947)[0m 2532it [00:08, 382.00it/s]
+[2m[36m(pid=6955)[0m 2765it [00:08, 395.64it/s]
+[2m[36m(pid=6950)[0m 2651it [00:08, 375.85it/s]
+[2m[36m(pid=6951)[0m 2740it [00:08, 387.22it/s]
+[2m[36m(pid=6953)[0m 2394it [00:07, 315.78it/s]
+[2m[36m(pid=6954)[0m 2507it [00:08, 373.93it/s]
+[2m[36m(pid=6958)[0m 2768it [00:08, 422.60it/s]
+[2m[36m(pid=6956)[0m 2705it [00:08, 384.54it/s]
+[2m[36m(pid=6947)[0m 2572it [00:08, 381.35it/s]
+[2m[36m(pid=6955)[0m 2806it [00:08, 394.58it/s]
+[2m[36m(pid=6950)[0m 2690it [00:08, 370.43it/s]
+[2m[36m(pid=6953)[0m 2428it [00:07, 307.74it/s]
+[2m[36m(pid=6954)[0m 2547it [00:08, 376.36it/s]
+[2m[36m(pid=6951)[0m 2780it [00:09, 381.03it/s]
+[2m[36m(pid=6956)[0m 2744it [00:08, 386.06it/s]
+[2m[36m(pid=6947)[0m 2611it [00:08, 365.41it/s]
+[2m[36m(pid=6950)[0m 2728it [00:08, 357.86it/s]
+[2m[36m(pid=6958)[0m 2811it [00:09, 406.62it/s]
+[2m[36m(pid=6953)[0m 2470it [00:08, 333.85it/s]
+[2m[36m(pid=6955)[0m 2846it [00:08, 381.89it/s]
+[2m[36m(pid=6951)[0m 2819it [00:09, 376.22it/s]
+[2m[36m(pid=6958)[0m 2855it [00:09, 414.52it/s]
+[2m[36m(pid=6956)[0m 2783it [00:08, 381.07it/s]
+[2m[36m(pid=6947)[0m 2648it [00:08, 356.47it/s]
+[2m[36m(pid=6954)[0m 2585it [00:08, 365.79it/s]
+[2m[36m(pid=6950)[0m 2767it [00:08, 365.60it/s]
+[2m[36m(pid=6953)[0m 2512it [00:08, 355.59it/s]
+[2m[36m(pid=6954)[0m 2623it [00:08, 369.67it/s]
+[2m[36m(pid=6955)[0m 2885it [00:09, 363.29it/s]
+[2m[36m(pid=6951)[0m 2866it [00:09, 394.18it/s]
+[2m[36m(pid=6956)[0m 2822it [00:09, 370.48it/s]
+[2m[36m(pid=6947)[0m 2689it [00:08, 370.65it/s]
+[2m[36m(pid=6950)[0m 2811it [00:08, 381.76it/s]
+[2m[36m(pid=6958)[0m 2897it [00:09, 384.94it/s]
+[2m[36m(pid=6955)[0m 2922it [00:09, 338.69it/s]
+[2m[36m(pid=6951)[0m 2906it [00:09, 381.02it/s]
+[2m[36m(pid=6953)[0m 2549it [00:08, 336.66it/s]
+[2m[36m(pid=6956)[0m 2865it [00:09, 383.49it/s]
+[2m[36m(pid=6947)[0m 2735it [00:08, 391.85it/s]
+[2m[36m(pid=6954)[0m 2670it [00:08, 389.12it/s]
+[2m[36m(pid=6950)[0m 2850it [00:08, 379.82it/s]
+[2m[36m(pid=6958)[0m 2937it [00:09, 380.69it/s]
+[2m[36m(pid=6953)[0m 2588it [00:08, 350.53it/s]
+[2m[36m(pid=6955)[0m 2960it [00:09, 349.43it/s]
+[2m[36m(pid=6951)[0m 2945it [00:09, 378.38it/s]
+[2m[36m(pid=6954)[0m 2710it [00:08, 390.26it/s]
+[2m[36m(pid=6956)[0m 2909it [00:09, 386.17it/s]
+[2m[36m(pid=6947)[0m 2777it [00:08, 399.74it/s]
+[2m[36m(pid=6950)[0m 2889it [00:09, 369.69it/s]
+[2m[36m(pid=6958)[0m 2976it [00:09, 354.56it/s]
+[2m[36m(pid=6953)[0m 2626it [00:08, 358.65it/s]
+[2m[36m(pid=6954)[0m 2753it [00:08, 398.86it/s]
+[2m[36m(pid=6955)[0m 2999it [00:09, 357.23it/s]
+[2m[36m(pid=6951)[0m 2984it [00:09, 348.98it/s]
+[2m[36m(pid=6956)[0m 2948it [00:09, 379.59it/s]
+[2m[36m(pid=6947)[0m 2818it [00:08, 394.38it/s]
+[2m[36m(pid=6950)[0m 2931it [00:09, 380.47it/s]
+[2m[36m(pid=6953)[0m 2664it [00:08, 364.00it/s]
+[2m[36m(pid=6951)[0m 3028it [00:09, 371.17it/s]
+[2m[36m(pid=6958)[0m 3013it [00:09, 350.92it/s]
+[2m[36m(pid=6956)[0m 2997it [00:09, 406.22it/s]
+[2m[36m(pid=6947)[0m 2860it [00:09, 399.89it/s]
+[2m[36m(pid=6954)[0m 2794it [00:08, 383.67it/s]
+[2m[36m(pid=6955)[0m 3036it [00:09, 337.79it/s]
+[2m[36m(pid=6950)[0m 2973it [00:09, 389.83it/s]
+[2m[36m(pid=6953)[0m 2709it [00:08, 384.09it/s]
+[2m[36m(pid=6951)[0m 3069it [00:09, 379.38it/s]
+[2m[36m(pid=6958)[0m 3049it [00:09, 321.58it/s]
+[2m[36m(pid=6954)[0m 2833it [00:08, 362.56it/s]
+[2m[36m(pid=6955)[0m 3077it [00:09, 354.02it/s]
+[2m[36m(pid=6956)[0m 3039it [00:09, 376.04it/s]
+[2m[36m(pid=6947)[0m 2901it [00:09, 381.96it/s]
+[2m[36m(pid=6950)[0m 3013it [00:09, 356.70it/s]
+[2m[36m(pid=6958)[0m 3085it [00:09, 330.52it/s]
+[2m[36m(pid=6953)[0m 2749it [00:08, 372.31it/s]
+[2m[36m(pid=6954)[0m 2870it [00:09, 342.27it/s]
+[2m[36m(pid=6955)[0m 3115it [00:09, 358.01it/s]
+[2m[36m(pid=6951)[0m 3108it [00:09, 350.67it/s]
+[2m[36m(pid=6953)[0m 2792it [00:08, 387.67it/s]
+[2m[36m(pid=6956)[0m 3078it [00:09, 363.99it/s]
+[2m[36m(pid=6947)[0m 2940it [00:09, 360.55it/s]
+[2m[36m(pid=6950)[0m 3051it [00:09, 362.07it/s]
+[2m[36m(pid=6958)[0m 3127it [00:09, 350.93it/s]
+[2m[36m(pid=6954)[0m 2909it [00:09, 353.57it/s]
+[2m[36m(pid=6955)[0m 3152it [00:09, 341.30it/s]
+[2m[36m(pid=6951)[0m 3144it [00:10, 351.31it/s]
+[2m[36m(pid=6956)[0m 3116it [00:09, 366.27it/s]
+[2m[36m(pid=6947)[0m 2977it [00:09, 359.62it/s]
+[2m[36m(pid=6950)[0m 3088it [00:09, 356.55it/s]
+[2m[36m(pid=6958)[0m 3166it [00:10, 361.23it/s]
+[2m[36m(pid=6953)[0m 2832it [00:09, 370.51it/s]
+[2m[36m(pid=6954)[0m 2945it [00:09, 346.05it/s]
+[2m[36m(pid=6955)[0m 3187it [00:09, 328.66it/s]
+[2m[36m(pid=6951)[0m 3187it [00:10, 366.69it/s]
+[2m[36m(pid=6956)[0m 3154it [00:09, 357.25it/s]
+[2m[36m(pid=6947)[0m 3014it [00:09, 354.11it/s]
+[2m[36m(pid=6950)[0m 3125it [00:09, 354.37it/s]
+[2m[36m(pid=6958)[0m 3205it [00:10, 368.40it/s]
+[2m[36m(pid=6953)[0m 2870it [00:09, 341.20it/s]
+[2m[36m(pid=6954)[0m 2982it [00:09, 352.52it/s]
+[2m[36m(pid=6955)[0m 3221it [00:10, 324.04it/s]
+[2m[36m(pid=6951)[0m 3225it [00:10, 365.22it/s]
+[2m[36m(pid=6956)[0m 3197it [00:10, 369.45it/s]
+[2m[36m(pid=6947)[0m 3058it [00:09, 375.87it/s]
+[2m[36m(pid=6950)[0m 3162it [00:09, 355.91it/s]
+[2m[36m(pid=6958)[0m 3245it [00:10, 376.57it/s]
+[2m[36m(pid=6954)[0m 3023it [00:09, 365.83it/s]
+[2m[36m(pid=6955)[0m 3254it [00:10, 322.27it/s]
+[2m[36m(pid=6951)[0m 3262it [00:10, 356.70it/s]
+[2m[36m(pid=6953)[0m 2905it [00:09, 329.59it/s]
+[2m[36m(pid=6956)[0m 3241it [00:10, 384.32it/s]
+[2m[36m(pid=6947)[0m 3105it [00:09, 397.53it/s]
+[2m[36m(pid=6950)[0m 3204it [00:09, 369.21it/s]
+[2m[36m(pid=6958)[0m 3293it [00:10, 402.55it/s]
+[2m[36m(pid=6953)[0m 2939it [00:09, 331.93it/s]
+[2m[36m(pid=6954)[0m 3060it [00:09, 366.46it/s]
+[2m[36m(pid=6955)[0m 3294it [00:10, 342.18it/s]
+[2m[36m(pid=6951)[0m 3301it [00:10, 364.85it/s]
+[2m[36m(pid=6956)[0m 3280it [00:10, 380.89it/s]
+[2m[36m(pid=6947)[0m 3151it [00:09, 410.73it/s]
+[2m[36m(pid=6950)[0m 3242it [00:10, 371.54it/s]
+[2m[36m(pid=6958)[0m 3339it [00:10, 412.55it/s]
+[2m[36m(pid=6953)[0m 2977it [00:09, 343.11it/s]
+[2m[36m(pid=6954)[0m 3097it [00:09, 364.38it/s]
+[2m[36m(pid=6955)[0m 3329it [00:10, 340.77it/s]
+[2m[36m(pid=6951)[0m 3341it [00:10, 373.72it/s]
+[2m[36m(pid=6956)[0m 3319it [00:10, 376.78it/s]
+[2m[36m(pid=6950)[0m 3280it [00:10, 351.86it/s]
+[2m[36m(pid=6958)[0m 3385it [00:10, 422.35it/s]
+[2m[36m(pid=6947)[0m 3193it [00:09, 360.61it/s]
+[2m[36m(pid=6954)[0m 3134it [00:09, 355.80it/s]
+[2m[36m(pid=6955)[0m 3365it [00:10, 333.71it/s]
+[2m[36m(pid=6951)[0m 3379it [00:10, 357.52it/s]
+[2m[36m(pid=6953)[0m 3012it [00:09, 316.73it/s]
+[2m[36m(pid=6956)[0m 3357it [00:10, 369.33it/s]
+[2m[36m(pid=6950)[0m 3316it [00:10, 345.29it/s]
+[2m[36m(pid=6958)[0m 3428it [00:10, 420.40it/s]
+[2m[36m(pid=6947)[0m 3231it [00:10, 348.78it/s]
+[2m[36m(pid=6954)[0m 3174it [00:09, 362.27it/s]
+[2m[36m(pid=6955)[0m 3402it [00:10, 343.72it/s]
+[2m[36m(pid=6953)[0m 3050it [00:09, 332.23it/s]
+[2m[36m(pid=6956)[0m 3396it [00:10, 373.69it/s]
+[2m[36m(pid=6950)[0m 3351it [00:10, 343.46it/s]
+[2m[36m(pid=6951)[0m 3416it [00:10, 337.85it/s]
+[2m[36m(pid=6958)[0m 3471it [00:10, 396.00it/s]
+[2m[36m(pid=6947)[0m 3268it [00:10, 348.52it/s]
+[2m[36m(pid=6954)[0m 3216it [00:10, 374.62it/s]
+[2m[36m(pid=6955)[0m 3437it [00:10, 331.81it/s]
+[2m[36m(pid=6953)[0m 3090it [00:09, 349.58it/s]
+[2m[36m(pid=6956)[0m 3436it [00:10, 380.50it/s]
+[2m[36m(pid=6950)[0m 3386it [00:10, 339.55it/s]
+[2m[36m(pid=6951)[0m 3457it [00:10, 351.95it/s]
+[2m[36m(pid=6958)[0m 3512it [00:10, 397.61it/s]
+[2m[36m(pid=6947)[0m 3314it [00:10, 373.94it/s]
+[2m[36m(pid=6953)[0m 3135it [00:09, 368.44it/s]
+[2m[36m(pid=6956)[0m 3476it [00:10, 385.73it/s]
+[2m[36m(pid=6954)[0m 3254it [00:10, 344.08it/s]
+[2m[36m(pid=6955)[0m 3471it [00:10, 327.23it/s]
+[2m[36m(pid=6950)[0m 3425it [00:10, 335.96it/s]
+[2m[36m(pid=6951)[0m 3508it [00:11, 381.56it/s]
+[2m[36m(pid=6958)[0m 3553it [00:11, 391.41it/s]
+[2m[36m(pid=6947)[0m 3353it [00:10, 368.55it/s]
+[2m[36m(pid=6953)[0m 3173it [00:10, 351.97it/s]
+[2m[36m(pid=6956)[0m 3516it [00:10, 388.59it/s]
+[2m[36m(pid=6954)[0m 3290it [00:10, 345.73it/s]
+[2m[36m(pid=6955)[0m 3504it [00:10, 313.91it/s]
+[2m[36m(pid=6950)[0m 3466it [00:10, 355.02it/s]
+[2m[36m(pid=6947)[0m 3391it [00:10, 362.89it/s]
+[2m[36m(pid=6958)[0m 3593it [00:11, 360.91it/s]
+[2m[36m(pid=6953)[0m 3209it [00:10, 349.36it/s]
+[2m[36m(pid=6956)[0m 3559it [00:11, 400.01it/s]
+[2m[36m(pid=6955)[0m 3547it [00:11, 341.15it/s]
+[2m[36m(pid=6950)[0m 3502it [00:10, 350.90it/s]
+[2m[36m(pid=6947)[0m 3428it [00:10, 349.46it/s]
+[2m[36m(pid=6954)[0m 3326it [00:10, 318.85it/s]
+[2m[36m(pid=6958)[0m 3630it [00:11, 356.02it/s]
+[2m[36m(pid=6953)[0m 3245it [00:10, 340.50it/s]
+[2m[36m(pid=6956)[0m 3600it [00:11, 390.81it/s]
+[2m[36m(pid=6955)[0m 3587it [00:11, 355.95it/s]
+[2m[36m(pid=6954)[0m 3363it [00:10, 331.23it/s]
+[2m[36m(pid=6950)[0m 3538it [00:10, 324.84it/s]
+[2m[36m(pid=6947)[0m 3465it [00:10, 349.29it/s]
+[2m[36m(pid=6958)[0m 3667it [00:11, 359.31it/s]
+[2m[36m(pid=6955)[0m 3624it [00:11, 336.33it/s]
+[2m[36m(pid=6953)[0m 3280it [00:10, 324.96it/s]
+[2m[36m(pid=6954)[0m 3397it [00:10, 329.35it/s]
+[2m[36m(pid=6950)[0m 3572it [00:11, 305.34it/s]
+[2m[36m(pid=6958)[0m 3704it [00:11, 320.70it/s]
+[2m[36m(pid=6953)[0m 3313it [00:10, 323.33it/s]
+[2m[36m(pid=6954)[0m 3431it [00:10, 319.87it/s]
+[2m[36m(pid=6951)[0m 3548it [00:11, 150.03it/s]
+[2m[36m(pid=6953)[0m 3346it [00:10, 319.62it/s]
+[2m[36m(pid=6954)[0m 3464it [00:10, 322.55it/s]
+[2m[36m(pid=6951)[0m 3578it [00:11, 174.00it/s]
+[2m[36m(pid=6953)[0m 3379it [00:10, 318.28it/s]
+[2m[36m(pid=6954)[0m 3497it [00:10, 303.13it/s]
+[2m[36m(pid=6951)[0m 3611it [00:11, 202.09it/s]
+[2m[36m(pid=6953)[0m 3416it [00:10, 328.50it/s]
+[2m[36m(pid=6954)[0m 3528it [00:11, 293.97it/s]
+[2m[36m(pid=6951)[0m 3642it [00:11, 224.04it/s]
+[2m[36m(pid=6953)[0m 3450it [00:10, 294.21it/s]
+[2m[36m(pid=6956)[0m 3640it [00:11, 144.67it/s]
+[2m[36m(pid=6947)[0m 3501it [00:11, 132.12it/s]
+[2m[36m(pid=6954)[0m 3558it [00:11, 277.35it/s]
+[2m[36m(pid=6951)[0m 3672it [00:12, 233.03it/s]
+[2m[36m(pid=6955)[0m 3659it [00:11, 130.34it/s]
+[2m[36m(pid=6953)[0m 3481it [00:11, 293.47it/s]
+[2m[36m(pid=6956)[0m 3670it [00:11, 166.44it/s]
+[2m[36m(pid=6950)[0m 3604it [00:11, 120.94it/s]
+[2m[36m(pid=6951)[0m 3703it [00:12, 251.08it/s]
+[2m[36m(pid=6958)[0m 3738it [00:12, 126.90it/s]
+[2m[36m(pid=6947)[0m 3528it [00:11, 152.79it/s]
+[2m[36m(pid=6955)[0m 3698it [00:12, 162.87it/s]
+[2m[36m(pid=6958)[0m 3754it [00:12, 306.87it/s]
+[2m[36m(pid=6958)[0m   0% 0/5000 [00:00<?, ?it/s]
+[2m[36m(pid=6953)[0m 3511it [00:11, 285.32it/s]
+[2m[36m(pid=6956)[0m 3701it [00:12, 192.86it/s]
+[2m[36m(pid=6950)[0m 3638it [00:11, 147.65it/s]
+[2m[36m(pid=6951)[0m 3740it [00:12, 277.85it/s]
+[2m[36m(pid=6947)[0m 3557it [00:11, 177.27it/s]
+[2m[36m(pid=6955)[0m 3744it [00:12, 201.35it/s]3754it [00:12, 309.09it/s]
+[2m[36m(pid=6955)[0m   0% 0/5000 [00:00<?, ?it/s]
+[2m[36m(pid=6951)[0m 3754it [00:12, 304.51it/s]
+[2m[36m(pid=6951)[0m   0% 0/5000 [00:00<?, ?it/s]
+[2m[36m(pid=6958)[0m   9% 443/5000 [00:00<00:01, 4429.95it/s]
+[2m[36m(pid=6953)[0m 3542it [00:11, 291.65it/s]
+[2m[36m(pid=6956)[0m 3737it [00:12, 223.55it/s]
+[2m[36m(pid=6947)[0m 3592it [00:11, 207.94it/s]
+[2m[36m(pid=6950)[0m 3670it [00:11, 174.91it/s]
+[2m[36m(pid=6956)[0m 3754it [00:12, 307.95it/s]
+[2m[36m(pid=6956)[0m   0% 0/5000 [00:00<?, ?it/s]
+[2m[36m(pid=6955)[0m  12% 600/5000 [00:00<00:00, 5982.62it/s]
+[2m[36m(pid=6951)[0m  11% 528/5000 [00:00<00:00, 5276.85it/s]
+[2m[36m(pid=6958)[0m  17% 867/5000 [00:00<00:00, 4370.03it/s]
+[2m[36m(pid=6950)[0m 3706it [00:12, 206.78it/s]
+[2m[36m(pid=6956)[0m   8% 418/5000 [00:00<00:01, 4172.77it/s]
+[2m[36m(pid=6947)[0m 3621it [00:11, 223.21it/s]
+[2m[36m(pid=6955)[0m  24% 1204/5000 [00:00<00:00, 5995.87it/s]
+[2m[36m(pid=6951)[0m  21% 1057/5000 [00:00<00:00, 5277.83it/s]
+[2m[36m(pid=6958)[0m  28% 1405/5000 [00:00<00:00, 4629.00it/s]
+[2m[36m(pid=6950)[0m 3738it [00:12, 231.24it/s]3754it [00:12, 309.14it/s]
+[2m[36m(pid=6950)[0m   0% 0/5000 [00:00<?, ?it/s]
+[2m[36m(pid=6956)[0m  18% 917/5000 [00:00<00:00, 4387.53it/s]
+[2m[36m(pid=6947)[0m 3653it [00:11, 243.99it/s]
+[2m[36m(pid=6954)[0m 3587it [00:11, 117.57it/s]
+[2m[36m(pid=6955)[0m  36% 1780/5000 [00:00<00:00, 5920.92it/s]
+[2m[36m(pid=6951)[0m  31% 1557/5000 [00:00<00:00, 5186.01it/s]
+[2m[36m(pid=6958)[0m  40% 1998/5000 [00:00<00:00, 4954.56it/s]
+[2m[36m(pid=6947)[0m 3694it [00:12, 277.54it/s]
+[2m[36m(pid=6950)[0m  10% 500/5000 [00:00<00:00, 4992.81it/s]
+[2m[36m(pid=6956)[0m  26% 1275/5000 [00:00<00:00, 4108.68it/s]
+[2m[36m(pid=6954)[0m 3620it [00:11, 145.47it/s]
+[2m[36m(pid=6955)[0m  47% 2356/5000 [00:00<00:00, 5865.11it/s]
+[2m[36m(pid=6951)[0m  39% 1958/5000 [00:00<00:00, 4763.62it/s]
+[2m[36m(pid=6958)[0m  51% 2553/5000 [00:00<00:00, 5116.08it/s]
+[2m[36m(pid=6947)[0m 3727it [00:12, 291.28it/s]
+[2m[36m(pid=6950)[0m  22% 1075/5000 [00:00<00:00, 5197.78it/s]
+[2m[36m(pid=6956)[0m  37% 1830/5000 [00:00<00:00, 4454.83it/s]
+[2m[36m(pid=6954)[0m 3648it [00:11, 169.66it/s]
+[2m[36m(pid=6955)[0m  59% 2939/5000 [00:00<00:00, 5854.16it/s]
+[2m[36m(pid=6951)[0m  48% 2422/5000 [00:00<00:00, 4725.29it/s]
+[2m[36m(pid=6958)[0m  62% 3084/5000 [00:00<00:00, 5162.82it/s]
+[2m[36m(pid=6947)[0m 3754it [00:12, 306.88it/s]
+[2m[36m(pid=6947)[0m   0% 0/5000 [00:00<?, ?it/s]
+[2m[36m(pid=6950)[0m  29% 1456/5000 [00:00<00:00, 4684.13it/s]
+[2m[36m(pid=6951)[0m  57% 2827/5000 [00:00<00:00, 4497.46it/s]
+[2m[36m(pid=6953)[0m 3572it [00:11, 121.68it/s]
+[2m[36m(pid=6956)[0m  48% 2421/5000 [00:00<00:00, 4807.53it/s]
+[2m[36m(pid=6954)[0m 3674it [00:12, 183.24it/s]
+[2m[36m(pid=6955)[0m  69% 3465/5000 [00:00<00:00, 5656.61it/s]
+[2m[36m(pid=6958)[0m  71% 3554/5000 [00:00<00:00, 4810.95it/s]
+[2m[36m(pid=6947)[0m   9% 461/5000 [00:00<00:00, 4608.74it/s]
+[2m[36m(pid=6950)[0m  40% 2017/5000 [00:00<00:00, 4926.63it/s]
+[2m[36m(pid=6951)[0m  65% 3247/5000 [00:00<00:00, 4403.26it/s]
+[2m[36m(pid=6953)[0m 3609it [00:11, 152.23it/s]
+[2m[36m(pid=6956)[0m  60% 3004/5000 [00:00<00:00, 5073.61it/s]
+[2m[36m(pid=6954)[0m 3718it [00:12, 222.08it/s]
+[2m[36m(pid=6955)[0m  79% 3962/5000 [00:00<00:00, 4950.03it/s]
+[2m[36m(pid=6958)[0m  80% 4008/5000 [00:00<00:00, 4548.61it/s]
+[2m[36m(pid=6947)[0m  18% 910/5000 [00:00<00:00, 4570.40it/s]
+[2m[36m(pid=6954)[0m 3754it [00:12, 306.68it/s]
+[2m[36m(pid=6954)[0m   0% 0/5000 [00:00<?, ?it/s]
+[2m[36m(pid=6950)[0m  50% 2511/5000 [00:00<00:00, 4929.33it/s]
+[2m[36m(pid=6951)[0m  74% 3676/5000 [00:00<00:00, 4366.16it/s]
+[2m[36m(pid=6953)[0m 3645it [00:12, 181.85it/s]
+[2m[36m(pid=6956)[0m  72% 3625/5000 [00:00<00:00, 5366.90it/s]
+[2m[36m(pid=6955)[0m  89% 4447/5000 [00:00<00:00, 4917.99it/s]
+[2m[36m(pid=6958)[0m  89% 4447/5000 [00:00<00:00, 4458.31it/s]
+[2m[36m(pid=6956)[0m  83% 4162/5000 [00:00<00:00, 5366.37it/s]
+[2m[36m(pid=6947)[0m  26% 1301/5000 [00:00<00:00, 4347.07it/s]
+[2m[36m(pid=6954)[0m  13% 669/5000 [00:00<00:00, 6685.59it/s]
+[2m[36m(pid=6950)[0m  62% 3089/5000 [00:00<00:00, 5156.30it/s]
+[2m[36m(pid=6951)[0m  82% 4086/5000 [00:00<00:00, 4248.59it/s]
+[2m[36m(pid=6953)[0m 3681it [00:12, 213.07it/s]
+[2m[36m(pid=6955)[0m  98% 4917/5000 [00:00<00:00, 4675.23it/s]
+[2m[36m(pid=6958)[0m  98% 4901/5000 [00:01<00:00, 4481.78it/s]
+[2m[36m(pid=6956)[0m  95% 4744/5000 [00:00<00:00, 5494.47it/s]
+[2m[36m(pid=6947)[0m  37% 1832/5000 [00:00<00:00, 4596.18it/s]
+[2m[36m(pid=6954)[0m  25% 1264/5000 [00:00<00:00, 6445.89it/s]
+[2m[36m(pid=6955)[0m 100% 5000/5000 [00:00<00:00, 5222.19it/s]
+[2m[36m(pid=6950)[0m  74% 3681/5000 [00:00<00:00, 5362.35it/s]
+[2m[36m(pid=6951)[0m  90% 4504/5000 [00:01<00:00, 4225.67it/s]
+[2m[36m(pid=6958)[0m 100% 5000/5000 [00:01<00:00, 4728.45it/s]
+[2m[36m(pid=6953)[0m 3719it [00:12, 244.63it/s]
+[2m[36m(pid=6955)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=6947)[0m  49% 2472/5000 [00:00<00:00, 5020.39it/s]
+[2m[36m(pid=6958)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=6956)[0m 100% 5000/5000 [00:00<00:00, 5140.19it/s]
+[2m[36m(pid=6954)[0m  34% 1714/5000 [00:00<00:00, 5703.22it/s]
+[2m[36m(pid=6950)[0m  84% 4192/5000 [00:00<00:00, 5283.59it/s]
+[2m[36m(pid=6951)[0m 100% 5000/5000 [00:01<00:00, 4589.07it/s]
+[2m[36m(pid=6953)[0m 3754it [00:12, 268.17it/s]3754it [00:12, 304.29it/s]
+[2m[36m(pid=6953)[0m   0% 0/5000 [00:00<?, ?it/s]
+[2m[36m(pid=6947)[0m  60% 2988/5000 [00:00<00:00, 5060.95it/s]
+[2m[36m(pid=6955)[0m 1471it [00:00, 14702.62it/s]
+[2m[36m(pid=6951)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=6958)[0m 1193it [00:00, 11922.71it/s]
+[2m[36m(pid=6956)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=6954)[0m  42% 2114/5000 [00:00<00:00, 5055.10it/s]
+[2m[36m(pid=6950)[0m  96% 4789/5000 [00:00<00:00, 5472.14it/s]100% 5000/5000 [00:00<00:00, 5326.76it/s]
+[2m[36m(pid=6953)[0m   8% 391/5000 [00:00<00:01, 3909.42it/s]
+[2m[36m(pid=6947)[0m  74% 3697/5000 [00:00<00:00, 5534.97it/s]
+[2m[36m(pid=6955)[0m 2968it [00:00, 14779.44it/s]
+[2m[36m(pid=6951)[0m 1768it [00:00, 17674.16it/s]
+[2m[36m(pid=6958)[0m 2204it [00:00, 11313.23it/s]
+[2m[36m(pid=6956)[0m 1389it [00:00, 13882.96it/s]
+[2m[36m(pid=6954)[0m  55% 2734/5000 [00:00<00:00, 5349.91it/s]
+[2m[36m(pid=6953)[0m  17% 859/5000 [00:00<00:01, 4111.95it/s]
+[2m[36m(pid=6947)[0m  87% 4347/5000 [00:00<00:00, 5791.34it/s]
+[2m[36m(pid=6955)[0m 4075it [00:00, 13428.35it/s]
+[2m[36m(pid=6950)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=6951)[0m 3127it [00:00, 16207.20it/s]
+[2m[36m(pid=6958)[0m 3249it [00:00, 11037.92it/s]
+[2m[36m(pid=6956)[0m 3058it [00:00, 14618.28it/s]
+[2m[36m(pid=6954)[0m  67% 3354/5000 [00:00<00:00, 5578.11it/s]
+[2m[36m(pid=6953)[0m  26% 1276/5000 [00:00<00:00, 4128.98it/s]
+[2m[36m(pid=6947)[0m  99% 4934/5000 [00:00<00:00, 5812.03it/s]100% 5000/5000 [00:00<00:00, 5497.06it/s]
+[2m[36m(pid=6955)[0m 5203it [00:00, 12702.04it/s]
+[2m[36m(pid=6950)[0m 1020it [00:00, 10191.43it/s]
+[2m[36m(pid=6951)[0m 4322it [00:00, 14638.98it/s]
+[2m[36m(pid=6958)[0m 4920it [00:00, 12288.38it/s]
+[2m[36m(pid=6953)[0m  34% 1690/5000 [00:00<00:00, 4130.11it/s]
+[2m[36m(pid=6956)[0m 3991it [00:00, 12491.08it/s]
+[2m[36m(pid=6954)[0m  77% 3852/5000 [00:00<00:00, 5089.83it/s]
+[2m[36m(pid=6955)[0m 6421it [00:00, 12538.58it/s]
+[2m[36m(pid=6950)[0m 2059it [00:00, 10248.19it/s]
+[2m[36m(pid=6951)[0m 5426it [00:00, 13330.26it/s]
+[2m[36m(pid=6958)[0m 6015it [00:00, 11851.58it/s]
+[2m[36m(pid=6953)[0m  48% 2383/5000 [00:00<00:00, 4699.27it/s]
+[2m[36m(pid=6956)[0m 4890it [00:00, 11184.32it/s]
+[2m[36m(pid=6947)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=6954)[0m  89% 4449/5000 [00:00<00:00, 5324.98it/s]
+[2m[36m(pid=6955)[0m 8139it [00:00, 13643.06it/s]
+[2m[36m(pid=6950)[0m 3105it [00:00, 10309.57it/s]
+[2m[36m(pid=6951)[0m 6403it [00:00, 12015.90it/s]
+[2m[36m(pid=6958)[0m 7038it [00:00, 11018.76it/s]
+[2m[36m(pid=6953)[0m  62% 3107/5000 [00:00<00:00, 5250.38it/s]
+[2m[36m(pid=6956)[0m 5840it [00:00, 10617.73it/s]
+[2m[36m(pid=6947)[0m 926it [00:00, 9253.30it/s]
+[2m[36m(pid=6954)[0m  99% 4961/5000 [00:00<00:00, 4754.75it/s]100% 5000/5000 [00:00<00:00, 5189.87it/s]
+[2m[36m(pid=6955)[0m 10003it [00:00, 14835.57it/s]
+[2m[36m(pid=6950)[0m 4085it [00:00, 10148.36it/s]
+[2m[36m(pid=6951)[0m 7371it [00:00, 11072.64it/s]
+[2m[36m(pid=6958)[0m 8038it [00:00, 10449.93it/s]
+[2m[36m(pid=6953)[0m  76% 3786/5000 [00:00<00:00, 5628.78it/s]
+[2m[36m(pid=6956)[0m 7055it [00:00, 11034.74it/s]
+[2m[36m(pid=6947)[0m 1855it [00:00, 9263.29it/s]
+[2m[36m(pid=6950)[0m 5421it [00:00, 10935.64it/s]
+[2m[36m(pid=6954)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=6955)[0m 11471it [00:00, 14785.25it/s]
+[2m[36m(pid=6951)[0m 8329it [00:00, 10456.03it/s]
+[2m[36m(pid=6958)[0m 9707it [00:00, 11769.87it/s]
+[2m[36m(pid=6956)[0m 8868it [00:00, 12502.57it/s]
+[2m[36m(pid=6947)[0m 2791it [00:00, 9290.19it/s]
+[2m[36m(pid=6954)[0m 1735it [00:00, 17347.91it/s]
+[2m[36m(pid=6950)[0m 7200it [00:00, 12362.63it/s]
+[2m[36m(pid=6953)[0m  87% 4353/5000 [00:00<00:00, 5180.05it/s]
+[2m[36m(pid=6955)[0m 12907it [00:00, 13299.39it/s]
+[2m[36m(pid=6951)[0m 9285it [00:00, 10167.73it/s]
+[2m[36m(pid=6958)[0m 10946it [00:00, 11949.16it/s]
+[2m[36m(pid=6956)[0m 10681it [00:00, 13784.71it/s]
+[2m[36m(pid=6947)[0m 4277it [00:00, 10466.61it/s]
+[2m[36m(pid=6954)[0m 3158it [00:00, 16277.06it/s]
+[2m[36m(pid=6950)[0m 8974it [00:00, 13598.11it/s]
+[2m[36m(pid=6953)[0m  98% 4894/5000 [00:00<00:00, 5246.78it/s]100% 5000/5000 [00:00<00:00, 5289.18it/s]
+[2m[36m(pid=6947)[0m 6098it [00:00, 11996.43it/s]
+[2m[36m(pid=6951)[0m 10248it [00:00, 9998.30it/s]
+[2m[36m(pid=6956)[0m 12341it [00:00, 14521.41it/s]
+[2m[36m(pid=6958)[0m 12149it [00:01, 11244.86it/s]
+[2m[36m(pid=6953)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=6954)[0m 4076it [00:00, 13211.62it/s]
+[2m[36m(pid=6955)[0m 14235it [00:01, 12238.66it/s]
+[2m[36m(pid=6950)[0m 10702it [00:00, 14524.86it/s]
+[2m[36m(pid=6956)[0m 14234it [00:01, 15610.85it/s]
+[2m[36m(pid=6947)[0m 7437it [00:00, 12381.78it/s]
+[2m[36m(pid=6951)[0m 11215it [00:01, 9896.38it/s]
+[2m[36m(pid=6958)[0m 13309it [00:01, 11347.91it/s]
+[2m[36m(pid=6953)[0m 1550it [00:00, 15498.50it/s]
+[2m[36m(pid=6954)[0m 5120it [00:00, 12232.03it/s]
+[2m[36m(pid=6955)[0m 15475it [00:01, 12112.65it/s]
+[2m[36m(pid=6947)[0m 8650it [00:00, 12021.64it/s]
+[2m[36m(pid=6950)[0m 12177it [00:00, 13033.83it/s]
+[2m[36m(pid=6951)[0m 12407it [00:01, 10426.45it/s]
+[2m[36m(pid=6958)[0m 15039it [00:01, 12653.52it/s]
+[2m[36m(pid=6953)[0m 2867it [00:00, 14715.84it/s]
+[2m[36m(pid=6956)[0m 15839it [00:01, 15158.97it/s]
+[2m[36m(pid=6954)[0m 6040it [00:00, 11129.44it/s]
+[2m[36m(pid=6955)[0m 16721it [00:01, 12213.02it/s]
+[2m[36m(pid=6956)[0m 17759it [00:01, 16178.22it/s]
+[2m[36m(pid=6950)[0m 13525it [00:01, 12004.98it/s]
+[2m[36m(pid=6951)[0m 13603it [00:01, 10843.03it/s]
+[2m[36m(pid=6958)[0m 16360it [00:01, 12370.31it/s]
+[2m[36m(pid=6953)[0m 4595it [00:00, 15400.97it/s]
+[2m[36m(pid=6947)[0m 9837it [00:00, 11200.06it/s]
+[2m[36m(pid=6954)[0m 7011it [00:00, 10660.58it/s]
+[2m[36m(pid=6955)[0m 17951it [00:01, 11819.07it/s]
+[2m[36m(pid=6951)[0m 14682it [00:01, 10609.03it/s]
+[2m[36m(pid=6958)[0m 18541it [00:01, 14215.19it/s]
+[2m[36m(pid=6953)[0m 5689it [00:00, 13717.98it/s]
+[2m[36m(pid=6956)[0m 19420it [00:01, 15917.53it/s]
+[2m[36m(pid=6947)[0m 10958it [00:00, 10681.76it/s]
+[2m[36m(pid=6954)[0m 7955it [00:00, 10258.74it/s]
+[2m[36m(pid=6955)[0m 19142it [00:01, 11568.17it/s]
+[2m[36m(pid=6950)[0m 14773it [00:01, 11401.84it/s]
+[2m[36m(pid=6956)[0m 21596it [00:01, 17309.39it/s]
+[2m[36m(pid=6951)[0m 15945it [00:01, 11143.59it/s]
+[2m[36m(pid=6953)[0m 6733it [00:00, 12086.62it/s]
+[2m[36m(pid=6947)[0m 12032it [00:01, 10418.08it/s]
+[2m[36m(pid=6954)[0m 9022it [00:00, 10377.14it/s]
+[2m[36m(pid=6955)[0m 20306it [00:01, 11584.50it/s]
+[2m[36m(pid=6950)[0m 15953it [00:01, 11010.10it/s]
+[2m[36m(pid=6951)[0m 17741it [00:01, 12574.14it/s]
+[2m[36m(pid=6958)[0m 20089it [00:01, 13378.46it/s]
+[2m[36m(pid=6956)[0m 23935it [00:01, 18770.12it/s]
+[2m[36m(pid=6958)[0m 21704it [00:01, 14103.76it/s]
+[2m[36m(pid=6953)[0m 7748it [00:00, 11102.97it/s]
+[2m[36m(pid=6947)[0m 13079it [00:01, 10353.44it/s]
+[2m[36m(pid=6954)[0m 10417it [00:00, 11240.07it/s]
+[2m[36m(pid=6955)[0m 21518it [00:01, 11736.43it/s]
+[2m[36m(pid=6950)[0m 17625it [00:01, 12265.98it/s]
+[2m[36m(pid=6956)[0m 26570it [00:01, 20541.77it/s]
+[2m[36m(pid=6951)[0m 19064it [00:01, 12090.35it/s]
+[2m[36m(pid=6958)[0m 23782it [00:01, 15605.92it/s]
+[2m[36m(pid=6953)[0m 8739it [00:00, 10542.59it/s]
+[2m[36m(pid=6947)[0m 15043it [00:01, 12064.65it/s]
+[2m[36m(pid=6954)[0m 11515it [00:01, 10739.68it/s]
+[2m[36m(pid=6955)[0m 22782it [00:01, 11993.01it/s]
+[2m[36m(pid=6950)[0m 19796it [00:01, 14105.99it/s]
+[2m[36m(pid=6956)[0m 28728it [00:01, 20008.88it/s]
+[2m[36m(pid=6955)[0m 24130it [00:01, 12401.10it/s]
+[2m[36m(pid=6951)[0m 20323it [00:01, 11944.11it/s]
+[2m[36m(pid=6953)[0m 9715it [00:00, 10239.05it/s]
+[2m[36m(pid=6947)[0m 17057it [00:01, 13714.22it/s]
+[2m[36m(pid=6954)[0m 12575it [00:01, 10466.77it/s]
+[2m[36m(pid=6950)[0m 22045it [00:01, 15881.18it/s]
+[2m[36m(pid=6958)[0m 25448it [00:01, 15070.92it/s]
+[2m[36m(pid=6955)[0m 25564it [00:01, 12921.41it/s]
+[2m[36m(pid=6951)[0m 21553it [00:01, 12006.65it/s]
+[2m[36m(pid=6953)[0m 10687it [00:00, 9898.55it/s]
+[2m[36m(pid=6956)[0m 30805it [00:01, 19195.39it/s]
+[2m[36m(pid=6947)[0m 19137it [00:01, 15273.82it/s]
+[2m[36m(pid=6954)[0m 13614it [00:01, 10371.97it/s]
+[2m[36m(pid=6950)[0m 24384it [00:01, 17572.20it/s]
+[2m[36m(pid=6958)[0m 27033it [00:02, 15256.06it/s]
+[2m[36m(pid=6955)[0m 27415it [00:02, 14207.08it/s]
+[2m[36m(pid=6951)[0m 22807it [00:01, 12159.17it/s]
+[2m[36m(pid=6953)[0m 11810it [00:01, 10263.13it/s]
+[2m[36m(pid=6956)[0m 34020it [00:01, 21834.57it/s]
+[2m[36m(pid=6947)[0m 20829it [00:01, 15100.06it/s]
+[2m[36m(pid=6954)[0m 14821it [00:01, 10827.83it/s]
+[2m[36m(pid=6950)[0m 26321it [00:01, 17326.87it/s]
+[2m[36m(pid=6951)[0m 24173it [00:02, 12570.95it/s]
+[2m[36m(pid=6958)[0m 28614it [00:02, 15258.62it/s]
+[2m[36m(pid=6956)[0m 38167it [00:02, 25448.74it/s]
+[2m[36m(pid=6955)[0m 30414it [00:02, 16870.22it/s]
+[2m[36m(pid=6958)[0m 31480it [00:02, 17747.43it/s]
+[2m[36m(pid=6953)[0m 13695it [00:01, 11887.29it/s]
+[2m[36m(pid=6947)[0m 22455it [00:01, 15369.67it/s]
+[2m[36m(pid=6954)[0m 15906it [00:01, 10701.75it/s]
+[2m[36m(pid=6950)[0m 28180it [00:01, 16917.83it/s]
+[2m[36m(pid=6951)[0m 25587it [00:02, 13003.52it/s]
+[2m[36m(pid=6956)[0m 41121it [00:02, 26545.69it/s]
+[2m[36m(pid=6955)[0m 33924it [00:02, 19983.51it/s]
+[2m[36m(pid=6958)[0m 33435it [00:02, 17920.88it/s]
+[2m[36m(pid=6953)[0m 15660it [00:01, 13483.86it/s]
+[2m[36m(pid=6947)[0m 24074it [00:01, 14739.17it/s]
+[2m[36m(pid=6954)[0m 17003it [00:01, 10777.90it/s]
+[2m[36m(pid=6950)[0m 29963it [00:02, 16796.43it/s]
+[2m[36m(pid=6951)[0m 27016it [00:02, 13364.40it/s]
+[2m[36m(pid=6956)[0m 44221it [00:02, 27735.16it/s]
+[2m[36m(pid=6955)[0m 37204it [00:02, 22634.79it/s]
+[2m[36m(pid=6958)[0m 35660it [00:02, 19031.68it/s]
+[2m[36m(pid=6953)[0m 17247it [00:01, 14120.04it/s]
+[2m[36m(pid=6947)[0m 25611it [00:01, 14616.57it/s]
+[2m[36m(pid=6954)[0m 18114it [00:01, 10873.41it/s]
+[2m[36m(pid=6950)[0m 32532it [00:02, 18740.08it/s]
+[2m[36m(pid=6951)[0m 28786it [00:02, 14421.44it/s]
+[2m[36m(pid=6956)[0m 47290it [00:02, 28559.53it/s]
+[2m[36m(pid=6954)[0m 19234it [00:01, 10967.94it/s]
+[2m[36m(pid=6955)[0m 39869it [00:02, 22793.29it/s]
+[2m[36m(pid=6958)[0m 38915it [00:02, 21740.26it/s]
+[2m[36m(pid=6953)[0m 18758it [00:01, 14153.28it/s]
+[2m[36m(pid=6947)[0m 27117it [00:02, 14646.96it/s]
+[2m[36m(pid=6950)[0m 34644it [00:02, 19392.42it/s]
+[2m[36m(pid=6951)[0m 31489it [00:02, 16767.09it/s]
+[2m[36m(pid=6956)[0m 50729it [00:02, 30082.78it/s]
+[2m[36m(pid=6954)[0m 20406it [00:01, 11180.89it/s]
+[2m[36m(pid=6955)[0m 44945it [00:02, 27306.69it/s]
+[2m[36m(pid=6958)[0m 42330it [00:02, 24395.11it/s]
+[2m[36m(pid=6953)[0m 20793it [00:01, 15575.96it/s]
+[2m[36m(pid=6947)[0m 29175it [00:02, 16033.50it/s]
+[2m[36m(pid=6950)[0m 36940it [00:02, 20335.78it/s]
+[2m[36m(pid=6951)[0m 33740it [00:02, 18154.82it/s]
+[2m[36m(pid=6956)[0m 56518it [00:02, 35147.67it/s]
+[2m[36m(pid=6954)[0m 22284it [00:01, 12724.70it/s]
+[2m[36m(pid=6955)[0m 48317it [00:02, 28951.52it/s]
+[2m[36m(pid=6958)[0m 45376it [00:02, 25944.60it/s]
+[2m[36m(pid=6953)[0m 22929it [00:01, 16951.94it/s]
+[2m[36m(pid=6947)[0m 31352it [00:02, 17406.36it/s]
+[2m[36m(pid=6950)[0m 39047it [00:02, 20515.90it/s]
+[2m[36m(pid=6951)[0m 35948it [00:02, 19175.51it/s]
+[2m[36m(pid=6956)[0m 62252it [00:02, 39762.34it/s]
+[2m[36m(pid=6954)[0m 24631it [00:02, 14749.70it/s]
+[2m[36m(pid=6955)[0m 52807it [00:02, 32402.75it/s]
+[2m[36m(pid=6958)[0m 48547it [00:02, 27440.15it/s]
+[2m[36m(pid=6953)[0m 25452it [00:01, 18802.14it/s]
+[2m[36m(pid=6947)[0m 33214it [00:02, 17753.17it/s]
+[2m[36m(pid=6950)[0m 42002it [00:02, 22583.60it/s]
+[2m[36m(pid=6951)[0m 39247it [00:02, 21929.26it/s]
+[2m[36m(pid=6953)[0m 28331it [00:01, 20984.91it/s]
+[2m[36m(pid=6956)[0m 68119it [00:02, 44018.03it/s]
+[2m[36m(pid=6954)[0m 27140it [00:02, 16829.95it/s]
+[2m[36m(pid=6955)[0m 58163it [00:02, 36757.80it/s]
+[2m[36m(pid=6958)[0m 57587it [00:02, 34685.99it/s]
+[2m[36m(pid=6947)[0m 35369it [00:02, 18742.55it/s]
+[2m[36m(pid=6950)[0m 45037it [00:02, 24460.06it/s]
+[2m[36m(pid=6951)[0m 44904it [00:02, 26864.18it/s]
+[2m[36m(pid=6953)[0m 31572it [00:01, 23466.22it/s]
+[2m[36m(pid=6956)[0m 73576it [00:02, 46720.04it/s]
+[2m[36m(pid=6954)[0m 30354it [00:02, 19634.38it/s]
+[2m[36m(pid=6955)[0m 63741it [00:03, 40942.76it/s]
+[2m[36m(pid=6950)[0m 48142it [00:02, 26122.97it/s]
+[2m[36m(pid=6958)[0m 67644it [00:03, 43168.26it/s]
+[2m[36m(pid=6947)[0m 37622it [00:02, 19735.91it/s]
+[2m[36m(pid=6951)[0m 51350it [00:02, 32558.90it/s]
+[2m[36m(pid=6953)[0m 35200it [00:02, 26247.23it/s]
+[2m[36m(pid=6956)[0m 79164it [00:02, 49121.58it/s]
+[2m[36m(pid=6954)[0m 33949it [00:02, 22728.86it/s]
+[2m[36m(pid=6955)[0m 69557it [00:03, 44929.63it/s]
+[2m[36m(pid=6950)[0m 52388it [00:02, 29530.71it/s]
+[2m[36m(pid=6958)[0m 77452it [00:03, 51882.41it/s]
+[2m[36m(pid=6947)[0m 40068it [00:02, 20945.33it/s]
+[2m[36m(pid=6951)[0m 61341it [00:03, 40812.42it/s]
+[2m[36m(pid=6953)[0m 39405it [00:02, 29581.56it/s]
+[2m[36m(pid=6956)[0m 84685it [00:03, 50789.66it/s]
+[2m[36m(pid=6954)[0m 38154it [00:02, 26361.91it/s]
+[2m[36m(pid=6955)[0m 75008it [00:03, 47429.71it/s]
+[2m[36m(pid=6950)[0m 57788it [00:02, 34175.32it/s]
+[2m[36m(pid=6958)[0m 87328it [00:03, 60493.27it/s]89527it [00:03, 27681.98it/s]
+[2m[36m(pid=6956)[0m 89527it [00:03, 28543.36it/s]
+[2m[36m(pid=6947)[0m 43147it [00:02, 23163.45it/s]
+[2m[36m(pid=6955)[0m 80670it [00:03, 49856.54it/s]
+[2m[36m(pid=6951)[0m 70647it [00:03, 49078.84it/s]
+[2m[36m(pid=6953)[0m 43177it [00:02, 31625.36it/s]
+[2m[36m(pid=6947)[0m 46289it [00:02, 25142.64it/s]
+[2m[36m(pid=6954)[0m 41750it [00:02, 28656.40it/s]
+[2m[36m(pid=6950)[0m 62889it [00:03, 37930.72it/s]
+[2m[36m(pid=6955)[0m 86183it [00:03, 51329.29it/s]
+[2m[36m(pid=6951)[0m 77646it [00:03, 52766.25it/s]
+[2m[36m(pid=6953)[0m 46604it [00:02, 31243.51it/s]
+[2m[36m(pid=6947)[0m 49727it [00:02, 27346.90it/s]
+[2m[36m(pid=6954)[0m 47260it [00:02, 33474.46it/s]
+[2m[36m(pid=6950)[0m 68372it [00:03, 41787.30it/s]
+[2m[36m(pid=6955)[0m 89527it [00:03, 25842.40it/s]
+[2m[36m(pid=6951)[0m 84465it [00:03, 53687.62it/s]
+[2m[36m(pid=6953)[0m 49915it [00:02, 31235.65it/s]
+[2m[36m(pid=6947)[0m 55303it [00:03, 32281.37it/s]
+[2m[36m(pid=6954)[0m 51558it [00:02, 35807.24it/s]
+[2m[36m(pid=6950)[0m 73999it [00:03, 45283.76it/s]
+[2m[36m(pid=6951)[0m 89527it [00:03, 25944.66it/s]
+[2m[36m(pid=6953)[0m 56022it [00:02, 36597.48it/s]
+[2m[36m(pid=6947)[0m 60402it [00:03, 36273.07it/s]
+[2m[36m(pid=6954)[0m 59701it [00:02, 43035.31it/s]
+[2m[36m(pid=6950)[0m 79319it [00:03, 47398.96it/s]
+[2m[36m(pid=6953)[0m 64075it [00:02, 43758.76it/s]
+[2m[36m(pid=6947)[0m 66314it [00:03, 41027.78it/s]
+[2m[36m(pid=6954)[0m 66483it [00:02, 48264.10it/s]
+[2m[36m(pid=6950)[0m 84721it [00:03, 49194.58it/s]
+[2m[36m(pid=6953)[0m 69814it [00:02, 47115.60it/s]
+[2m[36m(pid=6947)[0m 72795it [00:03, 46098.02it/s]
+[2m[36m(pid=6954)[0m 72295it [00:03, 50837.57it/s]
+[2m[36m(pid=6950)[0m 89527it [00:03, 25279.25it/s]
+[2m[36m(pid=6953)[0m 75241it [00:02, 48283.34it/s]
+[2m[36m(pid=6947)[0m 81184it [00:03, 53298.27it/s]
+[2m[36m(pid=6954)[0m 78036it [00:03, 52103.77it/s]
+[2m[36m(pid=6954)[0m 84553it [00:03, 55438.04it/s]
+[2m[36m(pid=6953)[0m 82441it [00:02, 53571.33it/s]
+[2m[36m(pid=6947)[0m 89186it [00:03, 59162.09it/s]89527it [00:03, 25504.75it/s]
+[2m[36m(pid=6954)[0m 89527it [00:03, 27049.10it/s]
+[2m[36m(pid=6953)[0m 89271it [00:03, 57272.93it/s]89527it [00:03, 29202.06it/s]
+[2020-01-12 17:23:30,153][HYDRA] Fatal error
+Traceback (most recent call last):
+  File "/u/home/badr/Expe/VirAAL/viraal/train_text.py", line 264, in <module>
+    train_text()
+  File "/u/home/badr/Expe/VirAAL/env/lib/python3.6/site-packages/hydra/main.py", line 24, in decorated_main
+    strict=strict,
+  File "/u/home/badr/Expe/VirAAL/env/lib/python3.6/site-packages/hydra/_internal/utils.py", line 180, in run_hydra
+    overrides=args.overrides,
+  File "/u/home/badr/Expe/VirAAL/env/lib/python3.6/site-packages/hydra/_internal/hydra.py", line 102, in multirun
+    return sweeper.sweep(arguments=task_overrides)
+  File "/u/home/badr/Expe/VirAAL/env/lib/python3.6/site-packages/hydra_plugins/range_sweeper_badr/range_sweeper_badr.py", line 62, in sweep
+    returns = [self.launcher.launch(batch)]
+  File "/u/home/badr/Softs/hydra_plugins/badr_ray_launcher/hydra_plugins/ray_launcher_badr/ray_launcher.py", line 126, in launch
+    return [ray.get(run) for run in runs]
+  File "/u/home/badr/Softs/hydra_plugins/badr_ray_launcher/hydra_plugins/ray_launcher_badr/ray_launcher.py", line 126, in <listcomp>
+    return [ray.get(run) for run in runs]
+  File "/u/home/badr/Expe/VirAAL/env/lib/python3.6/site-packages/ray/worker.py", line 1457, in get
+    raise value.as_instanceof_cause()
+ray.exceptions.RayTaskError(RuntimeError): [36mray::hydra_plugins.ray_launcher_badr.ray_launcher.launch()[39m (pid=6958, ip=192.168.2.5)
+  File "python/ray/_raylet.pyx", line 636, in ray._raylet.execute_task
+  File "/u/home/badr/Softs/hydra_plugins/badr_ray_launcher/hydra_plugins/ray_launcher_badr/ray_launcher.py", line 66, in launch
+    run_job(*args, **kwargs)
+  File "/u/home/badr/Expe/VirAAL/env/lib/python3.6/site-packages/hydra/plugins/common/utils.py", line 109, in run_job
+    ret.return_value = task_function(task_cfg)
+  File "/u/home/badr/Expe/VirAAL/viraal/train_text.py", line 258, in train_text
+    tr.train_loop()
+  File "/u/home/badr/Expe/VirAAL/viraal/train_text.py", line 232, in train_loop
+    raise e
+  File "/u/home/badr/Expe/VirAAL/viraal/train_text.py", line 222, in train_loop
+    self.train_epoch()
+  File "/u/home/badr/Expe/VirAAL/viraal/train_text.py", line 161, in train_epoch
+    ce_loss.mean().backward(retain_graph=True)
+  File "/u/home/badr/Expe/VirAAL/env/lib/python3.6/site-packages/torch/tensor.py", line 118, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph)
+  File "/u/home/badr/Expe/VirAAL/env/lib/python3.6/site-packages/torch/autograd/__init__.py", line 93, in backward
+    allow_unreachable=True)  # allow_unreachable flag
+RuntimeError: CUDA out of memory. Tried to allocate 1.38 GiB (GPU 0; 10.92 GiB total capacity; 4.01 GiB already allocated; 626.50 MiB free; 1.32 GiB cached)
+2020-01-12 17:26:53,045	INFO resource_spec.py:216 -- Starting Ray with 17.19 GiB memory available for workers and up to 8.6 GiB for objects. You can adjust these settings with ray.init(memory=<bytes>, object_store_memory=<bytes>).
+[2020-01-12 17:26:53,456][HYDRA] RangeSweeper sweeping
+[2020-01-12 17:26:53,456][HYDRA] Sweep output dir : multiruns/text/2020-01-12/17-26-53
+[2020-01-12 17:26:53,470][HYDRA] Ray Launcher is launching 8 jobs locally
+[2020-01-12 17:26:53,470][HYDRA] Sweep output dir : multiruns/text/2020-01-12/17-26-53
+[2020-01-12 17:26:53,470][HYDRA] 	#0 : losses=ce hydra=no_console misc.seed=293920 misc.wandb=True wandb.group=atis_ce wandb.project=viraal-joint ray.remote.num_gpus=0.5
+[2020-01-12 17:26:54,036][HYDRA] 	#1 : losses=ce hydra=no_console misc.seed=293921 misc.wandb=True wandb.group=atis_ce wandb.project=viraal-joint ray.remote.num_gpus=0.5
+[2020-01-12 17:26:54,313][HYDRA] 	#2 : losses=ce hydra=no_console misc.seed=293922 misc.wandb=True wandb.group=atis_ce wandb.project=viraal-joint ray.remote.num_gpus=0.5
+[2020-01-12 17:26:54,600][HYDRA] 	#3 : losses=ce hydra=no_console misc.seed=293923 misc.wandb=True wandb.group=atis_ce wandb.project=viraal-joint ray.remote.num_gpus=0.5
+[2020-01-12 17:26:54,779][HYDRA] 	#4 : losses=ce hydra=no_console misc.seed=293924 misc.wandb=True wandb.group=atis_ce wandb.project=viraal-joint ray.remote.num_gpus=0.5
+[2020-01-12 17:26:54,985][HYDRA] 	#5 : losses=ce hydra=no_console misc.seed=293925 misc.wandb=True wandb.group=atis_ce wandb.project=viraal-joint ray.remote.num_gpus=0.5
+[2020-01-12 17:26:55,280][HYDRA] 	#6 : losses=ce hydra=no_console misc.seed=293926 misc.wandb=True wandb.group=atis_ce wandb.project=viraal-joint ray.remote.num_gpus=0.5
+[2020-01-12 17:26:55,531][HYDRA] 	#7 : losses=ce hydra=no_console misc.seed=293927 misc.wandb=True wandb.group=atis_ce wandb.project=viraal-joint ray.remote.num_gpus=0.5
+[2m[36m(pid=7982)[0m wandb: Tracking run with wandb version 0.8.19
+[2m[36m(pid=7974)[0m wandb: Tracking run with wandb version 0.8.19
+[2m[36m(pid=7978)[0m wandb: Tracking run with wandb version 0.8.19
+[2m[36m(pid=7973)[0m wandb: Tracking run with wandb version 0.8.19
+[2m[36m(pid=7980)[0m wandb: Tracking run with wandb version 0.8.19
+[2m[36m(pid=8219)[0m wandb: Tracking run with wandb version 0.8.19
+[2m[36m(pid=7983)[0m wandb: Tracking run with wandb version 0.8.19
+[2m[36m(pid=7973)[0m wandb: Wandb version 0.8.20 is available!  To upgrade, please run:
+[2m[36m(pid=7973)[0m wandb:  $ pip install wandb --upgrade
+[2m[36m(pid=7973)[0m wandb: Run data is saved locally in wandb/run-20200113_012656-wpxt43lq
+[2m[36m(pid=7982)[0m wandb: Wandb version 0.8.20 is available!  To upgrade, please run:
+[2m[36m(pid=7982)[0m wandb:  $ pip install wandb --upgrade
+[2m[36m(pid=7982)[0m wandb: Run data is saved locally in wandb/run-20200113_012656-p0h7kply
+[2m[36m(pid=7974)[0m wandb: Wandb version 0.8.20 is available!  To upgrade, please run:
+[2m[36m(pid=7974)[0m wandb:  $ pip install wandb --upgrade
+[2m[36m(pid=7974)[0m wandb: Run data is saved locally in wandb/run-20200113_012656-e07dqgqg
+[2m[36m(pid=7978)[0m wandb: Wandb version 0.8.20 is available!  To upgrade, please run:
+[2m[36m(pid=7978)[0m wandb:  $ pip install wandb --upgrade
+[2m[36m(pid=7978)[0m wandb: Run data is saved locally in wandb/run-20200113_012656-q7zkwe4w
+[2m[36m(pid=7984)[0m wandb: Tracking run with wandb version 0.8.19
+[2m[36m(pid=7982)[0m wandb: Syncing run stilted-night-17
+[2m[36m(pid=7973)[0m wandb: Syncing run glorious-mountain-17
+[2m[36m(pid=7973)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-joint
+[2m[36m(pid=7982)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-joint
+[2m[36m(pid=7982)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-joint/runs/p0h7kply
+[2m[36m(pid=7982)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=7974)[0m wandb: Syncing run rich-valley-17
+[2m[36m(pid=7974)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-joint
+[2m[36m(pid=7974)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-joint/runs/e07dqgqg
+[2m[36m(pid=7974)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=7978)[0m wandb: Syncing run effortless-grass-17
+[2m[36m(pid=7978)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-joint
+[2m[36m(pid=7978)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-joint/runs/q7zkwe4w
+[2m[36m(pid=7978)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=7973)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-joint/runs/wpxt43lq
+[2m[36m(pid=7973)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=7980)[0m wandb: Wandb version 0.8.20 is available!  To upgrade, please run:
+[2m[36m(pid=7980)[0m wandb:  $ pip install wandb --upgrade
+[2m[36m(pid=7980)[0m wandb: Run data is saved locally in wandb/run-20200113_012657-orm7qpyv
+[2m[36m(pid=7973)[0m 
+[2m[36m(pid=7973)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=7982)[0m 
+[2m[36m(pid=7982)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=7974)[0m 
+[2m[36m(pid=7974)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=7978)[0m 
+[2m[36m(pid=7978)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=7980)[0m wandb: Syncing run glowing-cosmos-21
+[2m[36m(pid=7980)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-joint
+[2m[36m(pid=7980)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-joint/runs/orm7qpyv
+[2m[36m(pid=7980)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=7973)[0m 2978it [00:00, 29778.32it/s]
+[2m[36m(pid=7982)[0m 2295it [00:00, 22943.51it/s]
+[2m[36m(pid=7978)[0m 2556it [00:00, 25551.01it/s]
+[2m[36m(pid=7982)[0m 3059it [00:00, 11253.25it/s]
+[2m[36m(pid=7974)[0m 3059it [00:00, 13378.33it/s]
+[2m[36m(pid=7978)[0m 3323it [00:00, 10893.96it/s]
+[2m[36m(pid=7973)[0m 3872it [00:00, 12347.60it/s]4478it [00:00, 15296.52it/s]
+[2m[36m(pid=7973)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=7982)[0m 4478it [00:00, 14850.10it/s]
+[2m[36m(pid=7980)[0m 
+[2m[36m(pid=7980)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=7974)[0m 4478it [00:00, 16469.35it/s]
+[2m[36m(pid=7974)[0m 0it [00:00, ?it/s]500it [00:00, 36163.40it/s]
+[2m[36m(pid=7974)[0m   0% 0/4478 [00:00<?, ?it/s]
+[2m[36m(pid=7978)[0m 4478it [00:00, 14629.22it/s]
+[2m[36m(pid=7973)[0m 500it [00:00, 35102.30it/s]
+[2m[36m(pid=7973)[0m   0% 0/4478 [00:00<?, ?it/s]
+[2m[36m(pid=7982)[0m 0it [00:00, ?it/s]500it [00:00, 28201.93it/s]
+[2m[36m(pid=7982)[0m   0% 0/4478 [00:00<?, ?it/s]
+[2m[36m(pid=7974)[0m 100% 4478/4478 [00:00<00:00, 97673.33it/s]
+[2m[36m(pid=7974)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=7978)[0m 0it [00:00, ?it/s]500it [00:00, 29087.52it/s]
+[2m[36m(pid=7978)[0m   0% 0/4478 [00:00<?, ?it/s]
+[2m[36m(pid=7973)[0m 100% 4478/4478 [00:00<00:00, 89722.23it/s]
+[2m[36m(pid=7973)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=7982)[0m 100% 4478/4478 [00:00<00:00, 91311.73it/s]
+[2m[36m(pid=7982)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=7980)[0m 2855it [00:00, 28546.28it/s]
+[2m[36m(pid=7978)[0m 100% 4478/4478 [00:00<00:00, 73577.36it/s]
+[2m[36m(pid=7978)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=8219)[0m wandb: Wandb version 0.8.20 is available!  To upgrade, please run:
+[2m[36m(pid=8219)[0m wandb:  $ pip install wandb --upgrade
+[2m[36m(pid=8219)[0m wandb: Run data is saved locally in wandb/run-20200113_012657-jlfzjpan
+[2m[36m(pid=7973)[0m 100% 950/950 [00:00<00:00, 12706.36it/s]
+[2m[36m(pid=7974)[0m 100% 950/950 [00:00<00:00, 12885.39it/s]
+[2m[36m(pid=7982)[0m 100% 950/950 [00:00<00:00, 12695.03it/s]
+[2m[36m(pid=7980)[0m 3712it [00:00, 14861.04it/s]
+[2m[36m(pid=7978)[0m 100% 950/950 [00:00<00:00, 14262.36it/s]
+[2m[36m(pid=7980)[0m 4478it [00:00, 18569.91it/s]
+[2m[36m(pid=7980)[0m 0it [00:00, ?it/s]500it [00:00, 33859.44it/s]
+[2m[36m(pid=7980)[0m   0% 0/4478 [00:00<?, ?it/s]
+[2m[36m(pid=7983)[0m wandb: Wandb version 0.8.20 is available!  To upgrade, please run:
+[2m[36m(pid=7983)[0m wandb:  $ pip install wandb --upgrade
+[2m[36m(pid=7983)[0m wandb: Run data is saved locally in wandb/run-20200113_012657-f0sr980y
+[2m[36m(pid=7980)[0m 100% 4478/4478 [00:00<00:00, 102687.14it/s]
+[2m[36m(pid=7980)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=8219)[0m wandb: Syncing run autumn-glitter-22
+[2m[36m(pid=8219)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-joint
+[2m[36m(pid=8219)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-joint/runs/jlfzjpan
+[2m[36m(pid=8219)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=7980)[0m 100% 950/950 [00:00<00:00, 12456.78it/s]
+[2m[36m(pid=8219)[0m 
+[2m[36m(pid=8219)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=7983)[0m wandb: Syncing run fluent-hill-23
+[2m[36m(pid=7983)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-joint
+[2m[36m(pid=7983)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-joint/runs/f0sr980y
+[2m[36m(pid=7983)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=8219)[0m 2889it [00:00, 28693.48it/s]
+[2m[36m(pid=7984)[0m wandb: Wandb version 0.8.20 is available!  To upgrade, please run:
+[2m[36m(pid=7984)[0m wandb:  $ pip install wandb --upgrade
+[2m[36m(pid=7984)[0m wandb: Run data is saved locally in wandb/run-20200113_012658-jhwo6m1m
+[2m[36m(pid=8219)[0m 3750it [00:00, 13758.67it/s]4478it [00:00, 17022.02it/s]
+[2m[36m(pid=7983)[0m 
+[2m[36m(pid=7983)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=8219)[0m 0it [00:00, ?it/s]500it [00:00, 23246.16it/s]
+[2m[36m(pid=8219)[0m   0% 0/4478 [00:00<?, ?it/s]
+[2m[36m(pid=7984)[0m wandb: Syncing run dainty-spaceship-24
+[2m[36m(pid=7984)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-joint
+[2m[36m(pid=7984)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-joint/runs/jhwo6m1m
+[2m[36m(pid=7984)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=8219)[0m 100% 4478/4478 [00:00<00:00, 89336.02it/s]
+[2m[36m(pid=8219)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=8219)[0m 100% 950/950 [00:00<00:00, 11407.84it/s]
+[2m[36m(pid=7983)[0m 3059it [00:00, 15090.03it/s]
+[2m[36m(pid=7984)[0m 
+[2m[36m(pid=7984)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=7983)[0m 4478it [00:00, 17388.49it/s]
+[2m[36m(pid=7983)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=7983)[0m 500it [00:00, 33834.31it/s]
+[2m[36m(pid=7983)[0m   0% 0/4478 [00:00<?, ?it/s]
+[2m[36m(pid=7983)[0m 100% 4478/4478 [00:00<00:00, 89461.12it/s]
+[2m[36m(pid=7983)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=7983)[0m 100% 950/950 [00:00<00:00, 10920.69it/s]
+[2m[36m(pid=7984)[0m 3059it [00:00, 14659.95it/s]
+[2m[36m(pid=7984)[0m 4478it [00:00, 15834.43it/s]
+[2m[36m(pid=7984)[0m 0it [00:00, ?it/s]500it [00:00, 37711.10it/s]
+[2m[36m(pid=7984)[0m   0% 0/4478 [00:00<?, ?it/s]
+[2m[36m(pid=7984)[0m 100% 4478/4478 [00:00<00:00, 82333.19it/s]
+[2m[36m(pid=7984)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=7984)[0m 100% 950/950 [00:00<00:00, 12956.41it/s]
+[2m[36m(pid=7973)[0m 
+[2m[36m(pid=7973)[0m wandb: Waiting for W&B process to finish, PID 8441
+[2m[36m(pid=7973)[0m wandb: Program ended successfully.
+[2m[36m(pid=7973)[0m wandb: Run summary:
+[2m[36m(pid=7973)[0m wandb:                                    labeled_train_int acc 1.0
+[2m[36m(pid=7973)[0m wandb:                                labeled_train_ce_loss_ave 0.012398706749081612
+[2m[36m(pid=7973)[0m wandb:                                                    epoch 100
+[2m[36m(pid=7973)[0m wandb:                                              val_int acc 0.898
+[2m[36m(pid=7973)[0m wandb:                           labeled_train_tag conlleval f1 1.0
+[2m[36m(pid=7973)[0m wandb:                                                    _step 100
+[2m[36m(pid=7973)[0m wandb:                                               _timestamp 1578878926.6794972
+[2m[36m(pid=7973)[0m wandb:                                     val_tag conlleval f1 0.8014268727705113
+[2m[36m(pid=7973)[0m wandb:                                                 _runtime 111.67973971366882
+[2m[36m(pid=7973)[0m wandb: Syncing files in wandb/run-20200113_012656-wpxt43lq:
+[2m[36m(pid=7973)[0m wandb:   upstream_diff_bbe2af8444a2404bc47edc50908ea60f934d3b68.patch
+[2m[36m(pid=7973)[0m wandb: plus 8 W&B file(s) and 0 media file(s)
+[2m[36m(pid=7973)[0m wandb: - 0.03MB of 0.03MB uploaded
+[2m[36m(pid=7973)[0m wandb: \ 0.03MB of 0.03MB uploaded
+[2m[36m(pid=7973)[0m wandb: | 0.03MB of 0.03MB uploaded
+[2m[36m(pid=7984)[0m 
+[2m[36m(pid=7984)[0m wandb: Waiting for W&B process to finish, PID 8617
+[2m[36m(pid=7973)[0m wandb: / 0.03MB of 0.03MB uploadedwandb:                                                                                
+[2m[36m(pid=7973)[0m wandb: Synced glorious-mountain-17: https://app.wandb.ai/cetosignis/viraal-joint/runs/wpxt43lq
+[2m[36m(pid=7982)[0m 
+[2m[36m(pid=7982)[0m wandb: Waiting for W&B process to finish, PID 8427
+[2m[36m(pid=7982)[0m wandb: Program ended successfully.
+[2m[36m(pid=7978)[0m 
+[2m[36m(pid=7978)[0m wandb: Waiting for W&B process to finish, PID 8428
+[2m[36m(pid=7978)[0m wandb: Program ended successfully.
+[2m[36m(pid=7984)[0m wandb: Program ended successfully.
+[2m[36m(pid=7983)[0m 
+[2m[36m(pid=7983)[0m wandb: Waiting for W&B process to finish, PID 8537
+[2m[36m(pid=7983)[0m wandb: Program ended successfully.
+[2m[36m(pid=7974)[0m 
+[2m[36m(pid=7974)[0m wandb: Waiting for W&B process to finish, PID 8429
+[2m[36m(pid=7974)[0m wandb: Program ended successfully.
+[2m[36m(pid=8219)[0m 
+[2m[36m(pid=8219)[0m wandb: Waiting for W&B process to finish, PID 8518
+[2m[36m(pid=8219)[0m wandb: Program ended successfully.
+[2m[36m(pid=7983)[0m wandb: Run summary:
+[2m[36m(pid=7983)[0m wandb:                                              val_int acc 0.9
+[2m[36m(pid=7983)[0m wandb:                                labeled_train_ce_loss_ave 0.09079604595899582
+[2m[36m(pid=7983)[0m wandb:                                     val_tag conlleval f1 0.8178016726403823
+[2m[36m(pid=7983)[0m wandb:                           labeled_train_tag conlleval f1 0.961123815746488
+[2m[36m(pid=7983)[0m wandb:                                                    _step 100
+[2m[36m(pid=7983)[0m wandb:                                    labeled_train_int acc 0.9911699779249448
+[2m[36m(pid=7983)[0m wandb:                                                 _runtime 116.20227217674255
+[2m[36m(pid=7983)[0m wandb:                                               _timestamp 1578878932.0900471
+[2m[36m(pid=7983)[0m wandb:                                                    epoch 100
+[2m[36m(pid=7983)[0m wandb: Syncing files in wandb/run-20200113_012657-f0sr980y:
+[2m[36m(pid=7983)[0m wandb:   upstream_diff_bbe2af8444a2404bc47edc50908ea60f934d3b68.patch
+[2m[36m(pid=7983)[0m wandb: plus 8 W&B file(s) and 0 media file(s)
+[2m[36m(pid=7983)[0m wandb: - 0.03MB of 0.03MB uploaded
+[2m[36m(pid=7983)[0m wandb: \ 0.03MB of 0.03MB uploaded
+[2m[36m(pid=7983)[0m wandb: | 0.03MB of 0.03MB uploaded
+[2m[36m(pid=7983)[0m wandb: / 0.03MB of 0.03MB uploaded
+[2m[36m(pid=7983)[0m wandb: - 0.03MB of 0.03MB uploaded
+[2m[36m(pid=7978)[0m wandb: Run summary:
+[2m[36m(pid=7978)[0m wandb:                                     val_tag conlleval f1 0.8066726243669944
+[2m[36m(pid=7978)[0m wandb:                                              val_int acc 0.928
+[2m[36m(pid=7978)[0m wandb:                           labeled_train_tag conlleval f1 1.0
+[2m[36m(pid=7978)[0m wandb:                                               _timestamp 1578878931.4699268
+[2m[36m(pid=7978)[0m wandb:                                    labeled_train_int acc 1.0
+[2m[36m(pid=7978)[0m wandb:                                                 _runtime 116.62767481803894
+[2m[36m(pid=7978)[0m wandb:                                labeled_train_ce_loss_ave 0.010023140348494053
+[2m[36m(pid=7978)[0m wandb:                                                    _step 100
+[2m[36m(pid=7978)[0m wandb:                                                    epoch 100
+[2m[36m(pid=7982)[0m wandb: Run summary:
+[2m[36m(pid=7982)[0m wandb:                                                    epoch 100
+[2m[36m(pid=7982)[0m wandb:                                    labeled_train_int acc 1.0
+[2m[36m(pid=7982)[0m wandb:                                labeled_train_ce_loss_ave 0.011334224604070187
+[2m[36m(pid=7982)[0m wandb:                                     val_tag conlleval f1 0.8089020771513352
+[2m[36m(pid=7982)[0m wandb:                                                 _runtime 116.69645476341248
+[2m[36m(pid=7982)[0m wandb:                                              val_int acc 0.91
+[2m[36m(pid=7982)[0m wandb:                           labeled_train_tag conlleval f1 1.0
+[2m[36m(pid=7982)[0m wandb:                                                    _step 100
+[2m[36m(pid=7982)[0m wandb:                                               _timestamp 1578878931.4325325
+[2m[36m(pid=7982)[0m wandb: Syncing files in wandb/run-20200113_012656-p0h7kply:
+[2m[36m(pid=7982)[0m wandb:   upstream_diff_bbe2af8444a2404bc47edc50908ea60f934d3b68.patch
+[2m[36m(pid=7982)[0m wandb: plus 8 W&B file(s) and 0 media file(s)
+[2m[36m(pid=7982)[0m wandb: - 0.03MB of 0.03MB uploaded
+[2m[36m(pid=7978)[0m wandb: Syncing files in wandb/run-20200113_012656-q7zkwe4w:
+[2m[36m(pid=7978)[0m wandb:   upstream_diff_bbe2af8444a2404bc47edc50908ea60f934d3b68.patch
+[2m[36m(pid=7978)[0m wandb: plus 8 W&B file(s) and 0 media file(s)
+[2m[36m(pid=7978)[0m wandb: - 0.03MB of 0.03MB uploaded
+[2m[36m(pid=7983)[0m wandb: \ 0.03MB of 0.03MB uploadedwandb:                                                                                
+[2m[36m(pid=7983)[0m wandb: Synced fluent-hill-23: https://app.wandb.ai/cetosignis/viraal-joint/runs/f0sr980y
+[2m[36m(pid=7984)[0m wandb: Run summary:
+[2m[36m(pid=7984)[0m wandb:                                               _timestamp 1578878930.8431551
+[2m[36m(pid=7984)[0m wandb:                                    labeled_train_int acc 1.0
+[2m[36m(pid=7984)[0m wandb:                                                 _runtime 114.70503115653992
+[2m[36m(pid=7984)[0m wandb:                                     val_tag conlleval f1 0.8308237378210807
+[2m[36m(pid=7984)[0m wandb:                           labeled_train_tag conlleval f1 1.0
+[2m[36m(pid=7984)[0m wandb:                                                    epoch 100
+[2m[36m(pid=7984)[0m wandb:                                labeled_train_ce_loss_ave 0.009752758778631687
+[2m[36m(pid=7984)[0m wandb:                                                    _step 100
+[2m[36m(pid=7984)[0m wandb:                                              val_int acc 0.894
+[2m[36m(pid=7984)[0m wandb: Syncing files in wandb/run-20200113_012658-jhwo6m1m:
+[2m[36m(pid=7984)[0m wandb:   upstream_diff_bbe2af8444a2404bc47edc50908ea60f934d3b68.patch
+[2m[36m(pid=7984)[0m wandb: plus 8 W&B file(s) and 0 media file(s)
+[2m[36m(pid=7984)[0m wandb: - 0.03MB of 0.03MB uploaded
+[2m[36m(pid=7978)[0m wandb: \ 0.03MB of 0.03MB uploaded
+[2m[36m(pid=7982)[0m wandb: \ 0.03MB of 0.03MB uploaded
+[2m[36m(pid=7982)[0m wandb: | 0.03MB of 0.03MB uploaded
+[2m[36m(pid=7984)[0m wandb: \ 0.03MB of 0.03MB uploaded
+[2m[36m(pid=7978)[0m wandb: | 0.03MB of 0.03MB uploaded
+[2m[36m(pid=7984)[0m wandb: | 0.03MB of 0.03MB uploaded
+[2m[36m(pid=7982)[0m wandb: / 0.03MB of 0.03MB uploaded
+[2m[36m(pid=7978)[0m wandb: / 0.03MB of 0.03MB uploaded
+[2m[36m(pid=7974)[0m wandb: Run summary:
+[2m[36m(pid=7974)[0m wandb:                                                 _runtime 117.61945128440857
+[2m[36m(pid=7974)[0m wandb:                                               _timestamp 1578878932.385167
+[2m[36m(pid=7974)[0m wandb:                           labeled_train_tag conlleval f1 0.9967126890203813
+[2m[36m(pid=7974)[0m wandb:                                              val_int acc 0.902
+[2m[36m(pid=7974)[0m wandb:                                     val_tag conlleval f1 0.8154302670623145
+[2m[36m(pid=7974)[0m wandb:                                                    _step 100
+[2m[36m(pid=7974)[0m wandb:                                                    epoch 100
+[2m[36m(pid=7974)[0m wandb:                                    labeled_train_int acc 1.0
+[2m[36m(pid=7974)[0m wandb:                                labeled_train_ce_loss_ave 0.022703368216753006
+[2m[36m(pid=7974)[0m wandb: Syncing files in wandb/run-20200113_012656-e07dqgqg:
+[2m[36m(pid=7974)[0m wandb:   upstream_diff_bbe2af8444a2404bc47edc50908ea60f934d3b68.patch
+[2m[36m(pid=7974)[0m wandb: plus 8 W&B file(s) and 0 media file(s)
+[2m[36m(pid=7974)[0m wandb: - 0.03MB of 0.03MB uploaded
+[2m[36m(pid=7984)[0m wandb: / 0.03MB of 0.03MB uploaded
+[2m[36m(pid=7982)[0m wandb: - 0.03MB of 0.03MB uploadedwandb:                                                                                
+[2m[36m(pid=7982)[0m wandb: Synced stilted-night-17: https://app.wandb.ai/cetosignis/viraal-joint/runs/p0h7kply
+[2m[36m(pid=7980)[0m 
+[2m[36m(pid=7980)[0m wandb: Waiting for W&B process to finish, PID 8453
+[2m[36m(pid=7978)[0m wandb: - 0.03MB of 0.03MB uploadedwandb:                                                                                
+[2m[36m(pid=7978)[0m wandb: Synced effortless-grass-17: https://app.wandb.ai/cetosignis/viraal-joint/runs/q7zkwe4w
+[2m[36m(pid=7974)[0m wandb: \ 0.03MB of 0.03MB uploaded
+[2m[36m(pid=7984)[0m wandb: - 0.03MB of 0.03MB uploaded
+[2m[36m(pid=7980)[0m wandb: Program ended successfully.
+[2m[36m(pid=7974)[0m wandb: | 0.03MB of 0.03MB uploaded
+[2m[36m(pid=7984)[0m wandb: \ 0.03MB of 0.03MB uploadedwandb:                                                                                
+[2m[36m(pid=7984)[0m wandb: Synced dainty-spaceship-24: https://app.wandb.ai/cetosignis/viraal-joint/runs/jhwo6m1m
+[2m[36m(pid=8219)[0m wandb: Run summary:
+[2m[36m(pid=8219)[0m wandb:                                               _timestamp 1578878932.8377905
+[2m[36m(pid=8219)[0m wandb:                                                    _step 100
+[2m[36m(pid=8219)[0m wandb:                                    labeled_train_int acc 1.0
+[2m[36m(pid=8219)[0m wandb:                                labeled_train_ce_loss_ave 0.01627441868185997
+[2m[36m(pid=8219)[0m wandb:                                     val_tag conlleval f1 0.837444279346211
+[2m[36m(pid=8219)[0m wandb:                           labeled_train_tag conlleval f1 1.0
+[2m[36m(pid=8219)[0m wandb:                                              val_int acc 0.908
+[2m[36m(pid=8219)[0m wandb:                                                    epoch 100
+[2m[36m(pid=8219)[0m wandb:                                                 _runtime 117.25745725631714
+[2m[36m(pid=8219)[0m wandb: Syncing files in wandb/run-20200113_012657-jlfzjpan:
+[2m[36m(pid=8219)[0m wandb:   upstream_diff_bbe2af8444a2404bc47edc50908ea60f934d3b68.patch
+[2m[36m(pid=8219)[0m wandb: plus 8 W&B file(s) and 0 media file(s)
+[2m[36m(pid=8219)[0m wandb: - 0.03MB of 0.03MB uploaded
+[2m[36m(pid=7974)[0m wandb: / 0.03MB of 0.03MB uploadedwandb:                                                                                
+[2m[36m(pid=7974)[0m wandb: Synced rich-valley-17: https://app.wandb.ai/cetosignis/viraal-joint/runs/e07dqgqg
+[2m[36m(pid=8219)[0m wandb: \ 0.03MB of 0.03MB uploaded
+[2m[36m(pid=8219)[0m wandb: | 0.03MB of 0.03MB uploaded
+[2m[36m(pid=8219)[0m wandb: / 0.03MB of 0.03MB uploadedwandb:                                                                                
+[2m[36m(pid=8219)[0m wandb: Synced autumn-glitter-22: https://app.wandb.ai/cetosignis/viraal-joint/runs/jlfzjpan
+[2m[36m(pid=7980)[0m wandb: Run summary:
+[2m[36m(pid=7980)[0m wandb:                                labeled_train_ce_loss_ave 0.027620812878012657
+[2m[36m(pid=7980)[0m wandb:                                               _timestamp 1578878936.4013584
+[2m[36m(pid=7980)[0m wandb:                                     val_tag conlleval f1 0.7936979785969084
+[2m[36m(pid=7980)[0m wandb:                                                 _runtime 121.16336059570312
+[2m[36m(pid=7980)[0m wandb:                                    labeled_train_int acc 1.0
+[2m[36m(pid=7980)[0m wandb:                                                    epoch 100
+[2m[36m(pid=7980)[0m wandb:                           labeled_train_tag conlleval f1 0.9894234049812349
+[2m[36m(pid=7980)[0m wandb:                                              val_int acc 0.898
+[2m[36m(pid=7980)[0m wandb:                                                    _step 100
+[2m[36m(pid=7980)[0m wandb: Syncing files in wandb/run-20200113_012657-orm7qpyv:
+[2m[36m(pid=7980)[0m wandb:   upstream_diff_bbe2af8444a2404bc47edc50908ea60f934d3b68.patch
+[2m[36m(pid=7980)[0m wandb: plus 8 W&B file(s) and 0 media file(s)
+[2m[36m(pid=7980)[0m wandb: - 0.03MB of 0.03MB uploaded
+[2m[36m(pid=7980)[0m wandb: \ 0.03MB of 0.03MB uploaded
+[2m[36m(pid=7980)[0m wandb: | 0.03MB of 0.03MB uploaded
+[2m[36m(pid=7980)[0m wandb: / 0.03MB of 0.03MB uploaded
+[2m[36m(pid=7980)[0m wandb: - 0.03MB of 0.03MB uploaded
+[2m[36m(pid=7980)[0m wandb: \ 0.03MB of 0.03MB uploadedwandb:                                                                                
+[2m[36m(pid=7980)[0m wandb: Synced glowing-cosmos-21: https://app.wandb.ai/cetosignis/viraal-joint/runs/orm7qpyv

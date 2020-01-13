@@ -166,10 +166,10 @@ class F1Conlleval:
 
     def update(self, name='', logits=None, tags=None, vocab=None, mask=None, **kwargs):
         if logits is not None and tags is not None and vocab is not None and mask is not None and name==self.name:
-            self.nb_samples += logits.size(0)
             pred = logits.argmax(dim=-1)
-            self.pred.extend([vocab.get_token_from_index(idx, namespace='tags') for idx in pred[mask]])
-            self.tags.extend([vocab.get_token_from_index(idx, namespace='tags') for idx in tags[mask]])
+            self.pred.extend([vocab.get_token_from_index(idx.item(), namespace='tags') for idx in pred[mask]])
+            self.tags.extend([vocab.get_token_from_index(idx.item(), namespace='tags') for idx in tags[mask]])
+
     def get(self):
         if self.pred and self.tags:
             p,r = getPrecisionRecall(self.pred, self.tags)

@@ -22,7 +22,11 @@ from viraal.core.utils import (apply, batch_to_device, destroy_trainer, ensure_d
 
 logger = logging.getLogger(__name__)
 
-
+def get_checkpoint(checkpoint_prefix, iteration):
+    return {
+        "model": os.path.join(checkpoint_prefix, f"model_{iteration}.th"),
+        "vocab": os.path.join(checkpoint_prefix, "model.vocab"),
+    }
 class TrainText:
     def __init__(self, config, checkpoint_prefix='model'):
 
@@ -75,44 +79,47 @@ class TrainText:
         self.vocab = configured_vocab_from_inst(self.train_instances)
         self.iterator.index_with(self.vocab)
 
-    def instantiate_model(self):
+    def instantiate_word_embedding(self):
         embedding_params = Params(OmegaConf.to_container(self.c.dataset.embedding))
         token_embedding = Embedding.from_params(self.vocab, embedding_params)
         self.word_embeddings = BasicTextFieldEmbedder({"tokens": token_embedding})
-        self.word_embeddings.to(self.c.misc.device)
+
+    def instantiate_model(self):
+        
+        self.instantiate_word_embedding()
+
         self.model = instantiate(
             self.c.model,
             input_size=self.word_embeddings.get_output_dim(),
             vocab_size=self.vocab.get_vocab_size("labels"),
         )
+        #We assign the word embeddings to the model in order for it to be saved correctly
+        self.model.word_embeddings = self.word_embeddings
         self.model.to(self.c.misc.device)
 
         self.optimizer = instantiate(
             self.c.training.optimizer,
-            list(self.model.parameters()) + list(self.word_embeddings.parameters()),
+            self.model.parameters(),
         )
 
     def ensure_max_checkpoints(self):
         while len(self.saved_iterations) > self.c.training.checkpoint_max:
-            for p in self.saved_iterations.pop(0):
-                os.remove(p)
-
+            os.remove(self.saved_iterations.pop(0))
+    
     def save(self, checkpoint_prefix="model"):
         checkpoint = get_checkpoint(checkpoint_prefix, self.iteration)
         ensure_dir(checkpoint_prefix)
-        self.saved_iterations.append([checkpoint["embedding"], checkpoint["encoder"]])
+        self.saved_iterations.append(checkpoint['model'])
         self.ensure_max_checkpoints()
 
-        torch.save(self.model.state_dict(), checkpoint["encoder"])
-        torch.save(self.word_embeddings.state_dict(), checkpoint["embedding"])
+        torch.save(self.model.state_dict(), checkpoint["model"])
         if not os.path.isdir(checkpoint["vocab"]):
             self.vocab.save_to_files(checkpoint["vocab"])
 
         return checkpoint
 
     def restore(self, checkpoint):
-        self.word_embeddings.load_state_dict(torch.load(checkpoint["embedding"]))
-        self.model.load_state_dict(torch.load(checkpoint["encoder"]))
+        self.model.load_state_dict(torch.load(checkpoint["model"]))
         self.vocab.from_files(checkpoint["vocab"])
     
     def get_train_instances(self):
@@ -135,17 +142,9 @@ class TrainText:
             iterator = tqdm(iterator)
         return iterator
 
-    def set_train_mode(self):
-        self.model.train()
-        self.word_embeddings.train()
-    
-    def set_eval_mode(self):
-        self.model.eval()
-        self.word_embeddings.eval()
-
     def train_epoch(self):
 
-        self.set_train_mode()
+        self.model.train()
         logger.info("Epoch %s", self.iteration)
 
         for batch in self.get_iterator():
@@ -197,7 +196,7 @@ class TrainText:
         self.metrics.reset()
 
     def evaluate(self, phase, instances):
-        self.set_eval_mode()
+        self.model.eval()
 
         iterator = self.iterator(instances, num_epochs=1, shuffle=True)
         if self.c.misc.tqdm:

@@ -3,4 +3,4 @@ model:
   params:
     hidden_size: 256
     num_layers: 1
-    bidirectional: False
+    bidirectional: True

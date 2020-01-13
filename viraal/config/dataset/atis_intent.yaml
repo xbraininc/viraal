@@ -1,6 +1,6 @@
 dataset:
   reader:
-    class: viraal.datasets.iob.IobDatasetReader
+    class: viraal.datasets.iob_intent.IobIntentDatasetReader
   splits:
     train: /u/home/badr/Corpus/atis/atis-2.train.w-intent.iob
     val: /u/home/badr/Corpus/atis/atis-2.dev.w-intent.iob
