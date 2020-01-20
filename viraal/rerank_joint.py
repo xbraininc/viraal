@@ -54,7 +54,7 @@ def normalize(criter):
     return c/np.quantile(c, 0.99)
 
 def rerank(trainer, cfg):
-    trainer.model.train()
+    trainer.set_train_mode()
 
     unlabeled = trainer.get_unlabeled_instances()
     nb_instances = len(unlabeled)
@@ -66,30 +66,36 @@ def rerank(trainer, cfg):
     criter_epoch = []
 
     if cfg.rerank.presoftmax:
-        presoftmax = []
-        def hook(module, inp):
-            presoftmax.append(inp[0].detach().cpu().numpy())
-        trainer.model.output2label.register_forward_pre_hook(hook)
+        presoftmax_int = []
+        presoftmax_tag = []
+        def hook_int(module, inp):
+            presoftmax_int.append(inp[0].detach().cpu().numpy())
+        def hook_tag(module, inp):
+            presoftmax_tag.append(inp[0].detach().cpu().numpy())
+        trainer.model.output2label.register_forward_pre_hook(hook_int)
+        trainer.model.output2tag.register_forward_pre_hook(hook_tag)
 
     for batch in iterator:
         batch_to_device(batch, cfg.misc.device)
         embeddings = trainer.word_embeddings(batch["sentence"])
         mask = get_text_field_mask(batch["sentence"])
-        logits = trainer.model(embeddings=embeddings, mask=mask)
+        logits_int, logits_tag = trainer.model(embeddings=embeddings, mask=mask)
         labeled = np.array(batch["labeled"], dtype=bool)
-        dist = Categorical(logits=logits)
+        dist_int = Categorical(logits=logits_int)
+        dist_tag = Categorical(logits=logits_tag.view(-1, logits_tag.size(-1)))
 
         criter = np.zeros(logits.size(0))
-        if "ce" in cfg.rerank.criteria:
-            ce_criter = dist.entropy()
-            criter += normalize(ce_criter)
+        if "ce" in trainer.losses and any(labeled) and "ce" in cfg.rerank.criteria:
+            criter += normalize(dist_int.entropy())
+            criter += normalize(dist_tag.entropy().view(logits_tag.size(0), logits_tag.size(1)).mean(dim=-1))
 
-        if "vat" in cfg.rerank.criteria:
+        if "vat" in trainer.losses and "vat" in cfg.rerank.criteria:
             model_forward = lambda embeddings: trainer.model(
                 embeddings=embeddings, mask=mask
             )
-            vat_criter = trainer.losses["vat"](logits, model_forward, embeddings, mask)
-            criter += normalize(vat_criter)
+            vat_criter_int, vat_criter_tag = trainer.losses["vat"](logits, model_forward, embeddings, mask)
+            criter += normalize(vat_criter_int)
+            criter += normalize(vat_criter_tag.mean(dim=-1))
         
         if "random" in cfg.rerank.criteria:
             criter += np.random.rand(logits.size(0))
@@ -97,11 +103,12 @@ def rerank(trainer, cfg):
         criter_epoch.append(criter)
 
     criter_epoch = np.concatenate(criter_epoch)
-    if cfg.rerank.presoftmax: presoftmax = np.concatenate(presoftmax)
+    if cfg.rerank.presoftmax: 
+        presoftmax_int = np.concatenate(presoftmax_int)
+        presoftmax_tag = np.concatenate(presoftmax_tag)
 
     if "clustering" in cfg.rerank.criteria:
         clusterer = instantiate(cfg.rerank.cluster, to_select)
-        logger.info("Clustering")
         clusters = clusterer.fit_predict(presoftmax) # (nb_samples,)
         clusters = OneHotEncoder(sparse=False).fit_transform(clusters.reshape(-1, 1)) #(nb_samples, nb_to_select)
         clusters = clusters.astype(bool)

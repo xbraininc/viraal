@@ -180,6 +180,8 @@ class TrainText:
 
             tensors = from_locals(["logits", "mask", "label", "vat_loss"], loc=locals())
 
+            self.metrics.update("train", nb_labeled=sum(labeled)/labeled.size)
+
             if any(labeled):
                 labeled_tensors = apply(tensors, lambda x: x[labeled])
                 self.metrics.update("labeled_train", **labeled_tensors)

@@ -1,6 +1,6 @@
 model:
   class: viraal.models.attention.AttentionClassifier
   params:
-    hidden_size: 256
+    hidden_size: 128
     num_layers: 1
     bidirectional: True

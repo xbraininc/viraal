@@ -1,11 +1,14 @@
 defaults:
-  - dataset: imdb5000
+  - dataset: atis_intent
   - model: attention
   - losses: vat
-  - training: imdb5000
+  - training: atis
   - misc: default
   - hydra: default
   - hydra/sweeper: range
   - hydra/launcher: ray
   - ray: default
   - wandb: default
+
+rerank:
+  part: 0.1

@@ -2,3 +2,6 @@ ray:
   remote:
     num_cpus: 1
     num_gpus: 1
+    max_retries: 2
+  init:
+    num_cpus: 8

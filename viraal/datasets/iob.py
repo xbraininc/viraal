@@ -6,7 +6,7 @@ from overrides import overrides
 
 from allennlp.common.file_utils import cached_path
 from allennlp.data.dataset_readers.dataset_reader import DatasetReader
-from allennlp.data.fields import LabelField, TextField, SequenceLabelField
+from allennlp.data.fields import LabelField, TextField, SequenceLabelField, MetadataField
 from allennlp.data.instance import Instance
 from allennlp.data.tokenizers import Token
 from allennlp.data.token_indexers import TokenIndexer, SingleIdTokenIndexer
@@ -31,7 +31,7 @@ class IobDatasetReader(DatasetReader):
     def _read(self, file_path : str):
         with open(cached_path(file_path), "r") as data_file:
             logger.info("Reading instances from lines in file at: %s", file_path)
-            for line in data_file:
+            for idx, line in enumerate(data_file):
                 line = line.strip("\n")
                 if not line:
                     continue
@@ -40,13 +40,14 @@ class IobDatasetReader(DatasetReader):
 
                 tags, intent = labels[:-1], labels[-1]         
                 
-                yield self.text_to_instance(text, tags, intent)
+                yield self.text_to_instance(text, tags, intent, idx)
 
     @overrides
     def text_to_instance(self,
                          text : str,
                          tags : List[str] = None, 
-                         intent : str = None) -> Instance:
+                         intent : str = None,
+                         idx: int = None) -> Instance:
         
         fields = {}
 
@@ -61,6 +62,8 @@ class IobDatasetReader(DatasetReader):
         if intent is not None:
             intent_field = LabelField(intent)
             fields['label'] = intent_field
+        if idx is not None:
+            fields['idx'] = MetadataField(idx)
 
         return Instance(fields)
                 

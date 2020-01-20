@@ -52,9 +52,19 @@ def call_if(condition):
     return decorator
 
 def set_seeds(seed):
-    random.seed(seed)
     np.random.seed(seed)
+    random.seed(seed)
     torch.manual_seed(seed)
+    # if you are suing GPU
+    torch.cuda.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+
+
+    torch.backends.cudnn.enabled = False 
+    torch.backends.cudnn.benchmark = False
+    torch.backends.cudnn.deterministic = True
+
+    
 
 def register_interpolations():
     try:

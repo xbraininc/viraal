@@ -10,6 +10,14 @@ from tensorboardX import SummaryWriter
 
 logger = logging.getLogger(__name__)
 
+def check_params_defined(*args, **kwargs):
+    test = True
+    for e in args:
+        test = test and e is not None
+    for v in kwargs.values():
+        test = test and e is not None
+    return test
+
 def prepare_tensors(func):
     def wrapper(*args, **kwargs):
         new_args = []
@@ -141,7 +149,7 @@ class Accuracy:
         self.acc = None
 
     def update(self, name='', logits=None, label=None, **kwargs):
-        if logits is not None and label is not None and name==self.name:
+        if check_params_defined(logits, label) and name==self.name:
             self.nb_samples += logits.size(0)
             pred = logits.argmax(dim=-1)
             self.nb_correct += (pred == label).sum()
@@ -150,7 +158,7 @@ class Accuracy:
         return self.acc
 
     def get_name(self):
-        return f'{self.name} acc'
+        return f'{self.name}_acc' if self.name else 'acc'
 
     def __repr__(self):
         return f'{self.get_name()}: {self.get()*100:.2f}%'
@@ -165,7 +173,7 @@ class F1Conlleval:
         self.tags = []
 
     def update(self, name='', logits=None, tags=None, vocab=None, mask=None, **kwargs):
-        if logits is not None and tags is not None and vocab is not None and mask is not None and name==self.name:
+        if check_params_defined(logits, tags, vocab, mask) and name==self.name:
             pred = logits.argmax(dim=-1)
             self.pred.extend([vocab.get_token_from_index(idx.item(), namespace='tags') for idx in pred[mask]])
             self.tags.extend([vocab.get_token_from_index(idx.item(), namespace='tags') for idx in tags[mask]])
@@ -184,10 +192,10 @@ class F1Conlleval:
         return f'{self.get_name()}: {self.get()*100:.2f}%'
 
 class Metrics:
-    def __init__(self, wandb=True):
+    def __init__(self, wandb=True, metrics=None):
         # self.writer = SummaryWriter('tensorboard')
         self.wandb=wandb
-        self._metrics = ometrics.Metrics({
+        self._metrics = ometrics.Metrics(metrics or {
             'labeled_train': [Accuracy(), Accuracy('int'), F1Conlleval('tag'), Average('ce_loss'), Average('vat_loss')],
             'unlabeled_train': [Accuracy(), Accuracy('int'), F1Conlleval('tag'), Average('vat_loss')],
             'train': [Accuracy(), Accuracy('int'), F1Conlleval('tag'), Average('vat_loss')],
@@ -210,14 +218,14 @@ class Metrics:
             to_upload={'epoch':step}
             for phase in self._metrics:
                 for metric in self._metrics[phase]:
-                    if metric.get() is not None:
+                    if isinstance(metric.get(), float):
                         full_name='_'.join([phase, metric.get_name()])
                         to_upload[full_name] = metric.get()
             wandb.log(to_upload, step=step)
 
     def log(self):
         for phase in self._metrics:
-            any_metric_to_display = any([metric.get() is not None for metric in self._metrics[phase]])
+            any_metric_to_display = any([isinstance(metric.get(), float) for metric in self._metrics[phase]])
             if any_metric_to_display:
                 representations = [f'{metric}' for metric in self._metrics[phase] if metric.get() is not None]
                 message = phase.upper()+'    '+' - '.join(representations)

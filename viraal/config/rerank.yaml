@@ -3,12 +3,7 @@ defaults:
   - hydra/sweeper: range
   - hydra/launcher: ray
   - ray: default
-rerank:
-  criteria:
-    - ce
-  part: ${training.unlabeler.params.labeled_part}
-  pretrain: ???
-  iteration: 10
+  - rerank: ce
 misc:
   name: text
   id: ${id:}

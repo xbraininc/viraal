@@ -1,0 +1,9 @@
+rerank:
+  presoftmax: True
+  cluster:
+    class: sklearn.cluster.KMeans
+  criteria:
+    - ce
+  part: ${training.unlabeler.params.labeled_part}
+  pretrain: ???
+  iteration: 10
