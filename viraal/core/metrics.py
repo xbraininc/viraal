@@ -192,16 +192,10 @@ class F1Conlleval:
         return f'{self.get_name()}: {self.get()*100:.2f}%'
 
 class Metrics:
-    def __init__(self, wandb=True, metrics=None):
+    def __init__(self, metrics, wandb=True):
         # self.writer = SummaryWriter('tensorboard')
         self.wandb=wandb
-        self._metrics = ometrics.Metrics(metrics or {
-            'labeled_train': [Accuracy(), Accuracy('int'), F1Conlleval('tag'), Average('ce_loss'), Average('vat_loss')],
-            'unlabeled_train': [Accuracy(), Accuracy('int'), F1Conlleval('tag'), Average('vat_loss')],
-            'train': [Accuracy(), Accuracy('int'), F1Conlleval('tag'), Average('vat_loss')],
-            'val' : [Accuracy(), Accuracy('int'), F1Conlleval('tag')],
-            'test' : [Accuracy(), Accuracy('int'), F1Conlleval('tag')]
-        })
+        self._metrics = ometrics.Metrics(metrics)
 
     @prepare_tensors
     def update(self, phase, **kwargs):
@@ -218,14 +212,14 @@ class Metrics:
             to_upload={'epoch':step}
             for phase in self._metrics:
                 for metric in self._metrics[phase]:
-                    if isinstance(metric.get(), float):
+                    if metric.get():
                         full_name='_'.join([phase, metric.get_name()])
                         to_upload[full_name] = metric.get()
             wandb.log(to_upload, step=step)
 
     def log(self):
         for phase in self._metrics:
-            any_metric_to_display = any([isinstance(metric.get(), float) for metric in self._metrics[phase]])
+            any_metric_to_display = any([metric.get() for metric in self._metrics[phase]])
             if any_metric_to_display:
                 representations = [f'{metric}' for metric in self._metrics[phase] if metric.get() is not None]
                 message = phase.upper()+'    '+' - '.join(representations)

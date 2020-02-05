@@ -15,14 +15,14 @@ from omegaconf import OmegaConf
 
 from viraal.config import (flatten_dict, get_key, pass_conf,
                            register_interpolations, save_config, set_seeds)
-from viraal.train_text import TrainText, batch_to_device, get_checkpoint
+from viraal.train.text import TrainText, batch_to_device, get_checkpoint
 from viraal.core.utils import destroy_trainer, apply
 from viraal.queries.k_center_greedy import k_center_greedy
 
 logger = logging.getLogger(__name__)
 
 
-@hydra.main(config_path="config/rerank.yaml", strict=False)
+@hydra.main(config_path="../config/rerank.yaml", strict=False)
 def train_text(cfg):
     register_interpolations()
 
@@ -54,7 +54,7 @@ def normalize(criter):
     return c/np.quantile(c, 0.99)
 
 def rerank(trainer, cfg):
-    trainer.set_train_mode()
+    trainer.model.train()
 
     unlabeled = trainer.get_unlabeled_instances()
     nb_instances = len(unlabeled)
@@ -66,36 +66,30 @@ def rerank(trainer, cfg):
     criter_epoch = []
 
     if cfg.rerank.presoftmax:
-        presoftmax_int = []
-        presoftmax_tag = []
-        def hook_int(module, inp):
-            presoftmax_int.append(inp[0].detach().cpu().numpy())
-        def hook_tag(module, inp):
-            presoftmax_tag.append(inp[0].detach().cpu().numpy())
-        trainer.model.output2label.register_forward_pre_hook(hook_int)
-        trainer.model.output2tag.register_forward_pre_hook(hook_tag)
+        presoftmax = []
+        def hook(module, inp):
+            presoftmax.append(inp[0].detach().cpu().numpy())
+        trainer.model.output2label.register_forward_pre_hook(hook)
 
     for batch in iterator:
         batch_to_device(batch, cfg.misc.device)
         embeddings = trainer.word_embeddings(batch["sentence"])
         mask = get_text_field_mask(batch["sentence"])
-        logits_int, logits_tag = trainer.model(embeddings=embeddings, mask=mask)
+        logits = trainer.model(embeddings=embeddings, mask=mask)
         labeled = np.array(batch["labeled"], dtype=bool)
-        dist_int = Categorical(logits=logits_int)
-        dist_tag = Categorical(logits=logits_tag.view(-1, logits_tag.size(-1)))
+        dist = Categorical(logits=logits)
 
         criter = np.zeros(logits.size(0))
-        if "ce" in trainer.losses and any(labeled) and "ce" in cfg.rerank.criteria:
-            criter += normalize(dist_int.entropy())
-            criter += normalize(dist_tag.entropy().view(logits_tag.size(0), logits_tag.size(1)).mean(dim=-1))
+        if "ce" in cfg.rerank.criteria:
+            ce_criter = dist.entropy()
+            criter += normalize(ce_criter)
 
-        if "vat" in trainer.losses and "vat" in cfg.rerank.criteria:
+        if "vat" in cfg.rerank.criteria:
             model_forward = lambda embeddings: trainer.model(
                 embeddings=embeddings, mask=mask
             )
-            vat_criter_int, vat_criter_tag = trainer.losses["vat"](logits, model_forward, embeddings, mask)
-            criter += normalize(vat_criter_int)
-            criter += normalize(vat_criter_tag.mean(dim=-1))
+            vat_criter = trainer.losses["vat"](logits, model_forward, embeddings, mask)
+            criter += normalize(vat_criter)
         
         if "random" in cfg.rerank.criteria:
             criter += np.random.rand(logits.size(0))
@@ -103,12 +97,11 @@ def rerank(trainer, cfg):
         criter_epoch.append(criter)
 
     criter_epoch = np.concatenate(criter_epoch)
-    if cfg.rerank.presoftmax: 
-        presoftmax_int = np.concatenate(presoftmax_int)
-        presoftmax_tag = np.concatenate(presoftmax_tag)
+    if cfg.rerank.presoftmax: presoftmax = np.concatenate(presoftmax)
 
     if "clustering" in cfg.rerank.criteria:
         clusterer = instantiate(cfg.rerank.cluster, to_select)
+        logger.info("Clustering")
         clusters = clusterer.fit_predict(presoftmax) # (nb_samples,)
         clusters = OneHotEncoder(sparse=False).fit_transform(clusters.reshape(-1, 1)) #(nb_samples, nb_to_select)
         clusters = clusters.astype(bool)

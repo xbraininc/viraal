@@ -1,0 +1,7 @@
+misc:
+  wandb: True
+wandb:
+  group: 'snips_${training.loss}_attention_${training.task}_${training.unlabeler.params.labeled_part}'
+  project: viraal-final
+  name: ${id:}
+  reinit: True

@@ -18,9 +18,11 @@ from tqdm import tqdm
 from viraal.config import (flatten_dict, get_key, pass_conf,
                            register_interpolations, save_config, set_seeds)
 from viraal.core.utils import (apply, batch_to_device, destroy_trainer, ensure_dir,
-                          from_locals, instances_info)
+                          from_locals, instances_info, setup_wandb)
 
-from viraal.train_text import TrainText
+from viraal.core import metrics
+
+from viraal.train.text import TrainText
 
 
 logger = logging.getLogger(__name__)
@@ -32,7 +34,17 @@ def get_checkpoint(checkpoint_prefix, iteration):
     }
 
 class TrainJoint(TrainText):
-        
+
+    def instantiate_metrics(self):
+        m = {
+            'labeled_train': [metrics.Accuracy('int'), metrics.F1Conlleval('tag'), metrics.Average('ce_loss'), metrics.Average('vat_loss')],
+            'unlabeled_train': [metrics.Accuracy('int'), metrics.F1Conlleval('tag'), metrics.Average('vat_loss')],
+            'train': [metrics.Accuracy('int'), metrics.F1Conlleval('tag'), metrics.Average('vat_loss')],
+            'val' : [metrics.Accuracy('int'), metrics.F1Conlleval('tag')],
+            'test' : [metrics.Accuracy('int'), metrics.F1Conlleval('tag')]
+        }
+        self.metrics = instantiate(self.c.training.metrics, m,wandb=self.c.misc.wandb)
+
     def instantiate_model(self):
         
         self.instantiate_word_embedding()
@@ -54,7 +66,7 @@ class TrainJoint(TrainText):
 
     def get_train_instances(self):
         instances = self.train_instances
-        if "vat_joint" not in self.c.losses:
+        if "vat" not in self.c.losses:
             filter_func= lambda instance: instance.fields["labeled"].metadata
             instances = list(filter(filter_func, self.train_instances))
         
@@ -80,16 +92,16 @@ class TrainJoint(TrainText):
                 ce_loss.backward(retain_graph=True)
                 self.metrics.update("labeled_train", ce_loss=ce_loss)
 
-            if "vat_joint" in self.losses:
-                model_forward = lambda embeddings: self.model(
-                    embeddings=embeddings, mask=mask
-                )
-                vat_int_loss, vat_tag_loss = self.losses["vat_joint"]((int_logits, tag_logits), model_forward, embeddings, mask)
-                vat_int_loss = vat_int_loss.mean()
-                vat_tag_loss = vat_tag_loss.mean()
-                vat_loss = vat_int_loss+vat_tag_loss
-                vat_loss.backward()
-                self.metrics.update("train", vat_loss=vat_loss)
+            if "vat" in self.losses:
+                model_forward_int = lambda embeddings: self.model(embeddings=embeddings, mask=mask)[0]
+                vat_int_loss = self.losses["vat"](int_logits, model_forward_int, embeddings, mask).mean()
+                vat_int_loss.backward(retain_graph=True)
+
+                model_forward_tag = lambda embeddings: self.model(embeddings=embeddings, mask=mask)[1]
+                vat_tag_loss = self.losses["vat"](tag_logits, model_forward_tag, embeddings, mask).mean()
+                vat_tag_loss.backward()
+                
+                self.metrics.update("train", vat_loss=vat_int_loss+vat_tag_loss)
             
             tensors = from_locals(["int_logits", "tag_logits", "tags", "mask", "label"], loc=locals())
 
@@ -131,7 +143,7 @@ class TrainJoint(TrainText):
         self.metrics.reset()
 
 #This decorator makes it posisble to have easy command line arguments and receive a cfg object
-@hydra.main(config_path="config/train_joint.yaml", strict=False)
+@hydra.main(config_path="../config/train_joint_seperate.yaml", strict=False)
 def train_text(cfg):
     register_interpolations() 
     #This is to replace ${seed:} and ${id:} in the config with a seed and an id
@@ -141,10 +153,7 @@ def train_text(cfg):
     save_config(cfg_yaml)
     set_seeds(cfg.misc.seed)
 
-    #If wandb is activated we initialize it
-    if cfg.misc.wandb:
-        pass_conf(wandb.init, cfg, 'wandb')(config=cfg.to_container(resolve=True))
-
+    setup_wandb(cfg)
     tr = TrainJoint(cfg)
 
     tr.train_loop()

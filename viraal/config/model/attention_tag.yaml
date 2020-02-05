@@ -1,0 +1,7 @@
+model:
+  class: viraal.models.attention_tag.AttentionTagClassifier
+  params:
+    hidden_size: 128
+    tag_embedding_size: 128 
+    num_layers: 1
+    bidirectional: True

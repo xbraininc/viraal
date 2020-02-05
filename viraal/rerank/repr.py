@@ -22,7 +22,7 @@ from viraal.config import (flatten_dict, get_key, pass_conf,
 from viraal.core.utils import (apply, batch_to_device, destroy_trainer, ensure_dir,
                           from_locals, instances_info)
 
-from viraal.train_text import TrainText
+from viraal.train.text import TrainText
 
 logger = logging.getLogger(__name__)
 
@@ -87,7 +87,7 @@ class TrainRepr(TrainText):
         return before_last_repr, last_repr
 
 #This decorator makes it posisble to have easy command line arguments and receive a cfg object
-@hydra.main(config_path="config/rerank_repr.yaml", strict=False)
+@hydra.main(config_path="../config/rerank_repr.yaml", strict=False)
 def train_text(cfg):
     register_interpolations()
 

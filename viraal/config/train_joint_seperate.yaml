@@ -1,6 +1,6 @@
 defaults:
-  - dataset: atis_intent
-  - model: attention
+  - dataset: atis
+  - model: attention_joint
   - losses: vat
   - training: atis
   - misc: default
@@ -9,8 +9,3 @@ defaults:
   - hydra/launcher: ray
   - ray: default
   - wandb: default
-
-rerank:
-  part: 0.1
-  criteria:
-    - repr

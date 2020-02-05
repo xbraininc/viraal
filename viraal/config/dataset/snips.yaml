@@ -1,6 +1,6 @@
 dataset:
   reader:
-    class: viraal.datasets.iob_intent.IobDatasetReader
+    class: viraal.datasets.iob.IobDatasetReader
   splits:
     train: /u/home/badr/Corpus/snips/train.w-intent.iob
     val: /u/home/badr/Corpus/snips/valid.w-intent.iob

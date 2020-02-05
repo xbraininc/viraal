@@ -1,0 +1,26 @@
+training:
+  epochs: 60
+  checkpoint_freq: 10
+  eval_freq: 1
+  checkpoint_max: 10
+  
+  unlabeler:
+    class: viraal.datasets.unlabel.UnlabelInstances
+    params:
+      label_key: label
+      labeled_part: 0.01
+      label_min: 1
+
+  iterator:
+    class: allennlp.data.iterators.basic_iterator.BasicIterator
+    params:
+      batch_size: 64
+
+  optimizer:
+    class: torch.optim.Adam
+    params:
+      lr: 0.001
+
+  metrics:
+    class: viraal.core.metrics.Metrics
+

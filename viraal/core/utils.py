@@ -6,6 +6,14 @@ import wandb
 
 logger= logging.getLogger(__name__)
 
+def setup_wandb(cfg):
+    #If wandb is activated we initialize it
+    if cfg.misc.wandb:
+        resolv_cfg = cfg.to_container(resolve=True)
+        if cfg.select('wandb'):
+            wandb.init(config=resolv_cfg, **resolv_cfg['wandb'])
+        else:
+            wandb.init(config=resolv_cfg)
 
 def instances_info(phase, instances):
     message = f"{phase} instances : {len(instances)}. "

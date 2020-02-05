@@ -21,9 +21,9 @@ import umap
 from viraal.config import (flatten_dict, get_key, pass_conf,
                            register_interpolations, save_config, set_seeds)
 from viraal.core.utils import (apply, batch_to_device, destroy_trainer, ensure_dir,
-                          from_locals, instances_info)
+                          from_locals, instances_info, setup_wandb)
 
-from viraal.train_text import TrainText
+from viraal.train.text import TrainText
 
 logger = logging.getLogger(__name__)
 
@@ -66,6 +66,7 @@ class TrainRepr(TrainText):
                 epoch_repr_arr = sorted(epoch_repr.items(), key=lambda x : x[0])
                 epoch_repr_idx = np.stack([e[0] for e in epoch_repr_arr])
                 epoch_repr_arr = np.stack([e[1] for e in epoch_repr_arr])
+                epoch_repr_arr = torch.Tensor(epoch_repr_arr).sigmoid().numpy()
                 if epoch % 10 == 0:
                     reducer = umap.UMAP().fit(epoch_repr_arr)
                 epoch_repr_2D = reducer.transform(epoch_repr_arr)
@@ -115,7 +116,7 @@ class TrainRepr(TrainText):
         plotly.offline.plot(fig, 'figures/evol.html')
 
 #This decorator makes it posisble to have easy command line arguments and receive a cfg object
-@hydra.main(config_path="config/rerank_repr.yaml", strict=False)
+@hydra.main(config_path="../config/rerank_repr.yaml", strict=False)
 def train_text(cfg):
     register_interpolations()
 
@@ -124,8 +125,7 @@ def train_text(cfg):
     save_config(cfg_yaml)
     set_seeds(cfg.misc.seed)
 
-    if cfg.misc.wandb:
-        pass_conf(wandb.init, cfg, 'wandb')(config=cfg.to_container(resolve=True))
+    setup_wandb(cfg)
 
     tr = TrainRepr(cfg)
     logger.info("Training model")

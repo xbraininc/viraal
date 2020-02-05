@@ -4,6 +4,7 @@ import time
 
 import hydra
 import numpy as np
+import ometrics
 import torch
 import wandb
 from allennlp.common.params import Params
@@ -18,7 +19,8 @@ from tqdm import tqdm
 from viraal.config import (flatten_dict, get_key, pass_conf,
                            register_interpolations, save_config, set_seeds)
 from viraal.core.utils import (apply, batch_to_device, destroy_trainer, ensure_dir,
-                          from_locals, instances_info)
+                          from_locals, instances_info, setup_wandb)
+from viraal.core import metrics 
 
 logger = logging.getLogger(__name__)
 
@@ -42,13 +44,22 @@ class TrainText:
         self.instantiate_dataset()
         self.instantiate_model()
         self.instantiate_losses()
-
-        self.metrics = instantiate(config.training.metrics, wandb=self.c.misc.wandb)
+        self.instantiate_metrics()
 
         if config.misc.wandb: wandb.watch(self.model)
 
         self.iteration = 0
         self.saved_iterations = []
+
+    def instantiate_metrics(self):
+        m = {
+            'labeled_train': [metrics.Accuracy('int'), metrics.Average('ce_loss'), metrics.Average('vat_loss')],
+            'unlabeled_train': [metrics.Accuracy('int'), metrics.Average('vat_loss')],
+            'train': [metrics.Accuracy('int'), metrics.Average('vat_loss')],
+            'val' : [metrics.Accuracy('int')],
+            'test' : [metrics.Accuracy('int')]
+        }
+        self.metrics = instantiate(self.c.training.metrics, m, wandb=self.c.misc.wandb)
 
     def instantiate_losses(self):
         self.losses = {}
@@ -180,15 +191,13 @@ class TrainText:
 
             tensors = from_locals(["logits", "mask", "label", "vat_loss"], loc=locals())
 
-            self.metrics.update("train", nb_labeled=sum(labeled)/labeled.size)
-
             if any(labeled):
                 labeled_tensors = apply(tensors, lambda x: x[labeled])
-                self.metrics.update("labeled_train", **labeled_tensors)
+                self.metrics.update("labeled_train", name="int", **labeled_tensors)
 
             if any(~labeled):
                 unlabeled_tensors = apply(tensors, lambda x: x[~labeled])
-                self.metrics.update("unlabeled_train", **unlabeled_tensors)
+                self.metrics.update("unlabeled_train", name="int", **unlabeled_tensors)
 
             self.optimizer.step()
 
@@ -210,7 +219,7 @@ class TrainText:
             logits = self.model(embeddings=embeddings, mask=mask)
             label = batch["label"]
 
-            self.metrics.update(phase, logits=logits, mask=mask, label=label)
+            self.metrics.update(phase, name="int", logits=logits, mask=mask, label=label)
 
         self.metrics.log()
         self.metrics.upload(step=self.iteration)
@@ -241,19 +250,15 @@ class TrainText:
             self.evaluate("test", self.test_instances)
 
 #This decorator makes it posisble to have easy command line arguments and receive a cfg object
-@hydra.main(config_path="config/train_text.yaml", strict=False)
+@hydra.main(config_path="../config/train_text.yaml", strict=False)
 def train_text(cfg):
     register_interpolations() 
     #This is to replace ${seed:} and ${id:} in the config with a seed and an id
-
     cfg_yaml = cfg.pretty(resolve=True) #We write the config to disk
     logger.info("====CONFIG====\n%s", cfg_yaml)
     save_config(cfg_yaml)
     set_seeds(cfg.misc.seed)
-
-    #If wandb is activated we initialize it
-    if cfg.misc.wandb:
-        pass_conf(wandb.init, cfg, 'wandb')(config=cfg.to_container(resolve=True))
+    setup_wandb(cfg)
 
     tr = TrainText(cfg)
 
