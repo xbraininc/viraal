@@ -2,19 +2,15 @@ set -e
 
 DATASET=atis
 PARTS=(
-    0.05 
-    0.1 
     0.2
 )
 TYPES=(
     tag
 )
 LOSSES=(
-    ce
     vat
 )
 BATCH_SIZES=(
-    16
     64
 )
 
@@ -28,22 +24,22 @@ do
         do
             PRETRAIN_NAME="${DATASET}_${TYPE}_${LOSS}_${PART}"
 
-            # python -m viraal.train.$TYPE -m dataset=$DATASET \
-            #                             training=$DATASET \
-            #                             training.dataset=$DATASET \
-            #                             training.loss=$LOSS \
-            #                             training.task=$TYPE \
-            #                             training.iterator.params.batch_size=${BATCH_SIZE} \
-            #                             training.unlabeler.params.labeled_part=$PART \
-            #                             hydra=no_console \
-            #                             losses=$LOSS \
-            #                             hydra.sweep.dir=multiruns/pretrain/final/$DATASET/$PRETRAIN_NAME \
-            #                             misc.seed=293920:293928 \
-            #                             misc.wandb=True \
-            #                             misc.test=True \
-            #                             wandb.group=$PRETRAIN_NAME \
-            #                             wandb.project=viraal-pretrain-full \
-            #                             ray.remote.num_gpus=0.5
+            python -m viraal.train.$TYPE -m dataset=$DATASET \
+                                        training=$DATASET \
+                                        training.dataset=$DATASET \
+                                        training.loss=$LOSS \
+                                        training.task=$TYPE \
+                                        training.iterator.params.batch_size=${BATCH_SIZE} \
+                                        training.unlabeler.params.labeled_part=$PART \
+                                        hydra=no_console \
+                                        losses=$LOSS \
+                                        hydra.sweep.dir=multiruns/pretrain/final/$DATASET/$PRETRAIN_NAME \
+                                        misc.seed=293920:293928 \
+                                        misc.wandb=True \
+                                        misc.test=True \
+                                        wandb.group=$PRETRAIN_NAME \
+                                        wandb.project=viraal-pretrain-full \
+                                        ray.remote.num_gpus=0.5
             
             PRETRAIN_DIRS=`echo /u/home/badr/Expe/VirAAL/multiruns/pretrain/final/$DATASET/$PRETRAIN_NAME/{0..7} | tr ' ' ,`    
             

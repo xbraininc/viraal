@@ -92,7 +92,7 @@ def misc(cfg):
     sns.set()
     sns.set_context("paper")
     sns.set_style("whitegrid")
-    fig = sns.lineplot(x=x, y=y, hue="Loss", style="Task", data=df)
+    fig = sns.lineplot(x=x, y=y, hue="Loss", style="Task", data=df, palette="Blues_d")
     plt.xticks(xticks[cfg.dataset], rotation=90)
     plt.yticks(yticks)
     plt.title(title[cfg.dataset])

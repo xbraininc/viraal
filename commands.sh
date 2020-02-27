@@ -86,19 +86,19 @@
 
 #Pretrain snips
 
-python -m viraal.train.text -m dataset=snips \
-                               training=snips \
-                               training.dataset=snips \
-                               training.loss=ce \
-                               training.task=int \
-                               training.iterator.params.batch_size=16 \
-                               losses=ce \
-                               hydra=no_console \
-                               misc.seed=1234500:1234508 \
-                               misc.test=True \
-                               training.unlabeler.params.labeled_part=0.05,0.1 \
-                               ray.remote.num_gpus=0.5 \
-                               wandb=final
+# python -m viraal.train.text -m dataset=snips \
+#                                training=snips \
+#                                training.dataset=snips \
+#                                training.loss=ce \
+#                                training.task=int \
+#                                training.iterator.params.batch_size=16 \
+#                                losses=ce \
+#                                hydra=no_console \
+#                                misc.seed=1234500:1234508 \
+#                                misc.test=True \
+#                                training.unlabeler.params.labeled_part=0.05,0.1 \
+#                                ray.remote.num_gpus=0.5 \
+#                                wandb=final
 
 # python -m viraal.train.text -m dataset=snips \
 #                                training=snips \
@@ -113,19 +113,19 @@ python -m viraal.train.text -m dataset=snips \
 #                                wandb=final \
 #                                ray.remote.num_gpus=0.5
 
-python -m viraal.train.joint -m dataset=snips \
-                               training=snips \
-                               training.dataset=snips \
-                               training.loss=ce \
-                               training.task=joint \
-                               training.iterator.params.batch_size=16 \
-                               losses=ce \
-                               hydra=no_console \
-                               misc.seed=1234500:1234508 \
-                               misc.test=True \
-                               training.unlabeler.params.labeled_part=0.05,0.1 \
-                               wandb=final \
-                               ray.remote.num_gpus=0.5 
+# python -m viraal.train.joint -m dataset=snips \
+#                                training=snips \
+#                                training.dataset=snips \
+#                                training.loss=ce \
+#                                training.task=joint \
+#                                training.iterator.params.batch_size=16 \
+#                                losses=ce \
+#                                hydra=no_console \
+#                                misc.seed=1234500:1234508 \
+#                                misc.test=True \
+#                                training.unlabeler.params.labeled_part=0.05,0.1 \
+#                                wandb=final \
+#                                ray.remote.num_gpus=0.5 
 
 # python -m viraal.train.joint -m dataset=snips \
 #                                training=snips \
@@ -140,19 +140,19 @@ python -m viraal.train.joint -m dataset=snips \
 #                                wandb=final \
 #                                ray.remote.num_gpus=0.5 
 
-python -m viraal.train.tag -m dataset=snips \
-                               training=snips \
-                               training.dataset=snips \
-                               training.loss=ce \
-                               training.task=tag \
-                               training.iterator.params.batch_size=16 \
-                               losses=ce \
-                               hydra=no_console \
-                               misc.seed=1234500:1234508 \
-                               misc.test=True \
-                               training.unlabeler.params.labeled_part=0.05,0.1 \
-                               wandb=final \
-                               ray.remote.num_gpus=0.5 
+# python -m viraal.train.tag -m dataset=snips \
+#                                training=snips \
+#                                training.dataset=snips \
+#                                training.loss=ce \
+#                                training.task=tag \
+#                                training.iterator.params.batch_size=16 \
+#                                losses=ce \
+#                                hydra=no_console \
+#                                misc.seed=1234500:1234508 \
+#                                misc.test=True \
+#                                training.unlabeler.params.labeled_part=0.05,0.1 \
+#                                wandb=final \
+#                                ray.remote.num_gpus=0.5 
 
 # python -m viraal.train.tag -m dataset=snips \
 #                                training=snips \
@@ -242,3 +242,13 @@ python -m viraal.train.tag -m dataset=snips \
 # bash reranking_atis_text_tag.sh
 # bash reranking_snips_joint.sh
 # bash reranking_snips_text_tag.sh
+
+python -m viraal.plot_rerank dataset=snips task=text test_task=int hydra.run.dir=figures/rerank
+python -m viraal.plot_rerank dataset=snips task=tag test_task=tag hydra.run.dir=figures/rerank
+python -m viraal.plot_rerank dataset=snips task=joint test_task=int hydra.run.dir=figures/rerank
+python -m viraal.plot_rerank dataset=snips task=joint test_task=tag hydra.run.dir=figures/rerank
+
+python -m viraal.plot_rerank dataset=atis task=text test_task=int hydra.run.dir=figures/rerank
+python -m viraal.plot_rerank dataset=atis task=tag test_task=tag hydra.run.dir=figures/rerank
+python -m viraal.plot_rerank dataset=atis task=joint test_task=int hydra.run.dir=figures/rerank
+python -m viraal.plot_rerank dataset=atis task=joint test_task=tag hydra.run.dir=figures/rerank

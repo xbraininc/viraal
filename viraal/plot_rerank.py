@@ -26,8 +26,8 @@ def misc(cfg):
     }
 
     title = {
-        'atis' : f"Performance on ATIS with {cfg.loss} pretraining",
-        'snips' : f"Performance on SNIPS with {cfg.loss} pretraining"
+        'atis' : f"Performance on ATIS",
+        'snips' : f"Performance on SNIPS"
     }
 
     batch = {
@@ -49,8 +49,7 @@ def misc(cfg):
     runs = api.runs("cetosignis/viraal-rerank-full", {
             '$and' : [
                 {'config.training.dataset': cfg.dataset},
-                {'config.training.task': cfg.task}, 
-                {'config.training.loss': cfg.loss}       
+                {'config.training.task': cfg.task} 
             ]
         }, per_page=1000)
     configs = ometrics.Metrics()
@@ -64,13 +63,14 @@ def misc(cfg):
 
     x = "Labeled part"
     y = y_title[cfg.test_task]
-    filename = f'{cfg.dataset}_{cfg.task}_{cfg.test_task}_{cfg.loss}' 
+    filename = f'{cfg.dataset}_{cfg.task}_{cfg.test_task}' 
 
     df["Task"] = configs["training/task"]
     df["Dataset"] = cfg.dataset
     df["Loss"] = configs["training/loss"]
     df["Batch Size"] = configs["training/iterator/params/batch_size"]
     df["Criteria"] = [i[0] for i in configs["rerank/criteria"]]
+    df["Loss+Criteria"] = df["Loss"] + "+" + df["Criteria"]
     df[x] = configs["training/unlabeler/params/labeled_part"]
     df[y] = summaries[test_metric[cfg.test_task]]
     yticks = np.arange(np.floor(df[y].min()*100)/100, np.ceil(df[y].max()*100)/100, 0.01)
@@ -84,8 +84,8 @@ def misc(cfg):
     sns.set()
     sns.set_context("paper")
     sns.set_style("whitegrid")
-    fig = sns.boxplot(x=x, y=y, hue="Criteria", data=df)
-    plt.yticks(yticks)
+    fig = sns.barplot(x=x, y=y, hue="Loss+Criteria", data=df, palette="Blues_d")
+    plt.ylim(yticks[0],yticks[-1])
     plt.title(title[cfg.dataset])
     sns.despine(left=True, bottom=True)
     plt.tight_layout()
