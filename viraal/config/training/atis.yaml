@@ -15,7 +15,7 @@ training:
   iterator:
     class: allennlp.data.iterators.basic_iterator.BasicIterator
     params:
-      batch_size: 64
+      batch_size: 16
 
   optimizer:
     class: torch.optim.Adam

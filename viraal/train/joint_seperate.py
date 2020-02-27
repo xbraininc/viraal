@@ -94,14 +94,23 @@ class TrainJoint(TrainText):
 
             if "vat" in self.losses:
                 model_forward_int = lambda embeddings: self.model(embeddings=embeddings, mask=mask)[0]
-                vat_int_loss = self.losses["vat"](int_logits, model_forward_int, embeddings, mask).mean()
-                vat_int_loss.backward(retain_graph=True)
+                r_vadv_int = self.losses["vat"]._generate_vadv_perturbation(model_forward_int, int_logits, embeddings, mask)
 
                 model_forward_tag = lambda embeddings: self.model(embeddings=embeddings, mask=mask)[1]
-                vat_tag_loss = self.losses["vat"](tag_logits, model_forward_tag, embeddings, mask).mean()
-                vat_tag_loss.backward()
-                
-                self.metrics.update("train", vat_loss=vat_int_loss+vat_tag_loss)
+                r_vadv_tag = self.losses["vat"]._generate_vadv_perturbation(model_forward_tag, tag_logits, embeddings, mask)
+
+                perturbed_logits_int_int, perturbed_logits_int_tag = self.model(embeddings + r_vadv_int, mask)
+                perturbed_logits_tag_int, perturbed_logits_tag_tag = self.model(embeddings + r_vadv_tag, mask)
+
+                kl_div_int_int = self.losses["vat"]._kl_div_from_logits(int_logits, perturbed_logits_int_int)
+                kl_div_int_tag = self.losses["vat"]._kl_div_from_logits(tag_logits, perturbed_logits_int_tag)
+                kl_div_tag_int = self.losses["vat"]._kl_div_from_logits(int_logits, perturbed_logits_tag_int)
+                kl_div_tag_tag = self.losses["vat"]._kl_div_from_logits(tag_logits, perturbed_logits_tag_tag)
+
+                total_vat_loss = (kl_div_int_int.mean() + kl_div_int_tag.mean() + kl_div_tag_int.mean() + kl_div_tag_tag.mean())
+                total_vat_loss.backward()
+
+                self.metrics.update("train", vat_loss=total_vat_loss)
             
             tensors = from_locals(["int_logits", "tag_logits", "tags", "mask", "label"], loc=locals())
 

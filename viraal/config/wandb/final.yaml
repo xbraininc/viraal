@@ -1,7 +1,7 @@
 misc:
   wandb: True
 wandb:
-  group: 'snips_${training.loss}_attention_${training.task}_${training.unlabeler.params.labeled_part}'
+  group: '${training.dataset}_${training.loss}_attention_${training.task}_${training.unlabeler.params.labeled_part}_b${training.iterator.params.batch_size}'
   project: viraal-final
   name: ${id:}
   reinit: True

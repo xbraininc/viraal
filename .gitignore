@@ -9,3 +9,5 @@ outputs
 runs
 multiruns
 *.pyc
+multirun
+wandb

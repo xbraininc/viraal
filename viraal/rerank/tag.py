@@ -16,7 +16,7 @@ from omegaconf import OmegaConf
 from viraal.config import (flatten_dict, get_key, pass_conf,
                            register_interpolations, save_config, set_seeds)
 from viraal.train.text import batch_to_device, get_checkpoint
-from viraal.train.joint import TrainJoint
+from viraal.train.tag import TrainJoint
 from viraal.core.utils import destroy_trainer, apply
 from viraal.queries.k_center_greedy import k_center_greedy
 
@@ -70,26 +70,23 @@ def rerank(trainer, cfg):
         batch_to_device(batch, cfg.misc.device)
         embeddings = trainer.word_embeddings(batch["sentence"])
         mask = get_text_field_mask(batch["sentence"])
-        logits_int, logits_tag = trainer.model(embeddings=embeddings, mask=mask)
+        logits_tag = trainer.model(embeddings=embeddings, mask=mask)
         labeled = np.array(batch["labeled"], dtype=bool)
-        dist_int = Categorical(logits=logits_int)
         dist_tag = Categorical(logits=logits_tag.view(-1, logits_tag.size(-1)))
 
-        criter = np.zeros(logits_int.size(0))
+        criter = np.zeros(logits_tag.size(0))
         if "ce" in trainer.losses and any(labeled) and "ce" in cfg.rerank.criteria:
-            criter += normalize(dist_int.entropy())
             criter += normalize(dist_tag.entropy().view(logits_tag.size(0), logits_tag.size(1)).mean(dim=-1))
 
         if "vat" in trainer.losses and "vat" in cfg.rerank.criteria:
             model_forward = lambda embeddings: trainer.model(
                 embeddings=embeddings, mask=mask
             )
-            vat_criter_int, vat_criter_tag = trainer.losses["vat"](logits, model_forward, embeddings, mask)
-            criter += normalize(vat_criter_int)
+            vat_criter_tag = trainer.losses["vat"](logits_tag, model_forward, embeddings, mask)
             criter += normalize(vat_criter_tag.mean(dim=-1))
         
         if "random" in cfg.rerank.criteria:
-            criter += np.random.rand(logits_int.size(0))
+            criter += np.random.rand(logits_tag.size(0))
 
         criter_epoch.append(criter)
 

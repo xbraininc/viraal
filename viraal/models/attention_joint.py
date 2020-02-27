@@ -77,14 +77,14 @@ class AttentionJointClassifier(nn.Module):
                 last_target_input =  (last_target_tag * mask.long()) + (x_input * (~mask).long())
             embedded_tag = self.tag_embed(last_target_input) if i>0 else embedded_tag_zer#(B,1,H)
             # x_input, context, aligned encoder hidden, hidden
-            _, hidden = self.decoder(
+            decoder_output, hidden = self.decoder(
                 torch.cat((embedded_tag, context, aligned), dim=2), hidden)
 
-            concated = torch.cat((hidden[0][0].squeeze(0), context.squeeze(1)), dim=1) # (B,2*H)
+            concated = torch.cat((decoder_output.squeeze(1), context.squeeze(1)), dim=1) # (B,2*H)
             score = self.output2tag(concated) # (B,H)
             decode.append(score)
             # next Context Vector to Attention Calculated by
-            attention_weights = self.attention(hidden[0][0], output)*(mask.float()) # (B,H)
+            attention_weights = self.attention(decoder_output.squeeze(1), output)*(mask.float()) # (B,H)
             context  = torch.bmm(attention_weights.unsqueeze(1), output)
 
             _, last_target_input = torch.max(score, 1) # (B,)

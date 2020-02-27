@@ -4,6 +4,7 @@ import time
 
 import hydra
 import numpy as np
+import json
 import ometrics
 import torch
 import wandb
@@ -28,6 +29,7 @@ def get_checkpoint(checkpoint_prefix, iteration):
     return {
         "model": os.path.join(checkpoint_prefix, f"model_{iteration}.th"),
         "vocab": os.path.join(checkpoint_prefix, "model.vocab"),
+        "label_partition": os.path.join(checkpoint_prefix, "labeled.json")
     }
 class TrainText:
     def __init__(self, config, checkpoint_prefix='model'):
@@ -116,6 +118,13 @@ class TrainText:
     def ensure_max_checkpoints(self):
         while len(self.saved_iterations) > self.c.training.checkpoint_max:
             os.remove(self.saved_iterations.pop(0))
+
+    def save_label_partition(self, path):
+        label_partition = {
+            instance['idx'].metadata : instance['labeled'].metadata for instance in self.train_instances 
+        }
+        with open(path, 'w+') as file:
+            json.dump(label_partition, file) 
     
     def save(self, checkpoint_prefix="model"):
         checkpoint = get_checkpoint(checkpoint_prefix, self.iteration)
@@ -126,12 +135,20 @@ class TrainText:
         torch.save(self.model.state_dict(), checkpoint["model"])
         if not os.path.isdir(checkpoint["vocab"]):
             self.vocab.save_to_files(checkpoint["vocab"])
+        self.save_label_partition(checkpoint["label_partition"])
 
         return checkpoint
+
+    def restore_label_partition(self, path):
+        with open(path, 'r') as file:
+            label_partition = json.load(file)
+        for instance in self.train_instances:
+            instance['labeled'].metadata = label_partition[str(instance['idx'].metadata)]
 
     def restore(self, checkpoint):
         self.model.load_state_dict(torch.load(checkpoint["model"]))
         self.vocab.from_files(checkpoint["vocab"])
+        self.restore_label_partition(checkpoint["label_partition"])
     
     def get_train_instances(self):
         instances = self.train_instances
