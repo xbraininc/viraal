@@ -70,17 +70,18 @@ def rerank(trainer, cfg):
         batch_to_device(batch, cfg.misc.device)
         embeddings = trainer.word_embeddings(batch["sentence"])
         mask = get_text_field_mask(batch["sentence"])
+        sentence_lengths = mask.sum(dim=-1)
         logits_int, logits_tag = trainer.model(embeddings=embeddings, mask=mask)
         labeled = np.array(batch["labeled"], dtype=bool)
         dist_int = Categorical(logits=logits_int)
         dist_tag = Categorical(logits=logits_tag.view(-1, logits_tag.size(-1)))
 
         criter = np.zeros(logits_int.size(0))
-        if "ce" in trainer.losses and any(labeled) and "ce" in cfg.rerank.criteria:
+        if "ce" in cfg.rerank.criteria:
             criter += normalize(dist_int.entropy())
-            criter += normalize(dist_tag.entropy().view(logits_tag.size(0), logits_tag.size(1)).sum(dim=-1)/sentence_lengths)
-
-        if "vat" in trainer.losses and "vat" in cfg.rerank.criteria:
+            tag_entropies = dist_tag.entropy().view(logits_tag.size(0), logits_tag.size(1))*mask.float()
+            criter += normalize(tag_entropies.sum(dim=-1)/sentence_lengths.float())
+        if "vat" in cfg.rerank.criteria:
             model_forward = lambda embeddings: trainer.model(
                 embeddings=embeddings, mask=mask
             )
