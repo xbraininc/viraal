@@ -78,7 +78,7 @@ def rerank(trainer, cfg):
         criter = np.zeros(logits_int.size(0))
         if "ce" in trainer.losses and any(labeled) and "ce" in cfg.rerank.criteria:
             criter += normalize(dist_int.entropy())
-            criter += normalize(dist_tag.entropy().view(logits_tag.size(0), logits_tag.size(1)).mean(dim=-1))
+            criter += normalize(dist_tag.entropy().view(logits_tag.size(0), logits_tag.size(1)).sum(dim=-1)/sentence_lengths)
 
         if "vat" in trainer.losses and "vat" in cfg.rerank.criteria:
             model_forward = lambda embeddings: trainer.model(
