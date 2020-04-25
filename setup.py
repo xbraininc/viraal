@@ -33,6 +33,7 @@ with open("README.md", "r") as fh:
             "torch==1.2",
             "torchvision==0.4.2",
             "pandas",
-            "umap"
+            "umap",
+            "wandb==0.8.33"
          ]
     )

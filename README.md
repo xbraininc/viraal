@@ -10,6 +10,8 @@ Clone the repository in a local folder and then once in the folder install viraa
 pip install -e .
 ```
 
+This will install all required packages. Next create an account at [Weights & Biases](https://www.wandb.com/) and copy your API key from your profile settings. In the terminal just `wandb login` and paste your api key to upload your metrics automatically.
+
 ## Repo structure
 
 This repo is mainly based on configurability. There are scripts that receive the config and instantiate the different objects needed for the task at hand and make them interact.
