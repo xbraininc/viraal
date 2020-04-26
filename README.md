@@ -12,6 +12,10 @@ pip install -e .
 
 This will install all required packages. Next create an account at [Weights & Biases](https://www.wandb.com/) and copy your API key from your profile settings. In the terminal just `wandb login` and paste your api key to upload your metrics automatically.
 
+## Dataset paths
+
+You will need to modify the paths to datasets in viraal/config/dataset/atis.yaml and snips.yaml to point to an **absolute** path to the files included in the data/ folder for these scripts to work. 
+
 ## Reproducing the paper's experiments 
 
 To reproduce the paper's experiments launch the following two scripts :

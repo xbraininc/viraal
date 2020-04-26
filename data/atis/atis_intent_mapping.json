@@ -1,0 +1,11 @@
+{
+    "atis_aircraft#atis_flight#atis_flight_no": "atis_flight",
+        "atis_airline#atis_flight_n": "atis_airline",
+        "atis_airline#atis_flight_no": "atis_airline",
+        "atis_ground_service#atis_ground_fare": "atis_ground_service",
+        "atis_airfare#atis_flight_time": "atis_airfare",
+        "atis_airfare#atis_flight": "atis_flight",
+        "atis_flight#atis_airfare": "atis_flight",
+        "atis_flight#atis_airline": "atis_flight",
+        "atis_flight_no#atis_airline": "atis_flight"
+}
