@@ -12284,3 +12284,790 @@ PC: @                0x0 (unknown)
 [2m[36m(pid=22002)[0m   0% 0/4478 [00:00<?, ?it/s]
 [2m[36m(pid=21997)[0m 0it [00:00, ?it/s]500it [00:00, 24152.39it/s]
 [2m[36m(pid=21997)[0m   0% 0/4478 [00:00<?, ?it/s]
+[2m[36m(pid=21998)[0m 4478it [00:00, 16213.74it/s]
+[2m[36m(pid=21998)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=21994)[0m 500it [00:00, 17087.66it/s]
+[2m[36m(pid=21994)[0m   0% 0/4478 [00:00<?, ?it/s]
+[2m[36m(pid=21996)[0m 500it [00:00, 24117.12it/s]
+[2m[36m(pid=21998)[0m 500it [00:00, 20163.95it/s]
+[2m[36m(pid=21996)[0m   0% 0/4478 [00:00<?, ?it/s]
+[2m[36m(pid=21998)[0m   0% 0/4478 [00:00<?, ?it/s]
+[2m[36m(pid=21997)[0m 100% 4478/4478 [00:00<00:00, 80578.72it/s]
+[2m[36m(pid=21997)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=22001)[0m wandb: Syncing run helpful-shape-207
+[2m[36m(pid=22001)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-rerank-tag
+[2m[36m(pid=22001)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-rerank-tag/runs/2hkd79uy
+[2m[36m(pid=22001)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=21999)[0m 1864it [00:00, 18627.09it/s]
+[2m[36m(pid=21996)[0m 100% 4478/4478 [00:00<00:00, 71952.39it/s]
+[2m[36m(pid=21996)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=22002)[0m 100% 4478/4478 [00:00<00:00, 70547.58it/s]
+[2m[36m(pid=22002)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=21998)[0m 100% 4478/4478 [00:00<00:00, 66877.08it/s]
+[2m[36m(pid=21998)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=21994)[0m  99% 4413/4478 [00:00<00:00, 44127.20it/s]100% 4478/4478 [00:00<00:00, 44132.10it/s]
+[2m[36m(pid=21994)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=21996)[0m 100% 950/950 [00:00<00:00, 11675.53it/s]
+[2m[36m(pid=22002)[0m 100% 950/950 [00:00<00:00, 13770.02it/s]
+[2m[36m(pid=21997)[0m 100% 950/950 [00:00<00:00, 12475.07it/s]
+[2m[36m(pid=22001)[0m 
+[2m[36m(pid=21998)[0m 100% 950/950 [00:00<00:00, 14140.78it/s]
+[2m[36m(pid=22207)[0m /u/home/badr/.local/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+[2m[36m(pid=22207)[0m   from ._conv import register_converters as _register_converters
+[2m[36m(pid=22207)[0m wandb: Run data is saved locally in wandb/run-20200426_092658-3rbze1sf
+[2m[36m(pid=22001)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=21999)[0m 2423it [00:00, 9422.36it/s] 
+[2m[36m(pid=21994)[0m 100% 950/950 [00:00<00:00, 10768.26it/s]
+[2m[36m(pid=21999)[0m 4478it [00:00, 15075.35it/s]
+[2m[36m(pid=21999)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=22207)[0m wandb: Syncing run sandy-haze-208
+[2m[36m(pid=21999)[0m 500it [00:00, 21214.21it/s]
+[2m[36m(pid=21999)[0m   0% 0/4478 [00:00<?, ?it/s]
+[2m[36m(pid=22207)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-rerank-tag
+[2m[36m(pid=22207)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-rerank-tag/runs/3rbze1sf
+[2m[36m(pid=22207)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=22001)[0m 2234it [00:00, 12913.16it/s]
+[2m[36m(pid=21999)[0m 100% 4478/4478 [00:00<00:00, 75548.42it/s]
+[2m[36m(pid=21999)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=22001)[0m 4478it [00:00, 18287.67it/s]
+[2m[36m(pid=21999)[0m 100% 950/950 [00:00<00:00, 13516.15it/s]
+[2m[36m(pid=22207)[0m 
+[2m[36m(pid=22207)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=22001)[0m 0it [00:00, ?it/s]500it [00:00, 30240.12it/s]
+[2m[36m(pid=22001)[0m   0% 0/4478 [00:00<?, ?it/s]
+[2m[36m(pid=22001)[0m 100% 4478/4478 [00:00<00:00, 82114.69it/s]
+[2m[36m(pid=22001)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=22001)[0m 100% 950/950 [00:00<00:00, 12994.23it/s]
+[2m[36m(pid=22207)[0m 2234it [00:00, 13356.72it/s]
+[2m[36m(pid=22207)[0m 4478it [00:00, 18977.16it/s]
+[2m[36m(pid=22207)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=22207)[0m 500it [00:00, 28858.96it/s]
+[2m[36m(pid=22207)[0m   0% 0/4478 [00:00<?, ?it/s]
+[2m[36m(pid=22207)[0m 100% 4478/4478 [00:00<00:00, 93596.45it/s]
+[2m[36m(pid=22207)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=22207)[0m 100% 950/950 [00:00<00:00, 14014.25it/s]
+[2m[36m(pid=21996)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=21996)[0m  98% 933/950 [00:00<00:00, 9322.92it/s]100% 950/950 [00:00<00:00, 9315.49it/s]
+[2m[36m(pid=21996)[0m 
+[2m[36m(pid=22001)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=21994)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=22001)[0m 100% 950/950 [00:00<00:00, 11851.07it/s]
+[2m[36m(pid=21994)[0m  98% 932/950 [00:00<00:00, 9318.36it/s]100% 950/950 [00:00<00:00, 9300.79it/s]
+[2m[36m(pid=22207)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=21997)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=22207)[0m 100% 950/950 [00:00<00:00, 12936.60it/s]
+[2m[36m(pid=21997)[0m 100% 950/950 [00:00<00:00, 12569.13it/s]
+[2m[36m(pid=22002)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=22002)[0m 100% 950/950 [00:00<00:00, 11339.63it/s]
+[2m[36m(pid=21998)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=21998)[0m 100% 950/950 [00:00<00:00, 10802.09it/s]
+[2m[36m(pid=21999)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=21999)[0m 100% 950/950 [00:00<00:00, 10088.97it/s]
+[2m[36m(pid=21998)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=21998)[0m 676it [00:00, 3933.63it/s]
+[2m[36m(pid=21998)[0m 893it [00:00, 4926.65it/s]
+[2m[36m(pid=21998)[0m 
+[2m[36m(pid=21998)[0m wandb: Waiting for W&B process to finish, PID 22412
+[2m[36m(pid=21998)[0m wandb: Program ended successfully.
+[2m[36m(pid=21998)[0m wandb: Run summary:
+[2m[36m(pid=21998)[0m wandb:                       _timestamp 1587893547.8092306
+[2m[36m(pid=21998)[0m wandb:                      val_int_acc 0.914
+[2m[36m(pid=21998)[0m wandb:   labeled_train_tag conlleval f1 1.0
+[2m[36m(pid=21998)[0m wandb:                            epoch 100
+[2m[36m(pid=21998)[0m wandb:                         _runtime 332.02937173843384
+[2m[36m(pid=21998)[0m wandb:        labeled_train_ce_loss_ave 0.0012829257175326347
+[2m[36m(pid=21998)[0m wandb:            labeled_train_int_acc 1.0
+[2m[36m(pid=21998)[0m wandb:                            _step 100
+[2m[36m(pid=21998)[0m wandb:             val_tag conlleval f1 0.8449197860962567
+[2m[36m(pid=21998)[0m wandb:            test_tag conlleval f1 0.8252707581227435
+[2m[36m(pid=21998)[0m wandb:                     test_int_acc 0.9182530795072789
+[2m[36m(pid=21998)[0m wandb: Syncing 8 W&B file(s) and 0 media file(s)
+[2m[36m(pid=21998)[0m wandb: - 1.10MB of 1.10MB uploaded
+[2m[36m(pid=21998)[0m wandb: \ 1.10MB of 1.10MB uploaded
+[2m[36m(pid=21998)[0m wandb: | 1.10MB of 1.10MB uploaded
+[2m[36m(pid=21998)[0m wandb: / 1.10MB of 1.10MB uploaded
+[2m[36m(pid=21998)[0m wandb: - 1.10MB of 1.10MB uploaded
+[2m[36m(pid=21998)[0m wandb: \ 1.10MB of 1.10MB uploaded
+[2m[36m(pid=22002)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=21998)[0m wandb: | 1.10MB of 1.10MB uploadedwandb:                                                                                
+[2m[36m(pid=21998)[0m wandb: Synced dutiful-bird-201: https://app.wandb.ai/cetosignis/viraal-rerank-tag/runs/381snpp3
+[2m[36m(pid=22002)[0m 893it [00:00, 32559.77it/s]
+[2m[36m(pid=22002)[0m 
+[2m[36m(pid=22002)[0m wandb: Waiting for W&B process to finish, PID 22413
+[2m[36m(pid=22002)[0m wandb: Program ended successfully.
+[2m[36m(pid=22002)[0m wandb: Run summary:
+[2m[36m(pid=22002)[0m wandb:            labeled_train_int_acc 1.0
+[2m[36m(pid=22002)[0m wandb:                       _timestamp 1587893553.425421
+[2m[36m(pid=22002)[0m wandb:        labeled_train_ce_loss_ave 0.0008930778712965548
+[2m[36m(pid=22002)[0m wandb:                            epoch 100
+[2m[36m(pid=22002)[0m wandb:                      val_int_acc 0.928
+[2m[36m(pid=22002)[0m wandb:                         _runtime 337.6943266391754
+[2m[36m(pid=22002)[0m wandb:                            _step 100
+[2m[36m(pid=22002)[0m wandb:             val_tag conlleval f1 0.8298953662182362
+[2m[36m(pid=22002)[0m wandb:   labeled_train_tag conlleval f1 1.0
+[2m[36m(pid=22002)[0m wandb:                     test_int_acc 0.9204927211646137
+[2m[36m(pid=22002)[0m wandb:            test_tag conlleval f1 0.8119565217391304
+[2m[36m(pid=22002)[0m wandb: Syncing 8 W&B file(s) and 0 media file(s)
+[2m[36m(pid=22002)[0m wandb: - 1.10MB of 1.10MB uploaded
+[2m[36m(pid=21994)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=21994)[0m 120it [00:00, 1019.11it/s]893it [00:00, 6313.07it/s]
+[2m[36m(pid=22002)[0m wandb: \ 1.10MB of 1.10MB uploaded
+[2m[36m(pid=22002)[0m wandb: | 1.10MB of 1.10MB uploaded
+[2m[36m(pid=22002)[0m wandb: / 1.10MB of 1.10MB uploaded
+[2m[36m(pid=21996)[0m 0it [00:00, ?it/s]893it [00:00, 33005.06it/s]
+[2m[36m(pid=22002)[0m wandb: - 1.10MB of 1.10MB uploaded
+[2m[36m(pid=22001)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=22002)[0m wandb: \ 1.10MB of 1.10MB uploadedwandb:                                                                                
+[2m[36m(pid=22002)[0m wandb: Synced sunny-dragon-201: https://app.wandb.ai/cetosignis/viraal-rerank-tag/runs/1cch3kat
+[2m[36m(pid=22001)[0m 893it [00:00, 35398.48it/s]
+[2m[36m(pid=21994)[0m 
+[2m[36m(pid=21994)[0m wandb: Waiting for W&B process to finish, PID 22416
+[2m[36m(pid=21997)[0m 0it [00:00, ?it/s]893it [00:00, 29251.08it/s]
+[2m[36m(pid=21996)[0m 
+[2m[36m(pid=21996)[0m wandb: Waiting for W&B process to finish, PID 22415
+[2m[36m(pid=21996)[0m wandb: Program ended successfully.
+[2m[36m(pid=21994)[0m wandb: Program ended successfully.
+[2m[36m(pid=22001)[0m 
+[2m[36m(pid=22001)[0m wandb: Waiting for W&B process to finish, PID 22508
+[2m[36m(pid=22001)[0m wandb: Program ended successfully.
+[2m[36m(pid=21997)[0m 
+[2m[36m(pid=21997)[0m wandb: Waiting for W&B process to finish, PID 22414
+[2m[36m(pid=21997)[0m wandb: Program ended successfully.
+[2m[36m(pid=21996)[0m wandb: Run summary:
+[2m[36m(pid=21996)[0m wandb:                      val_int_acc 0.93
+[2m[36m(pid=21996)[0m wandb:                         _runtime 341.8294713497162
+[2m[36m(pid=21996)[0m wandb:                            epoch 100
+[2m[36m(pid=21996)[0m wandb:                       _timestamp 1587893557.5950131
+[2m[36m(pid=21996)[0m wandb:                            _step 100
+[2m[36m(pid=21996)[0m wandb:            labeled_train_int_acc 1.0
+[2m[36m(pid=21996)[0m wandb:        labeled_train_ce_loss_ave 0.0009181029163300991
+[2m[36m(pid=21996)[0m wandb:             val_tag conlleval f1 0.8143783146729522
+[2m[36m(pid=21996)[0m wandb:   labeled_train_tag conlleval f1 1.0
+[2m[36m(pid=21996)[0m wandb:            test_tag conlleval f1 0.8045608409050418
+[2m[36m(pid=21996)[0m wandb:                     test_int_acc 0.9148936170212766
+[2m[36m(pid=21996)[0m wandb: Syncing 8 W&B file(s) and 0 media file(s)
+[2m[36m(pid=21996)[0m wandb: - 1.10MB of 1.10MB uploaded
+[2m[36m(pid=21997)[0m wandb: Run summary:
+[2m[36m(pid=21997)[0m wandb:                         _runtime 342.4939067363739
+[2m[36m(pid=21997)[0m wandb:                            epoch 100
+[2m[36m(pid=21997)[0m wandb:                       _timestamp 1587893558.2443068
+[2m[36m(pid=21997)[0m wandb:                      val_int_acc 0.93
+[2m[36m(pid=21997)[0m wandb:            labeled_train_int_acc 1.0
+[2m[36m(pid=21997)[0m wandb:                            _step 100
+[2m[36m(pid=21997)[0m wandb:        labeled_train_ce_loss_ave 0.0010527711128816009
+[2m[36m(pid=21997)[0m wandb:   labeled_train_tag conlleval f1 1.0
+[2m[36m(pid=21997)[0m wandb:             val_tag conlleval f1 0.8286641108817457
+[2m[36m(pid=21997)[0m wandb:            test_tag conlleval f1 0.7980596478620194
+[2m[36m(pid=21997)[0m wandb:                     test_int_acc 0.9171332586786114
+[2m[36m(pid=21997)[0m wandb: Syncing 8 W&B file(s) and 0 media file(s)
+[2m[36m(pid=21997)[0m wandb: - 1.10MB of 1.10MB uploaded
+[2m[36m(pid=21996)[0m wandb: \ 1.10MB of 1.10MB uploaded
+[2m[36m(pid=21997)[0m wandb: \ 1.10MB of 1.10MB uploaded
+[2m[36m(pid=21996)[0m wandb: | 1.10MB of 1.10MB uploaded
+[2m[36m(pid=21997)[0m wandb: | 1.10MB of 1.10MB uploaded
+[2m[36m(pid=22001)[0m wandb: Run summary:
+[2m[36m(pid=22001)[0m wandb:                            epoch 100
+[2m[36m(pid=22001)[0m wandb:        labeled_train_ce_loss_ave 0.2885597050189972
+[2m[36m(pid=22001)[0m wandb:            labeled_train_int_acc 0.9536423841059603
+[2m[36m(pid=22001)[0m wandb:                       _timestamp 1587893557.876308
+[2m[36m(pid=22001)[0m wandb:                      val_int_acc 0.91
+[2m[36m(pid=22001)[0m wandb:                            _step 100
+[2m[36m(pid=22001)[0m wandb:                         _runtime 341.5590181350708
+[2m[36m(pid=22001)[0m wandb:             val_tag conlleval f1 0.8059259259259258
+[2m[36m(pid=22001)[0m wandb:   labeled_train_tag conlleval f1 0.9385394070860448
+[2m[36m(pid=22001)[0m wandb:                     test_int_acc 0.896976483762598
+[2m[36m(pid=22001)[0m wandb:            test_tag conlleval f1 0.8110532926610443
+[2m[36m(pid=22001)[0m wandb: Syncing 8 W&B file(s) and 0 media file(s)
+[2m[36m(pid=22001)[0m wandb: - 1.11MB of 1.11MB uploaded
+[2m[36m(pid=21997)[0m wandb: / 1.10MB of 1.10MB uploaded
+[2m[36m(pid=21996)[0m wandb: / 1.10MB of 1.10MB uploaded
+[2m[36m(pid=22001)[0m wandb: \ 1.11MB of 1.11MB uploaded
+[2m[36m(pid=21997)[0m wandb: - 1.10MB of 1.10MB uploaded
+[2m[36m(pid=21996)[0m wandb: - 1.10MB of 1.10MB uploaded
+[2m[36m(pid=22001)[0m wandb: | 1.11MB of 1.11MB uploaded
+[2m[36m(pid=21996)[0m wandb: \ 1.10MB of 1.10MB uploadedwandb:                                                                                
+[2m[36m(pid=21996)[0m wandb: Synced cosmic-elevator-201: https://app.wandb.ai/cetosignis/viraal-rerank-tag/runs/peouysjd
+[2m[36m(pid=21997)[0m wandb: \ 1.10MB of 1.10MB uploadedwandb:                                                                                
+[2m[36m(pid=21997)[0m wandb: Synced volcanic-water-202: https://app.wandb.ai/cetosignis/viraal-rerank-tag/runs/pndfaxep
+[2m[36m(pid=22001)[0m wandb: / 1.11MB of 1.11MB uploaded
+[2m[36m(pid=22001)[0m wandb: - 1.11MB of 1.11MB uploaded
+[2m[36m(pid=22001)[0m wandb: \ 1.11MB of 1.11MB uploadedwandb:                                                                                
+[2m[36m(pid=22001)[0m wandb: Synced helpful-shape-207: https://app.wandb.ai/cetosignis/viraal-rerank-tag/runs/2hkd79uy
+[2m[36m(pid=21994)[0m wandb: Run summary:
+[2m[36m(pid=21994)[0m wandb:        labeled_train_ce_loss_ave 0.0009515067213214934
+[2m[36m(pid=21994)[0m wandb:                            _step 100
+[2m[36m(pid=21994)[0m wandb:            labeled_train_int_acc 1.0
+[2m[36m(pid=21994)[0m wandb:   labeled_train_tag conlleval f1 1.0
+[2m[36m(pid=21994)[0m wandb:                            epoch 100
+[2m[36m(pid=21994)[0m wandb:                       _timestamp 1587893556.7954037
+[2m[36m(pid=21994)[0m wandb:                      val_int_acc 0.928
+[2m[36m(pid=21994)[0m wandb:                         _runtime 340.8508896827698
+[2m[36m(pid=21994)[0m wandb:             val_tag conlleval f1 0.8399525785417902
+[2m[36m(pid=21994)[0m wandb:            test_tag conlleval f1 0.7983315197678637
+[2m[36m(pid=21994)[0m wandb:                     test_int_acc 0.9193729003359462
+[2m[36m(pid=21994)[0m wandb: Syncing 8 W&B file(s) and 0 media file(s)
+[2m[36m(pid=21994)[0m wandb: - 1.10MB of 1.10MB uploadedwandb:                                                                                
+[2m[36m(pid=21994)[0m wandb: Synced snowy-resonance-205: https://app.wandb.ai/cetosignis/viraal-rerank-tag/runs/ry8f17rr
+[2m[36m(pid=21999)[0m 0it [00:00, ?it/s]893it [00:00, 33165.21it/s]
+[2m[36m(pid=21999)[0m 
+[2m[36m(pid=21999)[0m wandb: Waiting for W&B process to finish, PID 22465
+[2m[36m(pid=21999)[0m wandb: Program ended successfully.
+[2m[36m(pid=22207)[0m 0it [00:00, ?it/s]893it [00:00, 26582.78it/s]
+[2m[36m(pid=22207)[0m 
+[2m[36m(pid=22207)[0m wandb: Waiting for W&B process to finish, PID 22525
+[2m[36m(pid=22207)[0m wandb: Program ended successfully.
+[2m[36m(pid=21999)[0m wandb: Run summary:
+[2m[36m(pid=21999)[0m wandb:                            epoch 100
+[2m[36m(pid=21999)[0m wandb:            labeled_train_int_acc 1.0
+[2m[36m(pid=21999)[0m wandb:                      val_int_acc 0.932
+[2m[36m(pid=21999)[0m wandb:                         _runtime 348.18921661376953
+[2m[36m(pid=21999)[0m wandb:                       _timestamp 1587893564.323216
+[2m[36m(pid=21999)[0m wandb:        labeled_train_ce_loss_ave 0.0014552153879776597
+[2m[36m(pid=21999)[0m wandb:                            _step 100
+[2m[36m(pid=21999)[0m wandb:   labeled_train_tag conlleval f1 1.0
+[2m[36m(pid=21999)[0m wandb:             val_tag conlleval f1 0.8531675547661338
+[2m[36m(pid=21999)[0m wandb:                     test_int_acc 0.9081746920492721
+[2m[36m(pid=21999)[0m wandb:            test_tag conlleval f1 0.8255563531945442
+[2m[36m(pid=21999)[0m wandb: Syncing 8 W&B file(s) and 0 media file(s)
+[2m[36m(pid=21999)[0m wandb: - 1.10MB of 1.10MB uploaded
+[2m[36m(pid=21999)[0m wandb: \ 1.10MB of 1.10MB uploaded
+[2m[36m(pid=21999)[0m wandb: | 1.10MB of 1.10MB uploaded
+[2m[36m(pid=21999)[0m wandb: / 1.10MB of 1.10MB uploaded
+[2m[36m(pid=21999)[0m wandb: - 1.10MB of 1.10MB uploaded
+[2m[36m(pid=21999)[0m wandb: \ 1.10MB of 1.10MB uploadedwandb:                                                                                
+[2m[36m(pid=21999)[0m wandb: Synced efficient-monkey-206: https://app.wandb.ai/cetosignis/viraal-rerank-tag/runs/2pura0wm
+[2m[36m(pid=22207)[0m wandb: Run summary:
+[2m[36m(pid=22207)[0m wandb:            labeled_train_int_acc 1.0
+[2m[36m(pid=22207)[0m wandb:                         _runtime 350.0621862411499
+[2m[36m(pid=22207)[0m wandb:                            _step 100
+[2m[36m(pid=22207)[0m wandb:        labeled_train_ce_loss_ave 0.00122707465197891
+[2m[36m(pid=22207)[0m wandb:                       _timestamp 1587893566.5708687
+[2m[36m(pid=22207)[0m wandb:                      val_int_acc 0.926
+[2m[36m(pid=22207)[0m wandb:                            epoch 100
+[2m[36m(pid=22207)[0m wandb:   labeled_train_tag conlleval f1 1.0
+[2m[36m(pid=22207)[0m wandb:             val_tag conlleval f1 0.8467023172905525
+[2m[36m(pid=22207)[0m wandb:            test_tag conlleval f1 0.8386748289521065
+[2m[36m(pid=22207)[0m wandb:                     test_int_acc 0.9171332586786114
+[2m[36m(pid=22207)[0m wandb: Syncing 8 W&B file(s) and 0 media file(s)
+[2m[36m(pid=22207)[0m wandb: - 1.11MB of 1.11MB uploaded
+[2m[36m(pid=22207)[0m wandb: \ 1.11MB of 1.11MB uploaded
+[2m[36m(pid=22207)[0m wandb: | 1.11MB of 1.11MB uploaded
+[2m[36m(pid=22207)[0m wandb: / 1.11MB of 1.11MB uploaded
+[2m[36m(pid=22207)[0m wandb: - 1.11MB of 1.11MB uploaded
+[2m[36m(pid=22207)[0m wandb: \ 1.11MB of 1.11MB uploadedwandb:                                                                                
+[2m[36m(pid=22207)[0m wandb: Synced sandy-haze-208: https://app.wandb.ai/cetosignis/viraal-rerank-tag/runs/3rbze1sf
+/u/home/badr/.local/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+2020-04-26 02:32:57,759	WARNING worker.py:673 -- WARNING: Not updating worker name since `setproctitle` is not installed. Install this with `pip install setproctitle` (or ray[debug]) to enable monitoring of worker processes.
+2020-04-26 02:32:57,773	INFO resource_spec.py:216 -- Starting Ray with 44.38 GiB memory available for workers and up to 18.63 GiB for objects. You can adjust these settings with ray.init(memory=<bytes>, object_store_memory=<bytes>).
+[2020-04-26 02:32:58,201][HYDRA] RangeSweeper sweeping
+[2020-04-26 02:32:58,201][HYDRA] Sweep output dir : multiruns/rerank/final/atis/atis_joint_ce_0.1/ce
+[2020-04-26 02:32:58,207][HYDRA] Ray Launcher is launching 8 jobs locally
+[2020-04-26 02:32:58,207][HYDRA] Sweep output dir : multiruns/rerank/final/atis/atis_joint_ce_0.1/ce
+[2020-04-26 02:32:58,207][HYDRA] 	#0 : hydra=no_console rerank.pretrain=/u/home/badr/Expe/VirAAL/multiruns/pretrain/final/atis/atis_joint_ce_0.1/0 rerank.criteria=[ce] misc.wandb=True misc.test=True wandb.project=viraal-rerank-tag wandb.group=atis_joint_l_ce_r_ce_p0.1_r0.1 ray.remote.num_gpus=0.5
+[2020-04-26 02:32:58,579][HYDRA] 	#1 : hydra=no_console rerank.pretrain=/u/home/badr/Expe/VirAAL/multiruns/pretrain/final/atis/atis_joint_ce_0.1/1 rerank.criteria=[ce] misc.wandb=True misc.test=True wandb.project=viraal-rerank-tag wandb.group=atis_joint_l_ce_r_ce_p0.1_r0.1 ray.remote.num_gpus=0.5
+[2020-04-26 02:32:58,761][HYDRA] 	#2 : hydra=no_console rerank.pretrain=/u/home/badr/Expe/VirAAL/multiruns/pretrain/final/atis/atis_joint_ce_0.1/2 rerank.criteria=[ce] misc.wandb=True misc.test=True wandb.project=viraal-rerank-tag wandb.group=atis_joint_l_ce_r_ce_p0.1_r0.1 ray.remote.num_gpus=0.5
+[2020-04-26 02:32:58,948][HYDRA] 	#3 : hydra=no_console rerank.pretrain=/u/home/badr/Expe/VirAAL/multiruns/pretrain/final/atis/atis_joint_ce_0.1/3 rerank.criteria=[ce] misc.wandb=True misc.test=True wandb.project=viraal-rerank-tag wandb.group=atis_joint_l_ce_r_ce_p0.1_r0.1 ray.remote.num_gpus=0.5
+[2020-04-26 02:32:59,136][HYDRA] 	#4 : hydra=no_console rerank.pretrain=/u/home/badr/Expe/VirAAL/multiruns/pretrain/final/atis/atis_joint_ce_0.1/4 rerank.criteria=[ce] misc.wandb=True misc.test=True wandb.project=viraal-rerank-tag wandb.group=atis_joint_l_ce_r_ce_p0.1_r0.1 ray.remote.num_gpus=0.5
+[2020-04-26 02:32:59,323][HYDRA] 	#5 : hydra=no_console rerank.pretrain=/u/home/badr/Expe/VirAAL/multiruns/pretrain/final/atis/atis_joint_ce_0.1/5 rerank.criteria=[ce] misc.wandb=True misc.test=True wandb.project=viraal-rerank-tag wandb.group=atis_joint_l_ce_r_ce_p0.1_r0.1 ray.remote.num_gpus=0.5
+[2020-04-26 02:32:59,491][HYDRA] 	#6 : hydra=no_console rerank.pretrain=/u/home/badr/Expe/VirAAL/multiruns/pretrain/final/atis/atis_joint_ce_0.1/6 rerank.criteria=[ce] misc.wandb=True misc.test=True wandb.project=viraal-rerank-tag wandb.group=atis_joint_l_ce_r_ce_p0.1_r0.1 ray.remote.num_gpus=0.5
+[2020-04-26 02:32:59,668][HYDRA] 	#7 : hydra=no_console rerank.pretrain=/u/home/badr/Expe/VirAAL/multiruns/pretrain/final/atis/atis_joint_ce_0.1/7 rerank.criteria=[ce] misc.wandb=True misc.test=True wandb.project=viraal-rerank-tag wandb.group=atis_joint_l_ce_r_ce_p0.1_r0.1 ray.remote.num_gpus=0.5
+[2m[36m(pid=25367)[0m /u/home/badr/.local/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+[2m[36m(pid=25367)[0m   from ._conv import register_converters as _register_converters
+[2m[36m(pid=25370)[0m /u/home/badr/.local/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+[2m[36m(pid=25370)[0m   from ._conv import register_converters as _register_converters
+[2m[36m(pid=25368)[0m /u/home/badr/.local/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+[2m[36m(pid=25368)[0m   from ._conv import register_converters as _register_converters
+[2m[36m(pid=25369)[0m /u/home/badr/.local/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+[2m[36m(pid=25369)[0m   from ._conv import register_converters as _register_converters
+[2m[36m(pid=25371)[0m /u/home/badr/.local/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+[2m[36m(pid=25371)[0m   from ._conv import register_converters as _register_converters
+[2m[36m(pid=25364)[0m /u/home/badr/.local/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+[2m[36m(pid=25364)[0m   from ._conv import register_converters as _register_converters
+[2m[36m(pid=25366)[0m /u/home/badr/.local/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+[2m[36m(pid=25366)[0m   from ._conv import register_converters as _register_converters
+[2m[36m(pid=25565)[0m /u/home/badr/.local/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+[2m[36m(pid=25565)[0m   from ._conv import register_converters as _register_converters
+[2m[36m(pid=25370)[0m wandb: Tracking run with wandb version 0.8.33
+[2m[36m(pid=25368)[0m wandb: Tracking run with wandb version 0.8.33
+[2m[36m(pid=25369)[0m wandb: Tracking run with wandb version 0.8.33
+[2m[36m(pid=25367)[0m wandb: Tracking run with wandb version 0.8.33
+[2m[36m(pid=25371)[0m wandb: Tracking run with wandb version 0.8.33
+[2m[36m(pid=25364)[0m wandb: Tracking run with wandb version 0.8.33
+[2m[36m(pid=25366)[0m wandb: Tracking run with wandb version 0.8.33
+[2m[36m(pid=25565)[0m wandb: Tracking run with wandb version 0.8.33
+[2m[36m(pid=25369)[0m /u/home/badr/.local/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+[2m[36m(pid=25369)[0m   from ._conv import register_converters as _register_converters
+[2m[36m(pid=25369)[0m wandb: Run data is saved locally in wandb/run-20200426_093301-2r4d64tt
+[2m[36m(pid=25367)[0m /u/home/badr/.local/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+[2m[36m(pid=25367)[0m   from ._conv import register_converters as _register_converters
+[2m[36m(pid=25367)[0m wandb: Run data is saved locally in wandb/run-20200426_093301-2btjfcxo
+[2m[36m(pid=25370)[0m /u/home/badr/.local/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+[2m[36m(pid=25370)[0m   from ._conv import register_converters as _register_converters
+[2m[36m(pid=25370)[0m wandb: Run data is saved locally in wandb/run-20200426_093301-12k2p8wx
+[2m[36m(pid=25368)[0m /u/home/badr/.local/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+[2m[36m(pid=25368)[0m   from ._conv import register_converters as _register_converters
+[2m[36m(pid=25368)[0m wandb: Run data is saved locally in wandb/run-20200426_093301-efb6iusv
+[2m[36m(pid=25369)[0m wandb: Syncing run dazzling-sponge-209
+[2m[36m(pid=25369)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-rerank-tag
+[2m[36m(pid=25369)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-rerank-tag/runs/2r4d64tt
+[2m[36m(pid=25369)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=25367)[0m wandb: Syncing run cerulean-smoke-210
+[2m[36m(pid=25367)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-rerank-tag
+[2m[36m(pid=25367)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-rerank-tag/runs/2btjfcxo
+[2m[36m(pid=25367)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=25370)[0m wandb: Syncing run earnest-snowball-212
+[2m[36m(pid=25370)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-rerank-tag
+[2m[36m(pid=25370)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-rerank-tag/runs/12k2p8wx
+[2m[36m(pid=25370)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=25368)[0m wandb: Syncing run eager-paper-209
+[2m[36m(pid=25368)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-rerank-tag
+[2m[36m(pid=25368)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-rerank-tag/runs/efb6iusv
+[2m[36m(pid=25368)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=25371)[0m /u/home/badr/.local/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+[2m[36m(pid=25371)[0m   from ._conv import register_converters as _register_converters
+[2m[36m(pid=25371)[0m wandb: Run data is saved locally in wandb/run-20200426_093301-1iwmkd4d
+[2m[36m(pid=25368)[0m 
+[2m[36m(pid=25367)[0m 
+[2m[36m(pid=25367)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=25370)[0m 
+[2m[36m(pid=25370)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=25368)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=25369)[0m 
+[2m[36m(pid=25369)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=25371)[0m wandb: Syncing run bright-dawn-213
+[2m[36m(pid=25371)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-rerank-tag
+[2m[36m(pid=25371)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-rerank-tag/runs/1iwmkd4d
+[2m[36m(pid=25371)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=25364)[0m /u/home/badr/.local/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+[2m[36m(pid=25364)[0m   from ._conv import register_converters as _register_converters
+[2m[36m(pid=25364)[0m wandb: Run data is saved locally in wandb/run-20200426_093301-12fszwjp
+[2m[36m(pid=25367)[0m 2234it [00:00, 12882.13it/s]
+[2m[36m(pid=25371)[0m 
+[2m[36m(pid=25370)[0m 2234it [00:00, 12374.72it/s]
+[2m[36m(pid=25368)[0m 2234it [00:00, 11569.04it/s]
+[2m[36m(pid=25369)[0m 2234it [00:00, 12314.50it/s]
+[2m[36m(pid=25371)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=25364)[0m wandb: Syncing run divine-terrain-214
+[2m[36m(pid=25364)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-rerank-tag
+[2m[36m(pid=25364)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-rerank-tag/runs/12fszwjp
+[2m[36m(pid=25364)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=25367)[0m 4478it [00:00, 18896.15it/s]
+[2m[36m(pid=25367)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=25366)[0m /u/home/badr/.local/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+[2m[36m(pid=25366)[0m   from ._conv import register_converters as _register_converters
+[2m[36m(pid=25366)[0m wandb: Run data is saved locally in wandb/run-20200426_093301-2v9ivi3z
+[2m[36m(pid=25368)[0m 4478it [00:00, 17212.94it/s]
+[2m[36m(pid=25368)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=25369)[0m 4478it [00:00, 17894.00it/s]
+[2m[36m(pid=25369)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=25367)[0m 500it [00:00, 17618.24it/s]
+[2m[36m(pid=25367)[0m   0% 0/4478 [00:00<?, ?it/s]
+[2m[36m(pid=25370)[0m 4478it [00:00, 16458.34it/s]
+[2m[36m(pid=25370)[0m 0it [00:00, ?it/s]500it [00:00, 26378.28it/s]
+[2m[36m(pid=25370)[0m   0% 0/4478 [00:00<?, ?it/s]
+[2m[36m(pid=25368)[0m 500it [00:00, 23156.83it/s]
+[2m[36m(pid=25368)[0m   0% 0/4478 [00:00<?, ?it/s]
+[2m[36m(pid=25369)[0m 500it [00:00, 28051.79it/s]
+[2m[36m(pid=25369)[0m   0% 0/4478 [00:00<?, ?it/s]
+[2m[36m(pid=25367)[0m 100% 4478/4478 [00:00<00:00, 64241.50it/s]
+[2m[36m(pid=25367)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=25370)[0m 100% 4478/4478 [00:00<00:00, 88398.39it/s]
+[2m[36m(pid=25368)[0m 100% 4478/4478 [00:00<00:00, 83713.72it/s]
+[2m[36m(pid=25368)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=25369)[0m 100% 4478/4478 [00:00<00:00, 75825.97it/s]
+[2m[36m(pid=25369)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=25371)[0m 2234it [00:00, 12317.98it/s]
+[2m[36m(pid=25364)[0m 
+[2m[36m(pid=25364)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=25367)[0m 100% 950/950 [00:00<00:00, 13458.99it/s]
+[2m[36m(pid=25370)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=25366)[0m wandb: Syncing run dainty-deluge-215
+[2m[36m(pid=25366)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-rerank-tag
+[2m[36m(pid=25366)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-rerank-tag/runs/2v9ivi3z
+[2m[36m(pid=25366)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=25368)[0m 100% 950/950 [00:00<00:00, 15755.28it/s]
+[2m[36m(pid=25369)[0m 100% 950/950 [00:00<00:00, 13753.72it/s]
+[2m[36m(pid=25370)[0m 100% 950/950 [00:00<00:00, 12231.33it/s]
+[2m[36m(pid=25565)[0m /u/home/badr/.local/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+[2m[36m(pid=25565)[0m   from ._conv import register_converters as _register_converters
+[2m[36m(pid=25565)[0m wandb: Run data is saved locally in wandb/run-20200426_093302-18vyv6pd
+[2m[36m(pid=25371)[0m 4478it [00:00, 16987.22it/s]
+[2m[36m(pid=25371)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=25371)[0m 500it [00:00, 21684.28it/s]
+[2m[36m(pid=25371)[0m   0% 0/4478 [00:00<?, ?it/s]
+[2m[36m(pid=25366)[0m 
+[2m[36m(pid=25366)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=25371)[0m 100% 4478/4478 [00:00<00:00, 74369.51it/s]
+[2m[36m(pid=25371)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=25364)[0m 2234it [00:00, 11468.75it/s]
+[2m[36m(pid=25565)[0m wandb: Syncing run mild-sunset-216
+[2m[36m(pid=25565)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-rerank-tag
+[2m[36m(pid=25565)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-rerank-tag/runs/18vyv6pd
+[2m[36m(pid=25565)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=25371)[0m 100% 950/950 [00:00<00:00, 13789.94it/s]
+[2m[36m(pid=25364)[0m 4478it [00:00, 15995.51it/s]
+[2m[36m(pid=25364)[0m 0it [00:00, ?it/s]500it [00:00, 30274.60it/s]
+[2m[36m(pid=25364)[0m   0% 0/4478 [00:00<?, ?it/s]
+[2m[36m(pid=25366)[0m 2234it [00:00, 12802.64it/s]
+[2m[36m(pid=25364)[0m 100% 4478/4478 [00:00<00:00, 90347.61it/s]
+[2m[36m(pid=25364)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=25565)[0m 
+[2m[36m(pid=25565)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=25366)[0m 4478it [00:00, 17794.84it/s]
+[2m[36m(pid=25366)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=25364)[0m 100% 950/950 [00:00<00:00, 14702.85it/s]
+[2m[36m(pid=25366)[0m 500it [00:00, 31285.83it/s]
+[2m[36m(pid=25366)[0m   0% 0/4478 [00:00<?, ?it/s]
+[2m[36m(pid=25366)[0m 100% 4478/4478 [00:00<00:00, 82807.99it/s]
+[2m[36m(pid=25366)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=25366)[0m 100% 950/950 [00:00<00:00, 16161.64it/s]
+[2m[36m(pid=25565)[0m 2234it [00:00, 12310.81it/s]
+[2m[36m(pid=25565)[0m 4478it [00:00, 16750.37it/s]
+[2m[36m(pid=25565)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=25565)[0m 500it [00:00, 23221.96it/s]
+[2m[36m(pid=25565)[0m   0% 0/4478 [00:00<?, ?it/s]
+[2m[36m(pid=25565)[0m 100% 4478/4478 [00:00<00:00, 63470.60it/s]
+[2m[36m(pid=25565)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=25565)[0m 100% 950/950 [00:00<00:00, 15697.99it/s]
+[2m[36m(pid=25366)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=25366)[0m  98% 932/950 [00:00<00:00, 9313.59it/s]100% 950/950 [00:00<00:00, 9303.09it/s]
+[2m[36m(pid=25370)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=25370)[0m 100% 950/950 [00:00<00:00, 10550.87it/s]
+[2m[36m(pid=25367)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=25367)[0m  99% 941/950 [00:00<00:00, 9405.99it/s]100% 950/950 [00:00<00:00, 9392.08it/s]
+[2m[36m(pid=25369)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=25369)[0m  95% 904/950 [00:00<00:00, 9031.22it/s]100% 950/950 [00:00<00:00, 9013.42it/s]
+[2m[36m(pid=25368)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=25368)[0m  99% 937/950 [00:00<00:00, 9362.80it/s]100% 950/950 [00:00<00:00, 9346.69it/s]
+[2m[36m(pid=25371)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=25371)[0m 100% 950/950 [00:00<00:00, 10834.40it/s]
+[2m[36m(pid=25565)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=25364)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=25565)[0m  94% 897/950 [00:00<00:00, 8961.95it/s]100% 950/950 [00:00<00:00, 9055.02it/s]
+[2m[36m(pid=25364)[0m 100% 950/950 [00:00<00:00, 12045.09it/s]
+[2m[36m(pid=25368)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=25368)[0m 652it [00:00, 4223.23it/s]893it [00:00, 5467.54it/s]
+[2m[36m(pid=25368)[0m 
+[2m[36m(pid=25368)[0m wandb: Waiting for W&B process to finish, PID 25780
+[2m[36m(pid=25368)[0m wandb: Program ended successfully.
+[2m[36m(pid=25364)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=25364)[0m 701it [00:00, 4858.59it/s]893it [00:00, 5775.56it/s]
+[2m[36m(pid=25364)[0m 
+[2m[36m(pid=25364)[0m wandb: Waiting for W&B process to finish, PID 25822
+[2m[36m(pid=25364)[0m wandb: Program ended successfully.
+[2m[36m(pid=25368)[0m wandb: Run summary:
+[2m[36m(pid=25368)[0m wandb:                            _step 100
+[2m[36m(pid=25368)[0m wandb:        labeled_train_ce_loss_ave 0.00034326419699937105
+[2m[36m(pid=25368)[0m wandb:            labeled_train_int_acc 1.0
+[2m[36m(pid=25368)[0m wandb:                         _runtime 529.6978945732117
+[2m[36m(pid=25368)[0m wandb:                       _timestamp 1587894109.119999
+[2m[36m(pid=25368)[0m wandb:                      val_int_acc 0.946
+[2m[36m(pid=25368)[0m wandb:                            epoch 100
+[2m[36m(pid=25368)[0m wandb:   labeled_train_tag conlleval f1 1.0
+[2m[36m(pid=25368)[0m wandb:             val_tag conlleval f1 0.8983451536643026
+[2m[36m(pid=25368)[0m wandb:                     test_int_acc 0.9428891377379619
+[2m[36m(pid=25368)[0m wandb:            test_tag conlleval f1 0.8781535158346754
+[2m[36m(pid=25368)[0m wandb: Syncing files in wandb/run-20200426_093301-efb6iusv:
+[2m[36m(pid=25368)[0m wandb:   upstream_diff_c23775882a24de9a10d37f2aa77d7ecb75a5e8a0.patch
+[2m[36m(pid=25368)[0m wandb: plus 8 W&B file(s) and 0 media file(s)
+[2m[36m(pid=25368)[0m wandb: - 1.15MB of 1.15MB uploaded
+[2m[36m(pid=25368)[0m wandb: \ 1.15MB of 1.15MB uploaded
+[2m[36m(pid=25368)[0m wandb: | 1.15MB of 1.15MB uploaded
+[2m[36m(pid=25368)[0m wandb: / 1.15MB of 1.15MB uploaded
+[2m[36m(pid=25368)[0m wandb: - 1.15MB of 1.15MB uploaded
+[2m[36m(pid=25368)[0m wandb: \ 1.15MB of 1.15MB uploaded
+[2m[36m(pid=25368)[0m wandb: | 1.15MB of 1.15MB uploadedwandb:                                                                                
+[2m[36m(pid=25368)[0m wandb: Synced eager-paper-209: https://app.wandb.ai/cetosignis/viraal-rerank-tag/runs/efb6iusv
+[2m[36m(pid=25364)[0m wandb: Run summary:
+[2m[36m(pid=25364)[0m wandb:                            epoch 100
+[2m[36m(pid=25364)[0m wandb:   labeled_train_tag conlleval f1 1.0
+[2m[36m(pid=25364)[0m wandb:                       _timestamp 1587894111.9440353
+[2m[36m(pid=25364)[0m wandb:                      val_int_acc 0.954
+[2m[36m(pid=25364)[0m wandb:                         _runtime 532.170973777771
+[2m[36m(pid=25364)[0m wandb:                            _step 100
+[2m[36m(pid=25364)[0m wandb:        labeled_train_ce_loss_ave 0.0005367229459807277
+[2m[36m(pid=25364)[0m wandb:            labeled_train_int_acc 1.0
+[2m[36m(pid=25364)[0m wandb:             val_tag conlleval f1 0.9217647058823529
+[2m[36m(pid=25364)[0m wandb:            test_tag conlleval f1 0.8854853072128228
+[2m[36m(pid=25364)[0m wandb:                     test_int_acc 0.9529675251959686
+[2m[36m(pid=25364)[0m wandb: Syncing files in wandb/run-20200426_093301-12fszwjp:
+[2m[36m(pid=25364)[0m wandb:   upstream_diff_c23775882a24de9a10d37f2aa77d7ecb75a5e8a0.patch
+[2m[36m(pid=25364)[0m wandb: plus 8 W&B file(s) and 0 media file(s)
+[2m[36m(pid=25364)[0m wandb: - 1.16MB of 1.16MB uploaded
+[2m[36m(pid=25364)[0m wandb: \ 1.16MB of 1.16MB uploaded
+[2m[36m(pid=25364)[0m wandb: | 1.16MB of 1.16MB uploaded
+[2m[36m(pid=25364)[0m wandb: / 1.16MB of 1.16MB uploaded
+[2m[36m(pid=25364)[0m wandb: - 1.16MB of 1.16MB uploadedwandb:                                                                                
+[2m[36m(pid=25364)[0m wandb: Synced divine-terrain-214: https://app.wandb.ai/cetosignis/viraal-rerank-tag/runs/12fszwjp
+[2m[36m(pid=25369)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=25369)[0m 893it [00:00, 33996.96it/s]
+[2m[36m(pid=25369)[0m 
+[2m[36m(pid=25369)[0m wandb: Waiting for W&B process to finish, PID 25782
+[2m[36m(pid=25369)[0m wandb: Program ended successfully.
+[2m[36m(pid=25367)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=25367)[0m 893it [00:00, 19718.31it/s]
+[2m[36m(pid=25367)[0m 
+[2m[36m(pid=25367)[0m wandb: Waiting for W&B process to finish, PID 25783
+[2m[36m(pid=25367)[0m wandb: Program ended successfully.
+[2m[36m(pid=25369)[0m wandb: Run summary:
+[2m[36m(pid=25369)[0m wandb:            labeled_train_int_acc 1.0
+[2m[36m(pid=25369)[0m wandb:                         _runtime 542.7143559455872
+[2m[36m(pid=25369)[0m wandb:   labeled_train_tag conlleval f1 1.0
+[2m[36m(pid=25369)[0m wandb:                      val_int_acc 0.962
+[2m[36m(pid=25369)[0m wandb:        labeled_train_ce_loss_ave 0.0002406019193585962
+[2m[36m(pid=25369)[0m wandb:                            epoch 100
+[2m[36m(pid=25369)[0m wandb:                            _step 100
+[2m[36m(pid=25369)[0m wandb:                       _timestamp 1587894122.1440914
+[2m[36m(pid=25369)[0m wandb:             val_tag conlleval f1 0.8825958702064897
+[2m[36m(pid=25369)[0m wandb:                     test_int_acc 0.9518477043673013
+[2m[36m(pid=25369)[0m wandb:            test_tag conlleval f1 0.8646817614548048
+[2m[36m(pid=25369)[0m wandb: Syncing files in wandb/run-20200426_093301-2r4d64tt:
+[2m[36m(pid=25369)[0m wandb:   upstream_diff_c23775882a24de9a10d37f2aa77d7ecb75a5e8a0.patch
+[2m[36m(pid=25369)[0m wandb: plus 8 W&B file(s) and 0 media file(s)
+[2m[36m(pid=25369)[0m wandb: - 1.15MB of 1.15MB uploaded
+[2m[36m(pid=25369)[0m wandb: \ 1.15MB of 1.15MB uploaded
+[2m[36m(pid=25369)[0m wandb: | 1.15MB of 1.15MB uploaded
+[2m[36m(pid=25369)[0m wandb: / 1.15MB of 1.15MB uploaded
+[2m[36m(pid=25369)[0m wandb: - 1.15MB of 1.15MB uploaded
+[2m[36m(pid=25371)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=25369)[0m wandb: \ 1.15MB of 1.15MB uploaded
+[2m[36m(pid=25371)[0m 829it [00:00, 6052.07it/s]893it [00:00, 6401.66it/s]
+[2m[36m(pid=25369)[0m wandb: | 1.15MB of 1.15MB uploadedwandb:                                                                                
+[2m[36m(pid=25369)[0m wandb: Synced dazzling-sponge-209: https://app.wandb.ai/cetosignis/viraal-rerank-tag/runs/2r4d64tt
+[2m[36m(pid=25367)[0m wandb: Run summary:
+[2m[36m(pid=25367)[0m wandb:        labeled_train_ce_loss_ave 0.00024073512759059668
+[2m[36m(pid=25367)[0m wandb:                      val_int_acc 0.956
+[2m[36m(pid=25367)[0m wandb:                         _runtime 544.4726452827454
+[2m[36m(pid=25367)[0m wandb:            labeled_train_int_acc 1.0
+[2m[36m(pid=25367)[0m wandb:                            _step 100
+[2m[36m(pid=25367)[0m wandb:                            epoch 100
+[2m[36m(pid=25367)[0m wandb:                       _timestamp 1587894123.9034016
+[2m[36m(pid=25367)[0m wandb:   labeled_train_tag conlleval f1 1.0
+[2m[36m(pid=25367)[0m wandb:             val_tag conlleval f1 0.8999411418481461
+[2m[36m(pid=25367)[0m wandb:            test_tag conlleval f1 0.8773919206236711
+[2m[36m(pid=25367)[0m wandb:                     test_int_acc 0.9406494960806271
+[2m[36m(pid=25367)[0m wandb: Syncing files in wandb/run-20200426_093301-2btjfcxo:
+[2m[36m(pid=25367)[0m wandb:   upstream_diff_c23775882a24de9a10d37f2aa77d7ecb75a5e8a0.patch
+[2m[36m(pid=25367)[0m wandb: plus 8 W&B file(s) and 0 media file(s)
+[2m[36m(pid=25367)[0m wandb: - 1.15MB of 1.15MB uploaded
+[2m[36m(pid=25371)[0m 
+[2m[36m(pid=25371)[0m wandb: Waiting for W&B process to finish, PID 25784
+[2m[36m(pid=25371)[0m wandb: Program ended successfully.
+[2m[36m(pid=25367)[0m wandb: \ 1.15MB of 1.15MB uploaded
+[2m[36m(pid=25367)[0m wandb: | 1.15MB of 1.15MB uploaded
+[2m[36m(pid=25565)[0m 0it [00:00, ?it/s]893it [00:00, 29958.36it/s]
+[2m[36m(pid=25367)[0m wandb: / 1.15MB of 1.15MB uploaded
+[2m[36m(pid=25367)[0m wandb: - 1.15MB of 1.15MB uploadedwandb:                                                                                
+[2m[36m(pid=25367)[0m wandb: Synced cerulean-smoke-210: https://app.wandb.ai/cetosignis/viraal-rerank-tag/runs/2btjfcxo
+[2m[36m(pid=25565)[0m 
+[2m[36m(pid=25565)[0m wandb: Waiting for W&B process to finish, PID 25864
+[2m[36m(pid=25565)[0m wandb: Program ended successfully.
+[2m[36m(pid=25371)[0m wandb: Run summary:
+[2m[36m(pid=25371)[0m wandb:                            epoch 100
+[2m[36m(pid=25371)[0m wandb:            labeled_train_int_acc 1.0
+[2m[36m(pid=25371)[0m wandb:                       _timestamp 1587894126.5475051
+[2m[36m(pid=25371)[0m wandb:   labeled_train_tag conlleval f1 1.0
+[2m[36m(pid=25371)[0m wandb:                         _runtime 546.9309811592102
+[2m[36m(pid=25371)[0m wandb:                            _step 100
+[2m[36m(pid=25371)[0m wandb:        labeled_train_ce_loss_ave 0.0004960669321008027
+[2m[36m(pid=25371)[0m wandb:                      val_int_acc 0.946
+[2m[36m(pid=25371)[0m wandb:             val_tag conlleval f1 0.9174258007640318
+[2m[36m(pid=25371)[0m wandb:                     test_int_acc 0.9372900335946248
+[2m[36m(pid=25371)[0m wandb:            test_tag conlleval f1 0.8991446899501068
+[2m[36m(pid=25371)[0m wandb: Syncing files in wandb/run-20200426_093301-1iwmkd4d:
+[2m[36m(pid=25371)[0m wandb:   upstream_diff_c23775882a24de9a10d37f2aa77d7ecb75a5e8a0.patch
+[2m[36m(pid=25371)[0m wandb: plus 8 W&B file(s) and 0 media file(s)
+[2m[36m(pid=25371)[0m wandb: - 1.15MB of 1.15MB uploaded
+[2m[36m(pid=25371)[0m wandb: \ 1.15MB of 1.15MB uploaded
+[2m[36m(pid=25371)[0m wandb: | 1.15MB of 1.15MB uploaded
+[2m[36m(pid=25371)[0m wandb: / 1.15MB of 1.15MB uploaded
+[2m[36m(pid=25371)[0m wandb: - 1.15MB of 1.15MB uploadedwandb:                                                                                
+[2m[36m(pid=25371)[0m wandb: Synced bright-dawn-213: https://app.wandb.ai/cetosignis/viraal-rerank-tag/runs/1iwmkd4d
+[2m[36m(pid=25565)[0m wandb: Run summary:
+[2m[36m(pid=25565)[0m wandb:                            epoch 100
+[2m[36m(pid=25565)[0m wandb:                      val_int_acc 0.968
+[2m[36m(pid=25565)[0m wandb:                         _runtime 547.806887626648
+[2m[36m(pid=25565)[0m wandb:        labeled_train_ce_loss_ave 0.0005947143654339015
+[2m[36m(pid=25565)[0m wandb:            labeled_train_int_acc 1.0
+[2m[36m(pid=25565)[0m wandb:                       _timestamp 1587894127.9568532
+[2m[36m(pid=25565)[0m wandb:                            _step 100
+[2m[36m(pid=25565)[0m wandb:   labeled_train_tag conlleval f1 1.0
+[2m[36m(pid=25565)[0m wandb:             val_tag conlleval f1 0.9184574624668826
+[2m[36m(pid=25565)[0m wandb:                     test_int_acc 0.9428891377379619
+[2m[36m(pid=25565)[0m wandb:            test_tag conlleval f1 0.8831400535236396
+[2m[36m(pid=25565)[0m wandb: Syncing files in wandb/run-20200426_093302-18vyv6pd:
+[2m[36m(pid=25565)[0m wandb:   upstream_diff_c23775882a24de9a10d37f2aa77d7ecb75a5e8a0.patch
+[2m[36m(pid=25565)[0m wandb: plus 8 W&B file(s) and 0 media file(s)
+[2m[36m(pid=25565)[0m wandb: - 1.16MB of 1.16MB uploaded
+[2m[36m(pid=25565)[0m wandb: \ 1.16MB of 1.16MB uploaded
+[2m[36m(pid=25565)[0m wandb: | 1.16MB of 1.16MB uploaded
+[2m[36m(pid=25565)[0m wandb: / 1.16MB of 1.16MB uploaded
+[2m[36m(pid=25565)[0m wandb: - 1.16MB of 1.16MB uploaded
+[2m[36m(pid=25565)[0m wandb: \ 1.16MB of 1.16MB uploaded
+[2m[36m(pid=25565)[0m wandb: | 1.16MB of 1.16MB uploadedwandb:                                                                                
+[2m[36m(pid=25565)[0m wandb: Synced mild-sunset-216: https://app.wandb.ai/cetosignis/viraal-rerank-tag/runs/18vyv6pd
+[2m[36m(pid=25370)[0m 0it [00:00, ?it/s]893it [00:00, 27126.07it/s]
+[2m[36m(pid=25370)[0m 
+[2m[36m(pid=25370)[0m wandb: Waiting for W&B process to finish, PID 25781
+[2m[36m(pid=25370)[0m wandb: Program ended successfully.
+[2m[36m(pid=25370)[0m wandb: Run summary:
+[2m[36m(pid=25370)[0m wandb:                            epoch 100
+[2m[36m(pid=25370)[0m wandb:        labeled_train_ce_loss_ave 0.000375115720089525
+[2m[36m(pid=25370)[0m wandb:                      val_int_acc 0.946
+[2m[36m(pid=25370)[0m wandb:                         _runtime 554.7928175926208
+[2m[36m(pid=25370)[0m wandb:             val_tag conlleval f1 0.9042709867452136
+[2m[36m(pid=25370)[0m wandb:            labeled_train_int_acc 1.0
+[2m[36m(pid=25370)[0m wandb:                       _timestamp 1587894134.217953
+[2m[36m(pid=25370)[0m wandb:                            _step 100
+[2m[36m(pid=25370)[0m wandb:   labeled_train_tag conlleval f1 1.0
+[2m[36m(pid=25370)[0m wandb:                     test_int_acc 0.9507278835386338
+[2m[36m(pid=25370)[0m wandb:            test_tag conlleval f1 0.8807306590257881
+[2m[36m(pid=25370)[0m wandb: Syncing files in wandb/run-20200426_093301-12k2p8wx:
+[2m[36m(pid=25370)[0m wandb:   upstream_diff_c23775882a24de9a10d37f2aa77d7ecb75a5e8a0.patch
+[2m[36m(pid=25370)[0m wandb: plus 8 W&B file(s) and 0 media file(s)
+[2m[36m(pid=25370)[0m wandb: - 1.15MB of 1.15MB uploaded
+[2m[36m(pid=25370)[0m wandb: \ 1.15MB of 1.15MB uploaded
+[2m[36m(pid=25370)[0m wandb: | 1.15MB of 1.15MB uploaded
+[2m[36m(pid=25370)[0m wandb: / 1.15MB of 1.15MB uploaded
+[2m[36m(pid=25370)[0m wandb: - 1.15MB of 1.15MB uploaded
+[2m[36m(pid=25370)[0m wandb: \ 1.15MB of 1.15MB uploadedwandb:                                                                                
+[2m[36m(pid=25370)[0m wandb: Synced earnest-snowball-212: https://app.wandb.ai/cetosignis/viraal-rerank-tag/runs/12k2p8wx
+[2m[36m(pid=25366)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=25366)[0m 893it [00:00, 27400.32it/s]
+[2m[36m(pid=25366)[0m 
+[2m[36m(pid=25366)[0m wandb: Waiting for W&B process to finish, PID 25834
+[2m[36m(pid=25366)[0m wandb: Program ended successfully.
+[2m[36m(pid=25366)[0m wandb: Run summary:
+[2m[36m(pid=25366)[0m wandb:                      val_int_acc 0.958
+[2m[36m(pid=25366)[0m wandb:        labeled_train_ce_loss_ave 0.0007091255392879248
+[2m[36m(pid=25366)[0m wandb:                         _runtime 559.6844635009766
+[2m[36m(pid=25366)[0m wandb:                       _timestamp 1587894139.6452644
+[2m[36m(pid=25366)[0m wandb:            labeled_train_int_acc 1.0
+[2m[36m(pid=25366)[0m wandb:                            _step 100
+[2m[36m(pid=25366)[0m wandb:                            epoch 100
+[2m[36m(pid=25366)[0m wandb:             val_tag conlleval f1 0.9136310223266745
+[2m[36m(pid=25366)[0m wandb:   labeled_train_tag conlleval f1 1.0
+[2m[36m(pid=25366)[0m wandb:            test_tag conlleval f1 0.8988764044943821
+[2m[36m(pid=25366)[0m wandb:                     test_int_acc 0.9384098544232923
+[2m[36m(pid=25366)[0m wandb: Syncing files in wandb/run-20200426_093301-2v9ivi3z:
+[2m[36m(pid=25366)[0m wandb:   upstream_diff_c23775882a24de9a10d37f2aa77d7ecb75a5e8a0.patch
+[2m[36m(pid=25366)[0m wandb: plus 8 W&B file(s) and 0 media file(s)
+[2m[36m(pid=25366)[0m wandb: - 1.16MB of 1.16MB uploaded
+[2m[36m(pid=25366)[0m wandb: \ 1.16MB of 1.16MB uploaded
+[2m[36m(pid=25366)[0m wandb: | 1.16MB of 1.16MB uploaded
+[2m[36m(pid=25366)[0m wandb: / 1.16MB of 1.16MB uploaded
+[2m[36m(pid=25366)[0m wandb: - 1.16MB of 1.16MB uploaded
+[2m[36m(pid=25366)[0m wandb: \ 1.16MB of 1.16MB uploadedwandb:                                                                                
+[2m[36m(pid=25366)[0m wandb: Synced dainty-deluge-215: https://app.wandb.ai/cetosignis/viraal-rerank-tag/runs/2v9ivi3z
+/u/home/badr/.local/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+2020-04-26 02:42:31,528	WARNING worker.py:673 -- WARNING: Not updating worker name since `setproctitle` is not installed. Install this with `pip install setproctitle` (or ray[debug]) to enable monitoring of worker processes.
+2020-04-26 02:42:31,542	INFO resource_spec.py:216 -- Starting Ray with 43.85 GiB memory available for workers and up to 18.63 GiB for objects. You can adjust these settings with ray.init(memory=<bytes>, object_store_memory=<bytes>).
+[2020-04-26 02:42:31,972][HYDRA] RangeSweeper sweeping
+[2020-04-26 02:42:31,972][HYDRA] Sweep output dir : multiruns/rerank/final/atis/atis_joint_ce_0.2/ce
+[2020-04-26 02:42:31,977][HYDRA] Ray Launcher is launching 8 jobs locally
+[2020-04-26 02:42:31,977][HYDRA] Sweep output dir : multiruns/rerank/final/atis/atis_joint_ce_0.2/ce
+[2020-04-26 02:42:31,977][HYDRA] 	#0 : hydra=no_console rerank.pretrain=/u/home/badr/Expe/VirAAL/multiruns/pretrain/final/atis/atis_joint_ce_0.2/0 rerank.criteria=[ce] misc.wandb=True misc.test=True wandb.project=viraal-rerank-tag wandb.group=atis_joint_l_ce_r_ce_p0.2_r0.2 ray.remote.num_gpus=0.5
+[2020-04-26 02:42:32,268][HYDRA] 	#1 : hydra=no_console rerank.pretrain=/u/home/badr/Expe/VirAAL/multiruns/pretrain/final/atis/atis_joint_ce_0.2/1 rerank.criteria=[ce] misc.wandb=True misc.test=True wandb.project=viraal-rerank-tag wandb.group=atis_joint_l_ce_r_ce_p0.2_r0.2 ray.remote.num_gpus=0.5
+[2020-04-26 02:42:32,475][HYDRA] 	#2 : hydra=no_console rerank.pretrain=/u/home/badr/Expe/VirAAL/multiruns/pretrain/final/atis/atis_joint_ce_0.2/2 rerank.criteria=[ce] misc.wandb=True misc.test=True wandb.project=viraal-rerank-tag wandb.group=atis_joint_l_ce_r_ce_p0.2_r0.2 ray.remote.num_gpus=0.5
+[2020-04-26 02:42:32,666][HYDRA] 	#3 : hydra=no_console rerank.pretrain=/u/home/badr/Expe/VirAAL/multiruns/pretrain/final/atis/atis_joint_ce_0.2/3 rerank.criteria=[ce] misc.wandb=True misc.test=True wandb.project=viraal-rerank-tag wandb.group=atis_joint_l_ce_r_ce_p0.2_r0.2 ray.remote.num_gpus=0.5
+[2020-04-26 02:42:32,891][HYDRA] 	#4 : hydra=no_console rerank.pretrain=/u/home/badr/Expe/VirAAL/multiruns/pretrain/final/atis/atis_joint_ce_0.2/4 rerank.criteria=[ce] misc.wandb=True misc.test=True wandb.project=viraal-rerank-tag wandb.group=atis_joint_l_ce_r_ce_p0.2_r0.2 ray.remote.num_gpus=0.5
+[2020-04-26 02:42:33,114][HYDRA] 	#5 : hydra=no_console rerank.pretrain=/u/home/badr/Expe/VirAAL/multiruns/pretrain/final/atis/atis_joint_ce_0.2/5 rerank.criteria=[ce] misc.wandb=True misc.test=True wandb.project=viraal-rerank-tag wandb.group=atis_joint_l_ce_r_ce_p0.2_r0.2 ray.remote.num_gpus=0.5
+[2020-04-26 02:42:33,270][HYDRA] 	#6 : hydra=no_console rerank.pretrain=/u/home/badr/Expe/VirAAL/multiruns/pretrain/final/atis/atis_joint_ce_0.2/6 rerank.criteria=[ce] misc.wandb=True misc.test=True wandb.project=viraal-rerank-tag wandb.group=atis_joint_l_ce_r_ce_p0.2_r0.2 ray.remote.num_gpus=0.5
+[2m[36m(pid=30039)[0m /u/home/badr/.local/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+[2m[36m(pid=30039)[0m   from ._conv import register_converters as _register_converters
+[2m[36m(pid=30041)[0m /u/home/badr/.local/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+[2m[36m(pid=30041)[0m   from ._conv import register_converters as _register_converters
+[2m[36m(pid=30046)[0m /u/home/badr/.local/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+[2m[36m(pid=30046)[0m   from ._conv import register_converters as _register_converters
+[2020-04-26 02:42:33,457][HYDRA] 	#7 : hydra=no_console rerank.pretrain=/u/home/badr/Expe/VirAAL/multiruns/pretrain/final/atis/atis_joint_ce_0.2/7 rerank.criteria=[ce] misc.wandb=True misc.test=True wandb.project=viraal-rerank-tag wandb.group=atis_joint_l_ce_r_ce_p0.2_r0.2 ray.remote.num_gpus=0.5
+[2m[36m(pid=30042)[0m /u/home/badr/.local/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+[2m[36m(pid=30042)[0m   from ._conv import register_converters as _register_converters
+[2m[36m(pid=30040)[0m /u/home/badr/.local/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+[2m[36m(pid=30040)[0m   from ._conv import register_converters as _register_converters
+[2m[36m(pid=30044)[0m /u/home/badr/.local/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+[2m[36m(pid=30044)[0m   from ._conv import register_converters as _register_converters
+[2m[36m(pid=30043)[0m /u/home/badr/.local/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+[2m[36m(pid=30043)[0m   from ._conv import register_converters as _register_converters
+[2m[36m(pid=30236)[0m /u/home/badr/.local/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+[2m[36m(pid=30236)[0m   from ._conv import register_converters as _register_converters
+[2m[36m(pid=30039)[0m wandb: Tracking run with wandb version 0.8.33
+[2m[36m(pid=30041)[0m wandb: Tracking run with wandb version 0.8.33
+[2m[36m(pid=30046)[0m wandb: Tracking run with wandb version 0.8.33
+[2m[36m(pid=30042)[0m wandb: Tracking run with wandb version 0.8.33
+[2m[36m(pid=30040)[0m wandb: Tracking run with wandb version 0.8.33
+[2m[36m(pid=30044)[0m wandb: Tracking run with wandb version 0.8.33
+[2m[36m(pid=30043)[0m wandb: Tracking run with wandb version 0.8.33
+[2m[36m(pid=30236)[0m wandb: Tracking run with wandb version 0.8.33
+[2m[36m(pid=30039)[0m /u/home/badr/.local/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+[2m[36m(pid=30039)[0m   from ._conv import register_converters as _register_converters
+[2m[36m(pid=30039)[0m wandb: Run data is saved locally in wandb/run-20200426_094235-ij5eqt3n
+[2m[36m(pid=30041)[0m /u/home/badr/.local/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+[2m[36m(pid=30041)[0m   from ._conv import register_converters as _register_converters
+[2m[36m(pid=30041)[0m wandb: Run data is saved locally in wandb/run-20200426_094235-37kasewe
+[2m[36m(pid=30046)[0m /u/home/badr/.local/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+[2m[36m(pid=30046)[0m   from ._conv import register_converters as _register_converters
+[2m[36m(pid=30046)[0m wandb: Run data is saved locally in wandb/run-20200426_094235-1ha5zm3o
+[2m[36m(pid=30042)[0m /u/home/badr/.local/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+[2m[36m(pid=30042)[0m   from ._conv import register_converters as _register_converters
+[2m[36m(pid=30042)[0m wandb: Run data is saved locally in wandb/run-20200426_094235-alje7d5r
+[2m[36m(pid=30039)[0m wandb: Syncing run soft-paper-217
+[2m[36m(pid=30039)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-rerank-tag
+[2m[36m(pid=30039)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-rerank-tag/runs/ij5eqt3n
+[2m[36m(pid=30039)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=30046)[0m wandb: Syncing run clear-cosmos-218
+[2m[36m(pid=30046)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-rerank-tag
+[2m[36m(pid=30046)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-rerank-tag/runs/1ha5zm3o
+[2m[36m(pid=30046)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=30040)[0m /u/home/badr/.local/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+[2m[36m(pid=30040)[0m   from ._conv import register_converters as _register_converters
+[2m[36m(pid=30040)[0m wandb: Run data is saved locally in wandb/run-20200426_094235-3ic8o0gc
+[2m[36m(pid=30041)[0m wandb: Syncing run dutiful-valley-218
+[2m[36m(pid=30041)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-rerank-tag
+[2m[36m(pid=30041)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-rerank-tag/runs/37kasewe
+[2m[36m(pid=30041)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=30042)[0m wandb: Syncing run lemon-grass-219
+[2m[36m(pid=30042)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-rerank-tag
+[2m[36m(pid=30042)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-rerank-tag/runs/alje7d5r
+[2m[36m(pid=30042)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=30040)[0m wandb: Syncing run different-yogurt-221
+[2m[36m(pid=30040)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-rerank-tag
+[2m[36m(pid=30040)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-rerank-tag/runs/3ic8o0gc
+[2m[36m(pid=30040)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=30039)[0m 
+[2m[36m(pid=30039)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=30041)[0m 
+[2m[36m(pid=30041)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=30042)[0m 
+[2m[36m(pid=30042)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=30044)[0m /u/home/badr/.local/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+[2m[36m(pid=30044)[0m   from ._conv import register_converters as _register_converters
+[2m[36m(pid=30044)[0m wandb: Run data is saved locally in wandb/run-20200426_094235-u91l7bfc
+[2m[36m(pid=30046)[0m 
+[2m[36m(pid=30046)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=30040)[0m 
+[2m[36m(pid=30041)[0m 2234it [00:00, 14202.29it/s]
+[2m[36m(pid=30046)[0m 1936it [00:00, 19359.51it/s]
+[2m[36m(pid=30042)[0m 2234it [00:00, 13386.01it/s]
+[2m[36m(pid=30040)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=30039)[0m 2234it [00:00, 11048.72it/s]
+[2m[36m(pid=30041)[0m 4478it [00:00, 20346.05it/s]
+[2m[36m(pid=30044)[0m wandb: Syncing run icy-frog-222
+[2m[36m(pid=30044)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-rerank-tag
+[2m[36m(pid=30044)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-rerank-tag/runs/u91l7bfc
+[2m[36m(pid=30044)[0m wandb: Run `wandb off` to turn off syncing.
+[2m[36m(pid=30041)[0m 0it [00:00, ?it/s]500it [00:00, 26013.77it/s]
+[2m[36m(pid=30041)[0m   0% 0/4478 [00:00<?, ?it/s]
+[2m[36m(pid=30043)[0m /u/home/badr/.local/lib/python3.6/site-packages/h5py/__init__.py:34: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+[2m[36m(pid=30043)[0m   from ._conv import register_converters as _register_converters
+[2m[36m(pid=30043)[0m wandb: Run data is saved locally in wandb/run-20200426_094235-372cu0qd
+[2m[36m(pid=30042)[0m 4478it [00:00, 19610.77it/s]
+[2m[36m(pid=30042)[0m 0it [00:00, ?it/s]
+[2m[36m(pid=30039)[0m 4478it [00:00, 15723.35it/s]
+[2m[36m(pid=30039)[0m 0it [00:00, ?it/s]500it [00:00, 26986.21it/s]
+[2m[36m(pid=30039)[0m   0% 0/4478 [00:00<?, ?it/s]
+[2m[36m(pid=30041)[0m 100% 4478/4478 [00:00<00:00, 77459.92it/s]
+[2m[36m(pid=30041)[0m   0% 0/950 [00:00<?, ?it/s]
+[2m[36m(pid=30046)[0m 2517it [00:00, 9916.01it/s] 
+[2m[36m(pid=30042)[0m 500it [00:00, 23113.19it/s]
