@@ -1,573 +1,0 @@
-2020-02-27 12:21:17,049	INFO resource_spec.py:216 -- Starting Ray with 5.37 GiB memory available for workers and up to 2.71 GiB for objects. You can adjust these settings with ray.init(memory=<bytes>, object_store_memory=<bytes>).
-[2020-02-27 12:21:18,000][HYDRA] RangeSweeper sweeping
-[2020-02-27 12:21:18,000][HYDRA] Sweep output dir : multiruns/pretrain/final/atis/atis_tag_vat_0.2
-[2020-02-27 12:21:18,015][HYDRA] Ray Launcher is launching 8 jobs locally
-[2020-02-27 12:21:18,015][HYDRA] Sweep output dir : multiruns/pretrain/final/atis/atis_tag_vat_0.2
-[2020-02-27 12:21:18,015][HYDRA] 	#0 : dataset=atis training=atis hydra=no_console losses=vat training.dataset=atis training.loss=vat training.task=tag training.iterator.params.batch_size=64 training.unlabeler.params.labeled_part=0.2 misc.seed=293920 misc.wandb=True misc.test=True wandb.group=atis_tag_vat_0.2 wandb.project=viraal-pretrain-full ray.remote.num_gpus=0.5
-[2020-02-27 12:21:18,175][HYDRA] 	#1 : dataset=atis training=atis hydra=no_console losses=vat training.dataset=atis training.loss=vat training.task=tag training.iterator.params.batch_size=64 training.unlabeler.params.labeled_part=0.2 misc.seed=293921 misc.wandb=True misc.test=True wandb.group=atis_tag_vat_0.2 wandb.project=viraal-pretrain-full ray.remote.num_gpus=0.5
-[2020-02-27 12:21:18,314][HYDRA] 	#2 : dataset=atis training=atis hydra=no_console losses=vat training.dataset=atis training.loss=vat training.task=tag training.iterator.params.batch_size=64 training.unlabeler.params.labeled_part=0.2 misc.seed=293922 misc.wandb=True misc.test=True wandb.group=atis_tag_vat_0.2 wandb.project=viraal-pretrain-full ray.remote.num_gpus=0.5
-[2020-02-27 12:21:18,452][HYDRA] 	#3 : dataset=atis training=atis hydra=no_console losses=vat training.dataset=atis training.loss=vat training.task=tag training.iterator.params.batch_size=64 training.unlabeler.params.labeled_part=0.2 misc.seed=293923 misc.wandb=True misc.test=True wandb.group=atis_tag_vat_0.2 wandb.project=viraal-pretrain-full ray.remote.num_gpus=0.5
-[2020-02-27 12:21:18,595][HYDRA] 	#4 : dataset=atis training=atis hydra=no_console losses=vat training.dataset=atis training.loss=vat training.task=tag training.iterator.params.batch_size=64 training.unlabeler.params.labeled_part=0.2 misc.seed=293924 misc.wandb=True misc.test=True wandb.group=atis_tag_vat_0.2 wandb.project=viraal-pretrain-full ray.remote.num_gpus=0.5
-[2020-02-27 12:21:18,734][HYDRA] 	#5 : dataset=atis training=atis hydra=no_console losses=vat training.dataset=atis training.loss=vat training.task=tag training.iterator.params.batch_size=64 training.unlabeler.params.labeled_part=0.2 misc.seed=293925 misc.wandb=True misc.test=True wandb.group=atis_tag_vat_0.2 wandb.project=viraal-pretrain-full ray.remote.num_gpus=0.5
-[2020-02-27 12:21:18,949][HYDRA] 	#6 : dataset=atis training=atis hydra=no_console losses=vat training.dataset=atis training.loss=vat training.task=tag training.iterator.params.batch_size=64 training.unlabeler.params.labeled_part=0.2 misc.seed=293926 misc.wandb=True misc.test=True wandb.group=atis_tag_vat_0.2 wandb.project=viraal-pretrain-full ray.remote.num_gpus=0.5
-[2020-02-27 12:21:19,098][HYDRA] 	#7 : dataset=atis training=atis hydra=no_console losses=vat training.dataset=atis training.loss=vat training.task=tag training.iterator.params.batch_size=64 training.unlabeler.params.labeled_part=0.2 misc.seed=293927 misc.wandb=True misc.test=True wandb.group=atis_tag_vat_0.2 wandb.project=viraal-pretrain-full ray.remote.num_gpus=0.5
-[2m[36m(pid=18126)[0m wandb: Tracking run with wandb version 0.8.19
-[2m[36m(pid=18129)[0m wandb: Tracking run with wandb version 0.8.19
-[2m[36m(pid=18127)[0m wandb: Tracking run with wandb version 0.8.19
-[2m[36m(pid=18128)[0m wandb: Tracking run with wandb version 0.8.19
-[2m[36m(pid=18126)[0m wandb: Wandb version 0.8.28 is available!  To upgrade, please run:
-[2m[36m(pid=18126)[0m wandb:  $ pip install wandb --upgrade
-[2m[36m(pid=18126)[0m wandb: Run data is saved locally in wandb/run-20200227_202120-0gaor0yl
-[2m[36m(pid=18129)[0m wandb: Wandb version 0.8.28 is available!  To upgrade, please run:
-[2m[36m(pid=18129)[0m wandb:  $ pip install wandb --upgrade
-[2m[36m(pid=18129)[0m wandb: Run data is saved locally in wandb/run-20200227_202120-jz0m3oxw
-[2m[36m(pid=18127)[0m wandb: Wandb version 0.8.28 is available!  To upgrade, please run:
-[2m[36m(pid=18127)[0m wandb:  $ pip install wandb --upgrade
-[2m[36m(pid=18127)[0m wandb: Run data is saved locally in wandb/run-20200227_202120-cxbu1dve
-[2m[36m(pid=18128)[0m wandb: Wandb version 0.8.28 is available!  To upgrade, please run:
-[2m[36m(pid=18128)[0m wandb:  $ pip install wandb --upgrade
-[2m[36m(pid=18128)[0m wandb: Run data is saved locally in wandb/run-20200227_202120-uoi1872d
-[2m[36m(pid=18126)[0m wandb: Syncing run ethereal-puddle-713
-[2m[36m(pid=18126)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-pretrain-full
-[2m[36m(pid=18126)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-pretrain-full/runs/0gaor0yl
-[2m[36m(pid=18126)[0m wandb: Run `wandb off` to turn off syncing.
-[2m[36m(pid=18129)[0m wandb: ERROR Error while calling W&B API: Error 1213: Deadlock found when trying to get lock; try restarting transaction (<Response [500]>)
-[2m[36m(pid=18128)[0m wandb: ERROR Error while calling W&B API: Error 1213: Deadlock found when trying to get lock; try restarting transaction (<Response [500]>)
-[2m[36m(pid=18127)[0m wandb: Syncing run stoic-firebrand-713
-[2m[36m(pid=18127)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-pretrain-full
-[2m[36m(pid=18127)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-pretrain-full/runs/cxbu1dve
-[2m[36m(pid=18127)[0m wandb: Run `wandb off` to turn off syncing.
-[2m[36m(pid=18126)[0m 
-[2m[36m(pid=18127)[0m 
-[2m[36m(pid=18126)[0m 0it [00:00, ?it/s]
-[2m[36m(pid=18127)[0m 0it [00:00, ?it/s]
-[2m[36m(pid=18126)[0m 1817it [00:00, 18169.11it/s]
-[2m[36m(pid=18127)[0m 1812it [00:00, 18113.37it/s]
-[2m[36m(pid=18126)[0m 3234it [00:00, 16750.53it/s]
-[2m[36m(pid=18127)[0m 3247it [00:00, 16791.22it/s]
-[2m[36m(pid=18126)[0m 4478it [00:00, 19839.31it/s]
-[2m[36m(pid=18126)[0m 0it [00:00, ?it/s]500it [00:00, 25603.13it/s]
-[2m[36m(pid=18126)[0m   0% 0/4478 [00:00<?, ?it/s]
-[2m[36m(pid=18127)[0m 4478it [00:00, 19814.38it/s]
-[2m[36m(pid=18127)[0m 0it [00:00, ?it/s]500it [00:00, 26758.26it/s]
-[2m[36m(pid=18127)[0m   0% 0/4478 [00:00<?, ?it/s]
-[2m[36m(pid=18126)[0m 100% 4478/4478 [00:00<00:00, 126067.01it/s]
-[2m[36m(pid=18127)[0m 100% 4478/4478 [00:00<00:00, 125909.82it/s]
-[2m[36m(pid=18126)[0m   0% 0/950 [00:00<?, ?it/s]
-[2m[36m(pid=18127)[0m   0% 0/950 [00:00<?, ?it/s]
-[2m[36m(pid=18126)[0m 100% 950/950 [00:00<00:00, 16281.50it/s]
-[2m[36m(pid=18127)[0m 100% 950/950 [00:00<00:00, 16297.82it/s]
-[2m[36m(pid=18128)[0m wandb: Network error resolved after 0:00:01.468779, resuming normal operation.
-[2m[36m(pid=18129)[0m wandb: Network error resolved after 0:00:01.609722, resuming normal operation.
-[2m[36m(pid=18128)[0m wandb: Syncing run restful-spaceship-715
-[2m[36m(pid=18128)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-pretrain-full
-[2m[36m(pid=18128)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-pretrain-full/runs/uoi1872d
-[2m[36m(pid=18128)[0m wandb: Run `wandb off` to turn off syncing.
-[2m[36m(pid=18129)[0m wandb: Syncing run ruby-serenity-716
-[2m[36m(pid=18129)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-pretrain-full
-[2m[36m(pid=18129)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-pretrain-full/runs/jz0m3oxw
-[2m[36m(pid=18129)[0m wandb: Run `wandb off` to turn off syncing.
-[2m[36m(pid=18129)[0m 
-[2m[36m(pid=18128)[0m 
-[2m[36m(pid=18129)[0m 0it [00:00, ?it/s]
-[2m[36m(pid=18128)[0m 0it [00:00, ?it/s]
-[2m[36m(pid=18129)[0m 2812it [00:00, 17579.42it/s]
-[2m[36m(pid=18128)[0m 2812it [00:00, 17262.99it/s]
-[2m[36m(pid=18129)[0m 4478it [00:00, 22969.31it/s]
-[2m[36m(pid=18129)[0m 0it [00:00, ?it/s]
-[2m[36m(pid=18128)[0m 4478it [00:00, 22670.03it/s]
-[2m[36m(pid=18128)[0m 0it [00:00, ?it/s]
-[2m[36m(pid=18129)[0m 500it [00:00, 43732.58it/s]
-[2m[36m(pid=18129)[0m   0% 0/4478 [00:00<?, ?it/s]100% 4478/4478 [00:00<00:00, 122184.59it/s]
-[2m[36m(pid=18129)[0m   0% 0/950 [00:00<?, ?it/s]
-[2m[36m(pid=18128)[0m 500it [00:00, 46968.69it/s]
-[2m[36m(pid=18128)[0m   0% 0/4478 [00:00<?, ?it/s]100% 4478/4478 [00:00<00:00, 124566.21it/s]
-[2m[36m(pid=18128)[0m   0% 0/950 [00:00<?, ?it/s]
-[2m[36m(pid=18129)[0m 100% 950/950 [00:00<00:00, 22482.71it/s]
-[2m[36m(pid=18128)[0m 100% 950/950 [00:00<00:00, 22344.03it/s]
-[2m[36m(pid=18127)[0m 0it [00:00, ?it/s]
-[2m[36m(pid=18127)[0m 893it [00:00, 17557.37it/s]
-[2m[36m(pid=18127)[0m 
-[2m[36m(pid=18127)[0m wandb: Waiting for W&B process to finish, PID 18238
-[2m[36m(pid=18127)[0m wandb: Program ended successfully.
-[2m[36m(pid=18127)[0m wandb: Run summary:
-[2m[36m(pid=18127)[0m wandb:                                                    _step 100
-[2m[36m(pid=18127)[0m wandb:                                               _timestamp 1582836162.3071978
-[2m[36m(pid=18127)[0m wandb:                                                 _runtime 1283.530343055725
-[2m[36m(pid=18127)[0m wandb:                                                    epoch 100
-[2m[36m(pid=18127)[0m wandb:                                labeled_train_ce_loss_ave 0.00045146490447223186
-[2m[36m(pid=18127)[0m wandb:                                     val_tag conlleval f1 0.9304906542056075
-[2m[36m(pid=18127)[0m wandb:                                       train_vat_loss_ave 0.007699044421315193
-[2m[36m(pid=18127)[0m wandb:                           labeled_train_tag conlleval f1 0.9993355481727575
-[2m[36m(pid=18127)[0m wandb:                         unlabeled_train_tag conlleval f1 0.942858347741745
-[2m[36m(pid=18127)[0m wandb:                                    test_tag conlleval f1 0.9178130511463845
-[2m[36m(pid=18127)[0m wandb: Syncing 8 W&B file(s) and 0 media file(s)
-[2m[36m(pid=18127)[0m wandb: - 0.02MB of 0.02MB uploaded
-[2m[36m(pid=18127)[0m wandb: \ 0.02MB of 0.02MB uploaded
-[2m[36m(pid=18127)[0m wandb: | 0.02MB of 0.02MB uploaded
-[2m[36m(pid=18127)[0m wandb: / 0.02MB of 0.02MB uploaded
-[2m[36m(pid=18127)[0m wandb: - 0.02MB of 0.02MB uploadedwandb:                                                                                
-[2m[36m(pid=18127)[0m wandb: Synced stoic-firebrand-713: https://app.wandb.ai/cetosignis/viraal-pretrain-full/runs/cxbu1dve
-[2m[36m(pid=18127)[0m wandb: Tracking run with wandb version 0.8.19
-[2m[36m(pid=18127)[0m wandb: Wandb version 0.8.28 is available!  To upgrade, please run:
-[2m[36m(pid=18127)[0m wandb:  $ pip install wandb --upgrade
-[2m[36m(pid=18127)[0m wandb: Run data is saved locally in wandb/run-20200227_204246-q37jn2ys
-[2m[36m(pid=18127)[0m wandb: Syncing run misty-cloud-717
-[2m[36m(pid=18127)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-pretrain-full
-[2m[36m(pid=18127)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-pretrain-full/runs/q37jn2ys
-[2m[36m(pid=18127)[0m wandb: Run `wandb off` to turn off syncing.
-[2m[36m(pid=18127)[0m 
-[2m[36m(pid=18127)[0m 0it [00:00, ?it/s]
-[2m[36m(pid=18127)[0m 3363it [00:00, 33626.18it/s]
-[2m[36m(pid=18127)[0m 4372it [00:00, 18581.30it/s]4478it [00:00, 20890.25it/s]
-[2m[36m(pid=18127)[0m 0it [00:00, ?it/s]
-[2m[36m(pid=18127)[0m 500it [00:00, 15811.81it/s]
-[2m[36m(pid=18127)[0m   0% 0/4478 [00:00<?, ?it/s]
-[2m[36m(pid=18127)[0m 100% 4478/4478 [00:00<00:00, 117923.90it/s]
-[2m[36m(pid=18127)[0m   0% 0/950 [00:00<?, ?it/s]
-[2m[36m(pid=18127)[0m 100% 950/950 [00:00<00:00, 21878.68it/s]
-[2m[36m(pid=18128)[0m 0it [00:00, ?it/s]
-[2m[36m(pid=18128)[0m 893it [00:00, 42287.78it/s]
-[2m[36m(pid=18128)[0m 
-[2m[36m(pid=18128)[0m wandb: Waiting for W&B process to finish, PID 18240
-[2m[36m(pid=18128)[0m wandb: Program ended successfully.
-[2m[36m(pid=18128)[0m wandb: Run summary:
-[2m[36m(pid=18128)[0m wandb:                                               _timestamp 1582836191.4887567
-[2m[36m(pid=18128)[0m wandb:                                                 _runtime 1312.8600633144379
-[2m[36m(pid=18128)[0m wandb:                                                    _step 100
-[2m[36m(pid=18128)[0m wandb:                                labeled_train_ce_loss_ave 0.00020542296988423914
-[2m[36m(pid=18128)[0m wandb:                                                    epoch 100
-[2m[36m(pid=18128)[0m wandb:                                       train_vat_loss_ave 0.002353458432480693
-[2m[36m(pid=18128)[0m wandb:                         unlabeled_train_tag conlleval f1 0.9384422110552764
-[2m[36m(pid=18128)[0m wandb:                           labeled_train_tag conlleval f1 1.0
-[2m[36m(pid=18128)[0m wandb:                                     val_tag conlleval f1 0.9402158063575387
-[2m[36m(pid=18128)[0m wandb:                                    test_tag conlleval f1 0.9242985706723135
-[2m[36m(pid=18128)[0m wandb: Syncing 8 W&B file(s) and 0 media file(s)
-[2m[36m(pid=18128)[0m wandb: - 0.02MB of 0.02MB uploaded
-[2m[36m(pid=18128)[0m wandb: \ 0.02MB of 0.02MB uploaded
-[2m[36m(pid=18128)[0m wandb: | 0.02MB of 0.02MB uploaded
-[2m[36m(pid=18128)[0m wandb: / 0.02MB of 0.02MB uploaded
-[2m[36m(pid=18128)[0m wandb: - 0.02MB of 0.02MB uploadedwandb:                                                                                
-[2m[36m(pid=18128)[0m wandb: Synced restful-spaceship-715: https://app.wandb.ai/cetosignis/viraal-pretrain-full/runs/uoi1872d
-[2m[36m(pid=18128)[0m wandb: Tracking run with wandb version 0.8.19
-[2m[36m(pid=18128)[0m wandb: Wandb version 0.8.28 is available!  To upgrade, please run:
-[2m[36m(pid=18128)[0m wandb:  $ pip install wandb --upgrade
-[2m[36m(pid=18128)[0m wandb: Run data is saved locally in wandb/run-20200227_204316-35bdgm9q
-[2m[36m(pid=18128)[0m wandb: Syncing run devoted-sound-718
-[2m[36m(pid=18128)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-pretrain-full
-[2m[36m(pid=18128)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-pretrain-full/runs/35bdgm9q
-[2m[36m(pid=18128)[0m wandb: Run `wandb off` to turn off syncing.
-[2m[36m(pid=18128)[0m 
-[2m[36m(pid=18128)[0m 0it [00:00, ?it/s]
-[2m[36m(pid=18128)[0m 2934it [00:00, 29288.28it/s]
-[2m[36m(pid=18128)[0m 4044it [00:00, 19633.63it/s]4478it [00:00, 21340.57it/s]
-[2m[36m(pid=18128)[0m 0it [00:00, ?it/s]500it [00:00, 45121.39it/s]
-[2m[36m(pid=18128)[0m   0% 0/4478 [00:00<?, ?it/s]
-[2m[36m(pid=18128)[0m 100% 4478/4478 [00:00<00:00, 113908.88it/s]
-[2m[36m(pid=18128)[0m   0% 0/950 [00:00<?, ?it/s]
-[2m[36m(pid=18128)[0m 100% 950/950 [00:00<00:00, 21920.32it/s]
-[2m[36m(pid=18126)[0m 0it [00:00, ?it/s]893it [00:00, 50946.89it/s]
-[2m[36m(pid=18126)[0m 
-[2m[36m(pid=18126)[0m wandb: Waiting for W&B process to finish, PID 18239
-[2m[36m(pid=18126)[0m wandb: Program ended successfully.
-[2m[36m(pid=18126)[0m wandb: Run summary:
-[2m[36m(pid=18126)[0m wandb:                                                    _step 100
-[2m[36m(pid=18126)[0m wandb:                                                 _runtime 1335.4161415100098
-[2m[36m(pid=18126)[0m wandb:                                               _timestamp 1582836214.002711
-[2m[36m(pid=18126)[0m wandb:                         unlabeled_train_tag conlleval f1 0.9456137396868161
-[2m[36m(pid=18126)[0m wandb:                                                    epoch 100
-[2m[36m(pid=18126)[0m wandb:                                       train_vat_loss_ave 0.00666288286447525
-[2m[36m(pid=18126)[0m wandb:                                labeled_train_ce_loss_ave 0.0008567599579691887
-[2m[36m(pid=18126)[0m wandb:                                     val_tag conlleval f1 0.9401809162532827
-[2m[36m(pid=18126)[0m wandb:                           labeled_train_tag conlleval f1 1.0
-[2m[36m(pid=18126)[0m wandb:                                    test_tag conlleval f1 0.9198729262266149
-[2m[36m(pid=18126)[0m wandb: Syncing 8 W&B file(s) and 0 media file(s)
-[2m[36m(pid=18126)[0m wandb: - 0.02MB of 0.02MB uploaded
-[2m[36m(pid=18126)[0m wandb: \ 0.02MB of 0.02MB uploaded
-[2m[36m(pid=18126)[0m wandb: | 0.02MB of 0.02MB uploadedwandb:                                                                                
-[2m[36m(pid=18126)[0m wandb: Synced ethereal-puddle-713: https://app.wandb.ai/cetosignis/viraal-pretrain-full/runs/0gaor0yl
-[2m[36m(pid=18126)[0m wandb: Tracking run with wandb version 0.8.19
-[2m[36m(pid=18126)[0m wandb: Wandb version 0.8.28 is available!  To upgrade, please run:
-[2m[36m(pid=18126)[0m wandb:  $ pip install wandb --upgrade
-[2m[36m(pid=18126)[0m wandb: Run data is saved locally in wandb/run-20200227_204339-i22c5s98
-[2m[36m(pid=18126)[0m wandb: Syncing run different-sun-719
-[2m[36m(pid=18126)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-pretrain-full
-[2m[36m(pid=18126)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-pretrain-full/runs/i22c5s98
-[2m[36m(pid=18126)[0m wandb: Run `wandb off` to turn off syncing.
-[2m[36m(pid=18126)[0m 
-[2m[36m(pid=18126)[0m 0it [00:00, ?it/s]
-[2m[36m(pid=18126)[0m 2223it [00:00, 22226.84it/s]
-[2m[36m(pid=18126)[0m 3536it [00:00, 17898.24it/s]
-[2m[36m(pid=18126)[0m 4478it [00:00, 19664.44it/s]
-[2m[36m(pid=18126)[0m 0it [00:00, ?it/s]500it [00:00, 45260.65it/s]
-[2m[36m(pid=18126)[0m   0% 0/4478 [00:00<?, ?it/s]
-[2m[36m(pid=18126)[0m 100% 4478/4478 [00:00<00:00, 118071.42it/s]
-[2m[36m(pid=18126)[0m   0% 0/950 [00:00<?, ?it/s]
-[2m[36m(pid=18126)[0m 100% 950/950 [00:00<00:00, 22229.47it/s]
-[2m[36m(pid=18129)[0m 0it [00:00, ?it/s]
-[2m[36m(pid=18129)[0m 893it [00:00, 23933.76it/s]
-[2m[36m(pid=18129)[0m 
-[2m[36m(pid=18129)[0m wandb: Waiting for W&B process to finish, PID 18241
-[2m[36m(pid=18129)[0m wandb: Program ended successfully.
-[2m[36m(pid=18129)[0m wandb: Run summary:
-[2m[36m(pid=18129)[0m wandb:                                               _timestamp 1582836267.4886112
-[2m[36m(pid=18129)[0m wandb:                                                 _runtime 1388.9019474983215
-[2m[36m(pid=18129)[0m wandb:                                                    _step 100
-[2m[36m(pid=18129)[0m wandb:                           labeled_train_tag conlleval f1 1.0
-[2m[36m(pid=18129)[0m wandb:                                       train_vat_loss_ave 0.00347449304535985
-[2m[36m(pid=18129)[0m wandb:                         unlabeled_train_tag conlleval f1 0.937115400826098
-[2m[36m(pid=18129)[0m wandb:                                labeled_train_ce_loss_ave 0.00023691318347118795
-[2m[36m(pid=18129)[0m wandb:                                                    epoch 100
-[2m[36m(pid=18129)[0m wandb:                                     val_tag conlleval f1 0.9288849868305531
-[2m[36m(pid=18129)[0m wandb:                                    test_tag conlleval f1 0.9026111503175723
-[2m[36m(pid=18129)[0m wandb: Syncing 8 W&B file(s) and 0 media file(s)
-[2m[36m(pid=18129)[0m wandb: - 0.02MB of 0.02MB uploaded
-[2m[36m(pid=18129)[0m wandb: \ 0.02MB of 0.02MB uploaded
-[2m[36m(pid=18129)[0m wandb: | 0.02MB of 0.02MB uploadedwandb:                                                                                
-[2m[36m(pid=18129)[0m wandb: Synced ruby-serenity-716: https://app.wandb.ai/cetosignis/viraal-pretrain-full/runs/jz0m3oxw
-[2m[36m(pid=18129)[0m wandb: Tracking run with wandb version 0.8.19
-[2m[36m(pid=18129)[0m wandb: Wandb version 0.8.28 is available!  To upgrade, please run:
-[2m[36m(pid=18129)[0m wandb:  $ pip install wandb --upgrade
-[2m[36m(pid=18129)[0m wandb: Run data is saved locally in wandb/run-20200227_204432-vl7smq3e
-[2m[36m(pid=18129)[0m wandb: Syncing run dauntless-wildflower-720
-[2m[36m(pid=18129)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-pretrain-full
-[2m[36m(pid=18129)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-pretrain-full/runs/vl7smq3e
-[2m[36m(pid=18129)[0m wandb: Run `wandb off` to turn off syncing.
-[2m[36m(pid=18129)[0m 
-[2m[36m(pid=18129)[0m 0it [00:00, ?it/s]
-[2m[36m(pid=18129)[0m 3429it [00:00, 34122.69it/s]
-[2m[36m(pid=18129)[0m 4453it [00:00, 16756.35it/s]4478it [00:00, 19066.84it/s]
-[2m[36m(pid=18129)[0m 0it [00:00, ?it/s]500it [00:00, 44146.85it/s]
-[2m[36m(pid=18129)[0m   0% 0/4478 [00:00<?, ?it/s]
-[2m[36m(pid=18129)[0m 100% 4478/4478 [00:00<00:00, 94500.62it/s]
-[2m[36m(pid=18129)[0m   0% 0/950 [00:00<?, ?it/s]
-[2m[36m(pid=18129)[0m 100% 950/950 [00:00<00:00, 22002.63it/s]
-[2m[36m(pid=18127)[0m 0it [00:00, ?it/s]893it [00:00, 46979.82it/s]
-[2m[36m(pid=18127)[0m 
-[2m[36m(pid=18127)[0m wandb: Waiting for W&B process to finish, PID 19045
-[2m[36m(pid=18127)[0m wandb: Program ended successfully.
-[2m[36m(pid=18127)[0m wandb: Run summary:
-[2m[36m(pid=18127)[0m wandb:                                                    _step 100
-[2m[36m(pid=18127)[0m wandb:                                               _timestamp 1582837439.8422937
-[2m[36m(pid=18127)[0m wandb:                                                 _runtime 2561.0654389858246
-[2m[36m(pid=18127)[0m wandb:                                                    epoch 100
-[2m[36m(pid=18127)[0m wandb:                                labeled_train_ce_loss_ave 0.00022987433476373553
-[2m[36m(pid=18127)[0m wandb:                                     val_tag conlleval f1 0.9241540256709452
-[2m[36m(pid=18127)[0m wandb:                                       train_vat_loss_ave 0.0022641243413090706
-[2m[36m(pid=18127)[0m wandb:                           labeled_train_tag conlleval f1 1.0
-[2m[36m(pid=18127)[0m wandb:                         unlabeled_train_tag conlleval f1 0.9343047355859817
-[2m[36m(pid=18127)[0m wandb:                                    test_tag conlleval f1 0.9164163279731401
-[2m[36m(pid=18127)[0m wandb: Syncing 8 W&B file(s) and 0 media file(s)
-[2m[36m(pid=18127)[0m wandb: - 0.02MB of 0.02MB uploaded
-[2m[36m(pid=18127)[0m wandb: \ 0.02MB of 0.02MB uploaded
-[2m[36m(pid=18127)[0m wandb: | 0.02MB of 0.02MB uploaded
-[2m[36m(pid=18127)[0m wandb: / 0.02MB of 0.02MB uploaded
-[2m[36m(pid=18127)[0m wandb: - 0.02MB of 0.02MB uploadedwandb:                                                                                
-[2m[36m(pid=18127)[0m wandb: Synced misty-cloud-717: https://app.wandb.ai/cetosignis/viraal-pretrain-full/runs/q37jn2ys
-[2m[36m(pid=18128)[0m 0it [00:00, ?it/s]893it [00:00, 51895.61it/s]
-[2m[36m(pid=18128)[0m 
-[2m[36m(pid=18128)[0m wandb: Waiting for W&B process to finish, PID 19083
-[2m[36m(pid=18128)[0m wandb: Program ended successfully.
-[2m[36m(pid=18128)[0m wandb: Run summary:
-[2m[36m(pid=18128)[0m wandb:                                               _timestamp 1582837488.432065
-[2m[36m(pid=18128)[0m wandb:                                                 _runtime 2609.803371667862
-[2m[36m(pid=18128)[0m wandb:                                                    _step 100
-[2m[36m(pid=18128)[0m wandb:                                labeled_train_ce_loss_ave 0.0006708241999149323
-[2m[36m(pid=18128)[0m wandb:                           labeled_train_tag conlleval f1 1.0
-[2m[36m(pid=18128)[0m wandb:                                                    epoch 100
-[2m[36m(pid=18128)[0m wandb:                                     val_tag conlleval f1 0.9378663540445487
-[2m[36m(pid=18128)[0m wandb:                                       train_vat_loss_ave 0.007562699262052774
-[2m[36m(pid=18128)[0m wandb:                         unlabeled_train_tag conlleval f1 0.9464922711058265
-[2m[36m(pid=18128)[0m wandb:                                    test_tag conlleval f1 0.9235963041933192
-[2m[36m(pid=18128)[0m wandb: Syncing 8 W&B file(s) and 0 media file(s)
-[2m[36m(pid=18128)[0m wandb: - 0.02MB of 0.02MB uploaded
-[2m[36m(pid=18128)[0m wandb: \ 0.02MB of 0.02MB uploaded
-[2m[36m(pid=18128)[0m wandb: | 0.02MB of 0.02MB uploaded
-[2m[36m(pid=18128)[0m wandb: / 0.02MB of 0.02MB uploadedwandb:                                                                                
-[2m[36m(pid=18128)[0m wandb: Synced devoted-sound-718: https://app.wandb.ai/cetosignis/viraal-pretrain-full/runs/35bdgm9q
-[2m[36m(pid=18126)[0m 0it [00:00, ?it/s]
-[2m[36m(pid=18126)[0m 893it [00:00, 48904.70it/s]
-[2m[36m(pid=18126)[0m 
-[2m[36m(pid=18126)[0m wandb: Waiting for W&B process to finish, PID 19123
-[2m[36m(pid=18126)[0m wandb: Program ended successfully.
-[2m[36m(pid=18126)[0m wandb: Run summary:
-[2m[36m(pid=18126)[0m wandb:                                                    _step 100
-[2m[36m(pid=18126)[0m wandb:                                                 _runtime 2663.331730365753
-[2m[36m(pid=18126)[0m wandb:                                               _timestamp 1582837541.9183
-[2m[36m(pid=18126)[0m wandb:                                     val_tag conlleval f1 0.9353990061385559
-[2m[36m(pid=18126)[0m wandb:                         unlabeled_train_tag conlleval f1 0.9462728077198601
-[2m[36m(pid=18126)[0m wandb:                                                    epoch 100
-[2m[36m(pid=18126)[0m wandb:                                       train_vat_loss_ave 0.010946491733193398
-[2m[36m(pid=18126)[0m wandb:                                labeled_train_ce_loss_ave 0.000570025818888098
-[2m[36m(pid=18126)[0m wandb:                           labeled_train_tag conlleval f1 0.9996663329996663
-[2m[36m(pid=18126)[0m wandb:                                    test_tag conlleval f1 0.9303148213654051
-[2m[36m(pid=18126)[0m wandb: Syncing 8 W&B file(s) and 0 media file(s)
-[2m[36m(pid=18126)[0m wandb: - 0.02MB of 0.02MB uploaded
-[2m[36m(pid=18126)[0m wandb: \ 0.02MB of 0.02MB uploaded
-[2m[36m(pid=18126)[0m wandb: | 0.02MB of 0.02MB uploaded
-[2m[36m(pid=18126)[0m wandb: / 0.02MB of 0.02MB uploaded
-[2m[36m(pid=18126)[0m wandb: - 0.02MB of 0.02MB uploadedwandb:                                                                                
-[2m[36m(pid=18126)[0m wandb: Synced different-sun-719: https://app.wandb.ai/cetosignis/viraal-pretrain-full/runs/i22c5s98
-[2m[36m(pid=18129)[0m 0it [00:00, ?it/s]
-[2m[36m(pid=18129)[0m 893it [00:00, 49428.76it/s]
-[2m[36m(pid=18129)[0m 
-[2m[36m(pid=18129)[0m wandb: Waiting for W&B process to finish, PID 19164
-[2m[36m(pid=18129)[0m wandb: Program ended successfully.
-[2m[36m(pid=18129)[0m wandb: Run summary:
-[2m[36m(pid=18129)[0m wandb:                                               _timestamp 1582837611.7124267
-[2m[36m(pid=18129)[0m wandb:                                                 _runtime 2733.125762939453
-[2m[36m(pid=18129)[0m wandb:                                                    _step 100
-[2m[36m(pid=18129)[0m wandb:                                       train_vat_loss_ave 0.001597954542376101
-[2m[36m(pid=18129)[0m wandb:                                labeled_train_ce_loss_ave 0.00022693425125908107
-[2m[36m(pid=18129)[0m wandb:                                                    epoch 100
-[2m[36m(pid=18129)[0m wandb:                           labeled_train_tag conlleval f1 1.0
-[2m[36m(pid=18129)[0m wandb:                                     val_tag conlleval f1 0.93641957222385
-[2m[36m(pid=18129)[0m wandb:                         unlabeled_train_tag conlleval f1 0.9414209968186638
-[2m[36m(pid=18129)[0m wandb:                                    test_tag conlleval f1 0.9112803258367275
-[2m[36m(pid=18129)[0m wandb: Syncing 8 W&B file(s) and 0 media file(s)
-[2m[36m(pid=18129)[0m wandb: - 0.02MB of 0.02MB uploaded
-[2m[36m(pid=18129)[0m wandb: \ 0.02MB of 0.02MB uploaded
-[2m[36m(pid=18129)[0m wandb: | 0.02MB of 0.02MB uploaded
-[2m[36m(pid=18129)[0m wandb: / 0.02MB of 0.02MB uploadedwandb:                                                                                
-[2m[36m(pid=18129)[0m wandb: Synced dauntless-wildflower-720: https://app.wandb.ai/cetosignis/viraal-pretrain-full/runs/vl7smq3e
-2020-02-27 13:07:01,946	INFO resource_spec.py:216 -- Starting Ray with 6.64 GiB memory available for workers and up to 3.34 GiB for objects. You can adjust these settings with ray.init(memory=<bytes>, object_store_memory=<bytes>).
-[2020-02-27 13:07:02,302][HYDRA] RangeSweeper sweeping
-[2020-02-27 13:07:02,302][HYDRA] Sweep output dir : multiruns/rerank/2020-02-27/13-07-02
-[2020-02-27 13:07:02,324][HYDRA] Ray Launcher is launching 8 jobs locally
-[2020-02-27 13:07:02,324][HYDRA] Sweep output dir : multiruns/rerank/2020-02-27/13-07-02
-[2020-02-27 13:07:02,324][HYDRA] 	#0 : hydra=no_console rerank.pretrain=/u/home/badr/Expe/VirAAL/multiruns/pretrain/final/atis/atis_tag_vat_0.2/0 rerank.criteria=[ce] misc.wandb=True misc.test=True wandb.project=viraal-rerank-full wandb.group=atis_tag_l_vat_r_ce_p0.2_r0.2 ray.remote.num_gpus=0.5
-[2020-02-27 13:07:02,551][HYDRA] 	#1 : hydra=no_console rerank.pretrain=/u/home/badr/Expe/VirAAL/multiruns/pretrain/final/atis/atis_tag_vat_0.2/1 rerank.criteria=[ce] misc.wandb=True misc.test=True wandb.project=viraal-rerank-full wandb.group=atis_tag_l_vat_r_ce_p0.2_r0.2 ray.remote.num_gpus=0.5
-[2020-02-27 13:07:02,657][HYDRA] 	#2 : hydra=no_console rerank.pretrain=/u/home/badr/Expe/VirAAL/multiruns/pretrain/final/atis/atis_tag_vat_0.2/2 rerank.criteria=[ce] misc.wandb=True misc.test=True wandb.project=viraal-rerank-full wandb.group=atis_tag_l_vat_r_ce_p0.2_r0.2 ray.remote.num_gpus=0.5
-[2020-02-27 13:07:02,747][HYDRA] 	#3 : hydra=no_console rerank.pretrain=/u/home/badr/Expe/VirAAL/multiruns/pretrain/final/atis/atis_tag_vat_0.2/3 rerank.criteria=[ce] misc.wandb=True misc.test=True wandb.project=viraal-rerank-full wandb.group=atis_tag_l_vat_r_ce_p0.2_r0.2 ray.remote.num_gpus=0.5
-[2020-02-27 13:07:02,845][HYDRA] 	#4 : hydra=no_console rerank.pretrain=/u/home/badr/Expe/VirAAL/multiruns/pretrain/final/atis/atis_tag_vat_0.2/4 rerank.criteria=[ce] misc.wandb=True misc.test=True wandb.project=viraal-rerank-full wandb.group=atis_tag_l_vat_r_ce_p0.2_r0.2 ray.remote.num_gpus=0.5
-[2020-02-27 13:07:02,934][HYDRA] 	#5 : hydra=no_console rerank.pretrain=/u/home/badr/Expe/VirAAL/multiruns/pretrain/final/atis/atis_tag_vat_0.2/5 rerank.criteria=[ce] misc.wandb=True misc.test=True wandb.project=viraal-rerank-full wandb.group=atis_tag_l_vat_r_ce_p0.2_r0.2 ray.remote.num_gpus=0.5
-[2020-02-27 13:07:03,031][HYDRA] 	#6 : hydra=no_console rerank.pretrain=/u/home/badr/Expe/VirAAL/multiruns/pretrain/final/atis/atis_tag_vat_0.2/6 rerank.criteria=[ce] misc.wandb=True misc.test=True wandb.project=viraal-rerank-full wandb.group=atis_tag_l_vat_r_ce_p0.2_r0.2 ray.remote.num_gpus=0.5
-[2020-02-27 13:07:03,124][HYDRA] 	#7 : hydra=no_console rerank.pretrain=/u/home/badr/Expe/VirAAL/multiruns/pretrain/final/atis/atis_tag_vat_0.2/7 rerank.criteria=[ce] misc.wandb=True misc.test=True wandb.project=viraal-rerank-full wandb.group=atis_tag_l_vat_r_ce_p0.2_r0.2 ray.remote.num_gpus=0.5
-[2m[36m(pid=19771)[0m wandb: Tracking run with wandb version 0.8.19
-[2m[36m(pid=19768)[0m wandb: Tracking run with wandb version 0.8.19
-[2m[36m(pid=19770)[0m wandb: Tracking run with wandb version 0.8.19
-[2m[36m(pid=19769)[0m wandb: Tracking run with wandb version 0.8.19
-[2m[36m(pid=19770)[0m wandb: Wandb version 0.8.28 is available!  To upgrade, please run:
-[2m[36m(pid=19770)[0m wandb:  $ pip install wandb --upgrade
-[2m[36m(pid=19770)[0m wandb: Run data is saved locally in wandb/run-20200227_210704-909y8zbh
-[2m[36m(pid=19769)[0m wandb: Wandb version 0.8.28 is available!  To upgrade, please run:
-[2m[36m(pid=19769)[0m wandb:  $ pip install wandb --upgrade
-[2m[36m(pid=19769)[0m wandb: Run data is saved locally in wandb/run-20200227_210704-sxf8vvx7
-[2m[36m(pid=19771)[0m wandb: Wandb version 0.8.28 is available!  To upgrade, please run:
-[2m[36m(pid=19771)[0m wandb:  $ pip install wandb --upgrade
-[2m[36m(pid=19771)[0m wandb: Run data is saved locally in wandb/run-20200227_210704-tv381bwa
-[2m[36m(pid=19768)[0m wandb: Wandb version 0.8.28 is available!  To upgrade, please run:
-[2m[36m(pid=19768)[0m wandb:  $ pip install wandb --upgrade
-[2m[36m(pid=19768)[0m wandb: Run data is saved locally in wandb/run-20200227_210704-io43l6v4
-[2m[36m(pid=19770)[0m wandb: Syncing run copper-yogurt-1393
-[2m[36m(pid=19771)[0m wandb: ERROR Error while calling W&B API: Error 1213: Deadlock found when trying to get lock; try restarting transaction (<Response [500]>)
-[2m[36m(pid=19770)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-rerank-full
-[2m[36m(pid=19770)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-rerank-full/runs/909y8zbh
-[2m[36m(pid=19770)[0m wandb: Run `wandb off` to turn off syncing.
-[2m[36m(pid=19768)[0m wandb: Syncing run good-shape-1393
-[2m[36m(pid=19768)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-rerank-full
-[2m[36m(pid=19768)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-rerank-full/runs/io43l6v4
-[2m[36m(pid=19768)[0m wandb: Run `wandb off` to turn off syncing.
-[2m[36m(pid=19770)[0m 
-[2m[36m(pid=19769)[0m wandb: Syncing run winter-shadow-1393
-[2m[36m(pid=19769)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-rerank-full
-[2m[36m(pid=19769)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-rerank-full/runs/sxf8vvx7
-[2m[36m(pid=19769)[0m wandb: Run `wandb off` to turn off syncing.
-[2m[36m(pid=19768)[0m 
-[2m[36m(pid=19770)[0m 0it [00:00, ?it/s]
-[2m[36m(pid=19769)[0m 
-[2m[36m(pid=19769)[0m 0it [00:00, ?it/s]
-[2m[36m(pid=19768)[0m 0it [00:00, ?it/s]
-[2m[36m(pid=19770)[0m 2644it [00:00, 19788.65it/s]
-[2m[36m(pid=19768)[0m 2644it [00:00, 19896.12it/s]
-[2m[36m(pid=19770)[0m 4478it [00:00, 25660.53it/s]
-[2m[36m(pid=19770)[0m 0it [00:00, ?it/s]
-[2m[36m(pid=19769)[0m 2644it [00:00, 19689.65it/s]
-[2m[36m(pid=19768)[0m 4478it [00:00, 25864.31it/s]
-[2m[36m(pid=19768)[0m 0it [00:00, ?it/s]500it [00:00, 43097.18it/s]
-[2m[36m(pid=19768)[0m   0% 0/4478 [00:00<?, ?it/s]
-[2m[36m(pid=19770)[0m 500it [00:00, 42678.82it/s]
-[2m[36m(pid=19770)[0m   0% 0/4478 [00:00<?, ?it/s]
-[2m[36m(pid=19770)[0m 100% 4478/4478 [00:00<00:00, 125278.26it/s]
-[2m[36m(pid=19770)[0m   0% 0/950 [00:00<?, ?it/s]
-[2m[36m(pid=19769)[0m 4478it [00:00, 25697.00it/s]
-[2m[36m(pid=19769)[0m 0it [00:00, ?it/s]500it [00:00, 45306.60it/s]
-[2m[36m(pid=19769)[0m   0% 0/4478 [00:00<?, ?it/s]
-[2m[36m(pid=19768)[0m 100% 4478/4478 [00:00<00:00, 125521.06it/s]
-[2m[36m(pid=19768)[0m   0% 0/950 [00:00<?, ?it/s]
-[2m[36m(pid=19770)[0m 100% 950/950 [00:00<00:00, 22448.26it/s]
-[2m[36m(pid=19769)[0m 100% 4478/4478 [00:00<00:00, 123481.10it/s]
-[2m[36m(pid=19769)[0m   0% 0/950 [00:00<?, ?it/s]
-[2m[36m(pid=19768)[0m 100% 950/950 [00:00<00:00, 22238.53it/s]
-[2m[36m(pid=19769)[0m 100% 950/950 [00:00<00:00, 22246.60it/s]
-[2m[36m(pid=19771)[0m wandb: Network error resolved after 0:00:01.346291, resuming normal operation.
-[2m[36m(pid=19771)[0m wandb: Syncing run silver-plasma-1396
-[2m[36m(pid=19771)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-rerank-full
-[2m[36m(pid=19771)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-rerank-full/runs/tv381bwa
-[2m[36m(pid=19771)[0m wandb: Run `wandb off` to turn off syncing.
-[2m[36m(pid=19771)[0m 
-[2m[36m(pid=19771)[0m 0it [00:00, ?it/s]
-[2m[36m(pid=19771)[0m 2644it [00:00, 16301.97it/s]
-[2m[36m(pid=19771)[0m 4478it [00:00, 21204.16it/s]
-[2m[36m(pid=19771)[0m 0it [00:00, ?it/s]500it [00:00, 41438.32it/s]
-[2m[36m(pid=19771)[0m   0% 0/4478 [00:00<?, ?it/s]
-[2m[36m(pid=19771)[0m 100% 4478/4478 [00:00<00:00, 106127.91it/s]
-[2m[36m(pid=19771)[0m   0% 0/950 [00:00<?, ?it/s]
-[2m[36m(pid=19771)[0m 100% 950/950 [00:00<00:00, 20110.68it/s]
-[2m[36m(pid=19770)[0m   0% 0/950 [00:00<?, ?it/s]
-[2m[36m(pid=19770)[0m 100% 950/950 [00:00<00:00, 20539.54it/s]
-[2m[36m(pid=19768)[0m   0% 0/950 [00:00<?, ?it/s]
-[2m[36m(pid=19768)[0m 100% 950/950 [00:00<00:00, 17393.87it/s]
-[2m[36m(pid=19771)[0m   0% 0/950 [00:00<?, ?it/s]
-[2m[36m(pid=19771)[0m 100% 950/950 [00:00<00:00, 21625.99it/s]
-[2m[36m(pid=19769)[0m   0% 0/950 [00:00<?, ?it/s]
-[2m[36m(pid=19769)[0m 100% 950/950 [00:00<00:00, 20651.10it/s]
-[2m[36m(pid=19769)[0m 0it [00:00, ?it/s]893it [00:00, 27354.29it/s]
-[2m[36m(pid=19769)[0m 
-[2m[36m(pid=19769)[0m wandb: Waiting for W&B process to finish, PID 19928
-[2m[36m(pid=19768)[0m 0it [00:00, ?it/s]893it [00:00, 47139.47it/s]
-[2m[36m(pid=19769)[0m wandb: Program ended successfully.
-[2m[36m(pid=19768)[0m 
-[2m[36m(pid=19768)[0m wandb: Waiting for W&B process to finish, PID 19926
-[2m[36m(pid=19768)[0m wandb: Program ended successfully.
-[2m[36m(pid=19768)[0m wandb: Run summary:
-[2m[36m(pid=19768)[0m wandb:   unlabeled_train_tag conlleval f1 0.9647919010123734
-[2m[36m(pid=19768)[0m wandb:                 train_vat_loss_ave 0.0038010617718100548
-[2m[36m(pid=19768)[0m wandb:          labeled_train_ce_loss_ave 0.00045741413487121463
-[2m[36m(pid=19768)[0m wandb:                              _step 100
-[2m[36m(pid=19768)[0m wandb:                              epoch 100
-[2m[36m(pid=19768)[0m wandb:                           _runtime 1297.10702586174
-[2m[36m(pid=19768)[0m wandb:                         _timestamp 1582838920.367758
-[2m[36m(pid=19768)[0m wandb:               val_tag conlleval f1 0.965051395007342
-[2m[36m(pid=19768)[0m wandb:     labeled_train_tag conlleval f1 0.999664147774979
-[2m[36m(pid=19768)[0m wandb:              test_tag conlleval f1 0.9463051568314725
-[2m[36m(pid=19768)[0m wandb: Syncing 8 W&B file(s) and 0 media file(s)
-[2m[36m(pid=19768)[0m wandb: - 0.01MB of 0.01MB uploaded
-[2m[36m(pid=19768)[0m wandb: \ 0.01MB of 0.01MB uploaded
-[2m[36m(pid=19768)[0m wandb: | 0.01MB of 0.01MB uploaded
-[2m[36m(pid=19768)[0m wandb: / 0.01MB of 0.01MB uploaded
-[2m[36m(pid=19769)[0m wandb: Run summary:
-[2m[36m(pid=19769)[0m wandb:          labeled_train_ce_loss_ave 0.00018657166219782084
-[2m[36m(pid=19769)[0m wandb:                              epoch 100
-[2m[36m(pid=19769)[0m wandb:               val_tag conlleval f1 0.9590163934426229
-[2m[36m(pid=19769)[0m wandb:                           _runtime 1296.5820326805115
-[2m[36m(pid=19769)[0m wandb:   unlabeled_train_tag conlleval f1 0.962682775362728
-[2m[36m(pid=19769)[0m wandb:                         _timestamp 1582838919.828956
-[2m[36m(pid=19769)[0m wandb:                              _step 100
-[2m[36m(pid=19769)[0m wandb:                 train_vat_loss_ave 0.0029894118197262287
-[2m[36m(pid=19769)[0m wandb:     labeled_train_tag conlleval f1 1.0
-[2m[36m(pid=19769)[0m wandb:              test_tag conlleval f1 0.939142705944611
-[2m[36m(pid=19769)[0m wandb: Syncing 8 W&B file(s) and 0 media file(s)
-[2m[36m(pid=19769)[0m wandb: - 0.01MB of 0.01MB uploaded
-[2m[36m(pid=19768)[0m wandb: - 0.01MB of 0.01MB uploaded
-[2m[36m(pid=19769)[0m wandb: \ 0.01MB of 0.01MB uploaded
-[2m[36m(pid=19768)[0m wandb: \ 0.01MB of 0.01MB uploaded
-[2m[36m(pid=19769)[0m wandb: | 0.01MB of 0.01MB uploaded
-[2m[36m(pid=19768)[0m wandb: | 0.01MB of 0.01MB uploadedwandb:                                                                                
-[2m[36m(pid=19768)[0m wandb: Synced good-shape-1393: https://app.wandb.ai/cetosignis/viraal-rerank-full/runs/io43l6v4
-[2m[36m(pid=19769)[0m wandb: / 0.01MB of 0.01MB uploaded
-[2m[36m(pid=19769)[0m wandb: - 0.01MB of 0.01MB uploaded
-[2m[36m(pid=19768)[0m wandb: Tracking run with wandb version 0.8.19
-[2m[36m(pid=19769)[0m wandb: \ 0.01MB of 0.01MB uploaded
-[2m[36m(pid=19769)[0m wandb: | 0.01MB of 0.01MB uploadedwandb:                                                                                
-[2m[36m(pid=19769)[0m wandb: Synced winter-shadow-1393: https://app.wandb.ai/cetosignis/viraal-rerank-full/runs/sxf8vvx7
-[2m[36m(pid=19769)[0m wandb: Tracking run with wandb version 0.8.19
-[2m[36m(pid=19768)[0m wandb: Wandb version 0.8.28 is available!  To upgrade, please run:
-[2m[36m(pid=19768)[0m wandb:  $ pip install wandb --upgrade
-[2m[36m(pid=19768)[0m wandb: Run data is saved locally in wandb/run-20200227_212843-krlsryht
-[2m[36m(pid=19768)[0m wandb: Syncing run distinctive-dragon-1397
-[2m[36m(pid=19768)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-rerank-full
-[2m[36m(pid=19768)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-rerank-full/runs/krlsryht
-[2m[36m(pid=19768)[0m wandb: Run `wandb off` to turn off syncing.
-[2m[36m(pid=19768)[0m 0it [00:00, ?it/s]
-[2m[36m(pid=19768)[0m 
-[2m[36m(pid=19768)[0m 3386it [00:00, 23107.46it/s]
-[2m[36m(pid=19768)[0m 4478it [00:00, 26411.02it/s]
-[2m[36m(pid=19768)[0m 0it [00:00, ?it/s]500it [00:00, 43696.13it/s]
-[2m[36m(pid=19768)[0m   0% 0/4478 [00:00<?, ?it/s]
-[2m[36m(pid=19769)[0m wandb: Wandb version 0.8.28 is available!  To upgrade, please run:
-[2m[36m(pid=19769)[0m wandb:  $ pip install wandb --upgrade
-[2m[36m(pid=19769)[0m wandb: Run data is saved locally in wandb/run-20200227_212844-zafvkuzv
-[2m[36m(pid=19768)[0m 100% 4478/4478 [00:00<00:00, 111749.62it/s]
-[2m[36m(pid=19768)[0m   0% 0/950 [00:00<?, ?it/s]
-[2m[36m(pid=19768)[0m 100% 950/950 [00:00<00:00, 21644.79it/s]
-[2m[36m(pid=19769)[0m wandb: Syncing run crisp-sky-1398
-[2m[36m(pid=19769)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-rerank-full
-[2m[36m(pid=19769)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-rerank-full/runs/zafvkuzv
-[2m[36m(pid=19769)[0m wandb: Run `wandb off` to turn off syncing.
-[2m[36m(pid=19769)[0m 
-[2m[36m(pid=19769)[0m 0it [00:00, ?it/s]
-[2m[36m(pid=19769)[0m 3386it [00:00, 20442.88it/s]4478it [00:00, 23628.60it/s]
-[2m[36m(pid=19769)[0m 0it [00:00, ?it/s]500it [00:00, 34407.74it/s]
-[2m[36m(pid=19769)[0m   0% 0/4478 [00:00<?, ?it/s]
-[2m[36m(pid=19769)[0m 100% 4478/4478 [00:00<00:00, 107594.93it/s]
-[2m[36m(pid=19769)[0m   0% 0/950 [00:00<?, ?it/s]
-[2m[36m(pid=19769)[0m 100% 950/950 [00:00<00:00, 12086.23it/s]
-[2m[36m(pid=19768)[0m   0% 0/950 [00:00<?, ?it/s]
-[2m[36m(pid=19768)[0m 100% 950/950 [00:00<00:00, 21991.46it/s]
-[2m[36m(pid=19769)[0m   0% 0/950 [00:00<?, ?it/s]
-[2m[36m(pid=19769)[0m 100% 950/950 [00:00<00:00, 20374.86it/s]
-[2m[36m(pid=19770)[0m 0it [00:00, ?it/s]
-[2m[36m(pid=19770)[0m 753it [00:00, 6767.51it/s]893it [00:00, 7814.50it/s]
-[2m[36m(pid=19770)[0m 
-[2m[36m(pid=19770)[0m wandb: Waiting for W&B process to finish, PID 19927
-[2m[36m(pid=19770)[0m wandb: Program ended successfully.
-[2m[36m(pid=19770)[0m wandb: Run summary:
-[2m[36m(pid=19770)[0m wandb:          labeled_train_ce_loss_ave 0.00033544821781106293
-[2m[36m(pid=19770)[0m wandb:                 train_vat_loss_ave 0.004613395314663649
-[2m[36m(pid=19770)[0m wandb:                           _runtime 1348.730784893036
-[2m[36m(pid=19770)[0m wandb:                              _step 100
-[2m[36m(pid=19770)[0m wandb:   unlabeled_train_tag conlleval f1 0.9669066354149226
-[2m[36m(pid=19770)[0m wandb:     labeled_train_tag conlleval f1 1.0
-[2m[36m(pid=19770)[0m wandb:                              epoch 100
-[2m[36m(pid=19770)[0m wandb:               val_tag conlleval f1 0.9591598599766628
-[2m[36m(pid=19770)[0m wandb:                         _timestamp 1582838971.9141252
-[2m[36m(pid=19770)[0m wandb:              test_tag conlleval f1 0.9373451327433627
-[2m[36m(pid=19770)[0m wandb: Syncing 8 W&B file(s) and 0 media file(s)
-[2m[36m(pid=19770)[0m wandb: - 0.01MB of 0.01MB uploaded
-[2m[36m(pid=19770)[0m wandb: \ 0.01MB of 0.01MB uploaded
-[2m[36m(pid=19770)[0m wandb: | 0.01MB of 0.01MB uploaded
-[2m[36m(pid=19770)[0m wandb: / 0.01MB of 0.01MB uploaded
-[2m[36m(pid=19770)[0m wandb: - 0.01MB of 0.01MB uploaded
-[2m[36m(pid=19770)[0m wandb: \ 0.01MB of 0.01MB uploaded
-[2m[36m(pid=19770)[0m wandb: | 0.01MB of 0.01MB uploadedwandb:                                                                                
-[2m[36m(pid=19770)[0m wandb: Synced copper-yogurt-1393: https://app.wandb.ai/cetosignis/viraal-rerank-full/runs/909y8zbh
-[2m[36m(pid=19770)[0m wandb: Tracking run with wandb version 0.8.19
-[2m[36m(pid=19770)[0m wandb: Wandb version 0.8.28 is available!  To upgrade, please run:
-[2m[36m(pid=19770)[0m wandb:  $ pip install wandb --upgrade
-[2m[36m(pid=19770)[0m wandb: Run data is saved locally in wandb/run-20200227_212937-03l14eo2
-[2m[36m(pid=19770)[0m wandb: Syncing run hardy-sea-1399
-[2m[36m(pid=19770)[0m wandb: ⭐️ View project at https://app.wandb.ai/cetosignis/viraal-rerank-full
-[2m[36m(pid=19770)[0m wandb: 🚀 View run at https://app.wandb.ai/cetosignis/viraal-rerank-full/runs/03l14eo2
-[2m[36m(pid=19770)[0m wandb: Run `wandb off` to turn off syncing.
-[2m[36m(pid=19770)[0m 
-[2m[36m(pid=19770)[0m 0it [00:00, ?it/s]
-[2m[36m(pid=19770)[0m 3386it [00:00, 20669.05it/s]4478it [00:00, 23540.50it/s]
-[2m[36m(pid=19770)[0m 0it [00:00, ?it/s]
-[2m[36m(pid=19770)[0m 500it [00:00, 40633.82it/s]
-[2m[36m(pid=19770)[0m   0% 0/4478 [00:00<?, ?it/s]100% 4478/4478 [00:00<00:00, 120592.84it/s]
-[2m[36m(pid=19770)[0m   0% 0/950 [00:00<?, ?it/s]100% 950/950 [00:00<00:00, 20005.77it/s]
-[2m[36m(pid=19770)[0m   0% 0/950 [00:00<?, ?it/s]
-[2m[36m(pid=19770)[0m 100% 950/950 [00:00<00:00, 22308.13it/s]
-[2m[36m(pid=19771)[0m 0it [00:00, ?it/s]893it [00:00, 38053.72it/s]
-[2m[36m(pid=19771)[0m 
-[2m[36m(pid=19771)[0m wandb: Waiting for W&B process to finish, PID 19925
-[2m[36m(pid=19771)[0m wandb: Program ended successfully.
-[2m[36m(pid=19771)[0m wandb: Run summary:
-[2m[36m(pid=19771)[0m wandb:   unlabeled_train_tag conlleval f1 0.9621353196772192
-[2m[36m(pid=19771)[0m wandb:     labeled_train_tag conlleval f1 0.9994156440437433
-[2m[36m(pid=19771)[0m wandb:                              epoch 100
-[2m[36m(pid=19771)[0m wandb:                           _runtime 1358.3333311080933
-[2m[36m(pid=19771)[0m wandb:                         _timestamp 1582838981.5431097
-[2m[36m(pid=19771)[0m wandb:               val_tag conlleval f1 0.9489736070381232
-[2m[36m(pid=19771)[0m wandb:                              _step 100
-[2m[36m(pid=19771)[0m wandb:          labeled_train_ce_loss_ave 0.0010897628962993622
-[2m[36m(pid=19771)[0m wandb:                 train_vat_loss_ave 0.0063576423563063145
-[2m[36m(pid=19771)[0m wandb:              test_tag conlleval f1 0.9409469764142577
-[2m[36m(pid=19771)[0m wandb: Syncing 8 W&B file(s) and 0 media file(s)
-[2m[36m(pid=19771)[0m wandb: - 0.02MB of 0.02MB uploaded
-[2m[36m(pid=19771)[0m wandb: \ 0.02MB of 0.02MB uploaded
-[2m[36m(pid=19771)[0m wandb: | 0.02MB of 0.02MB uploaded
-[2m[36m(pid=19771)[0m wandb: / 0.02MB of 0.02MB uploaded
-[2m[36m(pid=19771)[0m wandb: - 0.02MB of 0.02MB uploaded
-[2m[36m(pid=19771)[0m wandb: \ 0.02MB of 0.02MB uploadedwandb:                                                                                
