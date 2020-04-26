@@ -12,6 +12,19 @@ pip install -e .
 
 This will install all required packages. Next create an account at [Weights & Biases](https://www.wandb.com/) and copy your API key from your profile settings. In the terminal just `wandb login` and paste your api key to upload your metrics automatically.
 
+## Reproducing the paper's experiments 
+
+To reproduce the paper's experiments launch the following two scripts :
+
+```
+bash launch_pretrain_experiments.sh
+bash launch_rerank_experiments.sh
+```
+
+This will launch the experiments and upload the results to your Weights and Biases account if you logged in under the projects 'viraal-pretrain-full' and 'viraal-rerank-full'. 
+
+These scripts invoke pretrain and rerank functions in the base_functions.sh script that are the base for launching any experiment with this code. 
+
 ## Repo structure
 
 This repo is mainly based on configurability. There are scripts that receive the config and instantiate the different objects needed for the task at hand and make them interact.
@@ -94,3 +107,4 @@ wandb login
 ```
 
 in a terminal. Then the results are automatically uploaded to your workspace online.
+
