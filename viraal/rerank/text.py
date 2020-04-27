@@ -9,7 +9,6 @@ import torch
 import wandb
 from allennlp.nn.util import get_text_field_mask
 from torch.distributions import Categorical
-from sklearn.preprocessing import OneHotEncoder
 
 from omegaconf import OmegaConf
 
@@ -17,7 +16,6 @@ from viraal.config import (flatten_dict, get_key, pass_conf,
                            register_interpolations, save_config, set_seeds)
 from viraal.train.text import TrainText, batch_to_device, get_checkpoint
 from viraal.core.utils import destroy_trainer, apply
-from viraal.queries.k_center_greedy import k_center_greedy
 
 logger = logging.getLogger(__name__)
 
@@ -99,18 +97,7 @@ def rerank(trainer, cfg):
     criter_epoch = np.concatenate(criter_epoch)
     if cfg.rerank.presoftmax: presoftmax = np.concatenate(presoftmax)
 
-    if "clustering" in cfg.rerank.criteria:
-        clusterer = instantiate(cfg.rerank.cluster, to_select)
-        logger.info("Clustering")
-        clusters = clusterer.fit_predict(presoftmax) # (nb_samples,)
-        clusters = OneHotEncoder(sparse=False).fit_transform(clusters.reshape(-1, 1)) #(nb_samples, nb_to_select)
-        clusters = clusters.astype(bool)
-        selected = []
-        for i in range(to_select):
-            cluster_instances = np.arange(nb_instances)[clusters[:,i]]
-            selected.append(max(cluster_instances, key=lambda idx: criter_epoch[idx]))
-    else:
-        selected = np.argsort(criter_epoch)[-to_select:]
+    selected = np.argsort(criter_epoch)[-to_select:]
 
     for idx in selected:
         unlabeled[idx]['labeled'].metadata = True

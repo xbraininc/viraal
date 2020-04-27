@@ -9,7 +9,6 @@ import torch
 import wandb
 from allennlp.nn.util import get_text_field_mask
 from torch.distributions import Categorical
-from sklearn.preprocessing import OneHotEncoder
 
 from omegaconf import OmegaConf
 
@@ -18,7 +17,6 @@ from viraal.config import (flatten_dict, get_key, pass_conf,
 from viraal.train.text import batch_to_device, get_checkpoint
 from viraal.train.tag import TrainJoint
 from viraal.core.utils import destroy_trainer, apply
-from viraal.queries.k_center_greedy import k_center_greedy
 
 logger = logging.getLogger(__name__)
 

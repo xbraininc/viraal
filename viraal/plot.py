@@ -7,7 +7,6 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 from viraal.config import pass_conf, get_func, register_interpolations, save_config, set_seeds
-from viraal.queries.k_center_greedy import k_center_greedy 
 import seaborn as sns
 from pprint import pprint
 
