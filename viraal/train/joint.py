@@ -80,7 +80,7 @@ class TrainJoint(TrainText):
         for batch in self.get_iterator():
             self.optimizer.zero_grad()
             batch_to_device(batch, self.c.misc.device)
-            embeddings = self.word_embeddings(batch["sentence"])
+            embeddings = torch.nn.functional.dropout(self.word_embeddings(batch["sentence"]), p=self.c.training.embedding_dropout)
             mask = get_text_field_mask(batch["sentence"]).bool()
             int_logits, tag_logits = self.model(embeddings=embeddings, mask=mask)
             label, tags = batch["label"], batch["tags"]

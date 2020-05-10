@@ -10,13 +10,13 @@ WANDB_PRETRAIN_PROJ_NAME=viraal-pretrain-full
 ## ======= ATIS
 
 DATASET=atis
-PARTS=(0.05 0.1 0.2 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0)
+PARTS=(0.05 0.1 0.15 0.2 0.25 0.3 0.4 0.5 0.6 0.7 0.8 0.9 1.0)
 
 ## ======= ATIS text + tag
 
 TYPES=(text tag)
 LOSSES=(ce vat)
-BATCH_SIZES=(16 64) #Each batch size corresponds to a loss
+BATCH_SIZES=(16 64) #Each batch size corresponds to each loss respectively
 
 loop_on_expes
 

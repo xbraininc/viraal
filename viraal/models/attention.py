@@ -12,7 +12,8 @@ class AttentionClassifier(nn.Module):
                  hidden_size: int,
                  num_layers: int,
                  bidirectional: bool,
-                 vocab_size : int) -> None:
+                 vocab_size : int,
+                 output_dropout : float) -> None:
         super().__init__()
 
         self.encoder = nn.LSTM(input_size=input_size, 
@@ -28,6 +29,8 @@ class AttentionClassifier(nn.Module):
         self.output2label = torch.nn.Linear(2*bidir_mul*hidden_size,
                                             vocab_size)
 
+        self.output_dropout = torch.nn.Dropout(p=output_dropout)
+
     def forward(self,
                 embeddings: torch.Tensor = None,
                 mask: torch.Tensor = None) -> torch.Tensor:
@@ -40,8 +43,10 @@ class AttentionClassifier(nn.Module):
         context  = torch.bmm(attention_weights.unsqueeze(1), output).squeeze(1) 
         # context : (B,1,T)*(B,T,H) = (B,1,H) --squeeze(1)--> (B,H)
         
-        concated = torch.cat([last_output, context], dim=1) # concated : (B,2*H) 
+        concated = self.output_dropout(torch.cat([last_output, context], dim=1)) # concated : (B,2*H) 
         logits = self.output2label(concated) # logits : (B,L)
+
+        
 
         return logits
         

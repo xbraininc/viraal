@@ -13,7 +13,8 @@ class AttentionTagClassifier(nn.Module):
                  tag_embedding_size: int,
                  num_layers: int,
                  bidirectional: bool,
-                 tag_vocab_size : int) -> None:
+                 tag_vocab_size : int,
+                 output_dropout : float) -> None:
         super().__init__()
 
         self.hidden_size = hidden_size
@@ -37,6 +38,8 @@ class AttentionTagClassifier(nn.Module):
 
         self.output2tag = torch.nn.Linear(2*bidir_mul*hidden_size,
                                           tag_vocab_size)
+
+        self.output_dropout = torch.nn.Dropout(p=output_dropout)
 
     def forward(self,
                 embeddings: torch.Tensor = None, #(B,T,H)
@@ -74,7 +77,7 @@ class AttentionTagClassifier(nn.Module):
                 torch.cat((embedded_tag, context, aligned), dim=2), hidden)
 
             concated = torch.cat((decoder_output.squeeze(1), context.squeeze(1)), dim=1) # (B,2*H)
-            score = self.output2tag(concated) # (B,H)
+            score = self.output2tag(self.output_dropout(concated)) # (B,H)
             decode.append(score)
             # next Context Vector to Attention Calculated by
             attention_weights = self.attention(decoder_output.squeeze(1), output)*(mask.float()) # (B,H)

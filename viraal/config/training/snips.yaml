@@ -3,6 +3,7 @@ training:
   checkpoint_freq: 10
   eval_freq: 1
   checkpoint_max: 10
+  embedding_dropout: 0.0
   
   unlabeler:
     class: viraal.datasets.unlabel.UnlabelInstances

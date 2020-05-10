@@ -5,3 +5,4 @@ model:
     tag_embedding_size: 128 
     num_layers: 1
     bidirectional: True
+    output_dropout: 0.0
