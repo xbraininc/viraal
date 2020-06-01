@@ -14,12 +14,12 @@ pip install -e .
 
 This repo is mainly based on configurability. There are scripts that receive the config and instantiate the different objects needed for the task at hand and make them interact.
 
-As of this moment there are two main scripts: train_text.py and rerank.py
+As of this moment there are two main scripts: train/text.py and rerank.py
 
 These scripts can be invoked as follows
 
 ```
-python -m viraal.train_text
+python -m viraal.train.text
 python -m viraal.rerank
 ```
 
@@ -27,7 +27,7 @@ python -m viraal.rerank
 
 The config is created by composing different blocks together. Hydra (the configuration manager) merges together the different parts and sends the whole config to the script. If no command line arguments are specified, the default `config/train_text.yaml` or `config/rerank.yaml` is used.
 
-You can also override the defaults by specifying command line arguments. These arguments can either change a whole block `python -m viraal.train_text dataset=atis` or individual values `python -m viraal.train_text training.epochs=80`.
+You can also override the defaults by specifying command line arguments. These arguments can either change a whole block `python -m viraal.train.text dataset=atis` or individual values `python -m viraal.train.text training.epochs=80`.
 
 When a script is launched, hydra creates a new directory in the `runs` folder to store the run.
 
@@ -36,8 +36,8 @@ When a script is launched, hydra creates a new directory in the `runs` folder to
 One can also launch multiple experiments in parallel very simply 
 
 ```
-python -m viraal.train_text -m dataset=atis,imdb5000,snips
-python -m viraal.train_text -m misc.seed=100:110
+python -m viraal.train.text -m dataset=atis,imdb5000,snips
+python -m viraal.train.text -m misc.seed=100:110
 ```
 
 Either using comma seperated values or a range.
@@ -67,7 +67,7 @@ The following is an example of running multiple experiments to average them. Gro
 
 ```
 PRETRAIN_NAME="imdb_vat_attention"
-python -m viraal.train_text -m dataset=imdb5000 \
+python -m viraal.train.text -m dataset=imdb5000 \
                                model=attention \
                                hydra=no_console \
                                hydra.sweep.dir=multiruns/pretrain/$PRETRAIN_NAME \
