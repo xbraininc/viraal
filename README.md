@@ -1,6 +1,6 @@
-# VirAAL repository
+# VirAAL: Virtual Adversarial Active Learning
 
-This repository implements the basic blocks needed for VirAAL in a configurable manner.
+This repository implements the basic blocks needed for VirAAL in a configurable manner to reproduce the results of the paper.
 
 ## Installation
 
@@ -59,7 +59,7 @@ python -m viraal.train.text -m dataset=atis,imdb5000,snips
 python -m viraal.train.text -m misc.seed=100:110
 ```
 
-Either using comma seperated values or a range.
+Either using comma separated values or a range.
 
 This launches the experiments using ray. You can override in the configuration how many cpus and gpus a single run uses in `ray.remote`.
 
