@@ -1,6 +1,6 @@
 # VirAAL: Virtual Adversarial Active Learning
 
-This repository implements the basic blocks needed for VirAAL in a configurable manner to reproduce the results of the paper.
+This repository implements the basic blocks needed for VirAAL in a configurable manner to reproduce the results of the paper (https://arxiv.org/abs/2005.07287).
 
 ## Installation
 
@@ -112,3 +112,17 @@ wandb login
 
 in a terminal. Then the results are automatically uploaded to your workspace online.
 
+## Citation
+
+If you use `VirAAL` in academic work, please cite it directly:
+
+```
+@misc{senay2020viraal,
+    title={VirAAL: Virtual Adversarial Active Learning},
+    author={Gregory Senay and Badr Youbi Idrissi and Marine Haziza},
+    year={2020},
+    eprint={2005.07287},
+    archivePrefix={arXiv},
+    primaryClass={cs.CL}
+}
+```
