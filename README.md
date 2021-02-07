@@ -1,6 +1,8 @@
-# VirAAL: Virtual Adversarial Active Learning
+# VirAAL: Virtual Adversarial Active Learning for NLU
 
 This repository implements the basic blocks needed for VirAAL in a configurable manner to reproduce the results of the paper (https://arxiv.org/abs/2005.07287).
+
+**Best Paper Award of The 8th IEEE Spoken Language Technology Workshop (SLT 2021).**
 
 ## Installation
 
@@ -117,12 +119,13 @@ in a terminal. Then the results are automatically uploaded to your workspace onl
 If you use `VirAAL` in academic work, please cite it directly:
 
 ```
-@misc{senay2020viraal,
-    title={VirAAL: Virtual Adversarial Active Learning},
+@misc{senay2021viraal,
+    title={VirAAL: Virtual Adversarial Active Learning for NLU},
     author={Gregory Senay and Badr Youbi Idrissi and Marine Haziza},
-    year={2020},
+    year={2021},
     eprint={2005.07287},
-    archivePrefix={arXiv},
+    archivePrefix={The 8th IEEE Spoken Language Technology Workshop (SLT 2021)},
+    booktitle = {2021 {IEEE} Spoken Language Technology Workshop, {SLT} 2021, Shenzhen, China, January 18-21, 2021},
     primaryClass={cs.CL}
 }
 ```
