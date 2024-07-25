@@ -30,7 +30,7 @@ with open("README.md", "r") as fh:
             "ometrics==1.0.2",
             "pytest==5.3.1",
             "ray==0.8",
-            "torch==1.2",
+            "torch==2.2.0",
             "torchvision==0.4.2",
             "pandas",
             "umap",
